@@ -7,6 +7,8 @@ from dotenv import load_dotenv
 load_dotenv()
 
 MODEL = os.getenv("CLAUDE_MODEL", "claude-opus-5-5")
+# MOCK_LLM=1 이면 API 호출 없이 가짜 응답 (프론트 개발용, 키 불필요)
+MOCK = os.getenv("MOCK_LLM", "0") == "1"
 
 _client: anthropic.Anthropic | None = None
 
@@ -24,6 +26,9 @@ def _get_client() -> anthropic.Anthropic:
 
 def ask(prompt: str, system: str | None = None, effort: str = "medium") -> str:
     """단일 질문 → 텍스트 응답. effort: low / medium / high / xhigh / max"""
+    if MOCK:
+        return f"[MOCK] '{prompt}' 에 대한 가짜 응답입니다."
+
     kwargs = {}
     if system:
         kwargs["system"] = system
