@@ -34,6 +34,7 @@ SOURCES = {
 # 면식당은 네이버 메뉴 순서를 menu_images.json 에 남겨 둠
 ORDER_FILE = {3: SOURCES[3] / "menu_images.json"}
 BOARD_NAMES = {"메뉴판", "menu_board_01"}
+DRINKS = {"음료", "주류"}
 IMAGE_EXT = {".jpg", ".jpeg", ".png", ".webp"}
 
 # 파일명 꼬리표 → 메뉴 이름 표기
@@ -166,6 +167,8 @@ def main():
         print(f"[{sid}] {store['name']}")
         menus, boards = scan(sid)
         enrich([m["name_ko"] for m in menus], store["name"], cache)
+        # 음료·주류는 뒤로 (가게 대표 사진·첫 탭이 음식이 되도록). 나머지는 원래 순서 유지
+        menus.sort(key=lambda m: cache.get(m["name_ko"], {}).get("menu_category") in DRINKS)
 
         dest = PUBLIC / str(sid)
         shutil.rmtree(dest, ignore_errors=True)

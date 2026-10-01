@@ -380,48 +380,6 @@
   {
     "id": 9,
     "store_id": 1,
-    "menu_category": "주류",
-    "menu_category_name": {
-      "ko": "주류",
-      "zh": "酒类",
-      "en": "Alcoholic Drinks"
-    },
-    "name_ko": "리치우유사와",
-    "pronunciation": "richi-uyu-sawa",
-    "translations": {
-      "ko": {
-        "name": "리치우유사와"
-      },
-      "zh": {
-        "name": "荔枝牛奶沙瓦",
-        "description": "荔枝的甜香与牛奶的柔滑融合在清爽的沙瓦酒中。"
-      },
-      "en": {
-        "name": "Lychee Milk Sour",
-        "description": "A refreshing alcoholic sour with sweet lychee and creamy milk."
-      }
-    },
-    "price": 6900,
-    "image_url": "/stores/1/menu/009.jpg",
-    "ingredients": [
-      "소주",
-      "리치",
-      "우유",
-      "탄산수"
-    ],
-    "allergens": [
-      "우유"
-    ],
-    "contains_pork": false,
-    "contains_alcohol": true,
-    "halal": "no",
-    "vegan": "no",
-    "spicy": 0,
-    "options": []
-  },
-  {
-    "id": 10,
-    "store_id": 1,
     "menu_category": "덮밥",
     "menu_category_name": {
       "ko": "덮밥",
@@ -444,7 +402,7 @@
       }
     },
     "price": 10900,
-    "image_url": "/stores/1/menu/010.jpg",
+    "image_url": "/stores/1/menu/009.jpg",
     "ingredients": [
       "소고기",
       "밥",
@@ -493,7 +451,7 @@
     ]
   },
   {
-    "id": 11,
+    "id": 10,
     "store_id": 1,
     "menu_category": "파스타",
     "menu_category_name": {
@@ -517,7 +475,7 @@
       }
     },
     "price": 12900,
-    "image_url": "/stores/1/menu/011.jpg",
+    "image_url": "/stores/1/menu/010.jpg",
     "ingredients": [
       "파스타",
       "새우",
@@ -556,7 +514,7 @@
     ]
   },
   {
-    "id": 12,
+    "id": 11,
     "store_id": 1,
     "menu_category": "파스타",
     "menu_category_name": {
@@ -580,7 +538,7 @@
       }
     },
     "price": 13900,
-    "image_url": "/stores/1/menu/012.jpg",
+    "image_url": "/stores/1/menu/011.jpg",
     "ingredients": [
       "파스타",
       "게살",
@@ -620,7 +578,7 @@
     ]
   },
   {
-    "id": 13,
+    "id": 12,
     "store_id": 1,
     "menu_category": "덮밥",
     "menu_category_name": {
@@ -644,7 +602,7 @@
       }
     },
     "price": 12900,
-    "image_url": "/stores/1/menu/013.png",
+    "image_url": "/stores/1/menu/012.png",
     "ingredients": [
       "소대창",
       "쌀",
@@ -683,7 +641,7 @@
     ]
   },
   {
-    "id": 14,
+    "id": 13,
     "store_id": 1,
     "menu_category": "덮밥",
     "menu_category_name": {
@@ -707,7 +665,7 @@
       }
     },
     "price": 9900,
-    "image_url": "/stores/1/menu/014.jpg",
+    "image_url": "/stores/1/menu/013.jpg",
     "ingredients": [
       "돼지고기",
       "쌀",
@@ -755,7 +713,7 @@
     ]
   },
   {
-    "id": 15,
+    "id": 14,
     "store_id": 1,
     "menu_category": "파스타",
     "menu_category_name": {
@@ -779,7 +737,7 @@
       }
     },
     "price": 13900,
-    "image_url": "/stores/1/menu/015.jpg",
+    "image_url": "/stores/1/menu/014.jpg",
     "ingredients": [
       "파스타면",
       "명란",
@@ -799,88 +757,7 @@
     "options": []
   },
   {
-    "id": 16,
-    "store_id": 1,
-    "menu_category": "주류",
-    "menu_category_name": {
-      "ko": "주류",
-      "zh": "酒类饮品",
-      "en": "Alcoholic drinks"
-    },
-    "name_ko": "모히또하이볼",
-    "pronunciation": "mohitto-haibol",
-    "translations": {
-      "ko": {
-        "name": "모히또하이볼"
-      },
-      "zh": {
-        "name": "莫吉托嗨棒",
-        "description": "薄荷、青柠和苏打调制的清爽酒饮。"
-      },
-      "en": {
-        "name": "Mojito Highball",
-        "description": "A refreshing alcoholic drink with mint, lime, and soda."
-      }
-    },
-    "price": 6900,
-    "image_url": "/stores/1/menu/016.jpg",
-    "ingredients": [
-      "민트",
-      "라임",
-      "소다수",
-      "주류"
-    ],
-    "allergens": [],
-    "contains_pork": false,
-    "contains_alcohol": true,
-    "halal": "no",
-    "vegan": "yes",
-    "spicy": 0,
-    "options": []
-  },
-  {
-    "id": 17,
-    "store_id": 1,
-    "menu_category": "주류",
-    "menu_category_name": {
-      "ko": "주류",
-      "zh": "酒类饮品",
-      "en": "Alcoholic drinks"
-    },
-    "name_ko": "미깡(귤)셔벗사와",
-    "pronunciation": "miggang-gyul-syeobeot-sawa",
-    "translations": {
-      "ko": {
-        "name": "미깡(귤)셔벗사와"
-      },
-      "zh": {
-        "name": "橘子雪葩沙瓦",
-        "description": "橘子雪葩与清爽气泡酒调和，酸甜冰凉。"
-      },
-      "en": {
-        "name": "Tangerine Sorbet Sour",
-        "description": "A bubbly alcoholic drink with sweet-tart tangerine and a scoop of sorbet."
-      }
-    },
-    "price": 7900,
-    "image_url": "/stores/1/menu/017.png",
-    "ingredients": [
-      "귤",
-      "셔벗",
-      "소주",
-      "탄산수",
-      "설탕"
-    ],
-    "allergens": [],
-    "contains_pork": false,
-    "contains_alcohol": true,
-    "halal": "no",
-    "vegan": "unknown",
-    "spicy": 0,
-    "options": []
-  },
-  {
-    "id": 18,
+    "id": 15,
     "store_id": 1,
     "menu_category": "파스타",
     "menu_category_name": {
@@ -904,7 +781,7 @@
       }
     },
     "price": 12900,
-    "image_url": "/stores/1/menu/018.jpg",
+    "image_url": "/stores/1/menu/015.jpg",
     "ingredients": [
       "파스타면",
       "명란",
@@ -924,87 +801,7 @@
     "options": []
   },
   {
-    "id": 19,
-    "store_id": 1,
-    "menu_category": "주류",
-    "menu_category_name": {
-      "ko": "주류",
-      "zh": "酒类饮品",
-      "en": "Alcoholic drinks"
-    },
-    "name_ko": "블루레몬사와",
-    "pronunciation": "beullu-remon-sawa",
-    "translations": {
-      "ko": {
-        "name": "블루레몬사와"
-      },
-      "zh": {
-        "name": "蓝柠檬沙瓦",
-        "description": "蓝柠檬风味与气泡酒融合，酸爽清新。"
-      },
-      "en": {
-        "name": "Blue Lemon Sour",
-        "description": "A sparkling alcoholic drink with a bright, tangy blue-lemon flavor."
-      }
-    },
-    "price": 6900,
-    "image_url": "/stores/1/menu/019.jpg",
-    "ingredients": [
-      "레몬",
-      "소주",
-      "탄산수",
-      "시럽"
-    ],
-    "allergens": [],
-    "contains_pork": false,
-    "contains_alcohol": true,
-    "halal": "no",
-    "vegan": "yes",
-    "spicy": 0,
-    "options": []
-  },
-  {
-    "id": 20,
-    "store_id": 1,
-    "menu_category": "주류",
-    "menu_category_name": {
-      "ko": "주류",
-      "zh": "酒类饮品",
-      "en": "Alcoholic drinks"
-    },
-    "name_ko": "샤인머스켓사와",
-    "pronunciation": "syain-meoseuket-sawa",
-    "translations": {
-      "ko": {
-        "name": "샤인머스켓사와"
-      },
-      "zh": {
-        "name": "阳光玫瑰葡萄沙瓦",
-        "description": "阳光玫瑰葡萄的清甜果香搭配气泡酒。"
-      },
-      "en": {
-        "name": "Shine Muscat Sour",
-        "description": "A sparkling alcoholic drink with the sweet, fragrant taste of Shine Muscat grapes."
-      }
-    },
-    "price": 6900,
-    "image_url": "/stores/1/menu/020.jpg",
-    "ingredients": [
-      "샤인머스켓",
-      "소주",
-      "탄산수",
-      "시럽"
-    ],
-    "allergens": [],
-    "contains_pork": false,
-    "contains_alcohol": true,
-    "halal": "no",
-    "vegan": "yes",
-    "spicy": 0,
-    "options": []
-  },
-  {
-    "id": 21,
+    "id": 16,
     "store_id": 1,
     "menu_category": "덮밥",
     "menu_category_name": {
@@ -1028,7 +825,7 @@
       }
     },
     "price": 9900,
-    "image_url": "/stores/1/menu/021.jpg",
+    "image_url": "/stores/1/menu/016.jpg",
     "ingredients": [
       "소고기",
       "쌀",
@@ -1058,7 +855,7 @@
     ]
   },
   {
-    "id": 22,
+    "id": 17,
     "store_id": 1,
     "menu_category": "파스타",
     "menu_category_name": {
@@ -1082,7 +879,7 @@
       }
     },
     "price": 13900,
-    "image_url": "/stores/1/menu/022.jpg",
+    "image_url": "/stores/1/menu/017.jpg",
     "ingredients": [
       "숏파스타면",
       "새우",
@@ -1103,7 +900,7 @@
     "options": []
   },
   {
-    "id": 23,
+    "id": 18,
     "store_id": 1,
     "menu_category": "파스타",
     "menu_category_name": {
@@ -1127,7 +924,7 @@
       }
     },
     "price": 10900,
-    "image_url": "/stores/1/menu/023.jpg",
+    "image_url": "/stores/1/menu/018.jpg",
     "ingredients": [
       "파스타면",
       "올리브유",
@@ -1165,47 +962,7 @@
     ]
   },
   {
-    "id": 24,
-    "store_id": 1,
-    "menu_category": "주류",
-    "menu_category_name": {
-      "ko": "주류",
-      "zh": "酒类饮品",
-      "en": "Alcoholic drinks"
-    },
-    "name_ko": "얼그레이하이볼",
-    "pronunciation": "eolgeurei-haibol",
-    "translations": {
-      "ko": {
-        "name": "얼그레이하이볼"
-      },
-      "zh": {
-        "name": "伯爵茶嗨棒",
-        "description": "伯爵茶的佛手柑香气融入清爽气泡酒。"
-      },
-      "en": {
-        "name": "Earl Grey Highball",
-        "description": "A refreshing alcoholic highball with fragrant Earl Grey tea and citrus notes."
-      }
-    },
-    "price": 6900,
-    "image_url": "/stores/1/menu/024.jpg",
-    "ingredients": [
-      "얼그레이",
-      "위스키",
-      "탄산수",
-      "레몬"
-    ],
-    "allergens": [],
-    "contains_pork": false,
-    "contains_alcohol": true,
-    "halal": "no",
-    "vegan": "yes",
-    "spicy": 0,
-    "options": []
-  },
-  {
-    "id": 25,
+    "id": 19,
     "store_id": 1,
     "menu_category": "전",
     "menu_category_name": {
@@ -1229,7 +986,7 @@
       }
     },
     "price": 12900,
-    "image_url": "/stores/1/menu/025.jpg",
+    "image_url": "/stores/1/menu/019.jpg",
     "ingredients": [
       "옥수수",
       "밀가루",
@@ -1250,47 +1007,7 @@
     "options": []
   },
   {
-    "id": 26,
-    "store_id": 1,
-    "menu_category": "주류",
-    "menu_category_name": {
-      "ko": "주류",
-      "zh": "酒精饮料",
-      "en": "Alcoholic drink"
-    },
-    "name_ko": "유자사와",
-    "pronunciation": "yuja-sawa",
-    "translations": {
-      "ko": {
-        "name": "유자사와"
-      },
-      "zh": {
-        "name": "柚子沙瓦",
-        "description": "柚子香气清新，带有酸甜果味的气泡酒饮。"
-      },
-      "en": {
-        "name": "Yuzu Sour",
-        "description": "A fizzy alcoholic drink with bright, sweet-tart yuzu flavor."
-      }
-    },
-    "price": 6900,
-    "image_url": "/stores/1/menu/026.jpg",
-    "ingredients": [
-      "유자",
-      "소주",
-      "탄산수",
-      "시럽"
-    ],
-    "allergens": [],
-    "contains_pork": false,
-    "contains_alcohol": true,
-    "halal": "no",
-    "vegan": "yes",
-    "spicy": 0,
-    "options": []
-  },
-  {
-    "id": 27,
+    "id": 20,
     "store_id": 1,
     "menu_category": "파스타",
     "menu_category_name": {
@@ -1314,7 +1031,7 @@
       }
     },
     "price": 13900,
-    "image_url": "/stores/1/menu/027.jpg",
+    "image_url": "/stores/1/menu/020.jpg",
     "ingredients": [
       "파스타",
       "잠봉",
@@ -1336,7 +1053,7 @@
     "options": []
   },
   {
-    "id": 28,
+    "id": 21,
     "store_id": 1,
     "menu_category": "전",
     "menu_category_name": {
@@ -1360,7 +1077,7 @@
       }
     },
     "price": 15900,
-    "image_url": "/stores/1/menu/028.jpg",
+    "image_url": "/stores/1/menu/021.jpg",
     "ingredients": [
       "감자",
       "치즈",
@@ -1400,7 +1117,7 @@
     ]
   },
   {
-    "id": 29,
+    "id": 22,
     "store_id": 1,
     "menu_category": "사이드",
     "menu_category_name": {
@@ -1424,7 +1141,7 @@
       }
     },
     "price": 19900,
-    "image_url": "/stores/1/menu/029.jpg",
+    "image_url": "/stores/1/menu/022.jpg",
     "ingredients": [
       "피자 도우",
       "옥수수",
@@ -1443,7 +1160,7 @@
     "options": []
   },
   {
-    "id": 30,
+    "id": 23,
     "store_id": 1,
     "menu_category": "스튜",
     "menu_category_name": {
@@ -1467,7 +1184,7 @@
       }
     },
     "price": 16900,
-    "image_url": "/stores/1/menu/030.png",
+    "image_url": "/stores/1/menu/023.png",
     "ingredients": [
       "닭고기",
       "생크림",
@@ -1497,7 +1214,7 @@
     ]
   },
   {
-    "id": 31,
+    "id": 24,
     "store_id": 1,
     "menu_category": "전골",
     "menu_category_name": {
@@ -1521,7 +1238,7 @@
       }
     },
     "price": 18900,
-    "image_url": "/stores/1/menu/031.png",
+    "image_url": "/stores/1/menu/024.png",
     "ingredients": [
       "삼겹살",
       "김치",
@@ -1570,7 +1287,7 @@
     ]
   },
   {
-    "id": 32,
+    "id": 25,
     "store_id": 1,
     "menu_category": "파스타",
     "menu_category_name": {
@@ -1594,7 +1311,7 @@
       }
     },
     "price": 11900,
-    "image_url": "/stores/1/menu/032.jpg",
+    "image_url": "/stores/1/menu/025.jpg",
     "ingredients": [
       "파스타",
       "버섯",
@@ -1614,7 +1331,7 @@
     "options": []
   },
   {
-    "id": 33,
+    "id": 26,
     "store_id": 1,
     "menu_category": "사이드",
     "menu_category_name": {
@@ -1638,7 +1355,7 @@
       }
     },
     "price": 7900,
-    "image_url": "/stores/1/menu/033.jpg",
+    "image_url": "/stores/1/menu/026.jpg",
     "ingredients": [
       "감자",
       "잠봉",
@@ -1657,7 +1374,7 @@
     "options": []
   },
   {
-    "id": 34,
+    "id": 27,
     "store_id": 1,
     "menu_category": "파스타",
     "menu_category_name": {
@@ -1681,7 +1398,7 @@
       }
     },
     "price": 14900,
-    "image_url": "/stores/1/menu/034.jpg",
+    "image_url": "/stores/1/menu/027.jpg",
     "ingredients": [
       "短意面",
       "다진 고기",
@@ -1702,47 +1419,7 @@
     "options": []
   },
   {
-    "id": 35,
-    "store_id": 1,
-    "menu_category": "주류",
-    "menu_category_name": {
-      "ko": "주류",
-      "zh": "酒精饮料",
-      "en": "Alcoholic drink"
-    },
-    "name_ko": "피치트리레드하이볼",
-    "pronunciation": "pichi-teuri-redeu-haibol",
-    "translations": {
-      "ko": {
-        "name": "피치트리레드하이볼"
-      },
-      "zh": {
-        "name": "蜜桃红色高球鸡尾酒",
-        "description": "带有蜜桃果香与清爽气泡感的威士忌调酒。"
-      },
-      "en": {
-        "name": "Peach Tree Red Highball",
-        "description": "A refreshing fizzy highball with sweet peach notes."
-      }
-    },
-    "price": 6900,
-    "image_url": "/stores/1/menu/035.jpg",
-    "ingredients": [
-      "위스키",
-      "피치 리큐르",
-      "탄산수",
-      "시럽"
-    ],
-    "allergens": [],
-    "contains_pork": false,
-    "contains_alcohol": true,
-    "halal": "no",
-    "vegan": "yes",
-    "spicy": 0,
-    "options": []
-  },
-  {
-    "id": 36,
+    "id": 28,
     "store_id": 1,
     "menu_category": "안주",
     "menu_category_name": {
@@ -1766,7 +1443,7 @@
       }
     },
     "price": 16900,
-    "image_url": "/stores/1/menu/036.jpg",
+    "image_url": "/stores/1/menu/028.jpg",
     "ingredients": [
       "한우",
       "깻잎",
@@ -1787,7 +1464,7 @@
     "options": []
   },
   {
-    "id": 37,
+    "id": 29,
     "store_id": 1,
     "menu_category": "전골",
     "menu_category_name": {
@@ -1811,7 +1488,7 @@
       }
     },
     "price": 21900,
-    "image_url": "/stores/1/menu/037.png",
+    "image_url": "/stores/1/menu/029.png",
     "ingredients": [
       "한우 대창",
       "된장",
@@ -1850,7 +1527,7 @@
     ]
   },
   {
-    "id": 38,
+    "id": 30,
     "store_id": 1,
     "menu_category": "구이",
     "menu_category_name": {
@@ -1874,7 +1551,7 @@
       }
     },
     "price": 15900,
-    "image_url": "/stores/1/menu/038.png",
+    "image_url": "/stores/1/menu/030.png",
     "ingredients": [
       "돼지고기",
       "소금",
@@ -1889,7 +1566,7 @@
     "options": []
   },
   {
-    "id": 39,
+    "id": 31,
     "store_id": 1,
     "menu_category": "덮밥",
     "menu_category_name": {
@@ -1913,7 +1590,7 @@
       }
     },
     "price": 10900,
-    "image_url": "/stores/1/menu/039.jpg",
+    "image_url": "/stores/1/menu/031.jpg",
     "ingredients": [
       "돼지고기",
       "숙주",
@@ -1932,48 +1609,7 @@
     "options": []
   },
   {
-    "id": 40,
-    "store_id": 1,
-    "menu_category": "주류",
-    "menu_category_name": {
-      "ko": "주류",
-      "zh": "酒类",
-      "en": "Alcoholic drink"
-    },
-    "name_ko": "화이트피치(백도)사와",
-    "pronunciation": "hwaiteu-pichi (baekdo) sawa",
-    "translations": {
-      "ko": {
-        "name": "화이트피치(백도)사와"
-      },
-      "zh": {
-        "name": "白桃沙瓦",
-        "description": "白桃风味沙瓦，口感清甜并带有气泡。"
-      },
-      "en": {
-        "name": "White Peach Sour",
-        "description": "A fizzy alcoholic drink with a sweet white peach flavor."
-      }
-    },
-    "price": 6900,
-    "image_url": "/stores/1/menu/040.jpg",
-    "ingredients": [
-      "백도",
-      "소주",
-      "탄산수"
-    ],
-    "allergens": [
-      "복숭아"
-    ],
-    "contains_pork": false,
-    "contains_alcohol": true,
-    "halal": "no",
-    "vegan": "unknown",
-    "spicy": 0,
-    "options": []
-  },
-  {
-    "id": 41,
+    "id": 32,
     "store_id": 1,
     "menu_category": "구이",
     "menu_category_name": {
@@ -1997,7 +1633,7 @@
       }
     },
     "price": 16900,
-    "image_url": "/stores/1/menu/041.png",
+    "image_url": "/stores/1/menu/032.png",
     "ingredients": [
       "닭고기",
       "소금",
@@ -2013,7 +1649,7 @@
     "options": []
   },
   {
-    "id": 42,
+    "id": 33,
     "store_id": 1,
     "menu_category": "구이",
     "menu_category_name": {
@@ -2037,7 +1673,7 @@
       }
     },
     "price": 18900,
-    "image_url": "/stores/1/menu/042.png",
+    "image_url": "/stores/1/menu/033.png",
     "ingredients": [
       "닭고기",
       "치즈",
@@ -2076,7 +1712,7 @@
     ]
   },
   {
-    "id": 43,
+    "id": 34,
     "store_id": 1,
     "menu_category": "덮밥",
     "menu_category_name": {
@@ -2100,7 +1736,7 @@
       }
     },
     "price": 12900,
-    "image_url": "/stores/1/menu/043.jpg",
+    "image_url": "/stores/1/menu/034.jpg",
     "ingredients": [
       "닭고기",
       "쌀",
@@ -2148,7 +1784,7 @@
     ]
   },
   {
-    "id": 44,
+    "id": 35,
     "store_id": 1,
     "menu_category": "파스타",
     "menu_category_name": {
@@ -2172,7 +1808,7 @@
       }
     },
     "price": 14900,
-    "image_url": "/stores/1/menu/044.jpg",
+    "image_url": "/stores/1/menu/035.jpg",
     "ingredients": [
       "닭고기",
       "숏파스타",
@@ -2220,7 +1856,7 @@
     ]
   },
   {
-    "id": 45,
+    "id": 36,
     "store_id": 1,
     "menu_category": "소바",
     "menu_category_name": {
@@ -2244,7 +1880,7 @@
       }
     },
     "price": 21900,
-    "image_url": "/stores/1/menu/045.png",
+    "image_url": "/stores/1/menu/036.png",
     "ingredients": [
       "돼지고기",
       "메밀면",
@@ -2264,7 +1900,7 @@
     "options": []
   },
   {
-    "id": 46,
+    "id": 37,
     "store_id": 1,
     "menu_category": "덮밥",
     "menu_category_name": {
@@ -2288,7 +1924,7 @@
       }
     },
     "price": 10900,
-    "image_url": "/stores/1/menu/046.jpg",
+    "image_url": "/stores/1/menu/037.jpg",
     "ingredients": [
       "돼지고기",
       "쌀",
@@ -2317,87 +1953,371 @@
     ]
   },
   {
+    "id": 38,
+    "store_id": 1,
+    "menu_category": "주류",
+    "menu_category_name": {
+      "ko": "주류",
+      "zh": "酒类",
+      "en": "Alcoholic Drinks"
+    },
+    "name_ko": "리치우유사와",
+    "pronunciation": "richi-uyu-sawa",
+    "translations": {
+      "ko": {
+        "name": "리치우유사와"
+      },
+      "zh": {
+        "name": "荔枝牛奶沙瓦",
+        "description": "荔枝的甜香与牛奶的柔滑融合在清爽的沙瓦酒中。"
+      },
+      "en": {
+        "name": "Lychee Milk Sour",
+        "description": "A refreshing alcoholic sour with sweet lychee and creamy milk."
+      }
+    },
+    "price": 6900,
+    "image_url": "/stores/1/menu/038.jpg",
+    "ingredients": [
+      "소주",
+      "리치",
+      "우유",
+      "탄산수"
+    ],
+    "allergens": [
+      "우유"
+    ],
+    "contains_pork": false,
+    "contains_alcohol": true,
+    "halal": "no",
+    "vegan": "no",
+    "spicy": 0,
+    "options": []
+  },
+  {
+    "id": 39,
+    "store_id": 1,
+    "menu_category": "주류",
+    "menu_category_name": {
+      "ko": "주류",
+      "zh": "酒类饮品",
+      "en": "Alcoholic drinks"
+    },
+    "name_ko": "모히또하이볼",
+    "pronunciation": "mohitto-haibol",
+    "translations": {
+      "ko": {
+        "name": "모히또하이볼"
+      },
+      "zh": {
+        "name": "莫吉托嗨棒",
+        "description": "薄荷、青柠和苏打调制的清爽酒饮。"
+      },
+      "en": {
+        "name": "Mojito Highball",
+        "description": "A refreshing alcoholic drink with mint, lime, and soda."
+      }
+    },
+    "price": 6900,
+    "image_url": "/stores/1/menu/039.jpg",
+    "ingredients": [
+      "민트",
+      "라임",
+      "소다수",
+      "주류"
+    ],
+    "allergens": [],
+    "contains_pork": false,
+    "contains_alcohol": true,
+    "halal": "no",
+    "vegan": "yes",
+    "spicy": 0,
+    "options": []
+  },
+  {
+    "id": 40,
+    "store_id": 1,
+    "menu_category": "주류",
+    "menu_category_name": {
+      "ko": "주류",
+      "zh": "酒类饮品",
+      "en": "Alcoholic drinks"
+    },
+    "name_ko": "미깡(귤)셔벗사와",
+    "pronunciation": "miggang-gyul-syeobeot-sawa",
+    "translations": {
+      "ko": {
+        "name": "미깡(귤)셔벗사와"
+      },
+      "zh": {
+        "name": "橘子雪葩沙瓦",
+        "description": "橘子雪葩与清爽气泡酒调和，酸甜冰凉。"
+      },
+      "en": {
+        "name": "Tangerine Sorbet Sour",
+        "description": "A bubbly alcoholic drink with sweet-tart tangerine and a scoop of sorbet."
+      }
+    },
+    "price": 7900,
+    "image_url": "/stores/1/menu/040.png",
+    "ingredients": [
+      "귤",
+      "셔벗",
+      "소주",
+      "탄산수",
+      "설탕"
+    ],
+    "allergens": [],
+    "contains_pork": false,
+    "contains_alcohol": true,
+    "halal": "no",
+    "vegan": "unknown",
+    "spicy": 0,
+    "options": []
+  },
+  {
+    "id": 41,
+    "store_id": 1,
+    "menu_category": "주류",
+    "menu_category_name": {
+      "ko": "주류",
+      "zh": "酒类饮品",
+      "en": "Alcoholic drinks"
+    },
+    "name_ko": "블루레몬사와",
+    "pronunciation": "beullu-remon-sawa",
+    "translations": {
+      "ko": {
+        "name": "블루레몬사와"
+      },
+      "zh": {
+        "name": "蓝柠檬沙瓦",
+        "description": "蓝柠檬风味与气泡酒融合，酸爽清新。"
+      },
+      "en": {
+        "name": "Blue Lemon Sour",
+        "description": "A sparkling alcoholic drink with a bright, tangy blue-lemon flavor."
+      }
+    },
+    "price": 6900,
+    "image_url": "/stores/1/menu/041.jpg",
+    "ingredients": [
+      "레몬",
+      "소주",
+      "탄산수",
+      "시럽"
+    ],
+    "allergens": [],
+    "contains_pork": false,
+    "contains_alcohol": true,
+    "halal": "no",
+    "vegan": "yes",
+    "spicy": 0,
+    "options": []
+  },
+  {
+    "id": 42,
+    "store_id": 1,
+    "menu_category": "주류",
+    "menu_category_name": {
+      "ko": "주류",
+      "zh": "酒类饮品",
+      "en": "Alcoholic drinks"
+    },
+    "name_ko": "샤인머스켓사와",
+    "pronunciation": "syain-meoseuket-sawa",
+    "translations": {
+      "ko": {
+        "name": "샤인머스켓사와"
+      },
+      "zh": {
+        "name": "阳光玫瑰葡萄沙瓦",
+        "description": "阳光玫瑰葡萄的清甜果香搭配气泡酒。"
+      },
+      "en": {
+        "name": "Shine Muscat Sour",
+        "description": "A sparkling alcoholic drink with the sweet, fragrant taste of Shine Muscat grapes."
+      }
+    },
+    "price": 6900,
+    "image_url": "/stores/1/menu/042.jpg",
+    "ingredients": [
+      "샤인머스켓",
+      "소주",
+      "탄산수",
+      "시럽"
+    ],
+    "allergens": [],
+    "contains_pork": false,
+    "contains_alcohol": true,
+    "halal": "no",
+    "vegan": "yes",
+    "spicy": 0,
+    "options": []
+  },
+  {
+    "id": 43,
+    "store_id": 1,
+    "menu_category": "주류",
+    "menu_category_name": {
+      "ko": "주류",
+      "zh": "酒类饮品",
+      "en": "Alcoholic drinks"
+    },
+    "name_ko": "얼그레이하이볼",
+    "pronunciation": "eolgeurei-haibol",
+    "translations": {
+      "ko": {
+        "name": "얼그레이하이볼"
+      },
+      "zh": {
+        "name": "伯爵茶嗨棒",
+        "description": "伯爵茶的佛手柑香气融入清爽气泡酒。"
+      },
+      "en": {
+        "name": "Earl Grey Highball",
+        "description": "A refreshing alcoholic highball with fragrant Earl Grey tea and citrus notes."
+      }
+    },
+    "price": 6900,
+    "image_url": "/stores/1/menu/043.jpg",
+    "ingredients": [
+      "얼그레이",
+      "위스키",
+      "탄산수",
+      "레몬"
+    ],
+    "allergens": [],
+    "contains_pork": false,
+    "contains_alcohol": true,
+    "halal": "no",
+    "vegan": "yes",
+    "spicy": 0,
+    "options": []
+  },
+  {
+    "id": 44,
+    "store_id": 1,
+    "menu_category": "주류",
+    "menu_category_name": {
+      "ko": "주류",
+      "zh": "酒精饮料",
+      "en": "Alcoholic drink"
+    },
+    "name_ko": "유자사와",
+    "pronunciation": "yuja-sawa",
+    "translations": {
+      "ko": {
+        "name": "유자사와"
+      },
+      "zh": {
+        "name": "柚子沙瓦",
+        "description": "柚子香气清新，带有酸甜果味的气泡酒饮。"
+      },
+      "en": {
+        "name": "Yuzu Sour",
+        "description": "A fizzy alcoholic drink with bright, sweet-tart yuzu flavor."
+      }
+    },
+    "price": 6900,
+    "image_url": "/stores/1/menu/044.jpg",
+    "ingredients": [
+      "유자",
+      "소주",
+      "탄산수",
+      "시럽"
+    ],
+    "allergens": [],
+    "contains_pork": false,
+    "contains_alcohol": true,
+    "halal": "no",
+    "vegan": "yes",
+    "spicy": 0,
+    "options": []
+  },
+  {
+    "id": 45,
+    "store_id": 1,
+    "menu_category": "주류",
+    "menu_category_name": {
+      "ko": "주류",
+      "zh": "酒精饮料",
+      "en": "Alcoholic drink"
+    },
+    "name_ko": "피치트리레드하이볼",
+    "pronunciation": "pichi-teuri-redeu-haibol",
+    "translations": {
+      "ko": {
+        "name": "피치트리레드하이볼"
+      },
+      "zh": {
+        "name": "蜜桃红色高球鸡尾酒",
+        "description": "带有蜜桃果香与清爽气泡感的威士忌调酒。"
+      },
+      "en": {
+        "name": "Peach Tree Red Highball",
+        "description": "A refreshing fizzy highball with sweet peach notes."
+      }
+    },
+    "price": 6900,
+    "image_url": "/stores/1/menu/045.jpg",
+    "ingredients": [
+      "위스키",
+      "피치 리큐르",
+      "탄산수",
+      "시럽"
+    ],
+    "allergens": [],
+    "contains_pork": false,
+    "contains_alcohol": true,
+    "halal": "no",
+    "vegan": "yes",
+    "spicy": 0,
+    "options": []
+  },
+  {
+    "id": 46,
+    "store_id": 1,
+    "menu_category": "주류",
+    "menu_category_name": {
+      "ko": "주류",
+      "zh": "酒类",
+      "en": "Alcoholic drink"
+    },
+    "name_ko": "화이트피치(백도)사와",
+    "pronunciation": "hwaiteu-pichi (baekdo) sawa",
+    "translations": {
+      "ko": {
+        "name": "화이트피치(백도)사와"
+      },
+      "zh": {
+        "name": "白桃沙瓦",
+        "description": "白桃风味沙瓦，口感清甜并带有气泡。"
+      },
+      "en": {
+        "name": "White Peach Sour",
+        "description": "A fizzy alcoholic drink with a sweet white peach flavor."
+      }
+    },
+    "price": 6900,
+    "image_url": "/stores/1/menu/046.jpg",
+    "ingredients": [
+      "백도",
+      "소주",
+      "탄산수"
+    ],
+    "allergens": [
+      "복숭아"
+    ],
+    "contains_pork": false,
+    "contains_alcohol": true,
+    "halal": "no",
+    "vegan": "unknown",
+    "spicy": 0,
+    "options": []
+  },
+  {
     "id": 47,
-    "store_id": 2,
-    "menu_category": "음료",
-    "menu_category_name": {
-      "ko": "음료",
-      "zh": "饮料",
-      "en": "Drinks"
-    },
-    "name_ko": "미린다 오렌지(355ml)",
-    "pronunciation": "mirinda-orenji-355ml",
-    "translations": {
-      "ko": {
-        "name": "미린다 오렌지(355ml)"
-      },
-      "zh": {
-        "name": "美年达橙味（355毫升）",
-        "description": ""
-      },
-      "en": {
-        "name": "Mirinda Orange (355 ml)",
-        "description": ""
-      }
-    },
-    "price": 2000,
-    "image_url": "/stores/2/menu/047.jpg",
-    "ingredients": [
-      "碳酸水",
-      "糖",
-      "橙味香料",
-      "酸味剂"
-    ],
-    "allergens": [],
-    "contains_pork": false,
-    "contains_alcohol": false,
-    "halal": "yes",
-    "vegan": "yes",
-    "spicy": 0,
-    "options": []
-  },
-  {
-    "id": 48,
-    "store_id": 2,
-    "menu_category": "음료",
-    "menu_category_name": {
-      "ko": "음료",
-      "zh": "饮料",
-      "en": "Drinks"
-    },
-    "name_ko": "미린다 파인애플",
-    "pronunciation": "mirinda-painaepeul",
-    "translations": {
-      "ko": {
-        "name": "미린다 파인애플"
-      },
-      "zh": {
-        "name": "美年达菠萝味",
-        "description": ""
-      },
-      "en": {
-        "name": "Mirinda Pineapple",
-        "description": ""
-      }
-    },
-    "price": 2000,
-    "image_url": "/stores/2/menu/048.jpg",
-    "ingredients": [
-      "碳酸水",
-      "糖",
-      "菠萝味香料",
-      "酸味剂"
-    ],
-    "allergens": [],
-    "contains_pork": false,
-    "contains_alcohol": false,
-    "halal": "yes",
-    "vegan": "yes",
-    "spicy": 0,
-    "options": []
-  },
-  {
-    "id": 49,
     "store_id": 2,
     "menu_category": "부리또",
     "menu_category_name": {
@@ -2421,7 +2341,7 @@
       }
     },
     "price": 6500,
-    "image_url": "/stores/2/menu/049.jpg",
+    "image_url": "/stores/2/menu/047.jpg",
     "ingredients": [
       "새우",
       "감자",
@@ -2483,7 +2403,7 @@
     ]
   },
   {
-    "id": 50,
+    "id": 48,
     "store_id": 2,
     "menu_category": "부리또",
     "menu_category_name": {
@@ -2507,7 +2427,7 @@
       }
     },
     "price": 7500,
-    "image_url": "/stores/2/menu/050.jpg",
+    "image_url": "/stores/2/menu/048.jpg",
     "ingredients": [
       "소고기 베이컨",
       "쌀밥",
@@ -2569,7 +2489,7 @@
     ]
   },
   {
-    "id": 51,
+    "id": 49,
     "store_id": 2,
     "menu_category": "사이드",
     "menu_category_name": {
@@ -2593,7 +2513,7 @@
       }
     },
     "price": 4000,
-    "image_url": "/stores/2/menu/051.jpg",
+    "image_url": "/stores/2/menu/049.jpg",
     "ingredients": [
       "돼지고기",
       "소시지",
@@ -2635,7 +2555,7 @@
     ]
   },
   {
-    "id": 52,
+    "id": 50,
     "store_id": 2,
     "menu_category": "핫도그",
     "menu_category_name": {
@@ -2659,7 +2579,7 @@
       }
     },
     "price": 7000,
-    "image_url": "/stores/2/menu/052.jpg",
+    "image_url": "/stores/2/menu/050.jpg",
     "ingredients": [
       "소시지",
       "고구마",
@@ -2703,47 +2623,7 @@
     ]
   },
   {
-    "id": 53,
-    "store_id": 2,
-    "menu_category": "음료",
-    "menu_category_name": {
-      "ko": "음료",
-      "zh": "饮料",
-      "en": "Drinks"
-    },
-    "name_ko": "제로 사이다 캔(355ml)",
-    "pronunciation": "jero-saida-kaen-355ml",
-    "translations": {
-      "ko": {
-        "name": "제로 사이다 캔(355ml)"
-      },
-      "zh": {
-        "name": "无糖汽水罐（355毫升）",
-        "description": ""
-      },
-      "en": {
-        "name": "Zero Sugar Soda Can (355 ml)",
-        "description": ""
-      }
-    },
-    "price": 2000,
-    "image_url": "/stores/2/menu/053.jpg",
-    "ingredients": [
-      "碳酸水",
-      "甜味剂",
-      "香料",
-      "酸味剂"
-    ],
-    "allergens": [],
-    "contains_pork": false,
-    "contains_alcohol": false,
-    "halal": "yes",
-    "vegan": "yes",
-    "spicy": 0,
-    "options": []
-  },
-  {
-    "id": 54,
+    "id": 51,
     "store_id": 2,
     "menu_category": "부리또",
     "menu_category_name": {
@@ -2767,7 +2647,7 @@
       }
     },
     "price": 7000,
-    "image_url": "/stores/2/menu/054.jpg",
+    "image_url": "/stores/2/menu/051.jpg",
     "ingredients": [
       "닭고기",
       "감자",
@@ -2828,7 +2708,7 @@
     ]
   },
   {
-    "id": 55,
+    "id": 52,
     "store_id": 2,
     "menu_category": "부리또",
     "menu_category_name": {
@@ -2852,7 +2732,7 @@
       }
     },
     "price": 7000,
-    "image_url": "/stores/2/menu/055.jpg",
+    "image_url": "/stores/2/menu/052.jpg",
     "ingredients": [
       "닭고기",
       "쌀밥",
@@ -2913,87 +2793,7 @@
     ]
   },
   {
-    "id": 56,
-    "store_id": 2,
-    "menu_category": "음료",
-    "menu_category_name": {
-      "ko": "음료",
-      "zh": "饮料",
-      "en": "Drinks"
-    },
-    "name_ko": "칠성사이다",
-    "pronunciation": "chilseong-saida",
-    "translations": {
-      "ko": {
-        "name": "칠성사이다"
-      },
-      "zh": {
-        "name": "七星汽水",
-        "description": ""
-      },
-      "en": {
-        "name": "Chilsung Cider",
-        "description": ""
-      }
-    },
-    "price": 2000,
-    "image_url": "/stores/2/menu/056.jpg",
-    "ingredients": [
-      "碳酸水",
-      "糖",
-      "香料",
-      "酸味剂"
-    ],
-    "allergens": [],
-    "contains_pork": false,
-    "contains_alcohol": false,
-    "halal": "yes",
-    "vegan": "yes",
-    "spicy": 0,
-    "options": []
-  },
-  {
-    "id": 57,
-    "store_id": 2,
-    "menu_category": "음료",
-    "menu_category_name": {
-      "ko": "음료",
-      "zh": "饮料",
-      "en": "Drinks"
-    },
-    "name_ko": "펩시 콜라 캔",
-    "pronunciation": "pepsi-kolla-kaen",
-    "translations": {
-      "ko": {
-        "name": "펩시 콜라 캔"
-      },
-      "zh": {
-        "name": "百事可乐罐装",
-        "description": ""
-      },
-      "en": {
-        "name": "Pepsi Cola Can",
-        "description": ""
-      }
-    },
-    "price": 2000,
-    "image_url": "/stores/2/menu/057.jpg",
-    "ingredients": [
-      "碳酸水",
-      "糖",
-      "焦糖色素",
-      "香料"
-    ],
-    "allergens": [],
-    "contains_pork": false,
-    "contains_alcohol": false,
-    "halal": "yes",
-    "vegan": "yes",
-    "spicy": 0,
-    "options": []
-  },
-  {
-    "id": 58,
+    "id": 53,
     "store_id": 2,
     "menu_category": "사이드",
     "menu_category_name": {
@@ -3017,12 +2817,212 @@
       }
     },
     "price": 8000,
-    "image_url": "/stores/2/menu/058.jpg",
+    "image_url": "/stores/2/menu/053.jpg",
     "ingredients": [
       "감자",
       "식용유",
       "소금",
       "전분"
+    ],
+    "allergens": [],
+    "contains_pork": false,
+    "contains_alcohol": false,
+    "halal": "yes",
+    "vegan": "yes",
+    "spicy": 0,
+    "options": []
+  },
+  {
+    "id": 54,
+    "store_id": 2,
+    "menu_category": "음료",
+    "menu_category_name": {
+      "ko": "음료",
+      "zh": "饮料",
+      "en": "Drinks"
+    },
+    "name_ko": "미린다 오렌지(355ml)",
+    "pronunciation": "mirinda-orenji-355ml",
+    "translations": {
+      "ko": {
+        "name": "미린다 오렌지(355ml)"
+      },
+      "zh": {
+        "name": "美年达橙味（355毫升）",
+        "description": ""
+      },
+      "en": {
+        "name": "Mirinda Orange (355 ml)",
+        "description": ""
+      }
+    },
+    "price": 2000,
+    "image_url": "/stores/2/menu/054.jpg",
+    "ingredients": [
+      "碳酸水",
+      "糖",
+      "橙味香料",
+      "酸味剂"
+    ],
+    "allergens": [],
+    "contains_pork": false,
+    "contains_alcohol": false,
+    "halal": "yes",
+    "vegan": "yes",
+    "spicy": 0,
+    "options": []
+  },
+  {
+    "id": 55,
+    "store_id": 2,
+    "menu_category": "음료",
+    "menu_category_name": {
+      "ko": "음료",
+      "zh": "饮料",
+      "en": "Drinks"
+    },
+    "name_ko": "미린다 파인애플",
+    "pronunciation": "mirinda-painaepeul",
+    "translations": {
+      "ko": {
+        "name": "미린다 파인애플"
+      },
+      "zh": {
+        "name": "美年达菠萝味",
+        "description": ""
+      },
+      "en": {
+        "name": "Mirinda Pineapple",
+        "description": ""
+      }
+    },
+    "price": 2000,
+    "image_url": "/stores/2/menu/055.jpg",
+    "ingredients": [
+      "碳酸水",
+      "糖",
+      "菠萝味香料",
+      "酸味剂"
+    ],
+    "allergens": [],
+    "contains_pork": false,
+    "contains_alcohol": false,
+    "halal": "yes",
+    "vegan": "yes",
+    "spicy": 0,
+    "options": []
+  },
+  {
+    "id": 56,
+    "store_id": 2,
+    "menu_category": "음료",
+    "menu_category_name": {
+      "ko": "음료",
+      "zh": "饮料",
+      "en": "Drinks"
+    },
+    "name_ko": "제로 사이다 캔(355ml)",
+    "pronunciation": "jero-saida-kaen-355ml",
+    "translations": {
+      "ko": {
+        "name": "제로 사이다 캔(355ml)"
+      },
+      "zh": {
+        "name": "无糖汽水罐（355毫升）",
+        "description": ""
+      },
+      "en": {
+        "name": "Zero Sugar Soda Can (355 ml)",
+        "description": ""
+      }
+    },
+    "price": 2000,
+    "image_url": "/stores/2/menu/056.jpg",
+    "ingredients": [
+      "碳酸水",
+      "甜味剂",
+      "香料",
+      "酸味剂"
+    ],
+    "allergens": [],
+    "contains_pork": false,
+    "contains_alcohol": false,
+    "halal": "yes",
+    "vegan": "yes",
+    "spicy": 0,
+    "options": []
+  },
+  {
+    "id": 57,
+    "store_id": 2,
+    "menu_category": "음료",
+    "menu_category_name": {
+      "ko": "음료",
+      "zh": "饮料",
+      "en": "Drinks"
+    },
+    "name_ko": "칠성사이다",
+    "pronunciation": "chilseong-saida",
+    "translations": {
+      "ko": {
+        "name": "칠성사이다"
+      },
+      "zh": {
+        "name": "七星汽水",
+        "description": ""
+      },
+      "en": {
+        "name": "Chilsung Cider",
+        "description": ""
+      }
+    },
+    "price": 2000,
+    "image_url": "/stores/2/menu/057.jpg",
+    "ingredients": [
+      "碳酸水",
+      "糖",
+      "香料",
+      "酸味剂"
+    ],
+    "allergens": [],
+    "contains_pork": false,
+    "contains_alcohol": false,
+    "halal": "yes",
+    "vegan": "yes",
+    "spicy": 0,
+    "options": []
+  },
+  {
+    "id": 58,
+    "store_id": 2,
+    "menu_category": "음료",
+    "menu_category_name": {
+      "ko": "음료",
+      "zh": "饮料",
+      "en": "Drinks"
+    },
+    "name_ko": "펩시 콜라 캔",
+    "pronunciation": "pepsi-kolla-kaen",
+    "translations": {
+      "ko": {
+        "name": "펩시 콜라 캔"
+      },
+      "zh": {
+        "name": "百事可乐罐装",
+        "description": ""
+      },
+      "en": {
+        "name": "Pepsi Cola Can",
+        "description": ""
+      }
+    },
+    "price": 2000,
+    "image_url": "/stores/2/menu/058.jpg",
+    "ingredients": [
+      "碳酸水",
+      "糖",
+      "焦糖色素",
+      "香料"
     ],
     "allergens": [],
     "contains_pork": false,
