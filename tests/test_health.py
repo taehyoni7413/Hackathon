@@ -49,6 +49,15 @@ def test_translate_limits():
     assert client.post("/api/translate", json={"text": "a" * 201}).status_code == 400
 
 
+def test_key_with_bom_is_cleaned(monkeypatch):
+    from backend import llm
+
+    monkeypatch.setattr(llm, "_client", None)
+    monkeypatch.setenv("OPENAI_API_KEY", "﻿sk-test-key\n")
+    assert llm._get_client().api_key == "sk-test-key"
+    monkeypatch.setattr(llm, "_client", None)
+
+
 def test_predict():
     r = client.post("/api/predict", json={"features": [1, 2, 3]})
     assert r.status_code == 200

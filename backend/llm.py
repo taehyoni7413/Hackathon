@@ -21,8 +21,10 @@ class LLMError(Exception):
 def _get_client() -> openai.OpenAI:
     global _client
     if _client is None:
+        # 환경변수 복사 과정에서 섞일 수 있는 BOM·공백·줄바꿈 제거
+        key = (os.getenv("OPENAI_API_KEY") or "").strip().lstrip("﻿").strip()
         try:
-            _client = openai.OpenAI()  # OPENAI_API_KEY 환경변수 사용
+            _client = openai.OpenAI(api_key=key or None)
         except openai.OpenAIError as e:
             raise LLMError("OPENAI_API_KEY 가 설정되지 않았습니다") from e
     return _client
@@ -37,6 +39,8 @@ def _call(fn, *args, **kwargs):
         raise LLMError(f"API 오류 ({e.status_code}): {e.message}") from e
     except openai.APIConnectionError as e:
         raise LLMError("API 연결 실패") from e
+    except Exception as e:  # 예상 못 한 오류도 500 대신 502 + 이유로
+        raise LLMError(f"AI 호출 실패: {type(e).__name__}") from e
 
 
 def ask(prompt: str, system: str | None = None) -> str:
