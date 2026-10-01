@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Campus Menu Translator</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <main class="app-shell">
+    <section class="hero">
+      <p class="eyebrow">CAMPUS FOOD GUIDE <span id="mode-badge">확인 중</span></p>
+      <h1>메뉴판을<br><em>여행 가이드처럼</em> 읽어보세요.</h1>
+      <p class="hero-copy">학교 앞 식당 메뉴를 영어와 중국어로 번역하고, 재료와 알레르겐 정보를 한눈에 확인합니다.</p>
+    </section>
+    <section class="workspace" aria-label="메뉴 번역 도구">
+      <aside class="menu-panel"><div class="panel-label">NEAR CAMPUS</div><h2>오늘의 메뉴</h2><p class="muted">메뉴를 선택하면 번역 결과가 업데이트됩니다.</p><div class="custom-menu"><input id="custom-menu-input" type="text" placeholder="다른 메뉴 직접 입력"><button id="custom-menu-button" type="button">번역</button></div><div id="restaurant-list" class="restaurant-list" aria-live="polite"><div class="loading">메뉴를 불러오는 중…</div></div></aside>
+      <article class="result-panel" aria-live="polite"><div class="result-topline"><span class="pill" id="result-label">TRANSLATION RESULT</span><div class="language-switcher" role="group" aria-label="표시 언어 선택"><button class="language-button" data-language="ko" type="button">한국어</button><button class="language-button active" data-language="en" type="button">English</button><button class="language-button" data-language="zh" type="button">中文</button></div><span id="selected-korean"></span></div><div id="result-content" class="result-content"><div class="empty-state"><span class="empty-icon">✦</span><h2>메뉴를 골라보세요</h2><p>번역 결과와 음식 정보를 이곳에서 확인할 수 있습니다.</p></div></div></article>
+    </section>
+    <section class="request-panel" aria-label="요청사항 번역"><div class="request-heading"><div><p class="panel-label" id="request-kicker">REQUEST BUILDER</p><h2 id="request-title">요청사항을 입력해보세요</h2><p class="muted" id="request-help">손님이 입력한 내용을 가게 사장님 언어로 번역합니다.</p></div><span class="ai-mark">AI TRANSLATION</span></div><div class="request-controls"><label><span id="source-label">손님 언어</span><select id="source-language"><option value="zh">中文</option><option value="en">English</option><option value="ko">한국어</option></select></label><span class="arrow">→</span><label><span id="target-label">가게 언어</span><select id="target-language"><option value="ko">한국어</option><option value="en">English</option><option value="zh">中文</option></select></label></div><div class="request-input-row"><textarea id="request-text" rows="2" placeholder="예: 少辣一点"></textarea></div><div class="request-actions"><button id="example-button" class="text-button" type="button">예시 입력</button><button id="request-translate-button" class="insight-button" type="button">요청사항 번역하기</button></div><div id="request-result" class="request-result" hidden></div></section>
+    <footer>OpenAI translation demo · 레시피와 알레르겐은 식당별로 달라질 수 있습니다.</footer>
+  </main>
+  <script src="{{ url_for('static', filename='app.js') }}"></script>
+</body>
+</html>

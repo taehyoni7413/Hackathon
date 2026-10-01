@@ -93,7 +93,6 @@ cd web && npm run lint && npm run build
 | API | 카카오맵 길찾기 링크 (`map.kakao.com/link/to`) | 외부 길 안내 버튼 | https://apis.map.kakao.com/web/guide/#routeurl |
 | API·데이터 | OSRM 공개 도보 경로 서버 (routing.openstreetmap.de, © OpenStreetMap 기여자) | 도보 경로 2순위 | https://routing.openstreetmap.de |
 | API | TMAP 보행자 경로 API (백엔드 `/route`, 예정) | 도보 경로 1순위 | https://openapi.sk.com |
-| API | Web Speech API (브라우저 내장 음성 인식 · 크롬은 Google, 사파리는 Apple 엔진) | 요청사항 음성 입력(STT). 음성은 각 브라우저 회사 서버에서 글자로 변환 | https://developer.mozilla.org/docs/Web/API/Web_Speech_API |
 |  |  |  |  |
 
 **사전 준비 내역 (규정상 허용되는 기본 환경 설정):** 대회 전에는 프로젝트 기본 구조(FastAPI + Next.js 템플릿), 세팅·실행 스크립트, 협업 문서만 준비했으며, 주제 관련 기능 코드는 모두 대회 시간(10/1 19:30 ~ 10/2 11:30) 중 작성.
@@ -111,3 +110,28 @@ cd web && npm run lint && npm run build
 | [발표 구성](docs/pitch.md) | 6분 발표 · 필수 구성 5요소 |
 | [시연/배포](docs/deploy.md) | 시연 방식 결정 |
 | [협업 규칙](.github/CONTRIBUTING.md) | 브랜치·커밋·PR |
+
+## 🍽️ 메뉴 번역 데모
+
+`menu_translator.py`와 `app.py`에는 메뉴 번역·AI 메뉴 코치·요청사항 번역을 확인할 수 있는 독립 실행형 데모가 포함되어 있습니다.
+
+```bash
+python -m pip install -r requirements.txt
+MOCK_LLM=1 python app.py
+```
+
+브라우저에서 `http://127.0.0.1:5000`을 열면 한국어·영어·중국어 메뉴 표시, 재료·알레르겐 정보, AI 메뉴 코치, 손님 언어에서 가게 언어로 요청사항 번역을 확인할 수 있습니다. `少辣一点` 같은 예시 요청은 `덜 맵게 해주세요.`로 변환됩니다.
+
+실제 OpenAI 응답을 사용하려면 키를 코드나 저장소에 넣지 않고 환경변수로 설정합니다.
+
+```bash
+export OPENAI_API_KEY="your-api-key"
+unset MOCK_LLM
+python app.py
+```
+
+데모 테스트:
+
+```bash
+python -m unittest -v test_menu_translator
+```
