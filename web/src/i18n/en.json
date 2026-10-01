@@ -59,7 +59,6 @@
   "route.minutes": "{m} min",
   "route.straight": "Based on straight-line distance. The real path may differ.",
   "route.loading": "Finding a route",
-  "route.kakao": "Navigate in Kakao Map",
   "route.arrived": "I'm here",
   "arrive.checking": "Checking your location",
   "arrive.question": "Are you at {name}?",
