@@ -1,0 +1,41 @@
+[
+  {
+    "id": 1,
+    "name": "Appro",
+    "address": "충북 충주시 충열1길 28 1층",
+    "lat": 36.9489305165078,
+    "lng": 127.903216045866,
+    "description": {
+      "ko": "맛있는 집",
+      "en": "A local favorite with tasty food"
+    },
+    "open_hours": {},
+    "image_url": ""
+  },
+  {
+    "id": 2,
+    "name": "밀플랜비 충주건국대점",
+    "address": "충북 충주시 충열4길 5-7",
+    "lat": 36.9499189724636,
+    "lng": 127.904116649718,
+    "description": {
+      "ko": "샌드위치집",
+      "en": "Sandwich shop"
+    },
+    "open_hours": {},
+    "image_url": ""
+  },
+  {
+    "id": 3,
+    "name": "면식당 충주건국대점",
+    "address": "충북 충주시 단월동 483-3",
+    "lat": 36.9489978151753,
+    "lng": 127.904093637669,
+    "description": {
+      "ko": "라멘 맛집",
+      "en": "Popular ramen restaurant"
+    },
+    "open_hours": {},
+    "image_url": ""
+  }
+]
