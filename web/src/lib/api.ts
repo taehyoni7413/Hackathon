@@ -192,20 +192,25 @@ export async function getMenuInsight(
 }
 
 /**
- * 주문번호 발급 (백엔드 /api/orders, 들어온 순서대로). 백엔드에 못 닿으면 이 기기에서만 세는 번호.
+ * 음식 번호 발급 (백엔드 /api/orders): 장바구니 음식마다 들어온 순서대로 이어지는 번호.
+ * 백엔드에 못 닿으면 이 기기에서만 세는 번호.
  */
-export async function getOrderNumber(): Promise<number> {
+export async function getDishNumbers(count: number): Promise<number[]> {
   try {
-    const r = await request<{ number: number }>("/orders", { method: "POST" });
-    if (Number.isInteger(r.number)) return r.number;
+    const r = await request<{ numbers: number[] }>("/orders", {
+      method: "POST",
+      body: JSON.stringify({ count }),
+    });
+    if (Array.isArray(r.numbers) && r.numbers.length === count) return r.numbers;
   } catch {
     // 아래 기기 번호로
   }
+  let start = 1;
   try {
-    const n = Number(localStorage.getItem("buk.orderSeq") ?? "0") + 1;
-    localStorage.setItem("buk.orderSeq", String(n));
-    return n;
+    start = Number(localStorage.getItem("buk.dishSeq") ?? "0") + 1;
+    localStorage.setItem("buk.dishSeq", String(start + count - 1));
   } catch {
-    return Math.floor(Math.random() * 90) + 10;
+    // 저장 못 하면 1부터
   }
+  return Array.from({ length: count }, (_, i) => start + i);
 }

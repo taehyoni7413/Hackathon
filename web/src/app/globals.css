@@ -48,6 +48,12 @@ body {
   -webkit-touch-callout: none;
 }
 
+:lang(ko) {
+  /* 한국어: 단어 중간에서 줄이 바뀌지 않게 ("도착하셨/나요" 방지). 아주 긴 단어만 끝에서 끊음 */
+  word-break: keep-all;
+  overflow-wrap: anywhere;
+}
+
 button,
 a {
   -webkit-user-select: none;

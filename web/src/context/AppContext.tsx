@@ -21,10 +21,9 @@ import type { CartItem, CustomRequest } from "@/types/models";
 
 export type Order = {
   store_id: string;
-  items: CartItem[];
+  /** no: 음식 번호 (사장님 주문서·대기 화면에 같은 번호) */
+  items: (CartItem & { no?: number })[];
   created_at: string;
-  /** 주문번호 (사장님 화면에서 발급, 대기 화면에 크게) */
-  number?: number;
 };
 
 type AppState = {
@@ -46,9 +45,11 @@ type AppState = {
   removeFromCart: (key: string) => void;
   clearCart: () => void;
 
-  /** 지금 장바구니에 붙은 주문번호 (사장님께 보여주기 화면에서 발급) */
-  orderNo: number | null;
-  setOrderNo: (n: number | null) => void;
+  /** 장바구니 음식별 번호 (줄 key → 번호, 사장님께 보여주기 화면에서 발급) */
+  dishNos: Record<string, number>;
+  setDishNos: (
+    v: Record<string, number> | ((prev: Record<string, number>) => Record<string, number>),
+  ) => void;
 
   order: Order | null;
   placeOrder: () => void;
@@ -81,9 +82,14 @@ export function AppProvider({ children }: { children: ReactNode }) {
     null,
   );
 
-  const [orderNo, setOrderNo] = usePersistentState<number | null>("app.orderNo", null);
+  const [dishNos, setDishNos] = usePersistentState<Record<string, number>>("app.dishNos", {});
 
   const lang: Lang = isLang(storedLang) ? storedLang : DEFAULT_LANG;
+
+  // 화면 언어를 <html lang>에 반영 → 한국어는 단어 단위 줄바꿈(globals.css :lang(ko))
+  useEffect(() => {
+    document.documentElement.lang = lang === "zh" ? "zh-CN" : lang;
+  }, [lang]);
   const t = useCallback(
     (key: MessageKey, vars?: Record<string, string | number>) =>
       translate(lang, key, vars),
@@ -127,19 +133,18 @@ export function AppProvider({ children }: { children: ReactNode }) {
         ),
       removeFromCart: (key) => setCart((prev) => prev.filter((c) => c.key !== key)),
       clearCart: () => setCart([]),
-      orderNo,
-      setOrderNo,
+      dishNos,
+      setDishNos,
       order,
       placeOrder: () => {
         if (!cart.length) return;
         setOrder({
           store_id: cart[0].store_id,
-          items: cart,
+          items: cart.map((c) => ({ ...c, no: dishNos[c.key] })),
           created_at: new Date().toISOString(),
-          number: orderNo ?? undefined,
         });
         setCart([]);
-        setOrderNo(null);
+        setDishNos({});
       },
       finishOrder: () => setOrder(null),
       resetAll: () => {
@@ -147,12 +152,12 @@ export function AppProvider({ children }: { children: ReactNode }) {
         setDemo(false);
         setCart([]);
         setOrder(null);
-        setOrderNo(null);
+        setDishNos({});
       },
     }),
     [
       langReady, demoReady, cartReady, orderReady, lang, storedLang, setStoredLang,
-      t, demo, setDemo, cart, setCart, addToCart, order, setOrder, orderNo, setOrderNo,
+      t, demo, setDemo, cart, setCart, addToCart, order, setOrder, dishNos, setDishNos,
     ],
   );
 
