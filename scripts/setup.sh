@@ -32,7 +32,7 @@ if [ -d .venv ] && ! .venv/bin/python -c 'import sys; sys.exit(sys.version_info 
 fi
 [ -d .venv ] || "$PY" -m venv .venv
 .venv/bin/python -m pip install -q --upgrade pip
-.venv/bin/python -m pip install -q -r requirements.txt
+.venv/bin/python -m pip install -q -r requirements.txt -r ml/requirements.txt
 
 step "환경변수 파일 생성 (이미 있으면 건너뜀)"
 [ -f .env ] || { cp .env.example .env; echo "  .env 생성 (MOCK_LLM=1)"; }

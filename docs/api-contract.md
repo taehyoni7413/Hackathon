@@ -3,7 +3,9 @@
 > 백엔드 ↔ 프론트의 **유일한 약속**. 코드보다 이 문서를 먼저 고친다.
 > - 백엔드: `backend/main.py` 의 Pydantic 모델과 일치
 > - 프론트: `web/src/lib/api.ts` 의 타입과 일치
-> - 프론트는 `/api/<path>` 로 호출 (Next.js 가 FastAPI 로 전달)
+> - **모든 경로는 `/api` 접두사 포함** (예: `GET /api/health`). 아래 표의 경로 앞에 `/api` 를 붙여 읽는다
+> - 배포(Vercel): `vercel.json` 이 `/api/*` 를 경로 그대로 `api` 서비스(FastAPI)로 보냄 / 로컬: Next.js 가 같은 경로로 FastAPI 에 전달
+> - API 문서: 로컬 http://localhost:8000/api/docs
 
 ## 상태
 | Method | Path | 설명 | 상태 | 담당 |

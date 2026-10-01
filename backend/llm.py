@@ -21,7 +21,10 @@ class LLMError(Exception):
 def _get_client() -> openai.OpenAI:
     global _client
     if _client is None:
-        _client = openai.OpenAI()  # OPENAI_API_KEY 환경변수 사용
+        try:
+            _client = openai.OpenAI()  # OPENAI_API_KEY 환경변수 사용
+        except openai.OpenAIError as e:
+            raise LLMError("OPENAI_API_KEY 가 설정되지 않았습니다") from e
     return _client
 
 

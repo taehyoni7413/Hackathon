@@ -13,7 +13,7 @@ for port in 8000 3000; do
   fi
 done
 
-echo "==> FastAPI  http://localhost:8000/docs"
+echo "==> FastAPI  http://localhost:8000/api/docs"
 .venv/bin/python -m uvicorn backend.main:app --reload --port 8000 &
 BACKEND_PID=$!
 trap 'kill $BACKEND_PID 2>/dev/null' EXIT

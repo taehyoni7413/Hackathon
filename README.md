@@ -44,7 +44,7 @@ powershell -ExecutionPolicy Bypass -File scripts\dev.ps1     # Windows
 bash scripts/dev.sh                                           # macOS / Linux
 ```
 - 프론트: http://localhost:3000
-- API 문서: http://localhost:8000/docs
+- API 문서: http://localhost:8000/api/docs
 - 기본 `MOCK_LLM=1` → API 키 없이 가짜 응답. 실제 호출은 `MOCK_LLM=0` + 공용 키 ([onboarding](docs/onboarding.md#-api-키))
 
 **테스트**

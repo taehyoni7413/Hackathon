@@ -19,7 +19,7 @@ node --version
 Step "Python 가상환경 + 패키지 설치"
 if (-not (Test-Path .venv)) { python -m venv .venv }
 & .\.venv\Scripts\python -m pip install -q --upgrade pip
-& .\.venv\Scripts\python -m pip install -q -r requirements.txt
+& .\.venv\Scripts\python -m pip install -q -r requirements.txt -r ml\requirements.txt
 
 Step "환경변수 파일 생성 (이미 있으면 건너뜀)"
 if (-not (Test-Path .env)) { Copy-Item .env.example .env; Write-Host "  .env 생성 (MOCK_LLM=1)" }
