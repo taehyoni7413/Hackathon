@@ -1,16 +1,31 @@
 # ✅ 해커톤 체크리스트
 
 ## 📅 사전 준비 (D-day 전)
-- [ ] 팀원 전원 레포 Collaborator 초대 & clone
-- [ ] 각자 로컬에서 `pip install -r requirements.txt` → `pytest` 통과 확인
-- [ ] `uvicorn backend.main:app` / `streamlit run frontend/app.py` 실행 확인
-- [ ] `cd web && npm install && npm run dev` 실행 확인 (Next.js)
-- [ ] 주제 발표 후 프론트 택1: Streamlit(빠른 데모) vs Next.js(서비스형 UI)
-- [ ] Anthropic API 키 발급 및 `.env` 세팅, `/chat` 호출 테스트
-- [ ] GitHub `main` 브랜치 보호 규칙 설정 (PR 필수)
-- [ ] 자주 쓸 데이터셋/공공 API 후보 조사 (공공데이터포털, Kaggle, AI Hub 등)
-- [ ] 발표 템플릿 미리 준비 (`docs/pitch.md`)
+
+### 👥 팀원 전원
+- [x] 레포 Collaborator 초대
+- [ ] clone 후 `.env.example` → `.env` 복사 (`MOCK_LLM=1` 그대로, 키 불필요)
+- [ ] `pip install -r requirements.txt` → `pytest` 통과
+- [ ] `uvicorn backend.main:app --reload` 실행 → http://localhost:8000/docs 확인
 - [ ] 노트북 충전기, 멀티탭, 핫스팟 등 장비 체크
+
+### 🧠 AI / 백엔드 담당
+- [ ] Anthropic API 키 발급 + 결제/한도 확인
+- [ ] `.env`에 `MOCK_LLM=0`, `ANTHROPIC_API_KEY` 설정 → `/chat` 실제 호출 테스트
+- [ ] 키는 본인 `.env`에만 보관 (레포·단톡 공유 금지)
+
+### 🎨 프론트 담당
+- [ ] Streamlit: `streamlit run frontend/app.py` 실행 확인
+- [ ] Next.js: `cd web && npm install && npm run dev` 실행 확인
+
+### 📋 PM
+- [ ] GitHub `main` 브랜치 보호 규칙 설정 (PR 필수)
+- [ ] 데이터셋/공공 API 후보 조사 (공공데이터포털, Kaggle, AI Hub 등)
+- [ ] 발표 템플릿 준비 (`docs/pitch.md`)
+
+### 주제 발표 후
+- [ ] 프론트 택1: Streamlit(빠른 데모) vs Next.js(서비스형 UI)
+- [ ] `docs/roles.md`의 API 계약 표 확정 → 각자 개발 시작
 
 ## ⏱️ 당일 타임라인 (24시간 기준, 기간에 맞게 비율 조정)
 | 구간 | 비율 | 할 일 |

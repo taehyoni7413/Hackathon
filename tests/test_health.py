@@ -11,6 +11,15 @@ def test_health():
     assert r.json() == {"status": "ok"}
 
 
+def test_chat_mock(monkeypatch):
+    from backend import llm
+
+    monkeypatch.setattr(llm, "MOCK", True)
+    r = client.post("/chat", json={"message": "hi"})
+    assert r.status_code == 200
+    assert r.json()["reply"].startswith("[MOCK]")
+
+
 def test_predict():
     r = client.post("/predict", json={"features": [1, 2, 3]})
     assert r.status_code == 200

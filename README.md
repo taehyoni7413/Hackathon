@@ -42,7 +42,7 @@ python -m venv .venv
 source .venv/bin/activate
 
 pip install -r requirements.txt
-cp .env.example .env   # API 키 입력
+cp .env.example .env   # 기본 MOCK_LLM=1 (키 없이 가짜 응답), 실제 호출은 AI 담당만
 
 # 백엔드
 uvicorn backend.main:app --reload        # http://localhost:8000/docs
