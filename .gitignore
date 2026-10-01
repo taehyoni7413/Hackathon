@@ -1,0 +1,35 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.ipynb_checkpoints/
+
+# Virtual env
+.venv/
+venv/
+env/
+
+# Secrets
+.env
+*.pem
+
+# Data & models (원본 데이터/대용량 모델은 커밋 금지)
+data/*
+!data/.gitkeep
+!data/README.md
+models/
+*.pkl
+*.joblib
+*.pt
+*.h5
+*.onnx
+
+# IDE / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Streamlit
+.streamlit/secrets.toml
