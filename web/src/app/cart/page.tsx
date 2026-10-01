@@ -63,10 +63,10 @@ export default function CartPage() {
                 src={menu.image_url}
                 fallback={defaultImage(store.category)}
                 alt={name}
-                className="h-16 w-16 shrink-0 rounded-xl object-cover"
+                className="h-20 w-20 shrink-0 rounded-2xl bg-rice object-cover"
               />
               <div className="min-w-0 flex-1">
-                <p className="font-semibold">{name}</p>
+                <p className="text-[17px] font-bold text-ink">{name}</p>
                 <p className="text-xs text-zinc-500">{menu.name_ko}</p>
                 {selectedOptions(menu, item.option_ids).map((o) => (
                   <p key={o.id} className="text-sm text-zinc-600">
@@ -96,7 +96,7 @@ export default function CartPage() {
                       +
                     </button>
                   </div>
-                  <span className="font-semibold">{formatPrice(lineTotal(menu, item), lang)}</span>
+                  <span className="font-display text-lg text-ink">{formatPrice(lineTotal(menu, item), lang)}</span>
                 </div>
                 <button
                   className="mt-1 min-h-11 text-sm text-zinc-500 underline"
@@ -111,11 +111,11 @@ export default function CartPage() {
       </ul>
 
       <footer className="sticky bottom-0 border-t border-zinc-100 bg-white px-4 pt-4 pb-safe">
-        <div className="flex items-center justify-between text-lg font-bold">
-          <span>{t("cart.total")}</span>
-          <span>{formatPrice(total, lang)}</span>
+        <div className="flex items-center justify-between">
+          <span className="text-lg font-bold text-ink">{t("cart.total")}</span>
+          <span className="font-display text-3xl text-ink">{formatPrice(total, lang)}</span>
         </div>
-        <p className="mt-1 rounded-xl bg-amber-50 px-3 py-2 text-sm text-amber-900">
+        <p className="mt-2 rounded-xl bg-rice px-3 py-2 text-sm text-ink">
           💳 {t("cart.payNotice")}
         </p>
         <Link href="/show-order" className="btn-primary mt-3 w-full">

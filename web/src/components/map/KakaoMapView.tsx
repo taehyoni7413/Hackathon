@@ -96,10 +96,13 @@ export default function KakaoMapView({
     overlays.current = markers.map((m) => {
       const node = document.createElement("button");
       const active = m.id === selectedId;
-      node.className = `flex items-center gap-1 whitespace-nowrap rounded-full border-2 px-2.5 py-1 text-sm font-semibold shadow-md ${
-        active ? "border-white bg-brand text-white scale-110" : "border-brand bg-white text-zinc-800"
+      // 가까운 가게끼리 겹치지 않게 작게. 선택한 가게만 크게 (확대하면 자연히 떨어진다)
+      node.className = `flex items-center gap-0.5 whitespace-nowrap rounded-full font-semibold shadow-md ${
+        active
+          ? "border-2 border-white bg-brand px-2.5 py-1 text-sm text-white"
+          : "border-[1.5px] border-brand bg-white px-2 py-0.5 text-xs text-ink"
       }`;
-      node.style.minHeight = "36px";
+      node.style.minHeight = active ? "34px" : "26px";
       node.textContent = `${CATEGORY_EMOJI[m.category] ?? "🍽️"} ${m.label}`;
       node.onclick = () => onMarkerClick?.(m.id);
       const o = new k.maps.CustomOverlay({

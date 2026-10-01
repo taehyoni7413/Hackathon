@@ -104,10 +104,10 @@ a {
     @apply relative mx-auto flex min-h-dvh w-full max-w-[480px] flex-col bg-background shadow-sm;
   }
   .btn-primary {
-    @apply inline-flex min-h-12 items-center justify-center rounded-2xl bg-brand px-5 text-base font-semibold text-white transition active:bg-brand-dark disabled:opacity-40;
+    @apply inline-flex min-h-14 items-center justify-center rounded-2xl bg-brand px-5 text-[17px] font-bold text-white transition active:bg-brand-dark disabled:opacity-40;
   }
   .btn-secondary {
-    @apply inline-flex min-h-12 items-center justify-center rounded-2xl border border-zinc-300 bg-white px-5 text-base font-semibold text-zinc-800 transition active:bg-zinc-100;
+    @apply inline-flex min-h-14 items-center justify-center rounded-2xl border-[1.5px] border-ink/20 bg-white px-5 text-[17px] font-bold text-ink transition active:bg-rice;
   }
   .icon-btn {
     @apply inline-flex h-11 w-11 items-center justify-center rounded-full bg-white text-xl shadow-md active:bg-zinc-100;

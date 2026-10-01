@@ -64,11 +64,11 @@ export function MenuDetailSheet({
         </div>
 
         <div className="flex-1 overflow-y-auto p-5">
-          <h2 className="text-2xl font-bold">{name}</h2>
+          <h2 className="font-display text-3xl leading-tight text-ink">{name}</h2>
           <p className="text-zinc-500">
             {menu.name_ko} <span className="text-zinc-400">· {menu.pronunciation}</span>
           </p>
-          <p className="mt-1 text-lg font-semibold">{formatPrice(menu.price, lang)}</p>
+          <p className="mt-1 font-display text-2xl text-ink">{formatPrice(menu.price, lang)}</p>
           {tr?.description && <p className="mt-2 text-zinc-700">{tr.description}</p>}
 
           <div className="mt-4 space-y-2">
@@ -84,7 +84,7 @@ export function MenuDetailSheet({
             </p>
           )}
 
-          <h3 className="mt-6 font-semibold">{t("menu.options")}</h3>
+          <h3 className="mt-6 font-display text-xl text-ink">{t("menu.options")}</h3>
           {menu.options.length > 0 && (
             <>
               <ul className="mt-2 space-y-2">

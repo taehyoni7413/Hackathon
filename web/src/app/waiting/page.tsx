@@ -29,11 +29,11 @@ export default function WaitingPage() {
   }
 
   return (
-    <main className="flex flex-1 flex-col">
+    <main className="flex flex-1 flex-col bg-rice">
       <header className="px-5 pb-4 pt-10 text-center">
         <p className="text-5xl" aria-hidden>⏳</p>
-        <h1 className="mt-3 text-3xl font-extrabold">{t("wait.title")}</h1>
-        <p className="mt-2 text-zinc-500">{t("wait.hint")}</p>
+        <h1 className="mt-3 font-display text-3xl text-ink">{t("wait.title")}</h1>
+        <p className="mt-2 text-zinc-600">{t("wait.hint")}</p>
       </header>
 
       <ul className="flex-1 space-y-4 px-5">
@@ -41,7 +41,7 @@ export default function WaitingPage() {
           const menu = store.menus.find((m) => m.id === item.menu_id);
           if (!menu) return null;
           return (
-            <li key={item.key} className="flex items-center gap-4 rounded-2xl bg-zinc-50 p-4">
+            <li key={item.key} className="flex items-center gap-4 rounded-3xl bg-white p-4 shadow-sm">
               <SmartImage
                 src={menu.image_url}
                 fallback={defaultImage(store.category)}
@@ -49,7 +49,7 @@ export default function WaitingPage() {
                 className="h-24 w-24 shrink-0 rounded-xl object-cover"
               />
               <div className="min-w-0">
-                <p className="text-4xl font-extrabold leading-tight">{menu.name_ko}</p>
+                <p className="font-display text-4xl leading-tight text-ink">{menu.name_ko}</p>
                 <p className="text-xl font-semibold text-brand-dark">{menu.pronunciation}</p>
                 <p className="text-sm text-zinc-500">
                   {menu.translations[lang]?.name ?? menu.name_ko} × {item.quantity}
@@ -60,7 +60,7 @@ export default function WaitingPage() {
         })}
       </ul>
 
-      <footer className="sticky bottom-0 bg-white px-4 pt-4 pb-safe">
+      <footer className="sticky bottom-0 bg-rice px-4 pt-4 pb-safe">
         <button
           className="btn-primary w-full"
           onClick={() => {
