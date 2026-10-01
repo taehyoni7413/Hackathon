@@ -3,9 +3,10 @@
 :root {
   --background: #ffffff;
   --foreground: #18181b;
-  --brand: #ff6a2b;
-  --brand-dark: #e5531a;
-  --brand-soft: #fff1ea;
+  /* BUK 로고 색 (docs/design/BUK-logo.jpg): 주황 #ec8a33, 초록 #64885c, 크림 #faf4e8, 차콜 #30353b */
+  --brand: #ec8a33;
+  --brand-dark: #c96f1f;
+  --brand-soft: #fdf0e3;
 }
 
 @theme inline {
@@ -66,7 +67,7 @@ a {
   }
 }
 .siri-orb {
-  background: conic-gradient(from 0deg, #ff6a2b, #ff2d87, #8b5cf6, #22d3ee, #34d399, #ff6a2b);
+  background: conic-gradient(from 0deg, #ec8a33, #ff2d87, #8b5cf6, #22d3ee, #34d399, #ec8a33);
   filter: blur(14px);
   animation: siri-spin 3.2s linear infinite;
 }

@@ -34,7 +34,7 @@ export const viewport: Viewport = {
   userScalable: false,
   // 노치·홈 바 영역까지 쓰고 safe-area 여백으로 피한다
   viewportFit: "cover",
-  themeColor: "#ff6a2b",
+  themeColor: "#ec8a33",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {

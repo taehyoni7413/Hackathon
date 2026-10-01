@@ -32,9 +32,9 @@ export default function SplashPage() {
         </div>
       ) : (
         <img
-          src="/logo.png"
+          src="/logo-on-brand.png"
           alt={t("app.name")}
-          className="h-32 w-32 object-contain"
+          className="h-36 w-44 object-contain drop-shadow-md"
           onError={() => setLogoFailed(true)}
         />
       )}
