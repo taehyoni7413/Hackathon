@@ -59,12 +59,15 @@ export default function MenuPage() {
             <h1 className="truncate text-lg font-bold">{name}</h1>
             {name !== store.name_ko && <p className="truncate text-xs text-zinc-500">{store.name_ko}</p>}
           </div>
-          <button
-            className="min-h-11 shrink-0 rounded-full bg-zinc-900 px-3 text-sm font-semibold text-white"
-            onClick={() => setBoardOpen(true)}
-          >
-            📷 {t("menu.viewBoard")}
-          </button>
+          {/* 원본 메뉴판 사진이 없는 가게(예: Appro)는 버튼을 숨긴다 */}
+          {store.menu_board_images.length > 0 && (
+            <button
+              className="min-h-11 shrink-0 rounded-full bg-zinc-900 px-3 text-sm font-semibold text-white"
+              onClick={() => setBoardOpen(true)}
+            >
+              📷 {t("menu.viewBoard")}
+            </button>
+          )}
         </div>
         {/* 카테고리 탭 */}
         <nav className="flex gap-1 overflow-x-auto px-2 [scrollbar-width:none]">
