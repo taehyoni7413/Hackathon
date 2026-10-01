@@ -1,8 +1,15 @@
 "use client";
 
-import { createContext, useCallback, useContext, useMemo, type ReactNode } from "react";
+import {
+  createContext,
+  useCallback,
+  useContext,
+  useEffect,
+  useMemo,
+  type ReactNode,
+} from "react";
 
-import { usePersistentState } from "@/hooks/usePersistentState";
+import { clearLegacyStorage, usePersistentState } from "@/hooks/usePersistentState";
 import {
   DEFAULT_LANG,
   isLang,
@@ -19,7 +26,7 @@ export type Order = {
 };
 
 type AppState = {
-  /** localStorage 복원이 끝났는지 (끝나기 전엔 저장값이 아직 반영 안 됨) */
+  /** 저장값(sessionStorage) 복원이 끝났는지 (끝나기 전엔 저장값이 아직 반영 안 됨) */
   ready: boolean;
   lang: Lang;
   /** 사용자가 언어를 고른 적이 있는지 */
@@ -40,6 +47,9 @@ type AppState = {
   order: Order | null;
   placeOrder: () => void;
   finishOrder: () => void;
+
+  /** 언어·데모·장바구니·주문을 모두 지우고 처음 상태로 */
+  resetAll: () => void;
 };
 
 const Ctx = createContext<AppState | null>(null);
@@ -51,6 +61,9 @@ function itemKey(menuId: string, optionIds: string[], custom?: CustomRequest[]) 
 }
 
 export function AppProvider({ children }: { children: ReactNode }) {
+  // 예전 버전이 localStorage에 남긴 언어·장바구니가 계속 보이지 않도록 한 번 정리
+  useEffect(() => clearLegacyStorage(), []);
+
   const [storedLang, setStoredLang, langReady] = usePersistentState<string | null>(
     "app.lang",
     null,
@@ -117,6 +130,12 @@ export function AppProvider({ children }: { children: ReactNode }) {
         setCart([]);
       },
       finishOrder: () => setOrder(null),
+      resetAll: () => {
+        setStoredLang(null);
+        setDemo(false);
+        setCart([]);
+        setOrder(null);
+      },
     }),
     [
       langReady, demoReady, cartReady, orderReady, lang, storedLang, setStoredLang,

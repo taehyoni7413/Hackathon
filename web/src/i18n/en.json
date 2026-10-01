@@ -39,6 +39,8 @@
   "settings.installIos": "Tap the Share button (□↑) at the bottom of Safari, then choose [Add to Home Screen].",
   "settings.installed": "Running as an app",
   "settings.installHint": "Choose [Add to Home Screen] in your browser menu to use it like an app.",
+  "settings.reset": "Start over",
+  "settings.resetConfirm": "Clear language, cart and order and go back to the start?",
   "store.open": "Open",
   "store.closed": "Closed",
   "store.dayOff": "Closed today",

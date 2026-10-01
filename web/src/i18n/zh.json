@@ -39,6 +39,8 @@
   "settings.installIos": "点击 Safari 下方的分享按钮（□↑），然后选择[添加到主屏幕]。",
   "settings.installed": "正在以应用方式运行",
   "settings.installHint": "在浏览器菜单中选择[添加到主屏幕]，即可像应用一样使用。",
+  "settings.reset": "从头开始",
+  "settings.resetConfirm": "要清除语言、购物车和订单并返回开始页面吗？",
   "store.open": "营业中",
   "store.closed": "已打烊",
   "store.dayOff": "今日休息",
