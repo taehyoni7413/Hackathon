@@ -4,18 +4,18 @@ import zh from "./zh.json";
 
 /**
  * 지원 언어 목록. 언어 추가 = JSON 파일 1개 + 아래에 한 줄.
- * 첫 번째 항목이 언어 선택 화면에서 강조된다.
+ * 언어 선택 화면에 이 순서로 나온다. 처음 선택값은 DEFAULT_LANG.
  */
 export const LANGS = [
+  { code: "ko", label: "한국어", dict: ko },
   { code: "zh", label: "简体中文", dict: zh },
   { code: "en", label: "English", dict: en },
-  { code: "ko", label: "한국어", dict: ko },
 ] as const;
 
 export type Lang = (typeof LANGS)[number]["code"];
 export type MessageKey = keyof typeof ko;
 
-export const DEFAULT_LANG: Lang = "zh";
+export const DEFAULT_LANG: Lang = "ko";
 const FALLBACK: Lang[] = ["en", "ko"];
 
 const dicts = Object.fromEntries(LANGS.map((l) => [l.code, l.dict])) as Record<
