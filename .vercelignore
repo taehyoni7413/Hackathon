@@ -1,12 +1,12 @@
 # 배포에 필요 없는 로컬 파일 (api 서비스가 레포 루트를 쓰므로 번들 크기 줄이기)
-.venv/
+# 주의: 앞에 / 를 붙여야 루트의 폴더만 제외된다. "data/" 처럼 쓰면 web/src/data/ 까지 빠진다.
+/.venv/
 **/__pycache__/
-.pytest_cache/
-web/node_modules/
-web/.next/
-notebooks/
-data/
-models/
-.claude/
-.env
-web/.env.local
+/.pytest_cache/
+/web/node_modules/
+/web/.next/
+/notebooks/
+/data/
+/models/
+/.env
+/web/.env.local
