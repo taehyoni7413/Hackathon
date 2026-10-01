@@ -1,0 +1,12 @@
+# 배포에 필요 없는 로컬 파일 (api 서비스가 레포 루트를 쓰므로 번들 크기 줄이기)
+.venv/
+**/__pycache__/
+.pytest_cache/
+web/node_modules/
+web/.next/
+notebooks/
+data/
+models/
+.claude/
+.env
+web/.env.local

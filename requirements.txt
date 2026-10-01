@@ -1,9 +1,6 @@
+# 백엔드(배포 대상) 의존성. 데이터·모델 학습용은 ml/requirements.txt
 fastapi
 uvicorn[standard]
-pandas
-numpy
-scikit-learn
-joblib
 openai
 python-dotenv
 httpx

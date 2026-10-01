@@ -4,7 +4,7 @@ $ErrorActionPreference = "Stop"
 $root = Split-Path -Parent $PSScriptRoot
 Set-Location $root
 
-Write-Host "==> FastAPI  http://localhost:8000/docs (새 창)" -ForegroundColor Cyan
+Write-Host "==> FastAPI  http://localhost:8000/api/docs (새 창)" -ForegroundColor Cyan
 $backend = Start-Process -PassThru powershell -ArgumentList @(
     "-NoExit", "-Command",
     "Set-Location '$root'; .\.venv\Scripts\python -m uvicorn backend.main:app --reload --port 8000"

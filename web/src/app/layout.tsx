@@ -6,13 +6,13 @@ import { DemoBadge } from "@/components/DemoBadge";
 import { ServiceWorkerRegister } from "@/components/ServiceWorkerRegister";
 
 export const metadata: Metadata = {
-  title: "캠퍼스 밥친구",
+  title: "BUK",
   description: "학교 앞 식당, 내 언어로 주문해요",
-  applicationName: "밥친구",
+  applicationName: "BUK",
   // iOS 홈 화면에 추가했을 때 전체 화면 앱처럼 실행
   appleWebApp: {
     capable: true,
-    title: "밥친구",
+    title: "BUK",
     statusBarStyle: "default",
   },
   icons: {

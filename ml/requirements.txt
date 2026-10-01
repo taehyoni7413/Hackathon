@@ -1,0 +1,5 @@
+# 데이터 처리·모델 학습용 (로컬 전용, Vercel 배포에는 포함하지 않음)
+pandas
+numpy
+scikit-learn
+joblib
