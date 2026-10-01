@@ -1,5 +1,6 @@
 "use client";
 
+import { Compass, MapPin } from "@/components/Icon";
 import { useParams, useRouter } from "next/navigation";
 import { useCallback, useEffect, useMemo, useState } from "react";
 
@@ -64,7 +65,7 @@ export default function ArrivePage() {
   if (phase === "confirm") {
     return (
       <main className="flex flex-1 flex-col justify-center gap-6 px-6">
-        <p className="text-center text-5xl" aria-hidden>📍</p>
+        <p className="flex justify-center text-6xl text-brand" aria-hidden><MapPin /></p>
         <h1 className="text-center text-2xl font-bold">
           {t("arrive.question", { name: pickText(target.name, lang, target.name_ko) })}
         </h1>
@@ -97,7 +98,7 @@ export default function ArrivePage() {
 
       {showEmpty ? (
         <div className="flex flex-1 flex-col items-center justify-center gap-3 px-6 text-center">
-          <p className="text-4xl" aria-hidden>🧭</p>
+          <p className="text-5xl text-ink" aria-hidden><Compass /></p>
           <p className="text-zinc-600">
             {phase === "failed" ? t("arrive.locationFail") : t("arrive.noneNearby")}
           </p>

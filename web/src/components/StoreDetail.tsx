@@ -1,5 +1,6 @@
 "use client";
 
+import { MapPin } from "@/components/Icon";
 import Link from "next/link";
 
 import { OpenBadge } from "@/components/OpenBadge";
@@ -58,7 +59,7 @@ export function StoreDetail({
         <div className="mt-2">
           <VerificationBadges store={store} />
         </div>
-        {store.address && <p className="mt-2 text-sm text-zinc-500">📍 {store.address}</p>}
+        {store.address && <p className="mt-2 flex items-center gap-1 text-sm text-zinc-500"><MapPin className="shrink-0" /> {store.address}</p>}
         <p className="mt-3 leading-relaxed text-zinc-700">{pickText(store.description, lang)}</p>
 
         <h3 className="mt-5 font-display text-xl text-ink">{t("store.popular")}</h3>

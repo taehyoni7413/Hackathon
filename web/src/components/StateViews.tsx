@@ -1,5 +1,6 @@
 "use client";
 
+import { ForkKnife, Warning } from "@/components/Icon";
 import { useApp } from "@/context/AppContext";
 
 export function LoadingView({ label }: { label?: string }) {
@@ -16,8 +17,8 @@ export function EmptyView({ label }: { label?: string }) {
   const { t } = useApp();
   return (
     <div className="flex flex-1 flex-col items-center justify-center gap-2 p-8 text-center text-zinc-500">
-      <span className="text-4xl" aria-hidden>
-        🍽️
+      <span className="text-5xl text-zinc-400" aria-hidden>
+        <ForkKnife />
       </span>
       <p>{label ?? t("common.empty")}</p>
     </div>
@@ -34,8 +35,8 @@ export function ErrorView({
   const { t } = useApp();
   return (
     <div className="flex flex-1 flex-col items-center justify-center gap-4 p-8 text-center">
-      <span className="text-4xl" aria-hidden>
-        ⚠️
+      <span className="text-5xl text-brand" aria-hidden>
+        <Warning />
       </span>
       <p className="text-zinc-600">{label ?? t("common.error")}</p>
       {onRetry && (

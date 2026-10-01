@@ -1,5 +1,6 @@
 "use client";
 
+import { Sparkle } from "@/components/Icon";
 import { useState } from "react";
 
 import { useApp } from "@/context/AppContext";
@@ -23,7 +24,7 @@ export function MenuCoach({ menu }: { menu: Menu }) {
     <section className="mt-5 rounded-2xl bg-brand-soft p-4">
       <div className="flex items-center justify-between gap-3">
         <div>
-          <p className="text-xs font-semibold text-brand-dark">🤖 {t("coach.label")}</p>
+          <p className="text-xs font-semibold text-brand-dark"><Sparkle className="mr-1 inline align-[-3px]" />{t("coach.label")}</p>
           <p className="font-semibold">{t("coach.question")}</p>
         </div>
         {state !== "done" && (

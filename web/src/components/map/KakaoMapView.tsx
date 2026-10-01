@@ -1,6 +1,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any -- 카카오맵 SDK는 타입 정의가 없음 */
 "use client";
 
+import { categoryIconSvg } from "@/lib/categoryIcons";
 import Script from "next/script";
 import { useEffect, useRef, useState } from "react";
 
@@ -14,16 +15,6 @@ declare global {
 
 const KEY = process.env.NEXT_PUBLIC_KAKAO_MAP_KEY;
 const LOAD_TIMEOUT_MS = 8000;
-
-const CATEGORY_EMOJI: Record<string, string> = {
-  korean: "🍚",
-  chinese: "🥟",
-  japanese: "🍣",
-  western: "🍔",
-  fusion: "🍽️",
-  snack: "🍢",
-  cafe: "☕",
-};
 
 /** 카카오맵 구현. autoload=false로 SDK를 받은 뒤 kakao.maps.load() 콜백에서 지도 생성 */
 export default function KakaoMapView({
@@ -103,7 +94,8 @@ export default function KakaoMapView({
           : "border-[1.5px] border-brand bg-white px-2 py-0.5 text-xs text-ink"
       }`;
       node.style.minHeight = active ? "34px" : "26px";
-      node.textContent = `${CATEGORY_EMOJI[m.category] ?? "🍽️"} ${m.label}`;
+      node.innerHTML = categoryIconSvg(m.category, active ? 18 : 14);
+      node.append(document.createTextNode(m.label));
       node.onclick = () => onMarkerClick?.(m.id);
       const o = new k.maps.CustomOverlay({
         position: new k.maps.LatLng(m.coord.lat, m.coord.lng),

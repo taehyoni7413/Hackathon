@@ -89,7 +89,11 @@ export function adaptMenu(m: BackendMenu, index: number): Menu {
     halal: toTri(m.halal),
     vegan: toTri(m.vegan),
     spicy: Math.max(0, Math.min(3, Math.round(m.spicy ?? 0))) as Menu["spicy"],
-    options: (m.options ?? []) as MenuOption[],
+    // 한국어 화면에서 영어로 폴백되지 않게 ko = 사장님께 보여줄 문장
+    options: ((m.options ?? []) as MenuOption[]).map((o) => ({
+      ...o,
+      translations: { ko: o.name_ko, ...o.translations },
+    })),
   };
 }
 
