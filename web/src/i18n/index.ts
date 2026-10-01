@@ -7,9 +7,10 @@ import zh from "./zh.json";
  * 언어 선택 화면에 이 순서로 나온다. 처음 선택값은 DEFAULT_LANG.
  */
 export const LANGS = [
-  { code: "ko", label: "한국어", dict: ko },
-  { code: "zh", label: "简体中文", dict: zh },
-  { code: "en", label: "English", dict: en },
+  // greeting: 언어 선택 화면에서 그 언어로 건네는 인사
+  { code: "ko", label: "한국어", greeting: "안녕하세요", dict: ko },
+  { code: "zh", label: "简体中文", greeting: "你好", dict: zh },
+  { code: "en", label: "English", greeting: "Hello", dict: en },
 ] as const;
 
 export type Lang = (typeof LANGS)[number]["code"];
