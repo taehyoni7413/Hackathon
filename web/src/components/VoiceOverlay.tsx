@@ -10,11 +10,14 @@ import type { SpeechStatus } from "@/hooks/useSpeechRecognition";
 export function VoiceOverlay({
   status,
   transcript,
+  langLabel,
   onDone,
   onCancel,
 }: {
   status: SpeechStatus;
   transcript: string;
+  /** 지금 듣고 있는 언어 이름 (예: 中文) */
+  langLabel: string;
   onDone: () => void;
   onCancel: () => void;
 }) {
@@ -52,6 +55,9 @@ export function VoiceOverlay({
         </button>
 
         <p className="mb-4 text-sm text-white/70">
+          <span className="mr-2 rounded-full bg-white/15 px-2 py-0.5 font-semibold text-white">
+            {langLabel}
+          </span>
           {hearing ? t("voice.hearing") : t("voice.listening")}
         </p>
         <button className="btn-secondary mb-2 w-full bg-white/10 text-white border-white/30" onClick={onCancel}>

@@ -40,8 +40,18 @@ def test_translate_mock(monkeypatch):
 
 
 def test_translate_korean_passthrough():
-    r = client.post("/api/translate", json={"text": "덜 맵게 해주세요", "lang": "ko"})
-    assert r.json() == {"ko": "덜 맵게 해주세요"}
+    for lang in ("ko", "ko-KR"):
+        r = client.post("/api/translate", json={"text": "덜 맵게 해주세요", "lang": lang})
+        assert r.json() == {"ko": "덜 맵게 해주세요"}
+
+
+def test_translate_other_speech_lang_is_translated(monkeypatch):
+    from backend import llm
+
+    monkeypatch.setattr(llm, "MOCK", True)
+    r = client.post("/api/translate", json={"text": "Không cay", "lang": "vi-VN"})
+    assert r.status_code == 200
+    assert r.json()["ko"].startswith("[MOCK]")
 
 
 def test_translate_limits():
