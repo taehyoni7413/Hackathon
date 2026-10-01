@@ -1,6 +1,6 @@
 "use client";
 
-import { Compass, MapPin } from "@/components/Icon";
+import { CaretLeft, Compass, MapPin } from "@/components/Icon";
 import { useParams, useRouter } from "next/navigation";
 import { useCallback, useEffect, useMemo, useState } from "react";
 
@@ -89,9 +89,9 @@ export default function ArrivePage() {
 
   return (
     <main className="flex flex-1 flex-col">
-      <header className="flex items-center gap-2 px-2 py-2">
+      <header className="flex items-center gap-2 px-2 pb-2 pt-safe">
         <button className="icon-btn shadow-none" onClick={() => router.back()} aria-label={t("common.back")}>
-          ←
+          <CaretLeft weight="bold" />
         </button>
         <h1 className="text-lg font-bold">{t("arrive.selectNearby")}</h1>
       </header>

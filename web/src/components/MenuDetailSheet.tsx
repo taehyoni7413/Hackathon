@@ -49,7 +49,7 @@ export function MenuDetailSheet({
   return (
     <div className="fixed inset-0 z-50 flex items-end justify-center bg-black/40" onClick={onClose}>
       <div
-        className="flex max-h-[92dvh] w-full max-w-[480px] flex-col overflow-hidden rounded-t-3xl bg-white"
+        className="flex max-h-[calc(var(--app-h)*0.92)] w-full max-w-[480px] flex-col overflow-hidden rounded-t-3xl bg-white"
         onClick={(e) => e.stopPropagation()}
         role="dialog"
         aria-modal

@@ -18,8 +18,8 @@ export default function LanguagePage() {
   const [selected, setSelected] = useState<Lang>(langChosen ? lang : DEFAULT_LANG);
 
   return (
-    <main className="flex flex-1 flex-col bg-rice px-6 pb-8 pt-12">
-      <img src="/logo-full.png" alt="BUK" className="h-28 w-auto self-start" />
+    <main className="flex flex-1 flex-col bg-rice px-6 pb-safe pt-safe">
+      <img src="/logo-full.png" alt="BUK" className="mt-6 h-28 w-auto self-start" />
 
       <h1 className="mt-8 font-display text-3xl leading-tight text-ink">
         {translate(selected, "lang.title")}
@@ -63,7 +63,7 @@ export default function LanguagePage() {
       </ul>
 
       <button
-        className="btn-primary mt-auto w-full text-lg"
+        className="btn-primary mb-2 mt-auto w-full text-lg"
         onClick={() => {
           setLang(selected);
           router.replace("/map");

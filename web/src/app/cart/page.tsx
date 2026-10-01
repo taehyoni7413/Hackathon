@@ -1,6 +1,6 @@
 "use client";
 
-import { CreditCard, Microphone } from "@/components/Icon";
+import { CaretLeft, CreditCard, Microphone } from "@/components/Icon";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 
@@ -20,11 +20,11 @@ export default function CartPage() {
   const store = data.status === "ok" ? data.store : null;
 
   const header = (
-    <header className="sticky top-0 z-10 flex items-center gap-2 bg-white px-2 py-2 shadow-sm">
+    <header className="app-bar flex items-center gap-2 px-2 pb-2 pt-safe">
       <button className="icon-btn shadow-none" onClick={() => router.back()} aria-label={t("common.back")}>
-        ←
+        <CaretLeft weight="bold" />
       </button>
-      <h1 className="text-lg font-bold">{t("cart.title")}</h1>
+      <h1 className="font-display text-2xl text-ink">{t("cart.title")}</h1>
     </header>
   );
 
@@ -111,7 +111,7 @@ export default function CartPage() {
         })}
       </ul>
 
-      <footer className="sticky bottom-0 border-t border-zinc-100 bg-white px-4 pt-4 pb-safe">
+      <footer className="sticky bottom-0 border-t border-black/5 bg-white/90 px-4 pt-4 pb-safe backdrop-blur-xl">
         <div className="flex items-center justify-between">
           <span className="text-lg font-bold text-ink">{t("cart.total")}</span>
           <span className="font-display text-3xl text-ink">{formatPrice(total, lang)}</span>

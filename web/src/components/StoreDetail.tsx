@@ -1,6 +1,6 @@
 "use client";
 
-import { MapPin } from "@/components/Icon";
+import { CaretLeft, MapPin } from "@/components/Icon";
 import Link from "next/link";
 
 import { OpenBadge } from "@/components/OpenBadge";
@@ -40,7 +40,7 @@ export function StoreDetail({
           className="icon-btn absolute left-3 top-3"
           aria-label={t("common.back")}
         >
-          ←
+          <CaretLeft weight="bold" />
         </button>
       </div>
 

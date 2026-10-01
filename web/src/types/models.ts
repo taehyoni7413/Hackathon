@@ -21,7 +21,6 @@ export const CATEGORIES: Category[] = [
   "japanese",
   "western",
   "fusion",
-  "snack",
   "cafe",
 ];
 

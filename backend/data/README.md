@@ -16,4 +16,4 @@
 
 ## 형식
 프론트 변환 코드: `web/src/lib/backendAdapter.ts` 의 `BackendStore`, `BackendMenu`
-`category`: korean / chinese / japanese / western / fusion / snack / cafe (없으면 "기타")
+`category`: korean / chinese / japanese / western / fusion / cafe (카카오 분식→korean, 패스트푸드→western) (없으면 "기타")
