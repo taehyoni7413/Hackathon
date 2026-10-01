@@ -1,5 +1,6 @@
 "use client";
 
+import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 
 import { InstallButton } from "@/components/InstallButton";
@@ -9,7 +10,8 @@ import { api, type DataSource } from "@/lib/api";
 
 /** 설정: 언어 변경, 데모 모드, 백엔드 연결 상태(기존 "백엔드 연결됨" 표시 유지) */
 export function SettingsSheet({ onClose }: { onClose: () => void }) {
-  const { lang, setLang, demo, setDemo, t } = useApp();
+  const { lang, setLang, demo, setDemo, t, resetAll } = useApp();
+  const router = useRouter();
   const [backend, setBackend] = useState<boolean | null>(null);
   const [source, setSource] = useState<DataSource | null>(null);
 
@@ -87,6 +89,19 @@ export function SettingsSheet({ onClose }: { onClose: () => void }) {
             {t("settings.dataSource", { source })}
           </p>
         )}
+
+        {/* 시연을 처음부터 다시 할 때: 언어·장바구니·주문·데모 모드를 모두 지우고 스플래시로 */}
+        <button
+          className="btn-secondary mt-6 w-full text-red-600"
+          onClick={() => {
+            if (!window.confirm(t("settings.resetConfirm"))) return;
+            resetAll();
+            onClose();
+            router.replace("/");
+          }}
+        >
+          ↺ {t("settings.reset")}
+        </button>
       </div>
     </div>
   );
