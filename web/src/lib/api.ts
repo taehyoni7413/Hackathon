@@ -1,23 +1,25 @@
 // 프론트의 모든 데이터 접근은 이 파일 한 곳을 거친다.
 //
 // 데이터 출처 우선순위
-//   NEXT_PUBLIC_USE_MOCK !== "0" (기본) : 번들 정적 데이터(src/data/stores.json) → 비어 있으면 가짜 데이터(src/mocks)
-//   NEXT_PUBLIC_USE_MOCK === "0"        : 백엔드 /api/stores → 실패하면 번들 → 가짜 데이터
-// 백엔드 계약(제안): GET /stores, GET /stores/{id}/menus, POST /route
+//   기본                       : 백엔드B /api/stores/all + /api/stores/{id}/menus
+//                                → 백엔드에 연결 못 하면 번들 정적 데이터(src/data/stores.json) → 비어 있으면 가짜 데이터(src/mocks)
+//   NEXT_PUBLIC_USE_MOCK === "1": 백엔드 없이 번들 → 가짜 데이터 (로컬 화면 작업용)
+// 백엔드B 형식 → 프론트 형식 변환은 lib/backendAdapter.ts
 
 import bundled from "@/data/stores.json";
 import { SCHOOL_COORD } from "@/config/location";
+import {
+  adaptMenu,
+  adaptStore,
+  type BackendMenu,
+  type BackendRoute,
+  type BackendStore,
+} from "@/lib/backendAdapter";
 import { distanceM, walkSeconds } from "@/lib/geo";
 import { MOCK_STORES } from "@/mocks/stores";
-import type {
-  Coord,
-  Menu,
-  RouteResult,
-  Store,
-  StoreWithMenus,
-} from "@/types/models";
+import type { Coord, Menu, RouteResult, StoreWithMenus } from "@/types/models";
 
-export const USE_MOCK = process.env.NEXT_PUBLIC_USE_MOCK !== "0";
+export const USE_MOCK = process.env.NEXT_PUBLIC_USE_MOCK === "1";
 
 export type DataSource = "backend" | "bundle" | "mock";
 
@@ -45,12 +47,16 @@ let cache: Promise<{ stores: StoreWithMenus[]; source: DataSource }> | null =
 async function loadAll() {
   if (USE_MOCK) return localData();
   try {
-    const stores = await request<Store[]>("/stores");
-    const withMenus = await Promise.all(
-      stores.map(async (s) => ({
-        ...s,
-        menus: await request<Menu[]>(`/stores/${s.id}/menus`),
-      })),
+    const raw = await request<BackendStore[]>("/stores/all");
+    const stores = raw.map(adaptStore).filter((s) => s !== null);
+    const withMenus: StoreWithMenus[] = await Promise.all(
+      stores.map(async (s) => {
+        // 메뉴는 가게마다 따로. 한 가게 메뉴를 못 받아도 가게는 보여준다
+        const menus = await request<BackendMenu[]>(`/stores/${s.id}/menus`).catch(
+          () => [] as BackendMenu[],
+        );
+        return { ...s, menus: menus.map(adaptMenu) };
+      }),
     );
     return { stores: withMenus, source: "backend" as const };
   } catch {
@@ -94,23 +100,34 @@ export async function translateRequest(text: string, lang: string): Promise<stri
 }
 
 /**
- * 도보 경로. ① 백엔드 /route (TMAP) ② OSRM 공개 도보 서버 ③ 직선 + 4km/h
+ * 도보 경로. ① 백엔드B GET /api/route (TMAP, 키 필요) ② OSRM 공개 도보 서버 ③ 직선 + 4km/h
  * OSRM: routing.openstreetmap.de 의 routed-foot, CORS 허용 확인됨 (좌표는 lng,lat 순서)
  */
 export async function getWalkingRoute(
   from: Coord,
   to: Coord,
+  /** 백엔드 가게 id. 있으면 TMAP 경로를 먼저 시도 */
+  storeId?: string,
 ): Promise<RouteResult> {
-  if (!USE_MOCK) {
+  if (!USE_MOCK && storeId) {
     try {
-      const r = await request<{
-        coordinates: Coord[];
-        distance_m: number;
-        duration_s: number;
-      }>("/route", { method: "POST", body: JSON.stringify({ from, to }) });
-      if (r.coordinates?.length > 1) return { ...r, source: "backend" };
+      const q = new URLSearchParams({
+        from_lat: String(from.lat),
+        from_lng: String(from.lng),
+        store_id: storeId,
+      });
+      const r = await request<BackendRoute>(`/route?${q}`);
+      if (r.path?.length > 1) {
+        const distance = r.total_distance_m ?? distanceM(from, to);
+        return {
+          coordinates: r.path.map(([lat, lng]) => ({ lat, lng })),
+          distance_m: distance,
+          duration_s: r.total_time_s ?? walkSeconds(distance),
+          source: "backend",
+        };
+      }
     } catch {
-      // 다음 방법으로
+      // TMAP 키가 없거나 실패 → 다음 방법으로
     }
   }
 

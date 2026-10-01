@@ -94,7 +94,7 @@ export default function MenuPage() {
       </div>
 
       {groups.length === 0 ? (
-        <EmptyView />
+        <EmptyView label={t("menu.empty")} />
       ) : (
         groups.map(([cat, menus]) => (
           <section

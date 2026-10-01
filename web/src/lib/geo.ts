@@ -39,7 +39,8 @@ export function offsetCoord(base: Coord, northM: number, eastM: number): Coord {
 const WEEKDAYS: Weekday[] = ["sun", "mon", "tue", "wed", "thu", "fri", "sat"];
 
 /** 지금 영업 중인지. 자정을 넘기는 영업(예: 17:00~02:00)도 처리 */
-export function isOpenNow(hours: OpenHours, now = new Date()): boolean {
+export function isOpenNow(hours: OpenHours | null, now = new Date()): boolean {
+  if (!hours) return false;
   const today = hours[WEEKDAYS[now.getDay()]];
   if (!today) return false;
   const toMin = (s: string) => {
@@ -52,6 +53,6 @@ export function isOpenNow(hours: OpenHours, now = new Date()): boolean {
   return close > open ? cur >= open && cur < close : cur >= open || cur < close;
 }
 
-export function todayHours(hours: OpenHours, now = new Date()) {
-  return hours[WEEKDAYS[now.getDay()]];
+export function todayHours(hours: OpenHours | null, now = new Date()) {
+  return hours ? hours[WEEKDAYS[now.getDay()]] : null;
 }

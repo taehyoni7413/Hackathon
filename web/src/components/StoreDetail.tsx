@@ -58,9 +58,13 @@ export function StoreDetail({
         <div className="mt-2">
           <VerificationBadges store={store} />
         </div>
+        {store.address && <p className="mt-2 text-sm text-zinc-500">📍 {store.address}</p>}
         <p className="mt-3 leading-relaxed text-zinc-700">{pickText(store.description, lang)}</p>
 
         <h3 className="mt-5 font-semibold">{t("store.popular")}</h3>
+        {store.menus.length === 0 && (
+          <p className="mt-2 text-sm text-zinc-500">{t("menu.empty")}</p>
+        )}
         <ul className="mt-2 flex gap-3 overflow-x-auto pb-1">
           {store.menus.slice(0, 4).map((m) => {
             const menuName = m.translations[lang]?.name ?? m.name_ko;
