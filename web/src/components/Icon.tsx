@@ -8,6 +8,7 @@ import { IconContext, type IconProps } from "@phosphor-icons/react";
 import type { ReactNode } from "react";
 
 export {
+  ArrowCounterClockwise,
   ArrowLeft,
   BeerStein,
   BowlSteam,
@@ -21,6 +22,8 @@ export {
   GearSix,
   Hourglass,
   Info,
+  MagnifyingGlassMinus,
+  MagnifyingGlassPlus,
   MapPin,
   MapTrifold,
   Microphone,
