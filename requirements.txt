@@ -7,3 +7,5 @@ httpx
 pytest
 Flask>=3.0,<4
 pydantic>=2,<3
+# 윈도우에서 ZoneInfo('Asia/Seoul') 쓰려면 필요 (backend/places.py)
+tzdata

@@ -1,9 +1,11 @@
 """
-유학생 식당 도우미 - 백엔드
- 
-실행:  uvicorn main:app --reload
-지도 데모:  http://127.0.0.1:8000/map
-API 확인:   http://127.0.0.1:8000/docs
+유학생 식당 도우미 - 백엔드B (가게·위치·도보 길안내·도착 확인)
+
+backend/main.py 가 이 라우터를 /api 아래에 붙인다. (원래 단독 서버 main.py 였던 것을 합침)
+실행:  uvicorn backend.main:app --reload
+지도 데모:  http://127.0.0.1:8000/api/map
+API 확인:   http://127.0.0.1:8000/api/docs
+필요한 키(.env): KAKAO_REST_KEY, KAKAO_JS_KEY, TMAP_APP_KEY
 """
 import json
 import math
@@ -15,8 +17,7 @@ from zoneinfo import ZoneInfo
  
 import httpx
 from dotenv import load_dotenv
-from fastapi import FastAPI, HTTPException, Query
-from fastapi.middleware.cors import CORSMiddleware
+from fastapi import APIRouter, HTTPException, Query
 from fastapi.responses import HTMLResponse
  
 load_dotenv()  # .env 파일에서 키 읽기
@@ -24,19 +25,17 @@ KAKAO_REST_KEY = os.getenv("KAKAO_REST_KEY")
 KAKAO_JS_KEY = os.getenv("KAKAO_JS_KEY")
 TMAP_APP_KEY = os.getenv("TMAP_APP_KEY")
  
-app = FastAPI(title="Campus Food Helper API")
- 
-# 나중에 프론트에서 호출할 수 있게 CORS 허용
-app.add_middleware(CORSMiddleware, allow_origins=["*"], allow_methods=["*"], allow_headers=["*"])
- 
- 
-@app.get("/health")
+# CORS 설정은 backend/main.py 의 앱에서 한 번만 한다
+router = APIRouter(tags=["places"])
+
+
+@router.get("/places/health")
 def health():
     """서버가 살아 있는지 확인"""
     return {"status": "ok", "kakao_key_loaded": bool(KAKAO_REST_KEY), "kakao_js_key_loaded": bool(KAKAO_JS_KEY), "tmap_key_loaded": bool(TMAP_APP_KEY)}
  
  
-@app.get("/location")
+@router.get("/location")
 async def location(
     lat: float = Query(..., ge=-90, le=90, description="위도"),
     lng: float = Query(..., ge=-180, le=180, description="경도"),
@@ -101,7 +100,7 @@ document.getElementById('btn').onclick = () => {
   const ok = async (p) => {
     const { latitude: lat, longitude: lng, accuracy } = p.coords;
     log(`좌표: lat=${lat}, lng=${lng} (오차 약 ${Math.round(accuracy)}m)`);
-    const res = await fetch(`/location?lat=${lat}&lng=${lng}`);
+    const res = await fetch(`/api/location?lat=${lat}&lng=${lng}`);
     const data = await res.json();
     log('\\n/location 응답:\\n' + JSON.stringify(data, null, 2));
     if (data.map_url) log('\\n지도에서 보기: ' + data.map_url);
@@ -117,13 +116,13 @@ document.getElementById('btn').onclick = () => {
 """
  
  
-@app.get("/gps-test", response_class=HTMLResponse)
+@router.get("/gps-test", response_class=HTMLResponse)
 def gps_test():
     return GPS_TEST_HTML
  
  
 # =====================================================================
-# 가게 / 메뉴 API  (데이터: data/stores.json, data/menus.json)
+# 가게 / 메뉴 API  (데이터: backend/data/stores.json, backend/data/menus.json)
 # =====================================================================
 DATA_DIR = Path(__file__).parent / "data"
 KST = ZoneInfo("Asia/Seoul")
@@ -241,7 +240,7 @@ def with_status(store: dict) -> dict:
             "today_hours": (store.get("open_hours") or {}).get(DAYS[datetime.now(KST).weekday()])}
  
  
-@app.get("/stores")
+@router.get("/stores")
 def list_stores(
     lat: float = Query(..., ge=-90, le=90),
     lng: float = Query(..., ge=-180, le=180),
@@ -258,13 +257,13 @@ def list_stores(
     return sorted(result, key=lambda x: x["distance_m"])
  
  
-@app.get("/stores/all")
+@router.get("/stores/all")
 def all_stores():
     """위치 상관없이 전체 가게 (지도에 핀 찍기용)"""
     return [with_status(s) for s in load_stores()]
  
  
-@app.get("/stores/{store_id}")
+@router.get("/stores/{store_id}")
 def get_store(store_id: int):
     for s in load_stores():
         if s["id"] == store_id:
@@ -272,7 +271,7 @@ def get_store(store_id: int):
     raise HTTPException(404, "가게를 찾을 수 없습니다")
  
  
-@app.get("/stores/{store_id}/menus")
+@router.get("/stores/{store_id}/menus")
 def get_menus(store_id: int, lang: str = "en"):
     """메뉴 목록. 선택 언어 번역을 name/description으로 펼쳐줌 (없으면 영어 → 한국어)"""
     get_store(store_id)  # 없는 가게면 404
@@ -352,7 +351,7 @@ async function init() {
   const iw = new kakao.maps.InfoWindow({ removable: true });
   const LL = (p) => new kakao.maps.LatLng(p.lat, p.lng);
  
-  const stores = await (await fetch('/stores/all')).json();
+  const stores = await (await fetch('/api/stores/all')).json();
   const placed = stores.filter(s => s.lat != null && s.lng != null);
   const missing = stores.filter(s => s.lat == null || s.lng == null);
  
@@ -396,7 +395,7 @@ async function init() {
   // ---------- 도보 경로 (서버 /route → TMAP) ----------
   async function loadRoute() {
     lastRouteAt = Date.now();
-    const res = await fetch(`/route?from_lat=${me.lat}&from_lng=${me.lng}&store_id=${selected.id}`);
+    const res = await fetch(`/api/route?from_lat=${me.lat}&from_lng=${me.lng}&store_id=${selected.id}`);
     const data = await res.json();
     if (!res.ok) throw new Error(data.detail || '경로를 불러오지 못했어요');
     const path = data.path.map(([lat, lng]) => ({ lat, lng }));
@@ -515,7 +514,7 @@ async function init() {
     const out = document.getElementById('arrivalResult');
     out.textContent = '위치 확인 중...';
     try { await getMe(); } catch (e) { out.textContent = '위치 실패: ' + e.message; return; }
-    const r = await fetch(`/arrival?store_id=${selected.id}&lat=${me.lat}&lng=${me.lng}&accuracy=${Math.round(me.acc || 0)}`);
+    const r = await fetch(`/api/arrival?store_id=${selected.id}&lat=${me.lat}&lng=${me.lng}&accuracy=${Math.round(me.acc || 0)}`);
     const d = await r.json();
     if (!r.ok) { out.textContent = d.detail || '확인 실패'; return; }
     const color = { arrived: '#1b8a3a', uncertain: '#b26a00', not_arrived: '#c62828' }[d.status];
@@ -564,7 +563,7 @@ async function init() {
 """
  
  
-@app.get("/map", response_class=HTMLResponse)
+@router.get("/map", response_class=HTMLResponse)
 def map_page():
     return MAP_HTML.replace("__JS_KEY__", KAKAO_JS_KEY or "")
  
@@ -576,7 +575,7 @@ def map_page():
 TMAP_SEARCH_OPTION = "10"  # 10 = 최단거리 (0 = 추천, 30 = 최단거리+계단 제외)
  
  
-@app.get("/route")
+@router.get("/route")
 async def walking_route(
     from_lat: float = Query(..., ge=-90, le=90),
     from_lng: float = Query(..., ge=-180, le=180),
@@ -656,7 +655,7 @@ def bearing_ko(lat1, lng1, lat2, lng2) -> str:
     return names[round(deg / 45) % 8]
  
  
-@app.get("/arrival")
+@router.get("/arrival")
 def check_arrival(
     store_id: int = Query(..., description="목적지 가게 id"),
     lat: float = Query(..., ge=-90, le=90, description="현재 위도"),

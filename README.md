@@ -78,6 +78,21 @@ cd web && npm run lint && npm run build
 - 서비스 워커(`web/public/sw.js`)가 한 번 열어본 화면·이미지를 저장해 두어, 발표장 네트워크가 끊겨도 다시 열립니다 (`npm run build` 후 실행한 프로덕션에서만 동작).
 - 앱 아이콘은 `web/public/icons/` 의 임시 아이콘입니다. 로고가 정해지면 같은 이름·크기(192, 512, maskable 512, apple 180)로 교체하세요.
 
+## 🗺️ 백엔드B: 가게·위치·도보 길안내·도착 확인 (`backend/places.py`)
+모든 경로는 `/api` 아래. 데이터는 `backend/data/stores.json`, `backend/data/menus.json`.
+
+| Method | Path | 설명 | 필요한 키 |
+|--------|------|------|-----------|
+| GET | `/api/places/health` | 키 로딩 상태 확인 | — |
+| GET | `/api/location?lat=&lng=` | 좌표 → 주소 + 카카오맵 링크 | `KAKAO_REST_KEY` |
+| GET | `/api/stores?lat=&lng=&radius=` | 반경 안 가게, 가까운 순 | (주소만 있으면 `KAKAO_REST_KEY`로 좌표 변환) |
+| GET | `/api/stores/all` | 전체 가게 | — |
+| GET | `/api/stores/{id}` / `/api/stores/{id}/menus?lang=` | 가게 / 메뉴 | — |
+| GET | `/api/route?from_lat=&from_lng=&store_id=` | 도보 경로(TMAP) | `TMAP_APP_KEY` |
+| GET | `/api/arrival?store_id=&lat=&lng=&accuracy=` | 도착 확인 (50m + GPS 오차) | — |
+| GET | `/api/map`, `/api/gps-test` | 백엔드 확인용 데모 페이지 | `KAKAO_JS_KEY` |
+
+키는 `.env`(로컬)와 Vercel 환경변수에만 넣고 레포에는 올리지 않습니다.
 ## 📦 외부 자료 (발표에서 공개 필수)
 > 대회 규정: 외부 코드·오픈소스·데이터를 활용했다면 최종 발표에서 주요 활용 내용을 밝혀야 함. **새로 쓰면 바로 한 줄 추가.**
 
@@ -92,7 +107,10 @@ cd web && npm run lint && npm run build
 | API | 카카오맵 JavaScript SDK | 지도·마커·경로선 표시 (프론트) | https://apis.map.kakao.com/web/ |
 | API | 카카오맵 길찾기 링크 (`map.kakao.com/link/to`) | 외부 길 안내 버튼 | https://apis.map.kakao.com/web/guide/#routeurl |
 | API·데이터 | OSRM 공개 도보 경로 서버 (routing.openstreetmap.de, © OpenStreetMap 기여자) | 도보 경로 2순위 | https://routing.openstreetmap.de |
-| API | TMAP 보행자 경로 API (백엔드 `/route`, 예정) | 도보 경로 1순위 | https://openapi.sk.com |
+| API | TMAP 보행자 경로 API (백엔드 `GET /api/route`) | 도보 경로 안내 (키는 서버에만) | https://openapi.sk.com |
+| API | 카카오 로컬 REST API (좌표→주소, 주소→좌표) | 내 위치 주소 표시, 가게 주소 좌표 변환 (백엔드) | https://developers.kakao.com/docs/latest/ko/local/dev-guide |
+| API | Web Speech API (브라우저 내장 음성 인식 · 크롬은 Google, 사파리는 Apple 엔진) | 요청사항 음성 입력(STT). 음성은 각 브라우저 회사 서버에서 글자로 변환 | https://developer.mozilla.org/docs/Web/API/Web_Speech_API |
+| 프레임워크 | Flask | 메뉴 번역 단독 데모(`app.py`) | https://flask.palletsprojects.com |
 |  |  |  |  |
 
 **사전 준비 내역 (규정상 허용되는 기본 환경 설정):** 대회 전에는 프로젝트 기본 구조(FastAPI + Next.js 템플릿), 세팅·실행 스크립트, 협업 문서만 준비했으며, 주제 관련 기능 코드는 모두 대회 시간(10/1 19:30 ~ 10/2 11:30) 중 작성.

@@ -71,8 +71,9 @@ class MenuTranslatorTests(unittest.TestCase):
                 mt.translate_menu("제육볶음")
 
     def test_cli_outputs_readable_json(self):
-        env = {**os.environ, "MOCK_LLM": "1"}
-        proc = subprocess.run([sys.executable, "menu_translator.py", "김치찌개"], env=env, capture_output=True, text=True, check=True)
+        # 한국어 윈도우(cp949)에서도 깨지지 않도록 입출력 인코딩을 UTF-8로 고정
+        env = {**os.environ, "MOCK_LLM": "1", "PYTHONIOENCODING": "utf-8"}
+        proc = subprocess.run([sys.executable, "menu_translator.py", "김치찌개"], env=env, capture_output=True, text=True, encoding="utf-8", check=True)
         self.assertEqual(json.loads(proc.stdout)["name_ko"], "김치찌개")
         self.assertIn("泡菜", proc.stdout)
 
