@@ -58,7 +58,7 @@ TRANSLATE_SYSTEM = (
 
 class TranslateRequest(BaseModel):
     text: str
-    # 사용자 언어 코드 (zh / en / ko). 번역 품질 힌트용
+    # 말한 언어 (BCP-47, 예: zh-CN, vi-VN, ko-KR) 또는 "auto"(직접 입력). 한국어면 번역하지 않음
     lang: str | None = None
 
 
@@ -70,7 +70,7 @@ def translate(req: TranslateRequest):
         raise HTTPException(status_code=400, detail="text is empty")
     if len(text) > MAX_REQUEST_CHARS:
         raise HTTPException(status_code=400, detail=f"text is longer than {MAX_REQUEST_CHARS} chars")
-    if req.lang == "ko":
+    if (req.lang or "").lower().startswith("ko"):
         return {"ko": text}
     try:
         ko = llm.ask(text, system=TRANSLATE_SYSTEM).strip()

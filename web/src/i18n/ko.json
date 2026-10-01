@@ -88,6 +88,7 @@
   "diet.spicy3": "아주 매워요",
   "diet.allergens": "알레르기: {list}",
   "voice.speak": "직접 말하기",
+  "voice.speakLang": "말할 언어",
   "voice.type": "직접 입력",
   "voice.hint": "요청사항을 말씀해 주세요",
   "voice.listening": "듣고 있어요…",

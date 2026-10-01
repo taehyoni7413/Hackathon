@@ -88,6 +88,7 @@
   "diet.spicy3": "Very spicy",
   "diet.allergens": "Allergens: {list}",
   "voice.speak": "Say a request",
+  "voice.speakLang": "Language you speak",
   "voice.type": "Type instead",
   "voice.hint": "Say your request",
   "voice.listening": "Listening…",

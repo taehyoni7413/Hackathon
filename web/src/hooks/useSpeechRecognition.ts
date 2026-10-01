@@ -2,8 +2,6 @@
 
 import { useCallback, useEffect, useRef, useState } from "react";
 
-import type { Lang } from "@/i18n";
-
 // 브라우저 내장 음성 인식(Web Speech API). 타입 정의가 lib.dom에 없어 필요한 만큼만 선언
 type RecognitionResultList = ArrayLike<ArrayLike<{ transcript: string }> & { isFinal: boolean }>;
 type Recognition = {
@@ -32,9 +30,6 @@ function getCtor(): RecognitionCtor | null {
   return w.SpeechRecognition ?? w.webkitSpeechRecognition ?? null;
 }
 
-/** 앱 언어 → 음성 인식 언어 */
-const LOCALE: Record<Lang, string> = { zh: "zh-CN", en: "en-US", ko: "ko-KR" };
-
 /** 말을 시작하지 않으면 이 시간 뒤 자동으로 닫힘 */
 const NO_SPEECH_MS = 6000;
 /** 한 번에 최대 녹음 시간 */
@@ -46,7 +41,11 @@ export type SpeechStatus = "idle" | "listening" | "hearing" | "denied" | "error"
  * 버튼을 누르면 듣기 시작 → 말이 멈추면 브라우저가 자동 종료 → onFinal(문장).
  * 아무 말도 없으면 조용히 닫힌다(onFinal 호출 안 함).
  */
-export function useSpeechRecognition(lang: Lang, onFinal: (text: string) => void) {
+export function useSpeechRecognition(
+  /** 인식할 언어 (BCP-47, 예: "zh-CN"). 브라우저는 언어를 자동 감지하지 못한다 */
+  locale: string,
+  onFinal: (text: string) => void,
+) {
   const [supported, setSupported] = useState(false);
   const [status, setStatus] = useState<SpeechStatus>("idle");
   const [transcript, setTranscript] = useState("");
@@ -77,7 +76,7 @@ export function useSpeechRecognition(lang: Lang, onFinal: (text: string) => void
     const Ctor = getCtor();
     if (!Ctor || rec.current) return;
     const r = new Ctor();
-    r.lang = LOCALE[lang];
+    r.lang = locale;
     r.interimResults = true;
     r.continuous = false;
     r.maxAlternatives = 1;
@@ -122,7 +121,7 @@ export function useSpeechRecognition(lang: Lang, onFinal: (text: string) => void
       }, NO_SPEECH_MS),
       window.setTimeout(() => rec.current?.stop(), MAX_MS),
     );
-  }, [lang]);
+  }, [locale]);
 
   /** 지금까지 들은 내용으로 끝내기 */
   const stop = useCallback(() => rec.current?.stop(), []);
