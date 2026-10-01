@@ -8,7 +8,7 @@ from fastapi import APIRouter, FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 
-from backend import llm, menu_coach, places
+from backend import llm, menu_coach, places, recommend
 
 app = FastAPI(title="Hackathon API", docs_url="/api/docs", openapi_url="/api/openapi.json")
 
@@ -92,3 +92,5 @@ app.include_router(router)
 app.include_router(places.router, prefix="/api")
 # AI 메뉴 코치 (backend/menu_coach.py)
 app.include_router(menu_coach.router, prefix="/api")
+# AI 맞춤 추천 (backend/recommend.py)
+app.include_router(recommend.router, prefix="/api")

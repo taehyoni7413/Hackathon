@@ -135,5 +135,18 @@
   "coach.error": "暂时无法获取 AI 建议。",
   "coach.summary": "一句话总结",
   "coach.goodFor": "适合人群",
-  "coach.notice": "注意事项"
+  "coach.notice": "注意事项",
+  "ai.label": "AI 个性推荐",
+  "ai.ex1": "我想吃肉",
+  "ai.ex2": "想吃辣的",
+  "ai.ex3": "想吃面包类",
+  "ai.title": "想吃点什么？",
+  "ai.subtitle": "像聊天一样输入，AI 会从学校附近餐厅的菜单中为你挑选",
+  "ai.submit": "推荐",
+  "ai.loading": "正在挑选菜品",
+  "ai.empty": "没有找到合适的菜品，换个说法试试",
+  "ai.error": "无法获取推荐，请重试",
+  "ai.results": "这些菜怎么样？",
+  "ai.keyword": "AI 暂时不可用，按关键词挑选",
+  "ai.tapHint": "点击菜品查看餐厅"
 }

@@ -60,6 +60,18 @@ a {
   user-select: none;
 }
 
+/* AI 검색창 예시 문구 바뀔 때 */
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(4px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
 /* 음성 입력: 시리 스타일 빛나는 구슬 */
 @keyframes siri-spin {
   to {

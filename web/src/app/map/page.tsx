@@ -10,6 +10,7 @@ import {
   useViewportHeight,
   type Snap,
 } from "@/components/BottomSheet";
+import { AiSearchBar, AiSearchSheet } from "@/components/AiSearch";
 import { CategoryChips, type CategoryFilter } from "@/components/CategoryChips";
 import { MapView, type MapMarker } from "@/components/map/MapView";
 import { SettingsSheet } from "@/components/SettingsSheet";
@@ -35,6 +36,7 @@ function MapHome() {
   const [snap, setSnap] = useState<Snap>("collapsed");
   const [mapUnavailable, setMapUnavailable] = useState(false);
   const [settingsOpen, setSettingsOpen] = useState(false);
+  const [aiOpen, setAiOpen] = useState(false);
   const vh = useViewportHeight();
 
   const stores = useMemo(() => {
@@ -85,8 +87,11 @@ function MapHome() {
         />
       )}
 
-      {/* 상단: 카테고리 칩 + 설정 */}
+      {/* 상단: AI 맞춤 추천 검색창 + 카테고리 칩 + 설정 */}
       <div className="absolute inset-x-0 top-0 z-20 pt-safe">
+        <div className="px-4 pb-2">
+          <AiSearchBar onOpen={() => setAiOpen(true)} />
+        </div>
         <div className="flex items-center gap-2 pr-4">
           <div className="min-w-0 flex-1">
             <CategoryChips
@@ -149,6 +154,17 @@ function MapHome() {
       </BottomSheet>
 
       {settingsOpen && <SettingsSheet onClose={() => setSettingsOpen(false)} />}
+      {aiOpen && (
+        <AiSearchSheet
+          stores={data.status === "ok" ? data.stores : []}
+          onClose={() => setAiOpen(false)}
+          onPick={(id) => {
+            setAiOpen(false);
+            setCategory("all");
+            select(id);
+          }}
+        />
+      )}
     </main>
   );
 }

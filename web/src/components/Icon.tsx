@@ -10,6 +10,7 @@ import type { ReactNode } from "react";
 export {
   ArrowCounterClockwise,
   ArrowLeft,
+  ArrowUp,
   BeerStein,
   BowlSteam,
   Camera,

@@ -82,3 +82,12 @@
 응답 `{ "summary": "...", "recommended_for": "...", "notice": "..." }`
 
 오류: 없는 메뉴 404, AI 실패 502. `MOCK_LLM=1` 이면 가짜 응답.
+
+## POST /api/recommend — AI 맞춤 추천
+손님이 적은 바람("고기가 먹고 싶어요")을 보고 **우리 가게 메뉴(menus.json) 중에서만** 최대 6개 추천. AI가 목록에 없는 id를 내면 버림.
+AI 실패·`MOCK_LLM=1` 이면 키워드 추천(`source: "keyword"`). 같은 질문·언어는 메모리 캐시.
+
+요청 `{ "query": "매운 음식이 땡겨요", "lang": "ko" }` (query 1~120자)
+
+응답 `{ "items": [{ "menu_id": 68, "store_id": 3, "reason": "..." }], "source": "ai" }`
+
