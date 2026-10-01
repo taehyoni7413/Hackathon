@@ -57,7 +57,7 @@ cd web && npm run lint && npm run build
 | 이름 | 설명 |
 |------|------|
 | `NEXT_PUBLIC_KAKAO_MAP_KEY` | 카카오맵 JavaScript 키. 없으면 지도 대신 식당 목록만 표시 |
-| `NEXT_PUBLIC_USE_MOCK` | `0`이면 백엔드 API 사용, 그 외(기본)는 내장 데이터(`web/src/data/stores.json` → 비어 있으면 가짜 데이터) |
+| `NEXT_PUBLIC_USE_MOCK` | 기본(비움)은 **백엔드B 데이터**(`/api/stores/all`, 연결 실패 시 내장 데이터). `1`이면 백엔드 없이 내장 데이터(`web/src/data/stores.json` → 비어 있으면 가짜 8곳)로 화면 작업 |
 | `BACKEND_URL` | Next.js가 `/api/*`를 전달할 FastAPI 주소 |
 
 카카오 개발자 콘솔 → 앱 → 플랫폼 → Web 에 `http://localhost:3000` 과 배포 도메인을 등록해야 지도가 뜹니다.
@@ -69,7 +69,7 @@ cd web && npm run lint && npm run build
 2. **Root Directory**: `web`
 3. Environment Variables: `NEXT_PUBLIC_KAKAO_MAP_KEY` (필요하면 `NEXT_PUBLIC_USE_MOCK`, `BACKEND_URL`)
 4. Deploy → 나온 `https://...vercel.app` 주소를 카카오 콘솔 Web 플랫폼에 추가
-5. 백엔드 없이도 내장 데이터로 동작합니다 (기본값). 발표장에서는 설정 ⚙️ → **데모 모드**를 켜세요.
+5. 가게·메뉴는 백엔드B 데이터(`backend/data/*.json`)를 씁니다. 발표장에서는 설정 ⚙️ → **데모 모드**를 켜세요.
 
 ### 앱처럼 설치하기 (PWA)
 - **안드로이드(크롬)**: 설정 ⚙️ → [홈 화면에 추가], 또는 크롬 메뉴 → 앱 설치

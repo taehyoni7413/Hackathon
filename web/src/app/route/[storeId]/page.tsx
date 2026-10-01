@@ -29,7 +29,7 @@ export default function RoutePage() {
   useEffect(() => {
     if (!store || status === "loading") return;
     let alive = true;
-    getWalkingRoute(coord, store).then((r) => alive && setRoute(r));
+    getWalkingRoute(coord, store, store.id).then((r) => alive && setRoute(r));
     return () => {
       alive = false;
     };

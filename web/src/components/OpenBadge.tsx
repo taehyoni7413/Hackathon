@@ -4,8 +4,10 @@ import { useApp } from "@/context/AppContext";
 import { isOpenNow, todayHours } from "@/lib/geo";
 import type { OpenHours } from "@/types/models";
 
-export function OpenBadge({ hours, withTime }: { hours: OpenHours; withTime?: boolean }) {
+export function OpenBadge({ hours, withTime }: { hours: OpenHours | null; withTime?: boolean }) {
   const { t } = useApp();
+  // 영업시간 정보가 없는 가게(백엔드 데이터)는 배지를 표시하지 않는다
+  if (!hours) return null;
   const today = todayHours(hours);
   const open = isOpenNow(hours);
   return (

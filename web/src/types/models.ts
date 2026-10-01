@@ -9,7 +9,9 @@ export type Category =
   | "japanese"
   | "western"
   | "snack"
-  | "cafe";
+  | "cafe"
+  /** 백엔드 데이터에 카테고리가 없을 때 ("전체"에서만 보임) */
+  | "other";
 
 export const CATEGORIES: Category[] = [
   "korean",
@@ -40,7 +42,9 @@ export type Store = {
   lat: number;
   lng: number;
   description: Localized;
-  open_hours: OpenHours;
+  /** 영업시간 정보가 없으면 null (배지 표시 안 함) */
+  open_hours: OpenHours | null;
+  address?: string;
   image_url: string;
   menu_board_images: string[];
   verifications?: Verification[];
