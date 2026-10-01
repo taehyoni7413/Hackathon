@@ -98,6 +98,7 @@
   "voice.speak": "Say a request",
   "voice.speakLang": "Language you speak",
   "voice.type": "Type instead",
+  "voice.backToSpeak": "Back to speaking",
   "voice.hint": "Say your request",
   "voice.listening": "Listening…",
   "voice.hearing": "Stops automatically when you finish",

@@ -23,6 +23,7 @@ export {
   GearSix,
   Hourglass,
   Info,
+  Keyboard,
   MagnifyingGlassMinus,
   MagnifyingGlassPlus,
   MapPin,
