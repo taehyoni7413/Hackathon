@@ -105,7 +105,6 @@ cd web && npm run lint && npm run build
 | API | OpenAI API (gpt-6-luna, text-embedding-3-small, 주최 측 제공) | 요청사항 한국어 번역(`/api/translate`), AI 메뉴 코치(`/api/menu-insight`), LLM 기능 | https://platform.openai.com/docs |
 | AI 도구 | Claude Code | 코딩 보조 | https://claude.com/claude-code |
 | API | 카카오맵 JavaScript SDK | 지도·마커·경로선 표시 (프론트) | https://apis.map.kakao.com/web/ |
-| API | 카카오맵 길찾기 링크 (`map.kakao.com/link/to`) | 외부 길 안내 버튼 | https://apis.map.kakao.com/web/guide/#routeurl |
 | API·데이터 | OSRM 공개 도보 경로 서버 (routing.openstreetmap.de, © OpenStreetMap 기여자) | 도보 경로 2순위 | https://routing.openstreetmap.de |
 | API | TMAP 보행자 경로 API (백엔드 `GET /api/route`) | 도보 경로 안내 (키는 서버에만) | https://openapi.sk.com |
 | API | 카카오 로컬 REST API (좌표→주소, 주소→좌표) | 내 위치 주소 표시, 가게 주소 좌표 변환 (백엔드), 가게 음식 분류(키워드 검색 장소 카테고리 → 한식·일식·퓨전 등) | https://developers.kakao.com/docs/latest/ko/local/dev-guide |

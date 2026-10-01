@@ -48,7 +48,6 @@ export default function RoutePage() {
   if (!store) return <ErrorView />;
 
   const name = pickText(store.name, lang, store.name_ko);
-  const kakaoUrl = `https://map.kakao.com/link/to/${encodeURIComponent(store.name_ko)},${store.lat},${store.lng}`;
 
   return (
     <main className="relative flex-1 overflow-hidden bg-zinc-100" style={{ minHeight: "100dvh" }}>
@@ -98,15 +97,7 @@ export default function RoutePage() {
           </>
         )}
 
-        <a
-          href={kakaoUrl}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="btn-secondary mt-4 w-full"
-        >
-          🗺️ {t("route.kakao")}
-        </a>
-        <Link href={`/arrive/${store.id}`} className="btn-primary mt-2 w-full">
+        <Link href={`/arrive/${store.id}`} className="btn-primary mt-4 w-full">
           {t("route.arrived")}
         </Link>
       </section>

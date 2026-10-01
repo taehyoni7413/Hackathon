@@ -59,7 +59,6 @@
   "route.minutes": "{m}분",
   "route.straight": "직선 거리 기준이에요. 실제 길은 다를 수 있어요.",
   "route.loading": "경로를 찾고 있어요",
-  "route.kakao": "카카오맵에서 길 안내",
   "route.arrived": "도착했어요",
   "arrive.checking": "위치를 확인하고 있어요",
   "arrive.question": "{name}에 도착하셨나요?",

@@ -59,7 +59,6 @@
   "route.minutes": "{m} 分钟",
   "route.straight": "按直线距离计算，实际路线可能不同。",
   "route.loading": "正在查找路线",
-  "route.kakao": "用 Kakao 地图导航",
   "route.arrived": "我到了",
   "arrive.checking": "正在确认您的位置",
   "arrive.question": "您到达 {name} 了吗？",
