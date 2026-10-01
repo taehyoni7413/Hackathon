@@ -30,6 +30,13 @@ def test_stores_nearby_sorted():
     assert dists == sorted(dists)
 
 
+def test_every_store_has_menus():
+    for s in client.get("/api/stores/all").json():
+        menus = client.get(f"/api/stores/{s['id']}/menus").json()
+        assert menus, f"store {s['id']} has no menus"
+        assert all(m["name_ko"] and m["price"] > 0 for m in menus)
+
+
 def test_store_not_found():
     assert client.get("/api/stores/99999").status_code == 404
 
