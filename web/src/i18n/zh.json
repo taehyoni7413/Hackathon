@@ -122,5 +122,14 @@
   "wait.hint": "店主叫到下面的菜名时，请去取餐",
   "wait.received": "我已取餐",
   "done.title": "祝您用餐愉快！",
-  "done.backMap": "返回地图"
+  "done.backMap": "返回地图",
+  "coach.label": "AI 菜单助手",
+  "coach.question": "这道菜适合我吗？",
+  "coach.ask": "问问 AI",
+  "coach.loading": "思考中…",
+  "coach.retry": "重试",
+  "coach.error": "暂时无法获取 AI 建议。",
+  "coach.summary": "一句话总结",
+  "coach.goodFor": "适合人群",
+  "coach.notice": "注意事项"
 }

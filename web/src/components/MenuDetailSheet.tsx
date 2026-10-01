@@ -4,6 +4,7 @@ import { useState } from "react";
 
 import { CustomRequestInput } from "@/components/CustomRequestInput";
 import { AiNotice, DietBadges } from "@/components/DietBadges";
+import { MenuCoach } from "@/components/MenuCoach";
 import { SmartImage } from "@/components/SmartImage";
 import { useApp } from "@/context/AppContext";
 import { pickText } from "@/i18n";
@@ -73,6 +74,8 @@ export function MenuDetailSheet({
             <DietBadges menu={menu} detail />
             <AiNotice />
           </div>
+
+          <MenuCoach menu={menu} />
 
           {menu.ingredients.length > 0 && (
             <p className="mt-4 text-sm text-zinc-600">

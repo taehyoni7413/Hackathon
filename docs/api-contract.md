@@ -73,3 +73,13 @@
 {}
 ```
 -->
+
+## POST /api/menu-insight — AI 메뉴 코치
+메뉴 정보(backend/data/menus.json)를 바탕으로 "이 메뉴가 나에게 맞을까?"를 사용자 언어로 답한다. 같은 메뉴·언어는 서버 메모리에 캐시.
+
+요청 `{ "store_id": 3, "menu_id": 10, "lang": "zh" }` (lang: ko / zh / en, 그 외는 en)
+
+응답 `{ "summary": "...", "recommended_for": "...", "notice": "..." }`
+
+오류: 없는 메뉴 404, AI 실패 502. `MOCK_LLM=1` 이면 가짜 응답.
+
