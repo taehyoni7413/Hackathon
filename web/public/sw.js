@@ -2,7 +2,7 @@
 // - 페이지 이동: 네트워크 우선, 실패하면 캐시
 // - 같은 출처 정적 파일(/_next/static, 이미지, 아이콘): 캐시 우선
 // - /api/* 와 다른 출처(카카오맵, OSRM 등)는 건드리지 않음
-const CACHE = "buk-v1";
+const CACHE = "buk-v2"; // 메뉴 사진처럼 같은 주소의 파일 내용이 바뀌면 숫자를 올린다
 const PRECACHE = ["/", "/language", "/map", "/manifest.webmanifest", "/icons/icon-192.png"];
 
 self.addEventListener("install", (event) => {
