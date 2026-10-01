@@ -4,13 +4,13 @@ import { useRouter } from "next/navigation";
 import { useState } from "react";
 
 import { useApp } from "@/context/AppContext";
-import { LANGS, translate, type Lang } from "@/i18n";
+import { DEFAULT_LANG, LANGS, translate, type Lang } from "@/i18n";
 
-/** 2. 언어 선택: 첫 번째 언어(简体中文)를 기본으로 강조 */
+/** 2. 언어 선택: 기본 언어(한국어)가 처음 선택돼 있음 */
 export default function LanguagePage() {
   const router = useRouter();
   const { lang, langChosen, setLang } = useApp();
-  const [selected, setSelected] = useState<Lang>(langChosen ? lang : LANGS[0].code);
+  const [selected, setSelected] = useState<Lang>(langChosen ? lang : DEFAULT_LANG);
 
   return (
     <main className="flex flex-1 flex-col px-6 pb-8 pt-16">
