@@ -85,7 +85,7 @@ function MapHome() {
       )}
 
       {/* 상단: 카테고리 칩 + 설정 */}
-      <div className="absolute inset-x-0 top-0 z-20 pt-3">
+      <div className="absolute inset-x-0 top-0 z-20 pt-safe">
         <div className="flex items-center gap-2 pr-4">
           <div className="min-w-0 flex-1">
             <CategoryChips

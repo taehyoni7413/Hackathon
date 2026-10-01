@@ -121,7 +121,7 @@ export function MenuDetailSheet({
           </div>
         </div>
 
-        <div className="shrink-0 border-t border-zinc-100 p-4">
+        <div className="shrink-0 border-t border-zinc-100 px-4 pt-4 pb-safe">
           <button className="btn-primary w-full" onClick={() => onAdd(qty, optionIds)}>
             {t("menu.addToCart", { price: formatPrice(unitPrice(menu, optionIds) * qty, lang) })}
           </button>

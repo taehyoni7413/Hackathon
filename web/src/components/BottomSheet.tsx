@@ -92,7 +92,7 @@ export function BottomSheet({
       </div>
       {header && <div className="shrink-0 px-4">{header}</div>}
       <div className="min-h-0 flex-1 overflow-y-auto overscroll-contain">{children}</div>
-      {footer && <div className="shrink-0 border-t border-zinc-100 bg-white p-4">{footer}</div>}
+      {footer && <div className="shrink-0 border-t border-zinc-100 bg-white px-4 pt-4 pb-safe">{footer}</div>}
     </section>
   );
 }

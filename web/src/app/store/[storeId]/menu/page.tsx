@@ -139,7 +139,7 @@ export default function MenuPage() {
 
       {/* 장바구니 버튼 */}
       {count > 0 && (
-        <div className="fixed inset-x-0 bottom-0 z-30 mx-auto max-w-[480px] p-4">
+        <div className="fixed inset-x-0 bottom-0 z-30 mx-auto max-w-[480px] px-4 pt-4 pb-safe">
           <Link href="/cart" className="btn-primary w-full shadow-lg">
             🛒 {t("menu.cartBtn", { n: count, price: formatPrice(cartTotal(store.menus, myCart), lang) })}
           </Link>
