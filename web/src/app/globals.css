@@ -251,6 +251,11 @@ a {
   .device-chrome {
     display: block;
   }
+  /* 화면 전체를 덮는 창(AI 추천·메뉴 상세·설정·메뉴판·음성)도 틀의 둥근 모서리에 맞춰 자름 */
+  .device .fixed.inset-0 {
+    border-radius: 56px;
+    overflow: hidden;
+  }
 }
 @layer components {
   /* 모바일 우선: 큰 화면에서도 휴대폰 폭으로 가운데 정렬 */

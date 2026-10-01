@@ -87,7 +87,7 @@ export function AiSearchSheet({
     <div className="fixed inset-0 z-50 flex flex-col bg-white" role="dialog" aria-modal aria-label={t("ai.label")}>
       {/* 검색 줄 */}
       <form
-        className="flex items-center gap-2 border-b border-black/5 px-2 pb-3 pt-safe"
+        className="flex items-center gap-1.5 border-b border-black/5 pb-3 pl-2 pr-4 pt-safe"
         onSubmit={(e) => {
           e.preventDefault();
           void ask(query);
@@ -96,7 +96,7 @@ export function AiSearchSheet({
         <button type="button" className="icon-btn shrink-0 shadow-none" onClick={onClose} aria-label={t("common.back")}>
           <CaretLeft weight="bold" />
         </button>
-        <div className="relative flex h-12 min-w-0 flex-1 items-center rounded-full bg-zinc-100 pl-4 pr-1.5">
+        <div className="relative flex h-11 min-w-0 flex-1 items-center rounded-full bg-zinc-100 pl-3.5 pr-1">
           <Sparkle weight="fill" className="mr-2 shrink-0 text-brand" />
           <input
             ref={input}
@@ -108,7 +108,7 @@ export function AiSearchSheet({
             aria-label={t("ai.title")}
           />
           {!query && (
-            <span key={example} className="pointer-events-none absolute left-11 animate-[fade-in_0.4s_ease] text-zinc-400">
+            <span key={example} className="pointer-events-none absolute left-10 animate-[fade-in_0.4s_ease] truncate pr-12 text-zinc-400">
               {t(example)}
             </span>
           )}
@@ -123,17 +123,17 @@ export function AiSearchSheet({
         </div>
       </form>
 
-      <div className="flex-1 overflow-y-auto px-4 pb-safe">
+      <div className="flex-1 overflow-y-auto px-5 pb-safe [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
         {phase === "idle" && (
           <div className="pt-6">
-            <h2 className="font-display text-3xl leading-tight text-ink">{t("ai.title")}</h2>
-            <p className="mt-1 text-zinc-500">{t("ai.subtitle")}</p>
+            <h2 className="font-display text-[28px] leading-tight text-ink">{t("ai.title")}</h2>
+            <p className="mt-1.5 text-[15px] leading-relaxed text-zinc-500">{t("ai.subtitle")}</p>
             <div className="mt-5 flex flex-wrap gap-2">
               {EXAMPLES.map((k) => (
                 <button
                   key={k}
                   onClick={() => void ask(t(k))}
-                  className="rounded-full bg-brand-soft px-4 py-2.5 font-semibold text-brand-dark transition active:scale-95"
+                  className="rounded-full bg-brand-soft px-4 py-2 text-[15px] font-semibold text-brand-dark transition active:scale-95"
                 >
                   {t(k)}
                 </button>
@@ -159,7 +159,7 @@ export function AiSearchSheet({
           <>
             <h2 className="mt-5 font-display text-2xl text-ink">{t("ai.results")}</h2>
             <p className="text-sm text-zinc-500">{keywordOnly ? t("ai.keyword") : t("ai.tapHint")}</p>
-            <ul className="mt-3 space-y-3 pb-4">
+            <ul className="mt-3 space-y-2.5 pb-12">
               {items.map((it) => {
                 const store = stores.find((s) => s.id === it.store_id)!;
                 const menu = store.menus.find((m) => m.id === it.menu_id)!;
@@ -168,21 +168,21 @@ export function AiSearchSheet({
                   <li key={it.menu_id}>
                     <button
                       onClick={() => onPick(store.id)}
-                      className="flex w-full items-center gap-3 rounded-2xl bg-white p-3 text-left shadow-sm ring-1 ring-black/5 transition active:scale-[0.99] active:bg-rice"
+                      className="flex w-full items-center gap-3 rounded-2xl bg-white p-2.5 pr-3 text-left shadow-sm ring-1 ring-black/5 transition active:scale-[0.99] active:bg-rice"
                     >
                       <SmartImage
                         src={menu.image_url}
                         fallback={defaultImage(store.category)}
                         alt={name}
-                        className="h-20 w-20 shrink-0 rounded-xl bg-rice object-cover"
+                        className="h-[72px] w-[72px] shrink-0 rounded-xl bg-rice object-cover"
                       />
                       <div className="min-w-0 flex-1">
-                        <p className="truncate text-[17px] font-bold text-ink">{name}</p>
-                        <p className="truncate text-sm text-zinc-500">
+                        <p className="truncate text-base font-bold text-ink">{name}</p>
+                        <p className="truncate text-[13px] text-zinc-500">
                           {pickText(store.name, lang, store.name_ko)} · {formatPrice(menu.price, lang)}
                         </p>
                         {it.reason && (
-                          <p className="mt-1 line-clamp-2 text-sm leading-snug text-brand-dark">
+                          <p className="mt-0.5 line-clamp-2 text-[13px] leading-snug text-brand-dark">
                             <Sparkle weight="fill" className="mr-1 inline align-[-2px]" />
                             {it.reason}
                           </p>
