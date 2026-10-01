@@ -10,6 +10,7 @@ from backend import llm
 
 app = FastAPI(title="Hackathon API")
 
+# 프론트는 Next.js rewrites(/api/*)로 호출하므로 보통 불필요. 직접 호출 테스트용으로 열어둠
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],

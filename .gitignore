@@ -31,5 +31,5 @@ models/
 .DS_Store
 Thumbs.db
 
-# Streamlit
-.streamlit/secrets.toml
+# Claude Code (개인 설정)
+.claude/settings.local.json

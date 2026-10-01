@@ -1,27 +1,24 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
-const BACKEND_URL =
-  process.env.NEXT_PUBLIC_BACKEND_URL ?? "http://localhost:8000";
-
-async function post<T>(path: string, body: unknown): Promise<T> {
-  const res = await fetch(`${BACKEND_URL}${path}`, {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify(body),
-  });
-  if (!res.ok) throw new Error(await res.text());
-  return res.json();
-}
+import { api } from "@/lib/api";
 
 export default function Home() {
+  const [backendOk, setBackendOk] = useState<boolean | null>(null);
   const [features, setFeatures] = useState("1.0, 2.0, 3.0");
   const [prediction, setPrediction] = useState<number | null>(null);
   const [message, setMessage] = useState("");
   const [reply, setReply] = useState("");
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
+
+  useEffect(() => {
+    api
+      .health()
+      .then(() => setBackendOk(true))
+      .catch(() => setBackendOk(false));
+  }, []);
 
   async function handlePredict() {
     setError("");
@@ -31,9 +28,7 @@ export default function Home() {
         .map((s) => s.trim())
         .filter(Boolean)
         .map(Number);
-      const data = await post<{ prediction: number }>("/predict", {
-        features: nums,
-      });
+      const data = await api.predict({ features: nums });
       setPrediction(data.prediction);
     } catch (e) {
       setError(String(e));
@@ -45,7 +40,7 @@ export default function Home() {
     setError("");
     setLoading(true);
     try {
-      const data = await post<{ reply: string }>("/chat", { message });
+      const data = await api.chat({ message });
       setReply(data.reply);
     } catch (e) {
       setError(String(e));
@@ -56,9 +51,26 @@ export default function Home() {
 
   return (
     <main className="mx-auto w-full max-w-3xl px-4 py-12 flex flex-col gap-10">
-      <header>
-        <h1 className="text-3xl font-bold">🚀 Hackathon Demo</h1>
-        <p className="text-zinc-500 mt-1">주제 확정 후 화면을 교체하세요</p>
+      <header className="flex items-start justify-between gap-4">
+        <div>
+          <h1 className="text-3xl font-bold">🚀 Hackathon Demo</h1>
+          <p className="text-zinc-500 mt-1">주제 확정 후 화면을 교체하세요</p>
+        </div>
+        <span
+          className={`shrink-0 rounded-full px-3 py-1 text-sm ${
+            backendOk === null
+              ? "bg-zinc-200 text-zinc-600 dark:bg-zinc-800 dark:text-zinc-400"
+              : backendOk
+                ? "bg-green-100 text-green-700 dark:bg-green-950 dark:text-green-400"
+                : "bg-red-100 text-red-700 dark:bg-red-950 dark:text-red-400"
+          }`}
+        >
+          {backendOk === null
+            ? "백엔드 확인 중"
+            : backendOk
+              ? "백엔드 연결됨"
+              : "백엔드 꺼짐"}
+        </span>
       </header>
 
       <section className="flex flex-col gap-3">
