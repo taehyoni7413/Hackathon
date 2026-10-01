@@ -13,6 +13,7 @@
 | GET | `/health` | 서버 상태 | ✅ 구현 | Backend |
 | POST | `/predict` | 예시 예측 (주제 확정 후 교체) | 🟡 더미 | ML |
 | POST | `/chat` | AI 응답 (gpt-6-luna) | ✅ 구현 (`MOCK_LLM`) | Backend |
+| POST | `/translate` | 요청사항(사용자 언어) → 사장님용 한국어 | ✅ 구현 | Backend |
 
 상태: ⬜ 계획 / 🟡 더미 응답 / ✅ 실제 구현
 
@@ -34,6 +35,18 @@
 { "prediction": 2.0 }
 ```
 **Error** `400` — features 가 비어 있음
+
+### `POST /translate`
+메뉴 상세에서 말하거나 입력한 요청사항을 사장님께 보여줄 한국어 문장으로 바꾼다. `lang` 이 `ko` 면 그대로 돌려준다.
+**Request**
+```json
+{ "text": "不要放香菜，少辣一点", "lang": "zh" }
+```
+**Response 200**
+```json
+{ "ko": "고수는 빼고 덜 맵게 해주세요." }
+```
+**Error** `400` — 비었거나 200자 초과 / `502` — 번역 실패 (프론트는 원문 그대로 표시)
 
 ### `POST /chat`
 **Request**

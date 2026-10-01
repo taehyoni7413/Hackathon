@@ -74,6 +74,10 @@ export default function ShowOrderPage() {
                       translated={lang !== "ko" ? pickText(o.translations, lang) : undefined}
                     />
                   ))}
+                  {/* 손님이 말하거나 입력한 요청: 한국어 번역을 크게, 원문을 작게 */}
+                  {item.custom_requests?.map((r, i) => (
+                    <OrderRequestItem key={`custom-${i}`} ko={r.ko} translated={r.text} />
+                  ))}
                 </ul>
               </li>
             );

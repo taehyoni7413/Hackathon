@@ -73,6 +73,11 @@ export default function CartPage() {
                     · {pickText(o.translations, lang, o.name_ko)}
                   </p>
                 ))}
+                {item.custom_requests?.map((r, i) => (
+                  <p key={i} className="text-sm text-zinc-600">
+                    · 🎤 “{r.text}”
+                  </p>
+                ))}
                 <div className="mt-2 flex items-center justify-between">
                   <div className="flex items-center gap-2">
                     <button

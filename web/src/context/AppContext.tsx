@@ -10,7 +10,7 @@ import {
   type Lang,
   type MessageKey,
 } from "@/i18n";
-import type { CartItem } from "@/types/models";
+import type { CartItem, CustomRequest } from "@/types/models";
 
 export type Order = {
   store_id: string;
@@ -44,8 +44,10 @@ type AppState = {
 
 const Ctx = createContext<AppState | null>(null);
 
-function itemKey(menuId: string, optionIds: string[]) {
-  return [menuId, ...[...optionIds].sort()].join("|");
+function itemKey(menuId: string, optionIds: string[], custom?: CustomRequest[]) {
+  // 같은 메뉴라도 말한 요청이 다르면 다른 줄로 담는다
+  const said = (custom ?? []).map((c) => c.text);
+  return [menuId, ...[...optionIds].sort(), ...said].join("|");
 }
 
 export function AppProvider({ children }: { children: ReactNode }) {
@@ -69,7 +71,7 @@ export function AppProvider({ children }: { children: ReactNode }) {
 
   const addToCart = useCallback(
     (item: Omit<CartItem, "key">) => {
-      const key = itemKey(item.menu_id, item.option_ids);
+      const key = itemKey(item.menu_id, item.option_ids, item.custom_requests);
       setCart((prev) => {
         // 다른 식당 메뉴는 섞지 않는다 (확인은 호출하는 화면에서)
         const base = prev.length && prev[0].store_id !== item.store_id ? [] : prev;

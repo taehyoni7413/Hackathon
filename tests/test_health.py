@@ -30,6 +30,25 @@ def test_chat_without_key_returns_502(monkeypatch):
     assert r.status_code == 502
 
 
+def test_translate_mock(monkeypatch):
+    from backend import llm
+
+    monkeypatch.setattr(llm, "MOCK", True)
+    r = client.post("/api/translate", json={"text": "less spicy please", "lang": "en"})
+    assert r.status_code == 200
+    assert r.json()["ko"]
+
+
+def test_translate_korean_passthrough():
+    r = client.post("/api/translate", json={"text": "덜 맵게 해주세요", "lang": "ko"})
+    assert r.json() == {"ko": "덜 맵게 해주세요"}
+
+
+def test_translate_limits():
+    assert client.post("/api/translate", json={"text": "  "}).status_code == 400
+    assert client.post("/api/translate", json={"text": "a" * 201}).status_code == 400
+
+
 def test_predict():
     r = client.post("/api/predict", json={"features": [1, 2, 3]})
     assert r.status_code == 200

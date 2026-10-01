@@ -2,13 +2,14 @@
 
 import { useState } from "react";
 
+import { CustomRequestInput } from "@/components/CustomRequestInput";
 import { AiNotice, DietBadges } from "@/components/DietBadges";
 import { SmartImage } from "@/components/SmartImage";
 import { useApp } from "@/context/AppContext";
 import { pickText } from "@/i18n";
 import { unitPrice } from "@/lib/cart";
 import { formatPrice } from "@/lib/format";
-import type { Menu } from "@/types/models";
+import type { CustomRequest, Menu } from "@/types/models";
 
 /** 메뉴 상세: 수량·요청사항 선택 후 장바구니 담기 */
 export function MenuDetailSheet({
@@ -19,12 +20,14 @@ export function MenuDetailSheet({
 }: {
   menu: Menu;
   fallbackImage: string;
-  onAdd: (quantity: number, optionIds: string[]) => void;
+  onAdd: (quantity: number, optionIds: string[], custom: CustomRequest[]) => void;
   onClose: () => void;
 }) {
   const { lang, t } = useApp();
   const [qty, setQty] = useState(1);
   const [optionIds, setOptionIds] = useState<string[]>([]);
+  const [custom, setCustom] = useState<CustomRequest[]>([]);
+  const [busy, setBusy] = useState(false);
   const tr = menu.translations[lang];
   const name = tr?.name ?? menu.name_ko;
 
@@ -77,9 +80,9 @@ export function MenuDetailSheet({
             </p>
           )}
 
+          <h3 className="mt-6 font-semibold">{t("menu.options")}</h3>
           {menu.options.length > 0 && (
             <>
-              <h3 className="mt-6 font-semibold">{t("menu.options")}</h3>
               <ul className="mt-2 space-y-2">
                 {menu.options.map((o) => {
                   const on = optionIds.includes(o.id);
@@ -106,6 +109,7 @@ export function MenuDetailSheet({
               </ul>
             </>
           )}
+          <CustomRequestInput value={custom} onChange={setCustom} onBusyChange={setBusy} />
 
           <div className="mt-6 flex items-center justify-between">
             <span className="font-semibold">{t("menu.quantity")}</span>
@@ -122,7 +126,11 @@ export function MenuDetailSheet({
         </div>
 
         <div className="shrink-0 border-t border-zinc-100 px-4 pt-4 pb-safe">
-          <button className="btn-primary w-full" onClick={() => onAdd(qty, optionIds)}>
+          <button
+            className="btn-primary w-full"
+            onClick={() => onAdd(qty, optionIds, custom)}
+            disabled={busy}
+          >
             {t("menu.addToCart", { price: formatPrice(unitPrice(menu, optionIds) * qty, lang) })}
           </button>
         </div>

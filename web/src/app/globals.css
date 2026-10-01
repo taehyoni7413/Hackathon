@@ -35,6 +35,48 @@ a {
   user-select: none;
 }
 
+/* 음성 입력: 시리 스타일 빛나는 구슬 */
+@keyframes siri-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes siri-breathe {
+  0%,
+  100% {
+    transform: scale(0.92);
+  }
+  50% {
+    transform: scale(1.04);
+  }
+}
+@keyframes siri-talk {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  25% {
+    transform: scale(1.18);
+  }
+  60% {
+    transform: scale(0.96);
+  }
+  80% {
+    transform: scale(1.12);
+  }
+}
+.siri-orb {
+  background: conic-gradient(from 0deg, #ff6a2b, #ff2d87, #8b5cf6, #22d3ee, #34d399, #ff6a2b);
+  filter: blur(14px);
+  animation: siri-spin 3.2s linear infinite;
+}
+.siri-core {
+  animation: siri-breathe 2.4s ease-in-out infinite;
+}
+.siri-core[data-hearing="true"] {
+  animation: siri-talk 0.9s ease-in-out infinite;
+}
+
 /* 노치·홈 바(safe area) 여백 */
 @utility pb-safe {
   padding-bottom: max(1rem, env(safe-area-inset-bottom));
