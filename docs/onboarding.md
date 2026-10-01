@@ -1,6 +1,9 @@
 # 👋 팀원 온보딩
 
-## 1. 해커톤 전날 (집에서, 약 10분)
+> 대회 규칙·주제·심사 기준은 [contest.md](contest.md) 먼저 읽기 (5분).
+> 개발 시간은 **10/1 19:30 ~ 10/2 11:30**. 핵심 기능 코드는 이 시간 안에만 작성.
+
+## 1. 오기 전에 (약 10분)
 
 필요 도구: **Git, Python 3.10+, Node.js 20+**
 
@@ -29,7 +32,7 @@ bash scripts/dev.sh                                         # macOS / Linux
 http://localhost:3000 에서 오른쪽 위에 **"백엔드 연결됨"** 이 보이면 성공.
 안 되면 단톡에 에러 메시지 캡처 공유.
 
-## 2. 해커톤 당일 도착하면
+## 2. 도착하면
 
 ```bash
 git checkout main
@@ -53,6 +56,8 @@ git push -u origin feat/12-result-page
 ```
 
 규칙 요약은 [CONTRIBUTING](../.github/CONTRIBUTING.md), 역할별 폴더는 [roles.md](roles.md).
+
+> 외부 API·오픈소스 라이브러리·데이터를 새로 쓰면 README「외부 자료」에 바로 한 줄 추가 (발표에서 공개 필수).
 
 ## 🔑 API 키
 - 기본값 `MOCK_LLM=1` → 키 없이 `/chat` 이 가짜 응답을 줌. **대부분 이대로 개발**하면 됨.
