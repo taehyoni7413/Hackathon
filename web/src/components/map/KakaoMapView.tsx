@@ -20,6 +20,7 @@ const CATEGORY_EMOJI: Record<string, string> = {
   chinese: "🥟",
   japanese: "🍣",
   western: "🍔",
+  fusion: "🍽️",
   snack: "🍢",
   cafe: "☕",
 };

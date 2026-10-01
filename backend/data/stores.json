@@ -11,8 +11,9 @@
     },
     "open_hours": {},
     "image_url": "/stores/1/menu/001.png",
-    "category": "korean",
-    "menu_board_images": []
+    "category": "fusion",
+    "menu_board_images": [],
+    "kakao_category": "음식점 > 퓨전요리"
   },
   {
     "id": 2,
@@ -29,7 +30,8 @@
     "category": "western",
     "menu_board_images": [
       "/stores/2/menu_board_01.png"
-    ]
+    ],
+    "kakao_category": "음식점 > 양식 > 멕시칸,브라질"
   },
   {
     "id": 3,
@@ -46,6 +48,7 @@
     "category": "japanese",
     "menu_board_images": [
       "/stores/3/menu_board_01.jpg"
-    ]
+    ],
+    "kakao_category": "음식점 > 일식"
   }
 ]
