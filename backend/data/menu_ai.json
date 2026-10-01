@@ -1,0 +1,2755 @@
+{
+  "요거닭": {
+    "menu_category": "치킨",
+    "menu_category_en": "Chicken",
+    "menu_category_zh": "鸡肉",
+    "pronunciation": "yogeo-dak",
+    "zh_name": "酸奶鸡肉",
+    "zh_description": "鸡肉搭配酸奶酱，口感清爽柔和。",
+    "en_name": "Yogurt Chicken",
+    "en_description": "Chicken served with a cool, tangy yogurt sauce.",
+    "ingredients": [
+      "닭고기",
+      "요거트",
+      "마요네즈",
+      "허브"
+    ],
+    "allergens": [
+      "우유",
+      "계란"
+    ],
+    "contains_pork": false,
+    "contains_alcohol": false,
+    "halal": "unknown",
+    "vegan": "no",
+    "spicy": 0
+  },
+  "치킨난반": {
+    "menu_category": "치킨",
+    "menu_category_en": "Chicken",
+    "menu_category_zh": "鸡肉",
+    "pronunciation": "chikin-nanban",
+    "zh_name": "南蛮炸鸡",
+    "zh_description": "酥炸鸡肉淋上酸甜酱汁，搭配浓郁塔塔酱。",
+    "en_name": "Chicken Nanban",
+    "en_description": "Crispy chicken is coated in a tangy sweet-and-sour sauce and served with creamy tartar sauce.",
+    "ingredients": [
+      "닭고기",
+      "밀가루",
+      "계란",
+      "간장"
+    ],
+    "allergens": [
+      "밀",
+      "계란",
+      "대두"
+    ],
+    "contains_pork": false,
+    "contains_alcohol": true,
+    "halal": "no",
+    "vegan": "no",
+    "spicy": 0
+  },
+  "닭누룽지전골": {
+    "menu_category": "전골",
+    "menu_category_en": "Hot Pot",
+    "menu_category_zh": "火锅",
+    "pronunciation": "dak-nurungji-jeongol",
+    "zh_name": "鸡肉锅巴火锅",
+    "zh_description": "鸡肉与锅巴在鲜香汤底中炖煮，口感暖胃浓郁。",
+    "en_name": "Chicken and Scorched Rice Hot Pot",
+    "en_description": "Chicken and crispy scorched rice simmer in a savory, warming broth.",
+    "ingredients": [
+      "닭고기",
+      "누룽지",
+      "버섯",
+      "대파",
+      "간장"
+    ],
+    "allergens": [
+      "대두"
+    ],
+    "contains_pork": false,
+    "contains_alcohol": false,
+    "halal": "unknown",
+    "vegan": "no",
+    "spicy": 0
+  },
+  "된장누룽지술밥": {
+    "menu_category": "전골",
+    "menu_category_en": "Stew",
+    "menu_category_zh": "炖汤",
+    "pronunciation": "doenjang-nurungji-sulbap",
+    "zh_name": "大酱锅巴汤饭",
+    "zh_description": "烤锅巴与大酱汤一起煮，咸香浓郁、口感温暖。",
+    "en_name": "Doenjang Scorched Rice Soup",
+    "en_description": "Scorched rice simmers in a hearty, savory Korean soybean paste broth.",
+    "ingredients": [
+      "된장",
+      "누룽지",
+      "두부",
+      "대파"
+    ],
+    "allergens": [
+      "대두",
+      "밀"
+    ],
+    "contains_pork": null,
+    "contains_alcohol": false,
+    "halal": "unknown",
+    "vegan": "unknown",
+    "spicy": 0
+  },
+  "들기름간장메밀면": {
+    "menu_category": "소바",
+    "menu_category_en": "Soba",
+    "menu_category_zh": "荞麦面",
+    "pronunciation": "deulgireum-ganjang-memilmyeon",
+    "zh_name": "紫苏油酱油荞麦面",
+    "zh_description": "荞麦面拌上香浓紫苏油和酱油，味道清爽咸香。",
+    "en_name": "Buckwheat Noodles with Perilla Oil and Soy Sauce",
+    "en_description": "Buckwheat noodles are tossed with fragrant perilla oil and savory soy sauce.",
+    "ingredients": [
+      "메밀면",
+      "들기름",
+      "간장",
+      "김"
+    ],
+    "allergens": [
+      "메밀",
+      "대두",
+      "밀"
+    ],
+    "contains_pork": false,
+    "contains_alcohol": false,
+    "halal": "yes",
+    "vegan": "yes",
+    "spicy": 0
+  },
+  "라구떡볶이": {
+    "menu_category": "떡볶이",
+    "menu_category_en": "Tteokbokki",
+    "menu_category_zh": "炒年糕",
+    "pronunciation": "ragu-tteokbokki",
+    "zh_name": "肉酱炒年糕",
+    "zh_description": "软糯年糕裹上浓郁番茄肉酱，咸香可口。",
+    "en_name": "Ragù Tteokbokki",
+    "en_description": "Chewy rice cakes are coated in a rich tomato and meat ragù sauce.",
+    "ingredients": [
+      "떡",
+      "라구소스",
+      "토마토",
+      "양파",
+      "치즈"
+    ],
+    "allergens": [
+      "밀",
+      "대두",
+      "우유"
+    ],
+    "contains_pork": true,
+    "contains_alcohol": false,
+    "halal": "no",
+    "vegan": "no",
+    "spicy": 0
+  },
+  "라구숏파스타": {
+    "menu_category": "파스타",
+    "menu_category_en": "Pasta",
+    "menu_category_zh": "意面",
+    "pronunciation": "ragu-syot-paseuta",
+    "zh_name": "肉酱短管意面",
+    "zh_description": "短意面拌入浓郁番茄肉酱，风味醇厚。",
+    "en_name": "Short Pasta with Ragù",
+    "en_description": "Short pasta is tossed in a hearty tomato and meat ragù sauce.",
+    "ingredients": [
+      "숏파스타",
+      "라구소스",
+      "토마토",
+      "소고기",
+      "치즈"
+    ],
+    "allergens": [
+      "밀",
+      "우유"
+    ],
+    "contains_pork": true,
+    "contains_alcohol": false,
+    "halal": "no",
+    "vegan": "no",
+    "spicy": 0
+  },
+  "라구프라이": {
+    "menu_category": "사이드",
+    "menu_category_en": "Side",
+    "menu_category_zh": "小食",
+    "pronunciation": "ragu-peurai",
+    "zh_name": "肉酱薯条",
+    "zh_description": "酥脆薯条淋上浓郁番茄肉酱。",
+    "en_name": "Ragù Fries",
+    "en_description": "Crispy fries are topped with rich tomato and meat ragù sauce.",
+    "ingredients": [
+      "감자",
+      "라구소스",
+      "토마토",
+      "치즈"
+    ],
+    "allergens": [
+      "우유"
+    ],
+    "contains_pork": true,
+    "contains_alcohol": false,
+    "halal": "no",
+    "vegan": "no",
+    "spicy": 0
+  },
+  "리치우유사와": {
+    "menu_category": "주류",
+    "menu_category_en": "Alcoholic Drinks",
+    "menu_category_zh": "酒类",
+    "pronunciation": "richi-uyu-sawa",
+    "zh_name": "荔枝牛奶沙瓦",
+    "zh_description": "荔枝的甜香与牛奶的柔滑融合在清爽的沙瓦酒中。",
+    "en_name": "Lychee Milk Sour",
+    "en_description": "A refreshing alcoholic sour with sweet lychee and creamy milk.",
+    "ingredients": [
+      "소주",
+      "리치",
+      "우유",
+      "탄산수"
+    ],
+    "allergens": [
+      "우유"
+    ],
+    "contains_pork": false,
+    "contains_alcohol": true,
+    "halal": "no",
+    "vegan": "no",
+    "spicy": 0
+  },
+  "매운소불고기덮밥": {
+    "menu_category": "덮밥",
+    "menu_category_en": "Rice Bowl",
+    "menu_category_zh": "盖饭",
+    "pronunciation": "maeun-so-bulgogi-deopbap",
+    "zh_name": "辣味韩式烤牛肉盖饭",
+    "zh_description": "辣味酱汁炒牛肉铺在米饭上，带有甜咸与微辣风味。",
+    "en_name": "Spicy Beef Bulgogi Rice Bowl",
+    "en_description": "Rice topped with sweet-savory beef bulgogi in a spicy sauce.",
+    "ingredients": [
+      "소고기",
+      "밥",
+      "양파",
+      "간장",
+      "고추장"
+    ],
+    "allergens": [
+      "소고기",
+      "대두",
+      "밀"
+    ],
+    "contains_pork": false,
+    "contains_alcohol": false,
+    "halal": "unknown",
+    "vegan": "no",
+    "spicy": 2
+  },
+  "매콤갈릭쉬림프파스타": {
+    "menu_category": "파스타",
+    "menu_category_en": "Pasta",
+    "menu_category_zh": "意面",
+    "pronunciation": "maekom-gallik-swirimpeu-paseuta",
+    "zh_name": "香辣蒜香虾仁意面",
+    "zh_description": "虾仁与蒜香、辣椒一起拌炒，味道鲜香微辣。",
+    "en_name": "Spicy Garlic Shrimp Pasta",
+    "en_description": "Pasta with shrimp, garlic, and chili has a savory, gently spicy kick.",
+    "ingredients": [
+      "파스타",
+      "새우",
+      "마늘",
+      "고추",
+      "올리브유"
+    ],
+    "allergens": [
+      "밀",
+      "새우"
+    ],
+    "contains_pork": false,
+    "contains_alcohol": false,
+    "halal": "unknown",
+    "vegan": "no",
+    "spicy": 2
+  },
+  "매콤게살크림파스타": {
+    "menu_category": "파스타",
+    "menu_category_en": "Pasta",
+    "menu_category_zh": "意面",
+    "pronunciation": "maekom-gesal-keurim-paseuta",
+    "zh_name": "香辣蟹肉奶油意面",
+    "zh_description": "蟹肉与奶油酱汁交融，加入辣椒带来微辣口感。",
+    "en_name": "Spicy Crab Cream Pasta",
+    "en_description": "Crab and pasta are coated in a creamy sauce with a mild chili kick.",
+    "ingredients": [
+      "파스타",
+      "게살",
+      "크림",
+      "마늘",
+      "고추"
+    ],
+    "allergens": [
+      "밀",
+      "게",
+      "우유"
+    ],
+    "contains_pork": false,
+    "contains_alcohol": false,
+    "halal": "unknown",
+    "vegan": "no",
+    "spicy": 2
+  },
+  "매콤대창덮밥": {
+    "menu_category": "덮밥",
+    "menu_category_en": "Rice bowl",
+    "menu_category_zh": "盖饭",
+    "pronunciation": "maekom-daechang-deopbap",
+    "zh_name": "香辣牛大肠盖饭",
+    "zh_description": "香辣酱汁搭配烤牛大肠和米饭，味道浓郁。",
+    "en_name": "Spicy Beef Intestine Rice Bowl",
+    "en_description": "Grilled beef intestines and rice are served with a rich, spicy sauce.",
+    "ingredients": [
+      "소대창",
+      "쌀",
+      "고추장",
+      "간장",
+      "마늘"
+    ],
+    "allergens": [
+      "대두",
+      "밀"
+    ],
+    "contains_pork": false,
+    "contains_alcohol": false,
+    "halal": "unknown",
+    "vegan": "no",
+    "spicy": 2
+  },
+  "매콤바베큐덮밥": {
+    "menu_category": "덮밥",
+    "menu_category_en": "Rice bowl",
+    "menu_category_zh": "盖饭",
+    "pronunciation": "maekom-babeukyu-deopbap",
+    "zh_name": "香辣烧烤猪肉盖饭",
+    "zh_description": "香辣烧烤酱炒猪肉配米饭，咸香微辣。",
+    "en_name": "Spicy BBQ Pork Rice Bowl",
+    "en_description": "Rice topped with pork tossed in a savory, spicy barbecue sauce.",
+    "ingredients": [
+      "돼지고기",
+      "쌀",
+      "바베큐소스",
+      "양파",
+      "마늘"
+    ],
+    "allergens": [
+      "대두",
+      "밀"
+    ],
+    "contains_pork": true,
+    "contains_alcohol": false,
+    "halal": "no",
+    "vegan": "no",
+    "spicy": 2
+  },
+  "명란크림파스타": {
+    "menu_category": "파스타",
+    "menu_category_en": "Pasta",
+    "menu_category_zh": "意大利面",
+    "pronunciation": "myeongran-keurim-paseuta",
+    "zh_name": "明太子奶油意面",
+    "zh_description": "明太子与奶油调成咸鲜顺滑的酱汁，拌入意面。",
+    "en_name": "Mentaiko Cream Pasta",
+    "en_description": "Pasta tossed in a smooth, savory cream sauce with salted pollock roe.",
+    "ingredients": [
+      "파스타면",
+      "명란",
+      "생크림",
+      "마늘",
+      "버터"
+    ],
+    "allergens": [
+      "밀",
+      "우유"
+    ],
+    "contains_pork": false,
+    "contains_alcohol": false,
+    "halal": "unknown",
+    "vegan": "no",
+    "spicy": 0
+  },
+  "모히또하이볼": {
+    "menu_category": "주류",
+    "menu_category_en": "Alcoholic drinks",
+    "menu_category_zh": "酒类饮品",
+    "pronunciation": "mohitto-haibol",
+    "zh_name": "莫吉托嗨棒",
+    "zh_description": "薄荷、青柠和苏打调制的清爽酒饮。",
+    "en_name": "Mojito Highball",
+    "en_description": "A refreshing alcoholic drink with mint, lime, and soda.",
+    "ingredients": [
+      "민트",
+      "라임",
+      "소다수",
+      "주류"
+    ],
+    "allergens": [],
+    "contains_pork": false,
+    "contains_alcohol": true,
+    "halal": "no",
+    "vegan": "yes",
+    "spicy": 0
+  },
+  "미깡(귤)셔벗사와": {
+    "menu_category": "주류",
+    "menu_category_en": "Alcoholic drinks",
+    "menu_category_zh": "酒类饮品",
+    "pronunciation": "miggang-gyul-syeobeot-sawa",
+    "zh_name": "橘子雪葩沙瓦",
+    "zh_description": "橘子雪葩与清爽气泡酒调和，酸甜冰凉。",
+    "en_name": "Tangerine Sorbet Sour",
+    "en_description": "A bubbly alcoholic drink with sweet-tart tangerine and a scoop of sorbet.",
+    "ingredients": [
+      "귤",
+      "셔벗",
+      "소주",
+      "탄산수",
+      "설탕"
+    ],
+    "allergens": [],
+    "contains_pork": false,
+    "contains_alcohol": true,
+    "halal": "no",
+    "vegan": "unknown",
+    "spicy": 0
+  },
+  "버터명란오일파스타": {
+    "menu_category": "파스타",
+    "menu_category_en": "Pasta",
+    "menu_category_zh": "意大利面",
+    "pronunciation": "beoteo-myeongran-oil-paseuta",
+    "zh_name": "黄油明太子油拌意面",
+    "zh_description": "明太子和黄油拌入蒜香油汁，咸鲜浓香。",
+    "en_name": "Butter Mentaiko Oil Pasta",
+    "en_description": "Pasta tossed with salted pollock roe, butter, and fragrant garlic oil.",
+    "ingredients": [
+      "파스타면",
+      "명란",
+      "버터",
+      "올리브유",
+      "마늘"
+    ],
+    "allergens": [
+      "밀",
+      "우유"
+    ],
+    "contains_pork": false,
+    "contains_alcohol": false,
+    "halal": "unknown",
+    "vegan": "no",
+    "spicy": 0
+  },
+  "블루레몬사와": {
+    "menu_category": "주류",
+    "menu_category_en": "Alcoholic drinks",
+    "menu_category_zh": "酒类饮品",
+    "pronunciation": "beullu-remon-sawa",
+    "zh_name": "蓝柠檬沙瓦",
+    "zh_description": "蓝柠檬风味与气泡酒融合，酸爽清新。",
+    "en_name": "Blue Lemon Sour",
+    "en_description": "A sparkling alcoholic drink with a bright, tangy blue-lemon flavor.",
+    "ingredients": [
+      "레몬",
+      "소주",
+      "탄산수",
+      "시럽"
+    ],
+    "allergens": [],
+    "contains_pork": false,
+    "contains_alcohol": true,
+    "halal": "no",
+    "vegan": "yes",
+    "spicy": 0
+  },
+  "샤인머스켓사와": {
+    "menu_category": "주류",
+    "menu_category_en": "Alcoholic drinks",
+    "menu_category_zh": "酒类饮品",
+    "pronunciation": "syain-meoseuket-sawa",
+    "zh_name": "阳光玫瑰葡萄沙瓦",
+    "zh_description": "阳光玫瑰葡萄的清甜果香搭配气泡酒。",
+    "en_name": "Shine Muscat Sour",
+    "en_description": "A sparkling alcoholic drink with the sweet, fragrant taste of Shine Muscat grapes.",
+    "ingredients": [
+      "샤인머스켓",
+      "소주",
+      "탄산수",
+      "시럽"
+    ],
+    "allergens": [],
+    "contains_pork": false,
+    "contains_alcohol": true,
+    "halal": "no",
+    "vegan": "yes",
+    "spicy": 0
+  },
+  "소불고기덮밥(규동)": {
+    "menu_category": "덮밥",
+    "menu_category_en": "Rice bowl",
+    "menu_category_zh": "盖饭",
+    "pronunciation": "so-bulgogi-deopbap-gyudong",
+    "zh_name": "韩式牛肉盖饭（牛丼）",
+    "zh_description": "酱油风味的甜咸牛肉与洋葱铺在米饭上。",
+    "en_name": "Beef Bulgogi Rice Bowl (Gyudon)",
+    "en_description": "Tender beef and onions in a sweet-savory soy sauce are served over rice.",
+    "ingredients": [
+      "소고기",
+      "쌀",
+      "양파",
+      "간장",
+      "설탕"
+    ],
+    "allergens": [
+      "대두",
+      "밀"
+    ],
+    "contains_pork": false,
+    "contains_alcohol": false,
+    "halal": "unknown",
+    "vegan": "no",
+    "spicy": 0
+  },
+  "쉬림프바질크림숏파스타": {
+    "menu_category": "파스타",
+    "menu_category_en": "Pasta",
+    "menu_category_zh": "意大利面",
+    "pronunciation": "swi-rimpeu-bajil-keurim-syot-paseuta",
+    "zh_name": "虾仁罗勒奶油短意面",
+    "zh_description": "虾仁和罗勒融入奶油酱汁，搭配口感弹韧的短意面。",
+    "en_name": "Shrimp Basil Cream Short Pasta",
+    "en_description": "Short pasta is tossed with shrimp, fragrant basil, and a creamy sauce.",
+    "ingredients": [
+      "숏파스타면",
+      "새우",
+      "바질",
+      "생크림",
+      "마늘"
+    ],
+    "allergens": [
+      "밀",
+      "새우",
+      "우유"
+    ],
+    "contains_pork": false,
+    "contains_alcohol": false,
+    "halal": "yes",
+    "vegan": "no",
+    "spicy": 0
+  },
+  "알리오올리오": {
+    "menu_category": "파스타",
+    "menu_category_en": "Pasta",
+    "menu_category_zh": "意大利面",
+    "pronunciation": "allio-ollio",
+    "zh_name": "蒜香橄榄油意面",
+    "zh_description": "意面以橄榄油、蒜和辣椒拌炒，蒜香清爽。",
+    "en_name": "Aglio e Olio",
+    "en_description": "Pasta tossed with olive oil, garlic, and chili for a light, savory flavor.",
+    "ingredients": [
+      "파스타면",
+      "올리브유",
+      "마늘",
+      "페페론치노",
+      "파슬리"
+    ],
+    "allergens": [
+      "밀"
+    ],
+    "contains_pork": false,
+    "contains_alcohol": false,
+    "halal": "yes",
+    "vegan": "yes",
+    "spicy": 1
+  },
+  "얼그레이하이볼": {
+    "menu_category": "주류",
+    "menu_category_en": "Alcoholic drinks",
+    "menu_category_zh": "酒类饮品",
+    "pronunciation": "eolgeurei-haibol",
+    "zh_name": "伯爵茶嗨棒",
+    "zh_description": "伯爵茶的佛手柑香气融入清爽气泡酒。",
+    "en_name": "Earl Grey Highball",
+    "en_description": "A refreshing alcoholic highball with fragrant Earl Grey tea and citrus notes.",
+    "ingredients": [
+      "얼그레이",
+      "위스키",
+      "탄산수",
+      "레몬"
+    ],
+    "allergens": [],
+    "contains_pork": false,
+    "contains_alcohol": true,
+    "halal": "no",
+    "vegan": "yes",
+    "spicy": 0
+  },
+  "옥수수브륄레전": {
+    "menu_category": "전",
+    "menu_category_en": "Korean pancake",
+    "menu_category_zh": "韩式煎饼",
+    "pronunciation": "oksusu-beurylle-jeon",
+    "zh_name": "焦糖玉米煎饼",
+    "zh_description": "玉米煎饼带有香甜的焦糖化表层，口感软嫩浓郁。",
+    "en_name": "Corn Brûlée Pancake",
+    "en_description": "A savory corn pancake with a sweet, caramelized brûlée topping.",
+    "ingredients": [
+      "옥수수",
+      "밀가루",
+      "계란",
+      "치즈",
+      "설탕"
+    ],
+    "allergens": [
+      "밀",
+      "계란",
+      "우유"
+    ],
+    "contains_pork": false,
+    "contains_alcohol": false,
+    "halal": "unknown",
+    "vegan": "no",
+    "spicy": 0
+  },
+  "유자사와": {
+    "menu_category": "주류",
+    "menu_category_en": "Alcoholic drink",
+    "menu_category_zh": "酒精饮料",
+    "pronunciation": "yuja-sawa",
+    "zh_name": "柚子沙瓦",
+    "zh_description": "柚子香气清新，带有酸甜果味的气泡酒饮。",
+    "en_name": "Yuzu Sour",
+    "en_description": "A fizzy alcoholic drink with bright, sweet-tart yuzu flavor.",
+    "ingredients": [
+      "유자",
+      "소주",
+      "탄산수",
+      "시럽"
+    ],
+    "allergens": [],
+    "contains_pork": false,
+    "contains_alcohol": true,
+    "halal": "no",
+    "vegan": "yes",
+    "spicy": 0
+  },
+  "잠봉까르보나라": {
+    "menu_category": "파스타",
+    "menu_category_en": "Pasta",
+    "menu_category_zh": "意大利面",
+    "pronunciation": "jambong-kkareubonara",
+    "zh_name": "法式火腿奶油培根意面",
+    "zh_description": "奶油蛋黄酱汁包裹意面，搭配咸香的猪肉火腿。",
+    "en_name": "Jambon Carbonara",
+    "en_description": "Pasta coated in a creamy egg sauce with savory pork ham.",
+    "ingredients": [
+      "파스타",
+      "잠봉",
+      "생크림",
+      "계란",
+      "파르메산 치즈"
+    ],
+    "allergens": [
+      "밀",
+      "돼지고기",
+      "우유",
+      "계란"
+    ],
+    "contains_pork": true,
+    "contains_alcohol": false,
+    "halal": "no",
+    "vegan": "no",
+    "spicy": 0
+  },
+  "치폴레치즈감자채전": {
+    "menu_category": "전",
+    "menu_category_en": "Korean pancake",
+    "menu_category_zh": "韩式煎饼",
+    "pronunciation": "chipolle-chijeu-gamjacha-jeon",
+    "zh_name": "烟熏辣椒芝士土豆丝煎饼",
+    "zh_description": "土豆丝煎饼配上浓郁芝士和带烟熏香气的微辣辣椒酱。",
+    "en_name": "Chipotle Cheese Potato Pancake",
+    "en_description": "A crisp shredded-potato pancake topped with rich cheese and smoky chipotle sauce.",
+    "ingredients": [
+      "감자",
+      "치즈",
+      "밀가루",
+      "계란",
+      "치폴레"
+    ],
+    "allergens": [
+      "밀",
+      "우유",
+      "계란"
+    ],
+    "contains_pork": false,
+    "contains_alcohol": false,
+    "halal": "unknown",
+    "vegan": "no",
+    "spicy": 1
+  },
+  "콘피자": {
+    "menu_category": "사이드",
+    "menu_category_en": "Side",
+    "menu_category_zh": "小吃",
+    "pronunciation": "kon-pija",
+    "zh_name": "玉米披萨",
+    "zh_description": "烤制面饼铺上香甜玉米和融化芝士。",
+    "en_name": "Corn Pizza",
+    "en_description": "Baked pizza topped with sweet corn and melted cheese.",
+    "ingredients": [
+      "피자 도우",
+      "옥수수",
+      "치즈",
+      "토마토소스"
+    ],
+    "allergens": [
+      "밀",
+      "우유"
+    ],
+    "contains_pork": false,
+    "contains_alcohol": false,
+    "halal": "unknown",
+    "vegan": "no",
+    "spicy": 0
+  },
+  "크림치킨스튜": {
+    "menu_category": "스튜",
+    "menu_category_en": "Stew",
+    "menu_category_zh": "炖菜",
+    "pronunciation": "keurim-chikin-seutyu",
+    "zh_name": "奶油鸡肉炖菜",
+    "zh_description": "鸡肉与蔬菜在浓郁奶油酱汁中炖煮，口感温和顺滑。",
+    "en_name": "Cream Chicken Stew",
+    "en_description": "Chicken and vegetables simmered in a rich, mild cream sauce.",
+    "ingredients": [
+      "닭고기",
+      "생크림",
+      "감자",
+      "양파",
+      "당근"
+    ],
+    "allergens": [
+      "닭고기",
+      "우유"
+    ],
+    "contains_pork": false,
+    "contains_alcohol": false,
+    "halal": "unknown",
+    "vegan": "no",
+    "spicy": 0
+  },
+  "통삼겹김치전골": {
+    "menu_category": "전골",
+    "menu_category_en": "Hot pot",
+    "menu_category_zh": "韩式火锅",
+    "pronunciation": "tong-samgyeop-gimchi-jeongol",
+    "zh_name": "整块五花肉泡菜锅",
+    "zh_description": "肥瘦相间的猪五花肉与酸辣泡菜一起炖煮，汤底浓香微辣。",
+    "en_name": "Pork Belly Kimchi Hot Pot",
+    "en_description": "Pork belly and tangy kimchi simmer together in a rich, mildly spicy broth.",
+    "ingredients": [
+      "삼겹살",
+      "김치",
+      "두부",
+      "대파",
+      "고춧가루"
+    ],
+    "allergens": [
+      "돼지고기",
+      "대두",
+      "새우"
+    ],
+    "contains_pork": true,
+    "contains_alcohol": false,
+    "halal": "no",
+    "vegan": "no",
+    "spicy": 2
+  },
+  "트러플버섯오일파스타": {
+    "menu_category": "파스타",
+    "menu_category_en": "Pasta",
+    "menu_category_zh": "意大利面",
+    "pronunciation": "teureupeul-beoseot-oil-paseuta",
+    "zh_name": "松露蘑菇油意面",
+    "zh_description": "蘑菇与松露油拌炒意面，香气浓郁并带有芝士风味。",
+    "en_name": "Truffle Mushroom Oil Pasta",
+    "en_description": "Pasta tossed with mushrooms and fragrant truffle oil, finished with cheese.",
+    "ingredients": [
+      "파스타",
+      "버섯",
+      "트러플오일",
+      "올리브오일",
+      "파르메산 치즈"
+    ],
+    "allergens": [
+      "밀",
+      "우유"
+    ],
+    "contains_pork": false,
+    "contains_alcohol": false,
+    "halal": "unknown",
+    "vegan": "no",
+    "spicy": 0
+  },
+  "트러플잠봉프라이": {
+    "menu_category": "사이드",
+    "menu_category_en": "Side",
+    "menu_category_zh": "小吃",
+    "pronunciation": "teureupeul-jambong-peurai",
+    "zh_name": "松露火腿薯条",
+    "zh_description": "酥脆薯条配上咸香猪肉火腿和浓郁松露香气。",
+    "en_name": "Truffle Jambon Fries",
+    "en_description": "Crispy fries topped with savory pork ham and aromatic truffle flavor.",
+    "ingredients": [
+      "감자",
+      "잠봉",
+      "트러플오일",
+      "파르메산 치즈"
+    ],
+    "allergens": [
+      "돼지고기",
+      "우유"
+    ],
+    "contains_pork": true,
+    "contains_alcohol": false,
+    "halal": "no",
+    "vegan": "no",
+    "spicy": 0
+  },
+  "트러플화이트라구숏파스타": {
+    "menu_category": "파스타",
+    "menu_category_en": "Pasta",
+    "menu_category_zh": "意大利面",
+    "pronunciation": "teureupeul-hwaiteu-ragu-syot-paseuta",
+    "zh_name": "松露白酱肉酱短意面",
+    "zh_description": "短意面拌入奶香浓郁的白酱肉酱，并带有松露香气。",
+    "en_name": "Truffle White Ragu Short Pasta",
+    "en_description": "Short pasta in a creamy white meat ragù with fragrant truffle flavor.",
+    "ingredients": [
+      "短意面",
+      "다진 고기",
+      "생크림",
+      "버섯",
+      "트러플오일"
+    ],
+    "allergens": [
+      "밀",
+      "우유",
+      "돼지고기"
+    ],
+    "contains_pork": null,
+    "contains_alcohol": false,
+    "halal": "unknown",
+    "vegan": "no",
+    "spicy": 0
+  },
+  "피치트리레드하이볼": {
+    "menu_category": "주류",
+    "menu_category_en": "Alcoholic drink",
+    "menu_category_zh": "酒精饮料",
+    "pronunciation": "pichi-teuri-redeu-haibol",
+    "zh_name": "蜜桃红色高球鸡尾酒",
+    "zh_description": "带有蜜桃果香与清爽气泡感的威士忌调酒。",
+    "en_name": "Peach Tree Red Highball",
+    "en_description": "A refreshing fizzy highball with sweet peach notes.",
+    "ingredients": [
+      "위스키",
+      "피치 리큐르",
+      "탄산수",
+      "시럽"
+    ],
+    "allergens": [],
+    "contains_pork": false,
+    "contains_alcohol": true,
+    "halal": "no",
+    "vegan": "yes",
+    "spicy": 0
+  },
+  "한우깻잎육회": {
+    "menu_category": "안주",
+    "menu_category_en": "Appetizer",
+    "menu_category_zh": "下酒菜",
+    "pronunciation": "hanu-kkaennip-yukhoe",
+    "zh_name": "韩牛紫苏叶生牛肉",
+    "zh_description": "韩牛生牛肉以清甜梨和调味酱拌制，搭配香气清新的紫苏叶。",
+    "en_name": "Hanwoo Beef Tartare with Perilla",
+    "en_description": "Korean beef tartare seasoned with a savory-sweet sauce and served with fragrant perilla leaves.",
+    "ingredients": [
+      "한우",
+      "깻잎",
+      "배",
+      "간장",
+      "계란노른자"
+    ],
+    "allergens": [
+      "소고기",
+      "대두",
+      "계란"
+    ],
+    "contains_pork": false,
+    "contains_alcohol": false,
+    "halal": "unknown",
+    "vegan": "no",
+    "spicy": 0
+  },
+  "한우대창전골 (소유,미소)": {
+    "menu_category": "전골",
+    "menu_category_en": "Hot pot",
+    "menu_category_zh": "火锅",
+    "pronunciation": "hanu-daechang-jeongol (soyu, miso)",
+    "zh_name": "韩牛牛大肠火锅（酱油、味噌）",
+    "zh_description": "韩牛牛大肠与蔬菜在酱油味噌汤底中炖煮，味道浓郁鲜香。",
+    "en_name": "Hanwoo Beef Intestine Hot Pot (Soy Sauce & Miso)",
+    "en_description": "Hanwoo beef intestines and vegetables simmer in a rich soy-miso broth.",
+    "ingredients": [
+      "한우 대창",
+      "된장",
+      "간장",
+      "채소"
+    ],
+    "allergens": [
+      "밀",
+      "대두",
+      "소고기"
+    ],
+    "contains_pork": false,
+    "contains_alcohol": false,
+    "halal": "unknown",
+    "vegan": "no",
+    "spicy": 1
+  },
+  "항정구이": {
+    "menu_category": "구이",
+    "menu_category_en": "Grilled meat",
+    "menu_category_zh": "烤肉",
+    "pronunciation": "hangjeong-gui",
+    "zh_name": "烤猪颈肉",
+    "zh_description": "猪颈肉烤至外香里嫩，肉香浓郁。",
+    "en_name": "Grilled Pork Jowl",
+    "en_description": "Pork jowl is grilled until fragrant outside and tender inside.",
+    "ingredients": [
+      "돼지고기",
+      "소금",
+      "후추"
+    ],
+    "allergens": [],
+    "contains_pork": true,
+    "contains_alcohol": false,
+    "halal": "no",
+    "vegan": "no",
+    "spicy": 0
+  },
+  "항정숙주덮밥": {
+    "menu_category": "덮밥",
+    "menu_category_en": "Rice bowl",
+    "menu_category_zh": "盖饭",
+    "pronunciation": "hangjeong-sukju-deopbap",
+    "zh_name": "猪颈肉豆芽盖饭",
+    "zh_description": "烤猪颈肉和爽脆豆芽铺在米饭上，搭配咸香酱汁。",
+    "en_name": "Pork Jowl and Bean Sprout Rice Bowl",
+    "en_description": "Grilled pork jowl and crisp bean sprouts are served over rice with a savory sauce.",
+    "ingredients": [
+      "돼지고기",
+      "숙주",
+      "쌀",
+      "간장"
+    ],
+    "allergens": [
+      "밀",
+      "대두"
+    ],
+    "contains_pork": true,
+    "contains_alcohol": false,
+    "halal": "no",
+    "vegan": "no",
+    "spicy": 0
+  },
+  "화이트피치(백도)사와": {
+    "menu_category": "주류",
+    "menu_category_en": "Alcoholic drink",
+    "menu_category_zh": "酒类",
+    "pronunciation": "hwaiteu-pichi (baekdo) sawa",
+    "zh_name": "白桃沙瓦",
+    "zh_description": "白桃风味沙瓦，口感清甜并带有气泡。",
+    "en_name": "White Peach Sour",
+    "en_description": "A fizzy alcoholic drink with a sweet white peach flavor.",
+    "ingredients": [
+      "백도",
+      "소주",
+      "탄산수"
+    ],
+    "allergens": [
+      "복숭아"
+    ],
+    "contains_pork": false,
+    "contains_alcohol": true,
+    "halal": "no",
+    "vegan": "unknown",
+    "spicy": 0
+  },
+  "훈연닭다리살구이": {
+    "menu_category": "구이",
+    "menu_category_en": "Grilled meat",
+    "menu_category_zh": "烤物",
+    "pronunciation": "hunyeon-dakdarisal-gui",
+    "zh_name": "烟熏烤鸡腿肉",
+    "zh_description": "鸡腿肉经过烟熏烤制，鲜嫩多汁并带有烟熏香气。",
+    "en_name": "Smoked Grilled Chicken Thigh",
+    "en_description": "Chicken thigh is smoked and grilled until juicy and savory.",
+    "ingredients": [
+      "닭고기",
+      "소금",
+      "후추",
+      "훈연향"
+    ],
+    "allergens": [],
+    "contains_pork": false,
+    "contains_alcohol": false,
+    "halal": "unknown",
+    "vegan": "no",
+    "spicy": 0
+  },
+  "훈연치즈불닭구이": {
+    "menu_category": "구이",
+    "menu_category_en": "Grilled meat",
+    "menu_category_zh": "烤物",
+    "pronunciation": "hunyeon-chijeu-buldak-gui",
+    "zh_name": "烟熏芝士辣鸡",
+    "zh_description": "烟熏鸡肉裹上辛辣酱汁并搭配融化芝士，味浓微辣。",
+    "en_name": "Smoked Cheese Buldak",
+    "en_description": "Smoked chicken is coated in spicy sauce and served with melted cheese.",
+    "ingredients": [
+      "닭고기",
+      "치즈",
+      "고추장",
+      "간장"
+    ],
+    "allergens": [
+      "우유",
+      "밀",
+      "대두"
+    ],
+    "contains_pork": false,
+    "contains_alcohol": false,
+    "halal": "unknown",
+    "vegan": "no",
+    "spicy": 3
+  },
+  "훈연치킨키마커리덮밥": {
+    "menu_category": "덮밥",
+    "menu_category_en": "Rice bowl",
+    "menu_category_zh": "咖喱盖饭",
+    "pronunciation": "hunyeon-chikin-kima-keori-deopbap",
+    "zh_name": "烟熏鸡肉碎咖喱盖饭",
+    "zh_description": "烟熏鸡肉碎咖喱配米饭，带有香料与番茄的浓郁风味。",
+    "en_name": "Smoked Chicken Keema Curry Rice Bowl",
+    "en_description": "Smoked minced chicken curry is served over rice with warming spices and tomato.",
+    "ingredients": [
+      "닭고기",
+      "쌀",
+      "양파",
+      "토마토",
+      "카레"
+    ],
+    "allergens": [
+      "밀",
+      "대두"
+    ],
+    "contains_pork": false,
+    "contains_alcohol": false,
+    "halal": "unknown",
+    "vegan": "no",
+    "spicy": 1
+  },
+  "훈연치킨키마커리숏파스타": {
+    "menu_category": "파스타",
+    "menu_category_en": "Pasta",
+    "menu_category_zh": "意面",
+    "pronunciation": "hunyeon-chikin-kima-keori-syot-paseuta",
+    "zh_name": "烟熏鸡肉碎咖喱短意面",
+    "zh_description": "短意面拌入烟熏鸡肉碎咖喱，带有浓郁香料风味。",
+    "en_name": "Smoked Chicken Keema Curry Short Pasta",
+    "en_description": "Short pasta is tossed with smoked minced chicken curry and aromatic spices.",
+    "ingredients": [
+      "닭고기",
+      "숏파스타",
+      "양파",
+      "토마토",
+      "카레"
+    ],
+    "allergens": [
+      "밀",
+      "대두"
+    ],
+    "contains_pork": false,
+    "contains_alcohol": false,
+    "halal": "unknown",
+    "vegan": "no",
+    "spicy": 1
+  },
+  "훈연항정스테이크&들기름간장메밀면": {
+    "menu_category": "소바",
+    "menu_category_en": "Buckwheat noodles",
+    "menu_category_zh": "荞麦面",
+    "pronunciation": "hunyeon-hangjeong-seuteikeu&deulgireum-ganjang-memilmyeon",
+    "zh_name": "烟熏猪颈肉牛排配紫苏油酱油荞麦面",
+    "zh_description": "烟熏烤猪颈肉搭配淋有紫苏油和酱油的荞麦面，咸香清爽。",
+    "en_name": "Smoked Pork Jowl Steak with Perilla Oil Soy Buckwheat Noodles",
+    "en_description": "Smoked pork jowl steak is served with buckwheat noodles dressed in perilla oil and soy sauce.",
+    "ingredients": [
+      "돼지고기",
+      "메밀면",
+      "들기름",
+      "간장"
+    ],
+    "allergens": [
+      "메밀",
+      "대두",
+      "밀"
+    ],
+    "contains_pork": true,
+    "contains_alcohol": false,
+    "halal": "no",
+    "vegan": "no",
+    "spicy": 0
+  },
+  "훈연항정스테이크덮밥": {
+    "menu_category": "덮밥",
+    "menu_category_en": "Rice bowl",
+    "menu_category_zh": "盖饭",
+    "pronunciation": "hunyeon-hangjeong-seuteikeu-deopbap",
+    "zh_name": "烟熏猪颈肉牛排盖饭",
+    "zh_description": "烟熏猪颈肉排铺在米饭上，肉香浓郁并带有烤香。",
+    "en_name": "Smoked Pork Jowl Steak Rice Bowl",
+    "en_description": "Smoked pork jowl steak is served over rice for a rich, savory meal.",
+    "ingredients": [
+      "돼지고기",
+      "쌀",
+      "간장",
+      "양파"
+    ],
+    "allergens": [
+      "밀",
+      "대두"
+    ],
+    "contains_pork": true,
+    "contains_alcohol": false,
+    "halal": "no",
+    "vegan": "no",
+    "spicy": 0
+  },
+  "미린다 오렌지(355ml)": {
+    "menu_category": "음료",
+    "menu_category_en": "Drinks",
+    "menu_category_zh": "饮料",
+    "pronunciation": "mirinda-orenji-355ml",
+    "zh_name": "美年达橙味（355毫升）",
+    "zh_description": "",
+    "en_name": "Mirinda Orange (355 ml)",
+    "en_description": "",
+    "ingredients": [
+      "碳酸水",
+      "糖",
+      "橙味香料",
+      "酸味剂"
+    ],
+    "allergens": [],
+    "contains_pork": false,
+    "contains_alcohol": false,
+    "halal": "yes",
+    "vegan": "yes",
+    "spicy": 0
+  },
+  "미린다 파인애플": {
+    "menu_category": "음료",
+    "menu_category_en": "Drinks",
+    "menu_category_zh": "饮料",
+    "pronunciation": "mirinda-painaepeul",
+    "zh_name": "美年达菠萝味",
+    "zh_description": "",
+    "en_name": "Mirinda Pineapple",
+    "en_description": "",
+    "ingredients": [
+      "碳酸水",
+      "糖",
+      "菠萝味香料",
+      "酸味剂"
+    ],
+    "allergens": [],
+    "contains_pork": false,
+    "contains_alcohol": false,
+    "halal": "yes",
+    "vegan": "yes",
+    "spicy": 0
+  },
+  "새우 감자 부리또": {
+    "menu_category": "부리또",
+    "menu_category_en": "Burrito",
+    "menu_category_zh": "墨西哥卷饼",
+    "pronunciation": "saeu-gamja-buritto",
+    "zh_name": "虾仁土豆卷饼",
+    "zh_description": "以小麦饼包入虾仁、土豆和米饭，搭配酱料，口感咸香浓郁。",
+    "en_name": "Shrimp and Potato Burrito",
+    "en_description": "Shrimp, potato, and rice are wrapped in a wheat tortilla with savory sauce.",
+    "ingredients": [
+      "새우",
+      "감자",
+      "쌀밥",
+      "밀 또띠아",
+      "소스"
+    ],
+    "allergens": [
+      "밀",
+      "새우",
+      "대두"
+    ],
+    "contains_pork": false,
+    "contains_alcohol": false,
+    "halal": "unknown",
+    "vegan": "no",
+    "spicy": 1
+  },
+  "소고기 베이컨 라이스 부리또": {
+    "menu_category": "부리또",
+    "menu_category_en": "Burrito",
+    "menu_category_zh": "墨西哥卷饼",
+    "pronunciation": "sogogi-beikeon-raisu-buritto",
+    "zh_name": "牛肉培根米饭卷饼",
+    "zh_description": "小麦饼包入牛肉培根和米饭，搭配蔬菜与酱料，味道咸香饱满。",
+    "en_name": "Beef Bacon Rice Burrito",
+    "en_description": "Beef bacon and rice are wrapped in a wheat tortilla with vegetables and savory sauce.",
+    "ingredients": [
+      "소고기 베이컨",
+      "쌀밥",
+      "밀 또띠아",
+      "채소",
+      "소스"
+    ],
+    "allergens": [
+      "밀",
+      "대두",
+      "소고기"
+    ],
+    "contains_pork": false,
+    "contains_alcohol": false,
+    "halal": "unknown",
+    "vegan": "no",
+    "spicy": 1
+  },
+  "수제 소시지 안매운": {
+    "menu_category": "사이드",
+    "menu_category_en": "Side",
+    "menu_category_zh": "小吃",
+    "pronunciation": "suje-sosiji-anmaeun",
+    "zh_name": "手制香肠（不辣）",
+    "zh_description": "手制香肠经过煎烤，味道咸香，不辣。",
+    "en_name": "House-Made Mild Sausage",
+    "en_description": "A savory house-made sausage, cooked until browned and served without spice.",
+    "ingredients": [
+      "돼지고기",
+      "소시지",
+      "향신료",
+      "식용유"
+    ],
+    "allergens": [
+      "돼지고기",
+      "대두"
+    ],
+    "contains_pork": true,
+    "contains_alcohol": false,
+    "halal": "no",
+    "vegan": "no",
+    "spicy": 0
+  },
+  "안매운 고구마 핫도그": {
+    "menu_category": "핫도그",
+    "menu_category_en": "Hot Dog",
+    "menu_category_zh": "热狗",
+    "pronunciation": "anmaeun-goguma-hatdogeu",
+    "zh_name": "不辣红薯热狗",
+    "zh_description": "香肠裹上面糊并搭配红薯，炸至金黄，口感香甜酥脆。",
+    "en_name": "Mild Sweet Potato Hot Dog",
+    "en_description": "A sausage coated in batter with sweet potato, fried until golden and crisp.",
+    "ingredients": [
+      "소시지",
+      "고구마",
+      "밀가루",
+      "튀김유",
+      "설탕"
+    ],
+    "allergens": [
+      "밀",
+      "돼지고기",
+      "대두"
+    ],
+    "contains_pork": true,
+    "contains_alcohol": false,
+    "halal": "no",
+    "vegan": "no",
+    "spicy": 0
+  },
+  "제로 사이다 캔(355ml)": {
+    "menu_category": "음료",
+    "menu_category_en": "Drinks",
+    "menu_category_zh": "饮料",
+    "pronunciation": "jero-saida-kaen-355ml",
+    "zh_name": "无糖汽水罐（355毫升）",
+    "zh_description": "",
+    "en_name": "Zero Sugar Soda Can (355 ml)",
+    "en_description": "",
+    "ingredients": [
+      "碳酸水",
+      "甜味剂",
+      "香料",
+      "酸味剂"
+    ],
+    "allergens": [],
+    "contains_pork": false,
+    "contains_alcohol": false,
+    "halal": "yes",
+    "vegan": "yes",
+    "spicy": 0
+  },
+  "치킨 감자 부리또 (Best)": {
+    "menu_category": "부리또",
+    "menu_category_en": "Burrito",
+    "menu_category_zh": "墨西哥卷饼",
+    "pronunciation": "chikin-gamja-burit to-best",
+    "zh_name": "鸡肉土豆卷饼（人气推荐）",
+    "zh_description": "小麦饼包入鸡肉、土豆和米饭，搭配酱料，味道咸香浓郁。",
+    "en_name": "Chicken and Potato Burrito (Best Seller)",
+    "en_description": "Chicken, potato, and rice are wrapped in a wheat tortilla with savory sauce.",
+    "ingredients": [
+      "닭고기",
+      "감자",
+      "쌀밥",
+      "밀 또띠아",
+      "소스"
+    ],
+    "allergens": [
+      "밀",
+      "대두"
+    ],
+    "contains_pork": false,
+    "contains_alcohol": false,
+    "halal": "unknown",
+    "vegan": "no",
+    "spicy": 1
+  },
+  "치킨 라이스 부리또": {
+    "menu_category": "부리또",
+    "menu_category_en": "Burrito",
+    "menu_category_zh": "墨西哥卷饼",
+    "pronunciation": "chikin-raisu-burit to",
+    "zh_name": "鸡肉米饭卷饼",
+    "zh_description": "小麦饼包入鸡肉和米饭，搭配蔬菜与酱料，味道咸香可口。",
+    "en_name": "Chicken Rice Burrito",
+    "en_description": "Chicken and rice are wrapped in a wheat tortilla with vegetables and savory sauce.",
+    "ingredients": [
+      "닭고기",
+      "쌀밥",
+      "밀 또띠아",
+      "채소",
+      "소스"
+    ],
+    "allergens": [
+      "밀",
+      "대두"
+    ],
+    "contains_pork": false,
+    "contains_alcohol": false,
+    "halal": "unknown",
+    "vegan": "no",
+    "spicy": 1
+  },
+  "칠성사이다": {
+    "menu_category": "음료",
+    "menu_category_en": "Drinks",
+    "menu_category_zh": "饮料",
+    "pronunciation": "chilseong-saida",
+    "zh_name": "七星汽水",
+    "zh_description": "",
+    "en_name": "Chilsung Cider",
+    "en_description": "",
+    "ingredients": [
+      "碳酸水",
+      "糖",
+      "香料",
+      "酸味剂"
+    ],
+    "allergens": [],
+    "contains_pork": false,
+    "contains_alcohol": false,
+    "halal": "yes",
+    "vegan": "yes",
+    "spicy": 0
+  },
+  "펩시 콜라 캔": {
+    "menu_category": "음료",
+    "menu_category_en": "Drinks",
+    "menu_category_zh": "饮料",
+    "pronunciation": "pepsi-kolla-kaen",
+    "zh_name": "百事可乐罐装",
+    "zh_description": "",
+    "en_name": "Pepsi Cola Can",
+    "en_description": "",
+    "ingredients": [
+      "碳酸水",
+      "糖",
+      "焦糖色素",
+      "香料"
+    ],
+    "allergens": [],
+    "contains_pork": false,
+    "contains_alcohol": false,
+    "halal": "yes",
+    "vegan": "yes",
+    "spicy": 0
+  },
+  "해쉬브라운 감자": {
+    "menu_category": "사이드",
+    "menu_category_en": "Side",
+    "menu_category_zh": "小吃",
+    "pronunciation": "haeswi-beuraun-gamja",
+    "zh_name": "薯饼",
+    "zh_description": "土豆制成的薯饼炸至金黄，外脆内软，带有淡淡咸香。",
+    "en_name": "Hash Brown",
+    "en_description": "A potato patty fried until golden, crisp on the outside and soft inside.",
+    "ingredients": [
+      "감자",
+      "식용유",
+      "소금",
+      "전분"
+    ],
+    "allergens": [],
+    "contains_pork": false,
+    "contains_alcohol": false,
+    "halal": "yes",
+    "vegan": "yes",
+    "spicy": 0
+  },
+  "돈코츠라멘": {
+    "menu_category": "라멘",
+    "menu_category_en": "Ramen",
+    "menu_category_zh": "拉面",
+    "pronunciation": "donkocheu-ramen",
+    "zh_name": "日式豚骨拉面",
+    "zh_description": "浓郁的猪骨汤底搭配拉面、叉烧和葱花，口感醇厚鲜香。",
+    "en_name": "Tonkotsu Ramen",
+    "en_description": "Ramen in a rich pork-bone broth with sliced pork and green onions.",
+    "ingredients": [
+      "라멘",
+      "돼지고기",
+      "돼지뼈 육수",
+      "파"
+    ],
+    "allergens": [
+      "밀",
+      "대두",
+      "계란",
+      "돼지고기"
+    ],
+    "contains_pork": true,
+    "contains_alcohol": false,
+    "halal": "no",
+    "vegan": "no",
+    "spicy": 0
+  },
+  "마제소바": {
+    "menu_category": "소바",
+    "menu_category_en": "Mixed Noodles",
+    "menu_category_zh": "拌面",
+    "pronunciation": "maje-soba",
+    "zh_name": "日式拌面",
+    "zh_description": "将面条与肉末、蛋黄和酱汁拌匀，味道浓郁鲜香。",
+    "en_name": "Mazesoba",
+    "en_description": "Noodles tossed with savory minced meat, egg yolk, and a rich sauce.",
+    "ingredients": [
+      "면",
+      "돼지고기",
+      "계란",
+      "파",
+      "간장"
+    ],
+    "allergens": [
+      "밀",
+      "대두",
+      "계란",
+      "돼지고기"
+    ],
+    "contains_pork": true,
+    "contains_alcohol": false,
+    "halal": "no",
+    "vegan": "no",
+    "spicy": 1
+  },
+  "샤브쌀국수": {
+    "menu_category": "쌀국수",
+    "menu_category_en": "Rice Noodle Soup",
+    "menu_category_zh": "越南米粉",
+    "pronunciation": "syabeu-ssalguksu",
+    "zh_name": "涮肉米粉汤",
+    "zh_description": "米粉搭配涮肉和蔬菜，浸在清爽鲜美的汤里。",
+    "en_name": "Shabu Rice Noodle Soup",
+    "en_description": "Rice noodles with thinly sliced meat and vegetables in a light, savory broth.",
+    "ingredients": [
+      "쌀국수",
+      "소고기",
+      "배추",
+      "숙주",
+      "육수"
+    ],
+    "allergens": [
+      "소고기",
+      "대두"
+    ],
+    "contains_pork": false,
+    "contains_alcohol": false,
+    "halal": "unknown",
+    "vegan": "no",
+    "spicy": 0
+  },
+  "마라돈코츠라멘": {
+    "menu_category": "라멘",
+    "menu_category_en": "Ramen",
+    "menu_category_zh": "拉面",
+    "pronunciation": "mara-donkocheu-ramen",
+    "zh_name": "麻辣豚骨拉面",
+    "zh_description": "浓厚的猪骨汤底加入麻辣调味，搭配拉面和猪肉，麻辣鲜香。",
+    "en_name": "Mala Tonkotsu Ramen",
+    "en_description": "Ramen with pork and a rich pork-bone broth seasoned with numbing, spicy mala flavors.",
+    "ingredients": [
+      "라멘",
+      "돼지고기",
+      "돼지뼈 육수",
+      "마라소스",
+      "파"
+    ],
+    "allergens": [
+      "밀",
+      "대두",
+      "계란",
+      "돼지고기"
+    ],
+    "contains_pork": true,
+    "contains_alcohol": false,
+    "halal": "no",
+    "vegan": "no",
+    "spicy": 3
+  },
+  "수제등심카츠": {
+    "menu_category": "카츠",
+    "menu_category_en": "Katsu",
+    "menu_category_zh": "炸猪排",
+    "pronunciation": "suje-deungsim-kacheu",
+    "zh_name": "手作里脊猪排",
+    "zh_description": "里脊肉裹上酥脆面衣炸制，肉质鲜嫩，通常搭配猪排酱。",
+    "en_name": "Homemade Pork Loin Katsu",
+    "en_description": "Tender pork loin coated in crisp breadcrumbs and served with katsu sauce.",
+    "ingredients": [
+      "돼지고기",
+      "빵가루",
+      "밀가루",
+      "계란",
+      "돈가스소스"
+    ],
+    "allergens": [
+      "밀",
+      "대두",
+      "계란",
+      "돼지고기"
+    ],
+    "contains_pork": true,
+    "contains_alcohol": false,
+    "halal": "no",
+    "vegan": "no",
+    "spicy": 0
+  },
+  "모짜치즈카츠": {
+    "menu_category": "카츠",
+    "menu_category_en": "Cheese Katsu",
+    "menu_category_zh": "芝士炸猪排",
+    "pronunciation": "mojja-chijeu-kacheu",
+    "zh_name": "马苏里拉芝士炸猪排",
+    "zh_description": "酥脆炸猪排包裹融化的马苏里拉芝士，口感浓郁香脆。",
+    "en_name": "Mozzarella Cheese Katsu",
+    "en_description": "Crispy pork cutlet filled with melted mozzarella cheese.",
+    "ingredients": [
+      "돼지고기",
+      "모짜렐라치즈",
+      "빵가루",
+      "밀가루",
+      "계란"
+    ],
+    "allergens": [
+      "밀",
+      "우유",
+      "계란",
+      "돼지고기"
+    ],
+    "contains_pork": true,
+    "contains_alcohol": false,
+    "halal": "no",
+    "vegan": "no",
+    "spicy": 0
+  },
+  "2인세트": {
+    "menu_category": "세트",
+    "menu_category_en": "Set Meal",
+    "menu_category_zh": "双人套餐",
+    "pronunciation": "i-in-seteu",
+    "zh_name": "双人套餐",
+    "zh_description": "适合两人分享的套餐，具体搭配因套餐内容而异。",
+    "en_name": "Set for Two",
+    "en_description": "A meal set for two to share; exact dishes may vary.",
+    "ingredients": [
+      "면",
+      "돼지고기",
+      "채소",
+      "소스"
+    ],
+    "allergens": [
+      "밀",
+      "대두",
+      "계란",
+      "돼지고기"
+    ],
+    "contains_pork": null,
+    "contains_alcohol": null,
+    "halal": "unknown",
+    "vegan": "no",
+    "spicy": 0
+  },
+  "1인세트": {
+    "menu_category": "세트",
+    "menu_category_en": "Set Meal",
+    "menu_category_zh": "单人套餐",
+    "pronunciation": "il-in-seteu",
+    "zh_name": "单人套餐",
+    "zh_description": "适合一人享用的套餐，具体搭配因套餐内容而异。",
+    "en_name": "Set for One",
+    "en_description": "A meal set for one; exact dishes may vary.",
+    "ingredients": [
+      "면",
+      "돼지고기",
+      "채소",
+      "소스"
+    ],
+    "allergens": [
+      "밀",
+      "대두",
+      "계란",
+      "돼지고기"
+    ],
+    "contains_pork": null,
+    "contains_alcohol": null,
+    "halal": "unknown",
+    "vegan": "no",
+    "spicy": 0
+  },
+  "에비돈코츠라멘": {
+    "menu_category": "라멘",
+    "menu_category_en": "Ramen",
+    "menu_category_zh": "拉面",
+    "pronunciation": "ebi-donkocheu-ramen",
+    "zh_name": "鲜虾豚骨拉面",
+    "zh_description": "浓郁猪骨汤底搭配拉面和鲜虾，鲜香醇厚。",
+    "en_name": "Shrimp Tonkotsu Ramen",
+    "en_description": "Ramen with shrimp in a rich pork-bone broth.",
+    "ingredients": [
+      "라멘",
+      "새우",
+      "돼지고기",
+      "돼지뼈 육수",
+      "파"
+    ],
+    "allergens": [
+      "밀",
+      "대두",
+      "계란",
+      "새우",
+      "돼지고기"
+    ],
+    "contains_pork": true,
+    "contains_alcohol": false,
+    "halal": "no",
+    "vegan": "no",
+    "spicy": 0
+  },
+  "매운돈코츠라멘": {
+    "menu_category": "라멘",
+    "menu_category_en": "Ramen",
+    "menu_category_zh": "拉面",
+    "pronunciation": "maeun-donkocheu-ramen",
+    "zh_name": "辣味豚骨拉面",
+    "zh_description": "浓厚的猪骨汤底加入辣味调料，搭配拉面和猪肉。",
+    "en_name": "Spicy Tonkotsu Ramen",
+    "en_description": "Ramen with pork in a rich pork-bone broth with a warming chili kick.",
+    "ingredients": [
+      "라멘",
+      "돼지고기",
+      "돼지뼈 육수",
+      "고추",
+      "파"
+    ],
+    "allergens": [
+      "밀",
+      "대두",
+      "계란",
+      "돼지고기"
+    ],
+    "contains_pork": true,
+    "contains_alcohol": false,
+    "halal": "no",
+    "vegan": "no",
+    "spicy": 2
+  },
+  "쇼유라멘": {
+    "menu_category": "라멘",
+    "menu_category_en": "Ramen",
+    "menu_category_zh": "拉面",
+    "pronunciation": "syoyu-ramen",
+    "zh_name": "酱油拉面",
+    "zh_description": "以酱油调味的清鲜汤底搭配拉面、叉烧和葱花。",
+    "en_name": "Shoyu Ramen",
+    "en_description": "Ramen in a savory soy-seasoned broth with sliced pork and green onions.",
+    "ingredients": [
+      "라멘",
+      "간장",
+      "돼지고기",
+      "육수",
+      "파"
+    ],
+    "allergens": [
+      "밀",
+      "대두",
+      "계란",
+      "돼지고기"
+    ],
+    "contains_pork": true,
+    "contains_alcohol": false,
+    "halal": "no",
+    "vegan": "no",
+    "spicy": 0
+  },
+  "매운샤브쌀국수": {
+    "menu_category": "쌀국수",
+    "menu_category_en": "Rice Noodle Soup",
+    "menu_category_zh": "越南米粉",
+    "pronunciation": "maeun-syabeu-ssalguksu",
+    "zh_name": "辣味涮肉米粉汤",
+    "zh_description": "米粉搭配涮肉和蔬菜，浸在带有辣味的鲜美汤里。",
+    "en_name": "Spicy Shabu Rice Noodle Soup",
+    "en_description": "Rice noodles with thinly sliced meat and vegetables in a savory, spicy broth.",
+    "ingredients": [
+      "쌀국수",
+      "소고기",
+      "배추",
+      "숙주",
+      "고추"
+    ],
+    "allergens": [
+      "소고기",
+      "대두"
+    ],
+    "contains_pork": false,
+    "contains_alcohol": false,
+    "halal": "unknown",
+    "vegan": "no",
+    "spicy": 2
+  },
+  "마라샤브쌀국수": {
+    "menu_category": "쌀국수",
+    "menu_category_en": "Rice noodles",
+    "menu_category_zh": "米粉",
+    "pronunciation": "mala-syabeu-ssal-guksu",
+    "zh_name": "麻辣涮牛肉米粉",
+    "zh_description": "米粉搭配涮牛肉和蔬菜，浸在麻辣鲜香的汤中。",
+    "en_name": "Mala Shabu Rice Noodle Soup",
+    "en_description": "Rice noodles with shabu-style beef and vegetables in a numbing, spicy broth.",
+    "ingredients": [
+      "쌀국수",
+      "소고기",
+      "채소",
+      "마라 육수"
+    ],
+    "allergens": [
+      "대두"
+    ],
+    "contains_pork": false,
+    "contains_alcohol": false,
+    "halal": "unknown",
+    "vegan": "no",
+    "spicy": 3
+  },
+  "사누끼어묵우동": {
+    "menu_category": "우동",
+    "menu_category_en": "Udon",
+    "menu_category_zh": "乌冬面",
+    "pronunciation": "sanukki-eomuk-udong",
+    "zh_name": "赞岐鱼糕乌冬面",
+    "zh_description": "劲道乌冬面配鱼糕，搭配清爽的日式高汤。",
+    "en_name": "Sanuki Udon with Fish Cake",
+    "en_description": "Chewy udon noodles and fish cake served in a light Japanese-style broth.",
+    "ingredients": [
+      "우동면",
+      "어묵",
+      "가쓰오부시",
+      "간장"
+    ],
+    "allergens": [
+      "밀",
+      "대두"
+    ],
+    "contains_pork": false,
+    "contains_alcohol": false,
+    "halal": "unknown",
+    "vegan": "no",
+    "spicy": 0
+  },
+  "얼큰김치우동": {
+    "menu_category": "우동",
+    "menu_category_en": "Udon",
+    "menu_category_zh": "乌冬面",
+    "pronunciation": "eolkeun-gimchi-udong",
+    "zh_name": "香辣泡菜乌冬面",
+    "zh_description": "乌冬面与泡菜在热辣鲜浓的汤中煮制，带有爽口酸味。",
+    "en_name": "Spicy Kimchi Udon",
+    "en_description": "Udon noodles simmered with kimchi in a bold, tangy and spicy broth.",
+    "ingredients": [
+      "우동면",
+      "김치",
+      "고춧가루",
+      "육수"
+    ],
+    "allergens": [
+      "밀",
+      "대두"
+    ],
+    "contains_pork": null,
+    "contains_alcohol": false,
+    "halal": "unknown",
+    "vegan": "no",
+    "spicy": 2
+  },
+  "카제소바": {
+    "menu_category": "소바",
+    "menu_category_en": "Soba",
+    "menu_category_zh": "荞麦面",
+    "pronunciation": "kaje-soba",
+    "zh_name": "日式拌荞麦面",
+    "zh_description": "荞麦面拌入肉末、蛋黄和酱汁，口感浓郁鲜香。",
+    "en_name": "Kaze Soba",
+    "en_description": "Soba noodles tossed with savory minced meat, egg yolk and sauce.",
+    "ingredients": [
+      "메밀면",
+      "돼지고기",
+      "계란",
+      "김",
+      "파"
+    ],
+    "allergens": [
+      "메밀",
+      "밀",
+      "돼지고기",
+      "계란",
+      "대두"
+    ],
+    "contains_pork": true,
+    "contains_alcohol": false,
+    "halal": "no",
+    "vegan": "no",
+    "spicy": 0
+  },
+  "마라 마제소바": {
+    "menu_category": "소바",
+    "menu_category_en": "Soba",
+    "menu_category_zh": "麻辣拌荞麦面",
+    "pronunciation": "mala-majesoba",
+    "zh_name": "麻辣日式拌面",
+    "zh_description": "荞麦面拌入麻辣酱汁、肉末和配料，麻香浓郁。",
+    "en_name": "Mala Mazesoba",
+    "en_description": "Soba noodles tossed with spicy mala sauce, minced meat and savory toppings.",
+    "ingredients": [
+      "메밀면",
+      "돼지고기",
+      "고춧가루",
+      "파",
+      "김"
+    ],
+    "allergens": [
+      "메밀",
+      "밀",
+      "돼지고기",
+      "대두"
+    ],
+    "contains_pork": true,
+    "contains_alcohol": false,
+    "halal": "no",
+    "vegan": "no",
+    "spicy": 3
+  },
+  "냉소바": {
+    "menu_category": "소바",
+    "menu_category_en": "Soba",
+    "menu_category_zh": "冷荞麦面",
+    "pronunciation": "naeng-soba",
+    "zh_name": "冷荞麦面",
+    "zh_description": "冰凉荞麦面搭配清爽的日式蘸汁，口味清淡鲜香。",
+    "en_name": "Cold Soba",
+    "en_description": "Chilled buckwheat noodles served with a light, savory dipping sauce.",
+    "ingredients": [
+      "메밀면",
+      "간장",
+      "가쓰오부시",
+      "무"
+    ],
+    "allergens": [
+      "메밀",
+      "밀",
+      "대두"
+    ],
+    "contains_pork": false,
+    "contains_alcohol": true,
+    "halal": "no",
+    "vegan": "no",
+    "spicy": 0
+  },
+  "물비빔소바": {
+    "menu_category": "소바",
+    "menu_category_en": "Soba",
+    "menu_category_zh": "汤拌荞麦面",
+    "pronunciation": "mulbibim-soba",
+    "zh_name": "汤汁拌荞麦面",
+    "zh_description": "荞麦面配清凉汤汁和微辣调味酱，酸爽开胃。",
+    "en_name": "Brothy Bibim Soba",
+    "en_description": "Buckwheat noodles served with a cool broth and tangy, spicy seasoning.",
+    "ingredients": [
+      "메밀면",
+      "육수",
+      "고추장",
+      "오이"
+    ],
+    "allergens": [
+      "메밀",
+      "밀",
+      "대두"
+    ],
+    "contains_pork": false,
+    "contains_alcohol": false,
+    "halal": "unknown",
+    "vegan": "no",
+    "spicy": 2
+  },
+  "비빔소바": {
+    "menu_category": "소바",
+    "menu_category_en": "Soba",
+    "menu_category_zh": "拌荞麦面",
+    "pronunciation": "bibim-soba",
+    "zh_name": "辣拌荞麦面",
+    "zh_description": "荞麦面拌上酸甜微辣的酱汁，口感清爽劲道。",
+    "en_name": "Bibim Soba",
+    "en_description": "Chewy buckwheat noodles tossed in a tangy, mildly spicy sauce.",
+    "ingredients": [
+      "메밀면",
+      "고추장",
+      "오이",
+      "참기름"
+    ],
+    "allergens": [
+      "메밀",
+      "밀",
+      "대두"
+    ],
+    "contains_pork": false,
+    "contains_alcohol": false,
+    "halal": "unknown",
+    "vegan": "no",
+    "spicy": 2
+  },
+  "들기름소바": {
+    "menu_category": "소바",
+    "menu_category_en": "Soba",
+    "menu_category_zh": "紫苏油荞麦面",
+    "pronunciation": "deulgireum-soba",
+    "zh_name": "紫苏油拌荞麦面",
+    "zh_description": "荞麦面拌上香浓紫苏油和酱油，带有清新的坚果香气。",
+    "en_name": "Perilla Oil Soba",
+    "en_description": "Buckwheat noodles dressed with fragrant perilla oil and savory soy sauce.",
+    "ingredients": [
+      "메밀면",
+      "들기름",
+      "간장",
+      "김"
+    ],
+    "allergens": [
+      "메밀",
+      "밀",
+      "대두"
+    ],
+    "contains_pork": false,
+    "contains_alcohol": false,
+    "halal": "unknown",
+    "vegan": "no",
+    "spicy": 0
+  },
+  "판소바": {
+    "menu_category": "소바",
+    "menu_category_en": "Soba",
+    "menu_category_zh": "蘸汁荞麦面",
+    "pronunciation": "pan-soba",
+    "zh_name": "日式蘸汁荞麦面",
+    "zh_description": "冰镇荞麦面搭配浓郁的日式蘸汁，口味鲜香清爽。",
+    "en_name": "Zaru Soba",
+    "en_description": "Chilled buckwheat noodles served separately with a savory Japanese dipping sauce.",
+    "ingredients": [
+      "메밀면",
+      "간장",
+      "가쓰오부시",
+      "김"
+    ],
+    "allergens": [
+      "메밀",
+      "밀",
+      "대두"
+    ],
+    "contains_pork": false,
+    "contains_alcohol": true,
+    "halal": "no",
+    "vegan": "no",
+    "spicy": 0
+  },
+  "초계 냉소바": {
+    "menu_category": "소바",
+    "menu_category_en": "Soba",
+    "menu_category_zh": "荞麦冷面",
+    "pronunciation": "chogye-naeng-soba",
+    "zh_name": "醋鸡冷荞麦面",
+    "zh_description": "冰凉荞麦面配鸡肉和带醋香的清爽冷汤。",
+    "en_name": "Chogye Cold Soba",
+    "en_description": "Chilled soba with chicken in a refreshing, lightly vinegared broth.",
+    "ingredients": [
+      "메밀면",
+      "닭고기",
+      "오이",
+      "식초"
+    ],
+    "allergens": [
+      "메밀",
+      "밀",
+      "대두"
+    ],
+    "contains_pork": false,
+    "contains_alcohol": false,
+    "halal": "unknown",
+    "vegan": "no",
+    "spicy": 0
+  },
+  "초계 물비빔소바": {
+    "menu_category": "소바",
+    "menu_category_en": "Soba",
+    "menu_category_zh": "醋鸡汤拌荞麦面",
+    "pronunciation": "chogye-mulbibim-soba",
+    "zh_name": "醋鸡汤拌荞麦面",
+    "zh_description": "荞麦面配鸡肉、清凉汤汁和酸辣调味，酸爽开胃。",
+    "en_name": "Chogye Brothy Bibim Soba",
+    "en_description": "Buckwheat noodles with chicken, cool broth and a tangy, mildly spicy seasoning.",
+    "ingredients": [
+      "메밀면",
+      "닭고기",
+      "오이",
+      "식초",
+      "고추장"
+    ],
+    "allergens": [
+      "메밀",
+      "밀",
+      "대두"
+    ],
+    "contains_pork": false,
+    "contains_alcohol": false,
+    "halal": "unknown",
+    "vegan": "no",
+    "spicy": 1
+  },
+  "초계 비빔소바": {
+    "menu_category": "소바",
+    "menu_category_en": "Soba",
+    "menu_category_zh": "荞麦面",
+    "pronunciation": "chogye-bibim-soba",
+    "zh_name": "醋鸡拌荞麦面",
+    "zh_description": "荞麦面拌入酸爽微辣的醋芥末酱，搭配鸡肉和蔬菜。",
+    "en_name": "Chogye Bibim Soba",
+    "en_description": "Buckwheat noodles tossed in a tangy, mildly spicy vinegar-mustard sauce with chicken and vegetables.",
+    "ingredients": [
+      "메밀면",
+      "닭고기",
+      "오이",
+      "식초",
+      "겨자"
+    ],
+    "allergens": [
+      "밀",
+      "대두",
+      "닭고기",
+      "메밀"
+    ],
+    "contains_pork": false,
+    "contains_alcohol": false,
+    "halal": "unknown",
+    "vegan": "no",
+    "spicy": 1
+  },
+  "데미등심카츠": {
+    "menu_category": "카츠",
+    "menu_category_en": "Cutlet",
+    "menu_category_zh": "炸猪排",
+    "pronunciation": "demideungsimkacheu",
+    "zh_name": "多蜜酱里脊猪排",
+    "zh_description": "酥炸猪里脊淋上浓郁的多蜜酱，通常搭配卷心菜。",
+    "en_name": "Pork Loin Cutlet with Demi-Glace",
+    "en_description": "Crispy pork loin cutlet served with rich demi-glace sauce, usually alongside cabbage.",
+    "ingredients": [
+      "돼지고기",
+      "빵가루",
+      "계란",
+      "데미글라스 소스",
+      "양배추"
+    ],
+    "allergens": [
+      "밀",
+      "대두",
+      "계란",
+      "돼지고기"
+    ],
+    "contains_pork": true,
+    "contains_alcohol": false,
+    "halal": "no",
+    "vegan": "no",
+    "spicy": 0
+  },
+  "매운파돈카츠": {
+    "menu_category": "카츠",
+    "menu_category_en": "Cutlet",
+    "menu_category_zh": "炸猪排",
+    "pronunciation": "maeunpadonkacheu",
+    "zh_name": "辣葱猪排",
+    "zh_description": "酥炸猪排配上辛辣酱汁和葱丝。",
+    "en_name": "Spicy Scallion Pork Cutlet",
+    "en_description": "Crispy pork cutlet topped with spicy sauce and scallions.",
+    "ingredients": [
+      "돼지고기",
+      "빵가루",
+      "계란",
+      "대파",
+      "매운 소스"
+    ],
+    "allergens": [
+      "밀",
+      "대두",
+      "계란",
+      "돼지고기"
+    ],
+    "contains_pork": true,
+    "contains_alcohol": false,
+    "halal": "no",
+    "vegan": "no",
+    "spicy": 2
+  },
+  "더블체다카츠": {
+    "menu_category": "카츠",
+    "menu_category_en": "Cutlet",
+    "menu_category_zh": "炸猪排",
+    "pronunciation": "deobeulchedakacheu",
+    "zh_name": "双层切达芝士猪排",
+    "zh_description": "酥炸猪排搭配双份切达芝士，口感浓郁咸香。",
+    "en_name": "Double Cheddar Pork Cutlet",
+    "en_description": "A crispy pork cutlet topped with double cheddar for a rich, savory flavor.",
+    "ingredients": [
+      "돼지고기",
+      "빵가루",
+      "계란",
+      "체다치즈",
+      "양배추"
+    ],
+    "allergens": [
+      "밀",
+      "대두",
+      "우유",
+      "계란",
+      "돼지고기"
+    ],
+    "contains_pork": true,
+    "contains_alcohol": false,
+    "halal": "no",
+    "vegan": "no",
+    "spicy": 0
+  },
+  "반반카츠": {
+    "menu_category": "카츠",
+    "menu_category_en": "Cutlet",
+    "menu_category_zh": "拼盘炸猪排",
+    "pronunciation": "banbankacheu",
+    "zh_name": "双拼猪排",
+    "zh_description": "一份包含原味里脊猪排和芝士猪排，搭配酱汁与卷心菜。",
+    "en_name": "Half-and-Half Pork Cutlet",
+    "en_description": "A combination of plain pork loin cutlet and cheese cutlet, served with sauce and cabbage.",
+    "ingredients": [
+      "돼지고기",
+      "빵가루",
+      "계란",
+      "치즈",
+      "양배추"
+    ],
+    "allergens": [
+      "밀",
+      "대두",
+      "우유",
+      "계란",
+      "돼지고기"
+    ],
+    "contains_pork": true,
+    "contains_alcohol": false,
+    "halal": "no",
+    "vegan": "no",
+    "spicy": 0
+  },
+  "가라아게카레덮밥": {
+    "menu_category": "덮밥",
+    "menu_category_en": "Rice Bowl",
+    "menu_category_zh": "盖饭",
+    "pronunciation": "garaagekaredeopbap",
+    "zh_name": "日式炸鸡咖喱盖饭",
+    "zh_description": "米饭铺上酥炸鸡块，再淋上香浓日式咖喱。",
+    "en_name": "Karaage Curry Rice Bowl",
+    "en_description": "Rice topped with crispy Japanese-style fried chicken and savory curry sauce.",
+    "ingredients": [
+      "밥",
+      "닭고기",
+      "밀가루",
+      "카레 소스",
+      "양파"
+    ],
+    "allergens": [
+      "밀",
+      "대두",
+      "계란",
+      "닭고기"
+    ],
+    "contains_pork": false,
+    "contains_alcohol": false,
+    "halal": "unknown",
+    "vegan": "no",
+    "spicy": 1
+  },
+  "에비카레덮밥": {
+    "menu_category": "덮밥",
+    "menu_category_en": "Rice Bowl",
+    "menu_category_zh": "盖饭",
+    "pronunciation": "ebikaredeopbap",
+    "zh_name": "炸虾咖喱盖饭",
+    "zh_description": "米饭搭配酥炸虾和香浓咖喱酱。",
+    "en_name": "Ebi Curry Rice Bowl",
+    "en_description": "Rice served with crispy shrimp and savory curry sauce.",
+    "ingredients": [
+      "밥",
+      "새우",
+      "빵가루",
+      "카레 소스",
+      "양파"
+    ],
+    "allergens": [
+      "밀",
+      "대두",
+      "계란",
+      "새우"
+    ],
+    "contains_pork": false,
+    "contains_alcohol": false,
+    "halal": "unknown",
+    "vegan": "no",
+    "spicy": 1
+  },
+  "매콤카레카츠": {
+    "menu_category": "카츠",
+    "menu_category_en": "Cutlet",
+    "menu_category_zh": "咖喱炸猪排",
+    "pronunciation": "maekomkarekacheu",
+    "zh_name": "微辣咖喱猪排",
+    "zh_description": "酥炸猪排淋上带有微辣风味的浓郁咖喱酱。",
+    "en_name": "Spicy Curry Pork Cutlet",
+    "en_description": "A crispy pork cutlet topped with rich, mildly spicy curry sauce.",
+    "ingredients": [
+      "돼지고기",
+      "빵가루",
+      "계란",
+      "카레 소스",
+      "밥"
+    ],
+    "allergens": [
+      "밀",
+      "대두",
+      "우유",
+      "계란",
+      "돼지고기"
+    ],
+    "contains_pork": true,
+    "contains_alcohol": false,
+    "halal": "no",
+    "vegan": "no",
+    "spicy": 2
+  },
+  "큰부타동": {
+    "menu_category": "덮밥",
+    "menu_category_en": "Rice Bowl",
+    "menu_category_zh": "猪肉盖饭",
+    "pronunciation": "keunbutadong",
+    "zh_name": "大份日式猪肉盖饭",
+    "zh_description": "大份米饭铺上酱香浓郁的猪肉片和洋葱。",
+    "en_name": "Large Butadon",
+    "en_description": "A large rice bowl topped with savory soy-glazed pork and onions.",
+    "ingredients": [
+      "밥",
+      "돼지고기",
+      "양파",
+      "대파",
+      "간장"
+    ],
+    "allergens": [
+      "밀",
+      "대두",
+      "돼지고기"
+    ],
+    "contains_pork": true,
+    "contains_alcohol": false,
+    "halal": "no",
+    "vegan": "no",
+    "spicy": 0
+  },
+  "큰김치부타동": {
+    "menu_category": "덮밥",
+    "menu_category_en": "Rice Bowl",
+    "menu_category_zh": "泡菜猪肉盖饭",
+    "pronunciation": "keunkimchibutadong",
+    "zh_name": "大份泡菜猪肉盖饭",
+    "zh_description": "大份米饭搭配酱炒猪肉和酸辣泡菜。",
+    "en_name": "Large Kimchi Butadon",
+    "en_description": "A large rice bowl topped with savory pork and tangy stir-fried kimchi.",
+    "ingredients": [
+      "밥",
+      "돼지고기",
+      "김치",
+      "양파",
+      "간장"
+    ],
+    "allergens": [
+      "밀",
+      "대두",
+      "돼지고기"
+    ],
+    "contains_pork": true,
+    "contains_alcohol": false,
+    "halal": "no",
+    "vegan": "no",
+    "spicy": 1
+  },
+  "매운갈비덮밥": {
+    "menu_category": "덮밥",
+    "menu_category_en": "Rice Bowl",
+    "menu_category_zh": "辣味排骨盖饭",
+    "pronunciation": "maeungalbideopbap",
+    "zh_name": "辣味排骨盖饭",
+    "zh_description": "米饭搭配辣酱烹制的排骨和洋葱，味道浓郁。",
+    "en_name": "Spicy Galbi Rice Bowl",
+    "en_description": "Rice topped with ribs and onions cooked in a bold, spicy sauce.",
+    "ingredients": [
+      "밥",
+      "돼지갈비",
+      "양파",
+      "대파",
+      "고추장"
+    ],
+    "allergens": [
+      "밀",
+      "대두",
+      "돼지고기"
+    ],
+    "contains_pork": true,
+    "contains_alcohol": false,
+    "halal": "no",
+    "vegan": "no",
+    "spicy": 2
+  },
+  "카레부타동": {
+    "menu_category": "덮밥",
+    "menu_category_en": "Rice Bowl",
+    "menu_category_zh": "咖喱猪肉盖饭",
+    "pronunciation": "karebutadong",
+    "zh_name": "咖喱猪肉盖饭",
+    "zh_description": "米饭铺上酱炒猪肉，再淋上浓郁日式咖喱。",
+    "en_name": "Curry Butadon",
+    "en_description": "Rice topped with savory pork and rich Japanese-style curry sauce.",
+    "ingredients": [
+      "밥",
+      "돼지고기",
+      "카레 소스",
+      "양파",
+      "간장"
+    ],
+    "allergens": [
+      "밀",
+      "대두",
+      "우유",
+      "돼지고기"
+    ],
+    "contains_pork": true,
+    "contains_alcohol": false,
+    "halal": "no",
+    "vegan": "no",
+    "spicy": 1
+  },
+  "마제소밥 (면 대신 밥)": {
+    "menu_category": "덮밥",
+    "menu_category_en": "Rice bowl",
+    "menu_category_zh": "盖饭",
+    "pronunciation": "maje-sobap (myeon-daesin-bap)",
+    "zh_name": "台湾风味肉末拌饭",
+    "zh_description": "米饭拌上咸香肉末酱，搭配蛋黄、葱花和海苔，风味浓郁。",
+    "en_name": "Mazesoba-Style Rice Bowl",
+    "en_description": "Rice is tossed with savory minced-meat sauce and topped with egg yolk, scallions, and seaweed.",
+    "ingredients": [
+      "밥",
+      "돼지고기",
+      "계란",
+      "대파",
+      "김"
+    ],
+    "allergens": [
+      "대두",
+      "계란",
+      "돼지고기",
+      "밀"
+    ],
+    "contains_pork": true,
+    "contains_alcohol": false,
+    "halal": "no",
+    "vegan": "no",
+    "spicy": 1
+  },
+  "히레카츠 (하프)": {
+    "menu_category": "카츠",
+    "menu_category_en": "Cutlet",
+    "menu_category_zh": "炸猪排",
+    "pronunciation": "hirekacheu (hapeu)",
+    "zh_name": "菲力炸猪排（半份）",
+    "zh_description": "猪里脊裹上酥脆面衣炸制，肉质柔嫩，配猪排酱食用。",
+    "en_name": "Pork Tenderloin Cutlet (Half)",
+    "en_description": "Tender pork tenderloin is coated in crisp breadcrumbs and served with cutlet sauce.",
+    "ingredients": [
+      "돼지고기",
+      "빵가루",
+      "밀가루",
+      "계란",
+      "돈카츠소스"
+    ],
+    "allergens": [
+      "돼지고기",
+      "밀",
+      "계란",
+      "대두"
+    ],
+    "contains_pork": true,
+    "contains_alcohol": false,
+    "halal": "no",
+    "vegan": "no",
+    "spicy": 0
+  },
+  "데미히레카츠 (하프)": {
+    "menu_category": "카츠",
+    "menu_category_en": "Cutlet",
+    "menu_category_zh": "炸猪排",
+    "pronunciation": "demi-hirekacheu (hapeu)",
+    "zh_name": "半份多蜜酱菲力炸猪排",
+    "zh_description": "酥炸猪里脊搭配浓郁的多蜜酱，口感柔嫩、酱香醇厚。",
+    "en_name": "Pork Tenderloin Cutlet with Demi-Glace (Half)",
+    "en_description": "Crispy pork tenderloin is served with rich, savory demi-glace sauce.",
+    "ingredients": [
+      "돼지고기",
+      "빵가루",
+      "밀가루",
+      "계란",
+      "데미글라스소스"
+    ],
+    "allergens": [
+      "돼지고기",
+      "밀",
+      "계란",
+      "대두"
+    ],
+    "contains_pork": true,
+    "contains_alcohol": false,
+    "halal": "no",
+    "vegan": "no",
+    "spicy": 0
+  },
+  "모짜치즈카츠 (2개)": {
+    "menu_category": "카츠",
+    "menu_category_en": "Cutlet",
+    "menu_category_zh": "芝士炸猪排",
+    "pronunciation": "mojja-chijeu-kacheu (du-gae)",
+    "zh_name": "马苏里拉芝士炸猪排（2块）",
+    "zh_description": "猪肉裹着马苏里拉芝士炸至金黄，外脆内软、芝士浓香。",
+    "en_name": "Mozzarella Cheese Cutlet (2 Pieces)",
+    "en_description": "Pork and mozzarella are fried in a crisp coating for a crunchy outside and melty, cheesy center.",
+    "ingredients": [
+      "돼지고기",
+      "모짜렐라치즈",
+      "빵가루",
+      "밀가루",
+      "계란"
+    ],
+    "allergens": [
+      "돼지고기",
+      "우유",
+      "밀",
+      "계란"
+    ],
+    "contains_pork": true,
+    "contains_alcohol": false,
+    "halal": "no",
+    "vegan": "no",
+    "spicy": 0
+  },
+  "가라아게 (5개)": {
+    "menu_category": "사이드",
+    "menu_category_en": "Side",
+    "menu_category_zh": "日式炸鸡",
+    "pronunciation": "garaage (daseot-gae)",
+    "zh_name": "日式炸鸡块（5块）",
+    "zh_description": "鸡肉以酱油等调味后炸至外酥里嫩，咸香可口。",
+    "en_name": "Karaage (5 Pieces)",
+    "en_description": "Chicken is seasoned with soy-based sauce and fried until crisp outside and juicy inside.",
+    "ingredients": [
+      "닭고기",
+      "간장",
+      "밀가루",
+      "전분",
+      "마늘"
+    ],
+    "allergens": [
+      "닭고기",
+      "대두",
+      "밀"
+    ],
+    "contains_pork": false,
+    "contains_alcohol": false,
+    "halal": "unknown",
+    "vegan": "no",
+    "spicy": 0
+  },
+  "새우튀김 (2개)": {
+    "menu_category": "사이드",
+    "menu_category_en": "Side",
+    "menu_category_zh": "炸虾",
+    "pronunciation": "saeu-twigim (du-gae)",
+    "zh_name": "炸虾（2只）",
+    "zh_description": "鲜虾裹上轻薄面衣炸至酥脆，鲜甜可口。",
+    "en_name": "Fried Shrimp (2 Pieces)",
+    "en_description": "Shrimp is lightly battered and fried until crisp, with a naturally sweet seafood flavor.",
+    "ingredients": [
+      "새우",
+      "밀가루",
+      "빵가루",
+      "계란"
+    ],
+    "allergens": [
+      "새우",
+      "밀",
+      "계란"
+    ],
+    "contains_pork": false,
+    "contains_alcohol": false,
+    "halal": "unknown",
+    "vegan": "no",
+    "spicy": 0
+  },
+  "짜조 (2개)": {
+    "menu_category": "사이드",
+    "menu_category_en": "Side",
+    "menu_category_zh": "越南炸春卷",
+    "pronunciation": "jjajo (du-gae)",
+    "zh_name": "越南炸春卷（2个）",
+    "zh_description": "薄皮包入猪肉和蔬菜后炸至金黄，口感酥脆、馅料鲜香。",
+    "en_name": "Cha Gio (2 Pieces)",
+    "en_description": "Crisp fried rolls are filled with savory pork and vegetables.",
+    "ingredients": [
+      "돼지고기",
+      "야채",
+      "춘권피",
+      "간장"
+    ],
+    "allergens": [
+      "돼지고기",
+      "밀",
+      "대두"
+    ],
+    "contains_pork": true,
+    "contains_alcohol": false,
+    "halal": "no",
+    "vegan": "no",
+    "spicy": 0
+  },
+  "감자고로케 (4개)": {
+    "menu_category": "사이드",
+    "menu_category_en": "Side",
+    "menu_category_zh": "土豆可乐饼",
+    "pronunciation": "gamja-goroke (ne-gae)",
+    "zh_name": "土豆可乐饼（4个）",
+    "zh_description": "细腻土豆泥裹上面包糠炸至金黄，外酥内软。",
+    "en_name": "Potato Croquettes (4 Pieces)",
+    "en_description": "Creamy mashed potato is coated in breadcrumbs and fried until golden and crisp.",
+    "ingredients": [
+      "감자",
+      "빵가루",
+      "밀가루",
+      "계란",
+      "우유"
+    ],
+    "allergens": [
+      "밀",
+      "계란",
+      "우유"
+    ],
+    "contains_pork": false,
+    "contains_alcohol": false,
+    "halal": "yes",
+    "vegan": "no",
+    "spicy": 0
+  },
+  "닭껍질교자 (4개)": {
+    "menu_category": "사이드",
+    "menu_category_en": "Side",
+    "menu_category_zh": "鸡皮饺子",
+    "pronunciation": "dak-kkeopjil-gyoja (ne-gae)",
+    "zh_name": "鸡皮煎饺（4个）",
+    "zh_description": "饺子皮包入鸡皮和调味馅料，煎炸后外脆内香。",
+    "en_name": "Chicken Skin Gyoza (4 Pieces)",
+    "en_description": "Gyoza wrappers hold a savory chicken-skin filling, cooked until crisp and flavorful.",
+    "ingredients": [
+      "닭껍질",
+      "닭고기",
+      "만두피",
+      "양배추",
+      "간장"
+    ],
+    "allergens": [
+      "닭고기",
+      "밀",
+      "대두"
+    ],
+    "contains_pork": false,
+    "contains_alcohol": false,
+    "halal": "unknown",
+    "vegan": "no",
+    "spicy": 0
+  },
+  "불맛미니부타동": {
+    "menu_category": "덮밥",
+    "menu_category_en": "Rice bowl",
+    "menu_category_zh": "猪肉盖饭",
+    "pronunciation": "bulmat-mini-butadong",
+    "zh_name": "炙香迷你猪肉盖饭",
+    "zh_description": "米饭铺上炙烤猪肉和洋葱，带有微甜咸香的酱汁风味。",
+    "en_name": "Flame-Grilled Mini Pork Rice Bowl",
+    "en_description": "Rice is topped with flame-grilled pork and onions in a savory, slightly sweet sauce.",
+    "ingredients": [
+      "밥",
+      "돼지고기",
+      "양파",
+      "간장",
+      "설탕"
+    ],
+    "allergens": [
+      "돼지고기",
+      "대두",
+      "밀"
+    ],
+    "contains_pork": true,
+    "contains_alcohol": false,
+    "halal": "no",
+    "vegan": "no",
+    "spicy": 0
+  },
+  "김치미니부타동": {
+    "menu_category": "덮밥",
+    "menu_category_en": "Rice bowl",
+    "menu_category_zh": "泡菜猪肉盖饭",
+    "pronunciation": "gimchi-mini-butadong",
+    "zh_name": "泡菜迷你猪肉盖饭",
+    "zh_description": "米饭搭配猪肉、泡菜和洋葱，咸香微辣，带有发酵酸香。",
+    "en_name": "Kimchi Mini Pork Rice Bowl",
+    "en_description": "Pork, kimchi, and onions are served over rice for a savory bowl with a mild spicy kick.",
+    "ingredients": [
+      "밥",
+      "돼지고기",
+      "김치",
+      "양파",
+      "고춧가루"
+    ],
+    "allergens": [
+      "돼지고기",
+      "대두",
+      "밀"
+    ],
+    "contains_pork": true,
+    "contains_alcohol": false,
+    "halal": "no",
+    "vegan": "no",
+    "spicy": 1
+  },
+  "미니카레밥": {
+    "menu_category": "덮밥",
+    "menu_category_en": "Rice bowl",
+    "menu_category_zh": "咖喱饭",
+    "pronunciation": "mini-karebap",
+    "zh_name": "迷你咖喱饭",
+    "zh_description": "米饭淋上浓稠咖喱酱，搭配猪肉和蔬菜，味道温和香浓。",
+    "en_name": "Mini Curry Rice",
+    "en_description": "Rice is served with mild, savory curry sauce, pork, and vegetables.",
+    "ingredients": [
+      "밥",
+      "돼지고기",
+      "감자",
+      "당근",
+      "카레소스"
+    ],
+    "allergens": [
+      "돼지고기",
+      "밀",
+      "대두",
+      "우유"
+    ],
+    "contains_pork": true,
+    "contains_alcohol": false,
+    "halal": "no",
+    "vegan": "no",
+    "spicy": 0
+  }
+}

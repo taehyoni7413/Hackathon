@@ -10,8 +10,9 @@
       "en": "A local favorite with tasty food"
     },
     "open_hours": {},
-    "image_url": "",
-    "category": "korean"
+    "image_url": "/stores/1/menu/001.png",
+    "category": "korean",
+    "menu_board_images": []
   },
   {
     "id": 2,
@@ -24,8 +25,11 @@
       "en": "Sandwich shop"
     },
     "open_hours": {},
-    "image_url": "",
-    "category": "western"
+    "image_url": "/stores/2/menu/047.jpg",
+    "category": "western",
+    "menu_board_images": [
+      "/stores/2/menu_board_01.png"
+    ]
   },
   {
     "id": 3,
@@ -38,7 +42,10 @@
       "en": "Popular ramen restaurant"
     },
     "open_hours": {},
-    "image_url": "",
-    "category": "japanese"
+    "image_url": "/stores/3/menu/059.jpg",
+    "category": "japanese",
+    "menu_board_images": [
+      "/stores/3/menu_board_01.jpg"
+    ]
   }
 ]

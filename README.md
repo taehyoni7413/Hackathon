@@ -112,6 +112,7 @@ cd web && npm run lint && npm run build
 | API | Web Speech API (브라우저 내장 음성 인식 · 크롬은 Google, 사파리는 Apple 엔진) | 요청사항 음성 입력(STT). 음성은 각 브라우저 회사 서버에서 글자로 변환 | https://developer.mozilla.org/docs/Web/API/Web_Speech_API |
 | 프레임워크 | Flask | 메뉴 번역 단독 데모(`app.py`) | https://flask.palletsprojects.com |
 | 데이터 | OpenStreetMap (© OpenStreetMap 기여자, ODbL) | 학교 정문 좌표(`SCHOOL_COORD`) | https://www.openstreetmap.org/node/4629757791 |
+| 데이터 | 네이버 지도(플레이스) 메뉴 사진·메뉴명·가격 | 3개 가게 실제 메뉴 데이터와 메뉴 사진·원본 메뉴판 (`scripts/build_menus.py`, 번역·식단 정보는 AI 추정) | https://map.naver.com |
 |  |  |  |  |
 
 **사전 준비 내역 (규정상 허용되는 기본 환경 설정):** 대회 전에는 프로젝트 기본 구조(FastAPI + Next.js 템플릿), 세팅·실행 스크립트, 협업 문서만 준비했으며, 주제 관련 기능 코드는 모두 대회 시간(10/1 19:30 ~ 10/2 11:30) 중 작성.

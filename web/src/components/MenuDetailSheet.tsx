@@ -36,10 +36,11 @@ export function MenuDetailSheet({
     const opt = menu.options.find((o) => o.id === id)!;
     setOptionIds((prev) => {
       if (prev.includes(id)) return prev.filter((x) => x !== id);
-      // 맵기 옵션은 하나만
-      const spicyIds = menu.options.filter((o) => o.type === "spicy").map((o) => o.id);
-      const base = opt.type === "spicy" ? prev.filter((x) => !spicyIds.includes(x)) : prev;
-      return [...base, id];
+      // 맵기 옵션, 같은 group(세트 A/B 등) 옵션은 하나만
+      const sameGroup = (o: (typeof menu.options)[number]) =>
+        (opt.type === "spicy" && o.type === "spicy") || (!!opt.group && o.group === opt.group);
+      const exclusive = menu.options.filter(sameGroup).map((o) => o.id);
+      return [...prev.filter((x) => !exclusive.includes(x)), id];
     });
   };
 

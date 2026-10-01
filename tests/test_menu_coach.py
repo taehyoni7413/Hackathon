@@ -9,7 +9,8 @@ client = TestClient(app)
 
 def test_menu_insight_mock(monkeypatch):
     monkeypatch.setattr(llm, "MOCK", True)
-    r = client.post("/api/menu-insight", json={"store_id": 3, "menu_id": 10, "lang": "zh"})
+    menu = client.get("/api/stores/3/menus").json()[0]
+    r = client.post("/api/menu-insight", json={"store_id": 3, "menu_id": menu["id"], "lang": "zh"})
     assert r.status_code == 200
     assert set(r.json()) == {"summary", "recommended_for", "notice"}
 
