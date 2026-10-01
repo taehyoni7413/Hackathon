@@ -87,12 +87,13 @@ cd web && npm run lint && npm run build
 | 프레임워크 | Next.js (create-next-app 기본 템플릿) | 프론트엔드 | https://nextjs.org |
 | 라이브러리 | Tailwind CSS | 스타일 | https://tailwindcss.com |
 | 라이브러리 | pandas, numpy, scikit-learn | 데이터 처리·모델 | https://scikit-learn.org |
-| API | OpenAI API (gpt-6-luna, text-embedding-3-small, 주최 측 제공) | LLM 기능 | https://platform.openai.com/docs |
+| API | OpenAI API (gpt-6-luna, text-embedding-3-small, 주최 측 제공) | 요청사항 한국어 번역(`/api/translate`), LLM 기능 | https://platform.openai.com/docs |
 | AI 도구 | Claude Code | 코딩 보조 | https://claude.com/claude-code |
 | API | 카카오맵 JavaScript SDK | 지도·마커·경로선 표시 (프론트) | https://apis.map.kakao.com/web/ |
 | API | 카카오맵 길찾기 링크 (`map.kakao.com/link/to`) | 외부 길 안내 버튼 | https://apis.map.kakao.com/web/guide/#routeurl |
 | API·데이터 | OSRM 공개 도보 경로 서버 (routing.openstreetmap.de, © OpenStreetMap 기여자) | 도보 경로 2순위 | https://routing.openstreetmap.de |
 | API | TMAP 보행자 경로 API (백엔드 `/route`, 예정) | 도보 경로 1순위 | https://openapi.sk.com |
+| API | Web Speech API (브라우저 내장 음성 인식 · 크롬은 Google, 사파리는 Apple 엔진) | 요청사항 음성 입력(STT). 음성은 각 브라우저 회사 서버에서 글자로 변환 | https://developer.mozilla.org/docs/Web/API/Web_Speech_API |
 |  |  |  |  |
 
 **사전 준비 내역 (규정상 허용되는 기본 환경 설정):** 대회 전에는 프로젝트 기본 구조(FastAPI + Next.js 템플릿), 세팅·실행 스크립트, 협업 문서만 준비했으며, 주제 관련 기능 코드는 모두 대회 시간(10/1 19:30 ~ 10/2 11:30) 중 작성.
