@@ -3,7 +3,7 @@
 import { Camera, CaretLeft, ShoppingCartSimple } from "@/components/Icon";
 import Link from "next/link";
 import { useParams, useRouter } from "next/navigation";
-import { useMemo, useRef, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 
 import { AiNotice, DietBadges } from "@/components/DietBadges";
 import { MenuBoardViewer } from "@/components/MenuBoardViewer";
@@ -27,6 +27,12 @@ export default function MenuPage() {
   const [openMenu, setOpenMenu] = useState<Menu | null>(null);
   const [activeCat, setActiveCat] = useState<string | null>(null);
   const sections = useRef<Record<string, HTMLElement | null>>({});
+  const headerRef = useRef<HTMLElement>(null);
+  const tabsRef = useRef<HTMLElement>(null);
+  const tabRefs = useRef<Record<string, HTMLButtonElement | null>>({});
+  // 탭을 눌러 이동하는 동안에는 스크롤 위치로 탭을 바꾸지 않음
+  const lockUntil = useRef(0);
+  const [bar, setBar] = useState({ left: 0, width: 0 });
 
   const store = data.status === "ok" ? data.store : null;
 
@@ -35,6 +41,33 @@ export default function MenuPage() {
     store?.menus.forEach((m) => map.set(m.menu_category, [...(map.get(m.menu_category) ?? []), m]));
     return [...map.entries()];
   }, [store]);
+
+  // 스크롤 위치에 맞춰 지금 보고 있는 카테고리 탭으로 바꿈 (폰: 창 스크롤, PC iPhone 틀: 틀 안 스크롤 → capture 로 둘 다 받음)
+  useEffect(() => {
+    if (!groups.length) return;
+    const onScroll = () => {
+      if (Date.now() < lockUntil.current) return;
+      const top = (headerRef.current?.getBoundingClientRect().bottom ?? 0) + 12;
+      let current = groups[0][0];
+      for (const [cat] of groups) {
+        const el = sections.current[cat];
+        if (el && el.getBoundingClientRect().top <= top) current = cat;
+      }
+      setActiveCat(current);
+    };
+    document.addEventListener("scroll", onScroll, { capture: true, passive: true });
+    return () => document.removeEventListener("scroll", onScroll, { capture: true });
+  }, [groups]);
+
+  // 고른 탭 아래 밑줄을 옮기고, 탭 줄을 옆으로 밀어 그 탭이 가운데 오게
+  const current = activeCat ?? groups[0]?.[0] ?? null;
+  useEffect(() => {
+    const tab = current ? tabRefs.current[current] : null;
+    const nav = tabsRef.current;
+    if (!tab || !nav) return;
+    setBar({ left: tab.offsetLeft, width: tab.offsetWidth });
+    nav.scrollTo({ left: tab.offsetLeft - nav.clientWidth / 2 + tab.offsetWidth / 2, behavior: "smooth" });
+  }, [current, groups, lang]);
 
   if (data.status === "loading") return <LoadingView />;
   if (data.status === "error") return <ErrorView onRetry={data.reload} />;
@@ -47,7 +80,7 @@ export default function MenuPage() {
   return (
     <main className="flex flex-1 flex-col pb-28">
       {/* 헤더 */}
-      <header className="app-bar pt-safe">
+      <header ref={headerRef} className="app-bar pt-safe">
         <div className="flex items-center gap-2 px-2 pt-1">
           <button
             className="icon-btn shadow-none"
@@ -71,25 +104,35 @@ export default function MenuPage() {
           )}
         </div>
         {/* 카테고리 탭 */}
-        <nav className="flex gap-1 overflow-x-auto px-2 [scrollbar-width:none]">
+        <nav ref={tabsRef} className="relative flex gap-1 overflow-x-auto px-2 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
           {groups.map(([cat, menus]) => {
             const label = pickText(menus[0].menu_category_name, lang, cat);
-            const active = (activeCat ?? groups[0]?.[0]) === cat;
+            const active = current === cat;
             return (
               <button
                 key={cat}
+                ref={(el) => {
+                  tabRefs.current[cat] = el;
+                }}
                 onClick={() => {
                   setActiveCat(cat);
+                  lockUntil.current = Date.now() + 800;
                   sections.current[cat]?.scrollIntoView({ behavior: "smooth", block: "start" });
                 }}
-                className={`min-h-11 shrink-0 border-b-2 px-3 text-sm font-semibold ${
-                  active ? "border-brand text-brand-dark" : "border-transparent text-zinc-500"
+                className={`min-h-11 shrink-0 px-3 text-sm font-semibold transition-colors ${
+                  active ? "text-brand-dark" : "text-zinc-500"
                 }`}
               >
                 {label}
               </button>
             );
           })}
+          {/* 고른 탭 밑줄: 스크롤에 따라 옆으로 미끄러지듯 이동 */}
+          <span
+            aria-hidden
+            className="pointer-events-none absolute bottom-0 h-0.5 rounded-full bg-brand transition-all duration-300 ease-out"
+            style={{ left: bar.left, width: bar.width }}
+          />
         </nav>
       </header>
 
