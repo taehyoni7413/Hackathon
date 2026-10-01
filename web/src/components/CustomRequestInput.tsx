@@ -1,6 +1,6 @@
 "use client";
 
-import { Hourglass, Microphone, X } from "@/components/Icon";
+import { Hourglass, Keyboard, Microphone, X } from "@/components/Icon";
 import { useCallback, useState } from "react";
 
 import { VoiceOverlay } from "@/components/VoiceOverlay";
@@ -86,7 +86,7 @@ export function CustomRequestInput({
 
       {typing || !speech.supported ? (
         <form
-          className="flex gap-2"
+          className="flex items-center gap-2"
           onSubmit={(e) => {
             e.preventDefault();
             // 직접 입력은 어떤 언어로 써도 되므로 언어를 정하지 않고 번역
@@ -95,7 +95,28 @@ export function CustomRequestInput({
             setTyping(false);
           }}
         >
+          {/* 말하기로 돌아가기 (음성 인식이 되는 브라우저에서만) */}
+          {speech.supported && (
+            <button
+              type="button"
+              className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl border-2 border-zinc-200 text-zinc-500 transition active:scale-95 active:bg-zinc-100"
+              onClick={() => {
+                setDraft("");
+                setTyping(false);
+              }}
+              aria-label={t("voice.backToSpeak")}
+            >
+              <X weight="bold" />
+            </button>
+          )}
           <input
+            autoFocus={typing}
+            onKeyDown={(e) => {
+              if (e.key === "Escape" && speech.supported) {
+                setDraft("");
+                setTyping(false);
+              }
+            }}
             value={draft}
             onChange={(e) => setDraft(e.target.value)}
             maxLength={MAX_CHARS}
@@ -148,7 +169,7 @@ export function CustomRequestInput({
             onClick={() => setTyping(true)}
             aria-label={t("voice.type")}
           >
-            ⌨️
+            <Keyboard className="text-xl" />
           </button>
         </div>
         </>

@@ -98,6 +98,7 @@
   "voice.speak": "说出要求",
   "voice.speakLang": "说话的语言",
   "voice.type": "手动输入",
+  "voice.backToSpeak": "返回语音输入",
   "voice.hint": "请说出您的要求",
   "voice.listening": "正在听…",
   "voice.hearing": "说完后会自动停止",

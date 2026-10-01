@@ -98,6 +98,7 @@
   "voice.speak": "직접 말하기",
   "voice.speakLang": "말할 언어",
   "voice.type": "직접 입력",
+  "voice.backToSpeak": "말하기로 돌아가기",
   "voice.hint": "요청사항을 말씀해 주세요",
   "voice.listening": "듣고 있어요…",
   "voice.hearing": "말이 끝나면 자동으로 멈춰요",
