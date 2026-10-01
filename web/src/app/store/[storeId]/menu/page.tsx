@@ -107,30 +107,32 @@ export default function MenuPage() {
             }}
             className="scroll-mt-28 px-4 pt-5"
           >
-            <h2 className="mb-2 text-lg font-bold">{pickText(menus[0].menu_category_name, lang, cat)}</h2>
+            <h2 className="mb-1 font-display text-2xl text-ink">{pickText(menus[0].menu_category_name, lang, cat)}</h2>
             <ul className="divide-y divide-zinc-100">
               {menus.map((m) => {
                 const tr = m.translations[lang];
                 return (
                   <li key={m.id}>
-                    <button onClick={() => setOpenMenu(m)} className="flex w-full gap-3 py-3 text-left">
-                      <div className="min-w-0 flex-1">
-                        <p className="font-semibold">{tr?.name ?? m.name_ko}</p>
-                        <p className="text-xs text-zinc-500">{m.name_ko}</p>
-                        <p className="mt-1 font-semibold">{formatPrice(m.price, lang)}</p>
-                        {tr?.description && (
-                          <p className="mt-0.5 line-clamp-1 text-sm text-zinc-500">{tr.description}</p>
-                        )}
-                        <div className="mt-2">
-                          <DietBadges menu={m} />
-                        </div>
-                      </div>
+                    <button onClick={() => setOpenMenu(m)} className="flex w-full items-start gap-4 py-4 text-left">
                       <SmartImage
                         src={m.image_url}
                         fallback={defaultImage(store.category)}
                         alt={tr?.name ?? m.name_ko}
-                        className="h-24 w-24 shrink-0 rounded-xl object-cover"
+                        className="h-28 w-28 shrink-0 rounded-2xl bg-rice object-cover"
                       />
+                      <div className="min-w-0 flex-1">
+                        <p className="text-[17px] font-bold leading-snug text-ink">{tr?.name ?? m.name_ko}</p>
+                        {(tr?.name ?? m.name_ko) !== m.name_ko && (
+                          <p className="text-sm text-zinc-500">{m.name_ko}</p>
+                        )}
+                        {tr?.description && (
+                          <p className="mt-1 line-clamp-2 text-sm leading-snug text-zinc-600">{tr.description}</p>
+                        )}
+                        <p className="mt-1.5 font-display text-xl text-ink">{formatPrice(m.price, lang)}</p>
+                        <div className="mt-1.5">
+                          <DietBadges menu={m} />
+                        </div>
+                      </div>
                     </button>
                   </li>
                 );

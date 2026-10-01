@@ -1,9 +1,13 @@
 import type { Metadata, Viewport } from "next";
+import { Do_Hyeon } from "next/font/google";
 import "./globals.css";
 
 import { AppProvider } from "@/context/AppContext";
 import { DemoBadge } from "@/components/DemoBadge";
 import { ServiceWorkerRegister } from "@/components/ServiceWorkerRegister";
+
+/** 제목용 글꼴: 로고의 굵고 둥근 "BUK" 글자와 닮은 Do Hyeon (한글·영문). 중국어는 시스템 글꼴로 대체 */
+const display = Do_Hyeon({ weight: "400", subsets: ["latin"], variable: "--font-do-hyeon", display: "swap", preload: false });
 
 export const metadata: Metadata = {
   title: "BUK",
@@ -39,7 +43,7 @@ export const viewport: Viewport = {
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
-    <html lang="ko" className="h-full antialiased">
+    <html lang="ko" className={`h-full antialiased ${display.variable}`}>
       <body className="min-h-full">
         <AppProvider>
           <div className="app-shell">{children}</div>

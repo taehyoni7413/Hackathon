@@ -8,7 +8,7 @@ type Tone = "bad" | "good" | "warn" | "neutral";
 
 const TONE: Record<Tone, string> = {
   bad: "bg-red-50 text-red-700 ring-red-200",
-  good: "bg-emerald-50 text-emerald-700 ring-emerald-200",
+  good: "bg-leaf-soft text-leaf ring-leaf/30",
   warn: "bg-amber-50 text-amber-800 ring-amber-200",
   neutral: "bg-zinc-100 text-zinc-700 ring-zinc-200",
 };
@@ -29,9 +29,27 @@ function TriBadge({ label, value }: { label: string; value: Tri }) {
   return <Badge tone="warn">{label}: {t("diet.unknown")}</Badge>;
 }
 
-/** 메뉴 식단 배지. detail이면 알레르기까지 표시 */
+/**
+ * 메뉴 식단 배지. detail이면 전부(할랄·비건 아님/확인 필요, 알레르기 포함),
+ * 목록에서는 판단에 바로 쓰이는 것만: 돼지고기·술(주의), 할랄·비건 가능(안심), 맵기
+ */
 export function DietBadges({ menu, detail }: { menu: Menu; detail?: boolean }) {
   const { t } = useApp();
+  if (!detail) {
+    return (
+      <div className="flex flex-wrap gap-1">
+        {menu.contains_pork === true && <Badge tone="bad">🐷 {t("diet.pork")}</Badge>}
+        {menu.contains_alcohol === true && <Badge tone="bad">🍺 {t("diet.alcohol")}</Badge>}
+        {menu.halal === "yes" && <Badge tone="good">✓ {t("diet.halal")}</Badge>}
+        {menu.vegan === "yes" && <Badge tone="good">✓ {t("diet.vegan")}</Badge>}
+        {menu.spicy > 0 && (
+          <Badge tone={menu.spicy >= 2 ? "bad" : "neutral"}>
+            {"🌶️".repeat(menu.spicy)} {t(`diet.spicy${menu.spicy}` as MessageKey)}
+          </Badge>
+        )}
+      </div>
+    );
+  }
   return (
     <div className="flex flex-wrap gap-1">
       {menu.contains_pork === true && <Badge tone="bad">🐷 {t("diet.pork")}</Badge>}
