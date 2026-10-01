@@ -6,33 +6,42 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useEffect } from "react";
 
+import { DishNo } from "@/components/DishNo";
 import { OrderRequestItem } from "@/components/OrderRequestItem";
 import { EmptyView, ErrorView, LoadingView } from "@/components/StateViews";
 import { useApp } from "@/context/AppContext";
 import { useStore } from "@/hooks/useStores";
 import { pickText, translate } from "@/i18n";
-import { getOrderNumber } from "@/lib/api";
+import { getDishNumbers } from "@/lib/api";
 import { cartTotal, selectedOptions } from "@/lib/cart";
 import { formatPrice, formatPriceKo } from "@/lib/format";
 
 /** 9. 사장님께 보여주기: 본문은 전부 한국어, 각 줄 아래 사용자 언어 번역을 작게 */
 export default function ShowOrderPage() {
   const router = useRouter();
-  const { lang, t, ready, cart, cartStoreId, placeOrder, orderNo, setOrderNo } = useApp();
+  const { lang, t, ready, cart, cartStoreId, placeOrder, dishNos, setDishNos } = useApp();
   const data = useStore(cartStoreId ?? "");
   const store = data.status === "ok" ? data.store : null;
   const ko = (key: Parameters<typeof translate>[1], vars?: Record<string, string | number>) =>
     translate("ko", key, vars);
 
-  // 이 화면을 처음 열 때 주문번호 발급 (장바구니가 그대로면 같은 번호 유지)
+  // 번호 없는 음식에 번호 발급 (이미 받은 음식은 같은 번호 유지)
+  const missingKey = cart
+    .filter((c) => dishNos[c.key] === undefined)
+    .map((c) => c.key)
+    .join(",");
   useEffect(() => {
-    if (!ready || !cart.length || orderNo !== null) return;
+    if (!ready || !missingKey) return;
+    const keys = missingKey.split(",");
     let alive = true;
-    getOrderNumber().then((n) => alive && setOrderNo(n));
+    getDishNumbers(keys.length).then((nums) => {
+      if (!alive) return;
+      setDishNos((prev) => ({ ...prev, ...Object.fromEntries(keys.map((k, i) => [k, nums[i]])) }));
+    });
     return () => {
       alive = false;
     };
-  }, [ready, cart.length, orderNo, setOrderNo]);
+  }, [ready, missingKey, setDishNos]);
 
   if (!ready || (cartStoreId && data.status === "loading")) return <LoadingView />;
   if (data.status === "error") return <ErrorView onRetry={data.reload} />;
@@ -64,17 +73,10 @@ export default function ShowOrderPage() {
       </header>
 
       {/* 주문서: 사장님이 읽는 한국어는 크게, 손님 언어는 작게 */}
-      <section className="mx-3 flex-1 rounded-t-3xl bg-white px-5 pb-6 pt-5">
-        <div className="flex items-center justify-between gap-3 border-b-2 border-dashed border-zinc-200 pb-3">
-          <div className="min-w-0">
-            <p className="truncate font-display text-2xl text-ink">{store.name_ko}</p>
-            <img src="/logo.png" alt="" aria-hidden className="mt-1 h-7 w-auto" />
-          </div>
-          {/* 주문번호: 사장님이 이 번호로 부르면 손님 대기 화면에도 같은 번호 */}
-          <div className="shrink-0 rounded-2xl bg-brand px-4 py-2 text-center text-white">
-            <p className="text-xs font-semibold opacity-90">주문번호</p>
-            <p className="font-display text-4xl leading-none">{orderNo ?? "…"}</p>
-          </div>
+      <section lang="ko" className="mx-3 flex-1 rounded-t-3xl bg-white px-5 pb-6 pt-5">
+        <div className="flex items-center justify-between border-b-2 border-dashed border-zinc-200 pb-3">
+          <p className="font-display text-2xl text-ink">{store.name_ko}</p>
+          <img src="/logo.png" alt="" aria-hidden className="h-9 w-auto" />
         </div>
         <ul className="divide-y divide-zinc-100">
           {cart.map((item) => {
@@ -83,9 +85,13 @@ export default function ShowOrderPage() {
             const userName = menu.translations[lang]?.name ?? menu.name_ko;
             return (
               <li key={item.key} className="space-y-2 py-5">
-                <p className="font-display text-4xl leading-tight text-ink">
-                  {ko("show.item", { name: menu.name_ko, n: item.quantity })}
-                </p>
+                <div className="flex items-start gap-3">
+                  {/* 음식 번호: 손님 대기 화면에도 같은 번호 → 음식을 건넬 때 맞춰 봄 */}
+                  <DishNo n={dishNos[item.key]} />
+                  <p className="font-display text-4xl leading-tight text-ink">
+                    {ko("show.item", { name: menu.name_ko, n: item.quantity })}
+                  </p>
+                </div>
                 {lang !== "ko" && (
                   <p className="text-sm text-zinc-500">
                     {t("show.item", { name: userName, n: item.quantity })}
