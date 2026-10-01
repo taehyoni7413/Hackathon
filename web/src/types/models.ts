@@ -82,13 +82,22 @@ export type Menu = {
 
 export type StoreWithMenus = Store & { menus: Menu[] };
 
+/** 사용자가 말하거나 입력한 자유 요청사항. 사장님 화면에는 ko를 크게, text를 작게 */
+export type CustomRequest = {
+  /** 사용자가 말한 원문 (사용자 언어) */
+  text: string;
+  /** 사장님께 보여줄 한국어 */
+  ko: string;
+};
+
 export type CartItem = {
-  /** menu_id + 선택 옵션으로 만든 고유 키 */
+  /** menu_id + 선택 옵션 + 자유 요청사항으로 만든 고유 키 */
   key: string;
   store_id: string;
   menu_id: string;
   quantity: number;
   option_ids: string[];
+  custom_requests?: CustomRequest[];
 };
 
 export type RouteResult = {

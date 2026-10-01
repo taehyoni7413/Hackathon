@@ -78,6 +78,22 @@ export const api = {
 };
 
 /**
+ * 요청사항 원문 → 사장님께 보여줄 한국어 (백엔드 /api/translate, gpt-6-luna).
+ * 가게 데이터의 목업 여부와 관계없이 항상 백엔드를 부른다. 실패하면 null.
+ */
+export async function translateRequest(text: string, lang: string): Promise<string | null> {
+  try {
+    const r = await request<{ ko: string }>("/translate", {
+      method: "POST",
+      body: JSON.stringify({ text: text.slice(0, 200), lang }),
+    });
+    return r.ko?.trim() || null;
+  } catch {
+    return null;
+  }
+}
+
+/**
  * 도보 경로. ① 백엔드 /route (TMAP) ② OSRM 공개 도보 서버 ③ 직선 + 4km/h
  * OSRM: routing.openstreetmap.de 의 routed-foot, CORS 허용 확인됨 (좌표는 lng,lat 순서)
  */

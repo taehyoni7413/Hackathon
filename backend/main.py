@@ -45,6 +45,40 @@ def predict(req: PredictRequest):
     return {"prediction": sum(req.features) / len(req.features)}
 
 
+MAX_REQUEST_CHARS = 200
+
+TRANSLATE_SYSTEM = (
+    "You translate a restaurant customer's spoken request into natural, polite Korean "
+    "that a Korean restaurant owner can read at a glance. "
+    "The customer is an international student ordering food. "
+    "Output only the Korean sentence, ending in a polite request form such as '~해주세요' or '~있나요?'. "
+    "Keep food and ingredient words concrete. No quotes, no explanations."
+)
+
+
+class TranslateRequest(BaseModel):
+    text: str
+    # 사용자 언어 코드 (zh / en / ko). 번역 품질 힌트용
+    lang: str | None = None
+
+
+@router.post("/translate")
+def translate(req: TranslateRequest):
+    """주문 요청사항(사용자 언어) → 사장님께 보여줄 한국어 문장"""
+    text = req.text.strip()
+    if not text:
+        raise HTTPException(status_code=400, detail="text is empty")
+    if len(text) > MAX_REQUEST_CHARS:
+        raise HTTPException(status_code=400, detail=f"text is longer than {MAX_REQUEST_CHARS} chars")
+    if req.lang == "ko":
+        return {"ko": text}
+    try:
+        ko = llm.ask(text, system=TRANSLATE_SYSTEM).strip()
+    except llm.LLMError as e:
+        raise HTTPException(status_code=502, detail=str(e))
+    return {"ko": ko}
+
+
 @router.post("/chat")
 def chat(req: ChatRequest):
     try:

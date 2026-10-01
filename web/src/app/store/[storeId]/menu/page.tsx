@@ -153,12 +153,12 @@ export default function MenuPage() {
           menu={openMenu}
           fallbackImage={defaultImage(store.category)}
           onClose={() => setOpenMenu(null)}
-          onAdd={(quantity, option_ids) => {
+          onAdd={(quantity, option_ids, custom_requests) => {
             if (cartStoreId && cartStoreId !== store.id) {
               if (!window.confirm(t("cart.replaceStore"))) return;
               clearCart();
             }
-            addToCart({ store_id: store.id, menu_id: openMenu.id, quantity, option_ids });
+            addToCart({ store_id: store.id, menu_id: openMenu.id, quantity, option_ids, custom_requests });
             setOpenMenu(null);
           }}
         />
