@@ -68,7 +68,11 @@ export function MenuDetailSheet({
         <div className="flex-1 overflow-y-auto p-5">
           <h2 className="font-display text-3xl leading-tight text-ink">{name}</h2>
           <p className="text-zinc-500">
-            {menu.name_ko} <span className="text-zinc-400">· {menu.pronunciation}</span>
+            {lang !== "ko" && (
+              <>
+                {menu.name_ko} <span className="text-zinc-400">· {menu.pronunciation}</span>
+              </>
+            )}
           </p>
           <p className="mt-1 font-display text-2xl text-ink">{formatPrice(menu.price, lang)}</p>
           {tr?.description && <p className="mt-2 text-zinc-700">{tr.description}</p>}
@@ -103,7 +107,7 @@ export function MenuDetailSheet({
                       >
                         <span>
                           <span className="block font-medium">{pickText(o.translations, lang, o.name_ko)}</span>
-                          <span className="block text-xs text-zinc-500">{o.name_ko}</span>
+                          {lang !== "ko" && <span className="block text-xs text-zinc-500">{o.name_ko}</span>}
                         </span>
                         <span className="text-sm text-zinc-500">
                           {o.price_delta ? `+${formatPrice(o.price_delta, lang)}` : on ? <Check weight="bold" className="text-brand" /> : ""}

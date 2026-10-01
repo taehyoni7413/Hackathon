@@ -68,7 +68,7 @@ export default function CartPage() {
               />
               <div className="min-w-0 flex-1">
                 <p className="text-[17px] font-bold text-ink">{name}</p>
-                <p className="text-xs text-zinc-500">{menu.name_ko}</p>
+                {name !== menu.name_ko && <p className="text-xs text-zinc-500">{menu.name_ko}</p>}
                 {selectedOptions(menu, item.option_ids).map((o) => (
                   <p key={o.id} className="text-sm text-zinc-600">
                     · {pickText(o.translations, lang, o.name_ko)}

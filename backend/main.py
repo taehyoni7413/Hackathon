@@ -4,6 +4,10 @@
 모든 엔드포인트는 /api 아래에 있다. Vercel은 /api/* 요청을 경로 그대로(/api/health) 이 서비스로 보내고,
 로컬에서는 Next.js(next.config.ts)가 /api/* 를 같은 경로로 전달한다.
 """
+import threading
+from datetime import datetime
+from zoneinfo import ZoneInfo
+
 from fastapi import APIRouter, FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
@@ -77,6 +81,23 @@ def translate(req: TranslateRequest):
     except llm.LLMError as e:
         raise HTTPException(status_code=502, detail=str(e))
     return {"ko": ko}
+
+
+# 주문번호: 주문이 들어온 순서대로 1, 2, 3 … (날짜가 바뀌면 1부터).
+# 서버 메모리에 두므로 서버가 다시 뜨면 1부터 — 해커톤 시연용. 실제 서비스는 DB 필요
+_order_seq = {"date": "", "n": 0}
+_order_lock = threading.Lock()
+
+
+@router.post("/orders")
+def create_order_number():
+    """사장님 화면을 열 때 주문번호 발급 → 사장님이 번호로 부르고, 손님은 대기 화면에서 확인"""
+    today = datetime.now(ZoneInfo("Asia/Seoul")).date().isoformat()
+    with _order_lock:
+        if _order_seq["date"] != today:
+            _order_seq.update(date=today, n=0)
+        _order_seq["n"] += 1
+        return {"number": _order_seq["n"]}
 
 
 @router.post("/chat")
