@@ -1,6 +1,6 @@
 "use client";
 
-import { Camera, ShoppingCartSimple } from "@/components/Icon";
+import { Camera, CaretLeft, ShoppingCartSimple } from "@/components/Icon";
 import Link from "next/link";
 import { useParams, useRouter } from "next/navigation";
 import { useMemo, useRef, useState } from "react";
@@ -47,14 +47,14 @@ export default function MenuPage() {
   return (
     <main className="flex flex-1 flex-col pb-28">
       {/* 헤더 */}
-      <header className="sticky top-0 z-20 bg-white shadow-sm">
-        <div className="flex items-center gap-2 px-2 pt-2">
+      <header className="app-bar pt-safe">
+        <div className="flex items-center gap-2 px-2 pt-1">
           <button
             className="icon-btn shadow-none"
             onClick={() => router.push(`/map?store=${store.id}`)}
             aria-label={t("common.back")}
           >
-            ←
+            <CaretLeft weight="bold" />
           </button>
           <div className="min-w-0 flex-1">
             <h1 className="truncate text-lg font-bold">{name}</h1>

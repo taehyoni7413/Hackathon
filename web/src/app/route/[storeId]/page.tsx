@@ -1,5 +1,6 @@
 "use client";
 
+import { CaretLeft } from "@/components/Icon";
 import Link from "next/link";
 import { useParams, useRouter } from "next/navigation";
 import { useEffect, useMemo, useState } from "react";
@@ -50,7 +51,7 @@ export default function RoutePage() {
   const name = pickText(store.name, lang, store.name_ko);
 
   return (
-    <main className="relative flex-1 overflow-hidden bg-zinc-100" style={{ minHeight: "100dvh" }}>
+    <main className="relative flex-1 overflow-hidden bg-zinc-100" style={{ minHeight: "var(--app-h)" }}>
       {!mapUnavailable && (
         <MapView
           center={store}
@@ -68,7 +69,7 @@ export default function RoutePage() {
         onClick={() => router.push(`/map?store=${store.id}`)}
         aria-label={t("common.back")}
       >
-        ←
+        <CaretLeft weight="bold" />
       </button>
 
       <section className="absolute inset-x-0 bottom-0 z-30 rounded-t-3xl bg-white px-5 pt-5 pb-safe shadow-[0_-8px_24px_rgba(0,0,0,0.12)]">

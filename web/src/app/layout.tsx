@@ -4,6 +4,7 @@ import "./globals.css";
 
 import { AppProvider } from "@/context/AppContext";
 import { IconProvider } from "@/components/Icon";
+import { DeviceChrome } from "@/components/DeviceChrome";
 import { DemoBadge } from "@/components/DemoBadge";
 import { ServiceWorkerRegister } from "@/components/ServiceWorkerRegister";
 
@@ -46,11 +47,23 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html lang="ko" className={`h-full antialiased ${display.variable}`}>
       <body className="min-h-full">
+        {/* 본문 글꼴 Pretendard (SIL OFL, jsDelivr 동적 서브셋: 쓰는 글자만 받아옴) */}
+        <link
+          rel="stylesheet"
+          href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css"
+          precedence="default"
+        />
         <AppProvider>
-          <IconProvider>
-            <div className="app-shell">{children}</div>
-          </IconProvider>
-          <DemoBadge />
+          {/* .device / .device-screen: 넓은 화면에서만 iPhone 틀 (globals.css), 휴대폰에서는 평소 화면 */}
+          <div className="device">
+            <div className="device-screen">
+              <IconProvider>
+                <div className="app-shell">{children}</div>
+              </IconProvider>
+            </div>
+            <DeviceChrome />
+            <DemoBadge />
+          </div>
         </AppProvider>
         <ServiceWorkerRegister />
       </body>

@@ -31,8 +31,8 @@ export default function WaitingPage() {
 
   return (
     <main className="flex flex-1 flex-col bg-rice">
-      <header className="px-5 pb-4 pt-10 text-center">
-        <p className="flex justify-center text-6xl text-brand" aria-hidden><Hourglass /></p>
+      <header className="px-5 pb-4 pt-safe text-center">
+        <p className="mt-6 flex justify-center text-6xl text-brand" aria-hidden><Hourglass /></p>
         <h1 className="mt-3 font-display text-3xl text-ink">{t("wait.title")}</h1>
         <p className="mt-2 text-zinc-600">{t("wait.hint")}</p>
       </header>

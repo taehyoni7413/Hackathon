@@ -72,7 +72,7 @@ function MapHome() {
   const center = selected ?? coord;
 
   return (
-    <main className="relative flex-1 overflow-hidden bg-zinc-100" style={{ minHeight: "100dvh" }}>
+    <main className="relative flex-1 overflow-hidden bg-zinc-100" style={{ minHeight: "var(--app-h)" }}>
       {!mapUnavailable && (
         <MapView
           center={center}

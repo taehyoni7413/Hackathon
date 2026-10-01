@@ -15,7 +15,13 @@ export function snapHeight(snap: Snap, viewport: number) {
 export function useViewportHeight() {
   const [h, setH] = useState(800);
   useEffect(() => {
-    const update = () => setH(window.innerHeight);
+    // 넓은 화면의 iPhone 틀(globals.css)과 같은 조건이면 틀 높이, 아니면 실제 화면 높이
+    const update = () =>
+      setH(
+        window.matchMedia("(min-width: 640px) and (min-height: 720px)").matches
+          ? Math.min(852, window.innerHeight - 48)
+          : window.innerHeight,
+      );
     update();
     window.addEventListener("resize", update);
     return () => window.removeEventListener("resize", update);

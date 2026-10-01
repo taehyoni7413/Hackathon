@@ -23,9 +23,16 @@
   --color-leaf: var(--leaf);
   --color-leaf-soft: var(--leaf-soft);
   --color-rice: var(--rice);
+  /* 작은 글자 한 단계 키움 (앱 가독성): xs 12→13px, sm 14→15px, base 16→17px */
+  --text-xs: 0.8125rem;
+  --text-xs--line-height: 1.125rem;
+  --text-sm: 0.9375rem;
+  --text-sm--line-height: 1.375rem;
+  --text-base: 1.0625rem;
+  --text-base--line-height: 1.6rem;
   --font-display: var(--font-do-hyeon), system-ui, -apple-system, "Apple SD Gothic Neo", "PingFang SC", "Microsoft YaHei", "Malgun Gothic", sans-serif;
-  /* 앱 전체 글꼴: Do Hyeon (사장님 화면과 같은 톤). 중국어 등 없는 글자는 시스템 글꼴 */
-  --font-sans: var(--font-do-hyeon), system-ui, -apple-system, "Apple SD Gothic Neo", "Noto Sans KR",
+  /* 본문: Pretendard (한국 앱에서 많이 쓰는 읽기 쉬운 글꼴). 제목·가격·사장님 화면은 font-display(Do Hyeon) */
+  --font-sans: "Pretendard Variable", Pretendard, system-ui, -apple-system, "Apple SD Gothic Neo", "Noto Sans KR",
     "PingFang SC", "Microsoft YaHei", "Malgun Gothic", sans-serif;
 }
 
@@ -34,9 +41,7 @@ body {
   background: #f4f4f5;
   color: var(--foreground);
   font-family: var(--font-sans);
-  /* Do Hyeon 은 굵기가 하나뿐 → 가짜 굵게(번짐) 막기. 위계는 크기로 */
-  font-synthesis-weight: none;
-  letter-spacing: 0.01em;
+  letter-spacing: -0.01em;
   -webkit-tap-highlight-color: transparent;
   /* 앱처럼: 당겨서 새로고침·바운스 막기, 길게 눌러 생기는 메뉴 줄이기 */
   overscroll-behavior: none;
@@ -93,27 +98,85 @@ a {
 
 /* 노치·홈 바(safe area) 여백 */
 @utility pb-safe {
-  padding-bottom: max(1rem, env(safe-area-inset-bottom));
+  padding-bottom: max(1rem, var(--sab));
 }
 @utility pt-safe {
-  padding-top: max(0.75rem, env(safe-area-inset-top));
+  padding-top: max(0.75rem, var(--sat));
 }
 @utility top-safe {
-  top: max(0.75rem, env(safe-area-inset-top));
+  top: max(0.75rem, var(--sat));
 }
 
+/* 앱 높이·안전 영역: 휴대폰에서는 실제 화면, 넓은 화면에서는 아래 iPhone 틀 크기 */
+:root {
+  --app-h: 100dvh;
+  --sat: env(safe-area-inset-top);
+  --sab: env(safe-area-inset-bottom);
+}
+
+.device-chrome {
+  display: none;
+}
+
+/* 넓은 화면(PC·발표 화면): iPhone 틀 안에서 앱 실행. 휴대폰·설치 앱에서는 적용 안 됨 */
+@media (min-width: 640px) and (min-height: 720px) {
+  :root {
+    --app-h: min(852px, calc(100dvh - 48px));
+    --sat: 54px;
+    --sab: 28px;
+  }
+  html,
+  body {
+    height: 100%;
+    overflow: hidden;
+    background: radial-gradient(circle at 30% 20%, #fdf0e3, #e9e2d6 60%, #d9d1c4);
+  }
+  .device {
+    position: fixed;
+    inset: 0;
+    margin: auto;
+    width: 393px;
+    height: var(--app-h);
+    border-radius: 56px;
+    box-shadow:
+      0 0 0 11px #1c1d20,
+      0 0 0 13px #4a4c52,
+      0 30px 80px rgba(48, 53, 59, 0.35);
+    /* fixed 자식(하단 버튼·시트·오버레이)이 틀 안에 머물도록 */
+    transform: translateZ(0);
+    overflow: hidden;
+  }
+  .device-screen {
+    height: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+    scrollbar-width: none;
+    border-radius: 56px;
+  }
+  .device-screen::-webkit-scrollbar {
+    display: none;
+  }
+  .device-chrome {
+    display: block;
+  }
+}
 @layer components {
   /* 모바일 우선: 큰 화면에서도 휴대폰 폭으로 가운데 정렬 */
   .app-shell {
-    @apply relative mx-auto flex min-h-dvh w-full max-w-[480px] flex-col bg-background shadow-sm;
+    @apply relative mx-auto flex w-full max-w-[480px] flex-col bg-background shadow-sm;
+    min-height: var(--app-h);
   }
   .btn-primary {
-    @apply inline-flex min-h-14 items-center justify-center rounded-2xl bg-brand px-5 text-[17px] font-bold text-white transition active:bg-brand-dark disabled:opacity-40;
+    @apply inline-flex min-h-14 items-center justify-center rounded-2xl bg-brand px-5 text-[17px] font-bold text-white transition active:scale-[0.98] active:bg-brand-dark disabled:opacity-40;
   }
   .btn-secondary {
-    @apply inline-flex min-h-14 items-center justify-center rounded-2xl border-[1.5px] border-ink/20 bg-white px-5 text-[17px] font-bold text-ink transition active:bg-rice;
+    @apply inline-flex min-h-14 items-center justify-center rounded-2xl border-[1.5px] border-ink/20 bg-white px-5 text-[17px] font-bold text-ink transition active:scale-[0.98] active:bg-rice;
+  }
+  /* 앱 상단 바: 반투명 + 흐림, 아래 얇은 선 */
+  .app-bar {
+    @apply sticky top-0 z-20 border-b border-black/5 bg-white/85 backdrop-blur-xl;
   }
   .icon-btn {
-    @apply inline-flex h-11 w-11 items-center justify-center rounded-full bg-white text-xl shadow-md active:bg-zinc-100;
+    @apply inline-flex h-11 w-11 items-center justify-center rounded-full bg-white text-xl shadow-md transition active:scale-95 active:bg-zinc-100;
   }
 }

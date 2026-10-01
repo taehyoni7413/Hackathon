@@ -1,6 +1,7 @@
 /* eslint-disable @next/next/no-img-element -- public 의 로고 이미지를 그대로 사용 */
 "use client";
 
+import { CaretLeft } from "@/components/Icon";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 
@@ -44,7 +45,7 @@ export default function ShowOrderPage() {
           onClick={() => router.back()}
           aria-label={t("common.back")}
         >
-          ← {t("common.back")}
+          <CaretLeft weight="bold" className="mr-0.5 inline align-[-3px]" />{t("common.back")}
         </button>
         <h1 className="font-display text-3xl leading-tight">사장님께 이 화면을 보여주세요</h1>
         {lang !== "ko" && <p className="mt-1 text-white/80">{t("show.hint")}</p>}

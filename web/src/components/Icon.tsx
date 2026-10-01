@@ -12,6 +12,7 @@ export {
   BeerStein,
   BowlSteam,
   Camera,
+  CaretLeft,
   Check,
   Compass,
   CreditCard,

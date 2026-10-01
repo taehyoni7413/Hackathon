@@ -182,7 +182,8 @@ def geocode(address: str, name: str = ""):
 # 카카오 장소 분류("음식점 > 양식 > 멕시칸,브라질")의 두 번째 단계 → 앱 카테고리
 KAKAO_CATEGORY_MAP = {
     "한식": "korean", "중식": "chinese", "일식": "japanese", "양식": "western",
-    "분식": "snack", "패스트푸드": "snack", "간식": "cafe", "카페": "cafe", "퓨전요리": "fusion",
+    # 앱에 분식 칩은 없음 → 분식은 한식, 패스트푸드는 양식으로
+    "분식": "korean", "패스트푸드": "western", "간식": "cafe", "카페": "cafe", "퓨전요리": "fusion",
 }
 
 
