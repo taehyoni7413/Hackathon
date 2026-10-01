@@ -3,14 +3,8 @@
 import { useCallback, useState } from "react";
 
 import { VoiceOverlay } from "@/components/VoiceOverlay";
-import {
-  DEFAULT_SPEECH_LANG,
-  SPEECH_LANGS,
-  isSpeechLang,
-  type SpeechLang,
-} from "@/config/speech";
+import { DEFAULT_SPEECH_LANG, SPEECH_LANGS, type SpeechLang } from "@/config/speech";
 import { useApp } from "@/context/AppContext";
-import { usePersistentState } from "@/hooks/usePersistentState";
 import { useSpeechRecognition } from "@/hooks/useSpeechRecognition";
 import { translateRequest } from "@/lib/api";
 import type { CustomRequest } from "@/types/models";
@@ -35,14 +29,10 @@ export function CustomRequestInput({
   const [typing, setTyping] = useState(false);
   const [draft, setDraft] = useState("");
   const [failed, setFailed] = useState(false);
-  // 말할 언어 (앱 화면 언어와 별개). 마지막으로 고른 언어를 기억
-  const [storedSpeechLang, setSpeechLang] = usePersistentState<string | null>(
-    "app.speechLang",
-    null,
-  );
-  const speechLang: SpeechLang = isSpeechLang(storedSpeechLang)
-    ? storedSpeechLang
-    : DEFAULT_SPEECH_LANG[lang];
+  // 말할 언어: 처음 언어 선택 화면에서 고른 언어(앱 언어)를 따라간다.
+  // 아래 선택 칩으로 바꾸면 이 메뉴 상세에서만 임시로 바뀐다.
+  const [overrideLang, setSpeechLang] = useState<SpeechLang | null>(null);
+  const speechLang: SpeechLang = overrideLang ?? DEFAULT_SPEECH_LANG[lang];
   const speechLabel = SPEECH_LANGS.find((l) => l.code === speechLang)?.label ?? speechLang;
 
   const add = useCallback(
@@ -120,7 +110,11 @@ export function CustomRequestInput({
         {/* 말할 언어: 브라우저 음성 인식은 언어 자동 감지가 안 돼서 직접 고른다 */}
         <p className="pt-1 text-sm font-semibold text-zinc-600">{t("voice.speakLang")}</p>
         <div className="-mx-1 flex gap-1.5 overflow-x-auto px-1 pb-1 [scrollbar-width:none]" role="radiogroup">
-          {SPEECH_LANGS.map((l) => {
+          {[
+            // 처음 고른 언어를 맨 앞에
+            ...SPEECH_LANGS.filter((l) => l.code === DEFAULT_SPEECH_LANG[lang]),
+            ...SPEECH_LANGS.filter((l) => l.code !== DEFAULT_SPEECH_LANG[lang]),
+          ].map((l) => {
             const on = l.code === speechLang;
             return (
               <button
