@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element -- public 의 로고 이미지를 그대로 사용 */
 "use client";
 
 import Link from "next/link";
@@ -36,29 +37,33 @@ export default function ShowOrderPage() {
   const total = cartTotal(store.menus, cart);
 
   return (
-    <main className="flex flex-1 flex-col bg-white">
-      <header className="bg-brand px-5 pb-5 pt-safe text-white">
+    <main className="flex flex-1 flex-col bg-ink">
+      <header className="px-5 pb-5 pt-safe text-white">
         <button
-          className="mb-2 min-h-11 text-sm text-white/90"
+          className="mb-2 min-h-11 text-sm text-white/80"
           onClick={() => router.back()}
           aria-label={t("common.back")}
         >
           ← {t("common.back")}
         </button>
-        <h1 className="text-3xl font-extrabold leading-tight">사장님께 이 화면을 보여주세요</h1>
-        {lang !== "ko" && <p className="mt-1 text-white/90">{t("show.hint")}</p>}
+        <h1 className="font-display text-3xl leading-tight">사장님께 이 화면을 보여주세요</h1>
+        {lang !== "ko" && <p className="mt-1 text-white/80">{t("show.hint")}</p>}
       </header>
 
-      <section className="flex-1 space-y-6 px-5 py-6">
-        <p className="text-xl font-semibold text-zinc-500">{store.name_ko}</p>
-        <ul className="space-y-6">
+      {/* 주문서: 사장님이 읽는 한국어는 크게, 손님 언어는 작게 */}
+      <section className="mx-3 flex-1 rounded-t-3xl bg-white px-5 pb-6 pt-5">
+        <div className="flex items-center justify-between border-b-2 border-dashed border-zinc-200 pb-3">
+          <p className="font-display text-2xl text-ink">{store.name_ko}</p>
+          <img src="/logo.png" alt="" aria-hidden className="h-9 w-auto" />
+        </div>
+        <ul className="divide-y divide-zinc-100">
           {cart.map((item) => {
             const menu = store.menus.find((m) => m.id === item.menu_id);
             if (!menu) return null;
             const userName = menu.translations[lang]?.name ?? menu.name_ko;
             return (
-              <li key={item.key} className="space-y-2">
-                <p className="text-3xl font-extrabold text-zinc-900">
+              <li key={item.key} className="space-y-2 py-5">
+                <p className="font-display text-4xl leading-tight text-ink">
                   {ko("show.item", { name: menu.name_ko, n: item.quantity })}
                 </p>
                 {lang !== "ko" && (
@@ -85,8 +90,8 @@ export default function ShowOrderPage() {
         </ul>
 
         <div className="border-t-2 border-dashed border-zinc-200 pt-5">
-          <p className="text-2xl font-bold">{ko("show.total", { price: formatPriceKo(total) })}</p>
-          <p className="text-2xl font-bold">{ko("show.payCounter")}</p>
+          <p className="font-display text-3xl text-ink">{ko("show.total", { price: formatPriceKo(total) })}</p>
+          <p className="mt-1 text-2xl font-bold text-ink">{ko("show.payCounter")}</p>
           {lang !== "ko" && (
             <p className="mt-1 text-sm text-zinc-500">
               {t("show.total", { price: formatPrice(total, lang) })} · {t("show.payCounter")}
@@ -95,7 +100,7 @@ export default function ShowOrderPage() {
         </div>
       </section>
 
-      <footer className="sticky bottom-0 bg-white px-4 pt-4 pb-safe">
+      <footer className="sticky bottom-0 mx-3 bg-white px-2 pt-2 pb-safe">
         <button
           className="btn-primary w-full"
           onClick={() => {

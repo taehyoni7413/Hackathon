@@ -17,8 +17,8 @@ export function OrderRequestItem({
   actions?: ReactNode;
 }) {
   return (
-    <li className="pl-4">
-      <p className="text-2xl font-bold leading-snug text-zinc-900">— {ko}</p>
+    <li className="rounded-xl border-l-4 border-brand bg-brand-soft py-2 pl-3 pr-2">
+      <p className="text-2xl font-bold leading-snug text-ink">{ko}</p>
       {translated && translated !== ko && (
         <p className="text-sm text-zinc-500">{translated}</p>
       )}

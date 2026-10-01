@@ -44,7 +44,7 @@ export function StoreDetail({
       </div>
 
       <div className="px-4 pt-4">
-        <h2 className="text-2xl font-bold">{name}</h2>
+        <h2 className="font-display text-3xl leading-tight text-ink">{name}</h2>
         {name !== store.name_ko && <p className="text-zinc-500">{store.name_ko}</p>}
         <div className="mt-2 flex flex-wrap items-center gap-x-3 gap-y-1 text-sm text-zinc-600">
           <span>{t(`cat.${store.category}` as MessageKey)}</span>
@@ -61,7 +61,7 @@ export function StoreDetail({
         {store.address && <p className="mt-2 text-sm text-zinc-500">📍 {store.address}</p>}
         <p className="mt-3 leading-relaxed text-zinc-700">{pickText(store.description, lang)}</p>
 
-        <h3 className="mt-5 font-semibold">{t("store.popular")}</h3>
+        <h3 className="mt-5 font-display text-xl text-ink">{t("store.popular")}</h3>
         {store.menus.length === 0 && (
           <p className="mt-2 text-sm text-zinc-500">{t("menu.empty")}</p>
         )}
@@ -74,10 +74,10 @@ export function StoreDetail({
                   src={m.image_url}
                   fallback={defaultImage(store.category)}
                   alt={menuName}
-                  className="h-24 w-28 rounded-xl object-cover"
+                  className="h-24 w-28 rounded-2xl bg-rice object-cover"
                 />
                 <p className="mt-1 line-clamp-2 text-sm font-medium">{menuName}</p>
-                <p className="text-sm text-zinc-500">{formatPrice(m.price, lang)}</p>
+                <p className="font-display text-ink">{formatPrice(m.price, lang)}</p>
               </li>
             );
           })}
@@ -93,7 +93,7 @@ export function StoreDetailFooter({ storeId }: { storeId: string }) {
   const menuHref = `/store/${storeId}/menu`;
   return (
     <div>
-      <p className="mb-3 text-center font-medium text-zinc-700">{t("store.askRoute")}</p>
+      <p className="mb-3 text-center font-semibold text-ink">{t("store.askRoute")}</p>
       <div className="flex gap-2">
         <Link href={menuHref} className="btn-secondary flex-1">
           {t("store.menuBtn")}

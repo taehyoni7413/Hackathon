@@ -36,16 +36,16 @@ export function StoreCard({
   return (
     <button
       onClick={onClick}
-      className="flex w-full items-center gap-3 px-4 py-3 text-left active:bg-zinc-50"
+      className="flex w-full items-center gap-3 px-4 py-3 text-left active:bg-rice"
     >
       <SmartImage
         src={store.image_url}
         fallback={defaultImage(store.category)}
         alt={name}
-        className="h-16 w-16 shrink-0 rounded-xl object-cover"
+        className="h-[72px] w-[72px] shrink-0 rounded-2xl bg-rice object-cover"
       />
       <div className="min-w-0 flex-1">
-        <p className="truncate font-semibold">{name}</p>
+        <p className="truncate text-[17px] font-bold text-ink">{name}</p>
         {name !== store.name_ko && (
           <p className="truncate text-sm text-zinc-500">{store.name_ko}</p>
         )}

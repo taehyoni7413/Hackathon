@@ -24,7 +24,7 @@ export function CategoryChips({
             key={c}
             onClick={() => onChange(c)}
             className={`min-h-11 shrink-0 rounded-full px-4 text-sm font-semibold shadow-md transition ${
-              active ? "bg-zinc-900 text-white" : "bg-white text-zinc-700"
+              active ? "bg-ink text-white" : "bg-white text-ink"
             }`}
           >
             {t(`cat.${c}` as MessageKey)}
