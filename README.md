@@ -108,7 +108,7 @@ cd web && npm run lint && npm run build
 | API | 카카오맵 길찾기 링크 (`map.kakao.com/link/to`) | 외부 길 안내 버튼 | https://apis.map.kakao.com/web/guide/#routeurl |
 | API·데이터 | OSRM 공개 도보 경로 서버 (routing.openstreetmap.de, © OpenStreetMap 기여자) | 도보 경로 2순위 | https://routing.openstreetmap.de |
 | API | TMAP 보행자 경로 API (백엔드 `GET /api/route`) | 도보 경로 안내 (키는 서버에만) | https://openapi.sk.com |
-| API | 카카오 로컬 REST API (좌표→주소, 주소→좌표) | 내 위치 주소 표시, 가게 주소 좌표 변환 (백엔드) | https://developers.kakao.com/docs/latest/ko/local/dev-guide |
+| API | 카카오 로컬 REST API (좌표→주소, 주소→좌표) | 내 위치 주소 표시, 가게 주소 좌표 변환 (백엔드), 가게 음식 분류(키워드 검색 장소 카테고리 → 한식·일식·퓨전 등) | https://developers.kakao.com/docs/latest/ko/local/dev-guide |
 | API | Web Speech API (브라우저 내장 음성 인식 · 크롬은 Google, 사파리는 Apple 엔진) | 요청사항 음성 입력(STT). 음성은 각 브라우저 회사 서버에서 글자로 변환 | https://developer.mozilla.org/docs/Web/API/Web_Speech_API |
 | 프레임워크 | Flask | 메뉴 번역 단독 데모(`app.py`) | https://flask.palletsprojects.com |
 | 데이터 | OpenStreetMap (© OpenStreetMap 기여자, ODbL) | 학교 정문 좌표(`SCHOOL_COORD`) | https://www.openstreetmap.org/node/4629757791 |
