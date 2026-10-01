@@ -4,7 +4,6 @@ import { X } from "@/components/Icon";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 
-import { InstallButton } from "@/components/InstallButton";
 import { useApp } from "@/context/AppContext";
 import { LANGS } from "@/i18n";
 import { api, type DataSource } from "@/lib/api";
@@ -64,8 +63,6 @@ export function SettingsSheet({ onClose }: { onClose: () => void }) {
           />
         </label>
 
-        <p className="mb-2 mt-6 font-semibold">{t("settings.app")}</p>
-        <InstallButton />
 
         <div className="mt-6 flex items-center justify-between text-sm">
           <span className="font-semibold">{t("settings.backend")}</span>

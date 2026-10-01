@@ -34,7 +34,13 @@ export default function WaitingPage() {
       <header className="px-5 pb-4 pt-safe text-center">
         <p className="mt-6 flex justify-center text-6xl text-brand" aria-hidden><Hourglass /></p>
         <h1 className="mt-3 font-display text-3xl text-ink">{t("wait.title")}</h1>
-        <p className="mt-2 text-zinc-600">{t("wait.hint")}</p>
+        {order.number != null && (
+          <div className="mx-auto mt-5 w-fit rounded-3xl bg-brand px-8 py-4 text-white shadow-lg">
+            <p className="text-sm font-semibold opacity-90">{t("order.no")}</p>
+            <p className="font-display text-7xl leading-none">{order.number}</p>
+          </div>
+        )}
+        <p className="mt-4 text-zinc-600">{t("wait.hint")}</p>
       </header>
 
       <ul className="flex-1 space-y-4 px-5">
@@ -51,9 +57,12 @@ export default function WaitingPage() {
               />
               <div className="min-w-0">
                 <p className="font-display text-4xl leading-tight text-ink">{menu.name_ko}</p>
-                <p className="text-xl font-semibold text-brand-dark">{menu.pronunciation}</p>
+                {/* 한국어 화면이면 발음·번역 없이 수량만 */}
+                {lang !== "ko" && (
+                  <p className="text-xl font-semibold text-brand-dark">{menu.pronunciation}</p>
+                )}
                 <p className="text-sm text-zinc-500">
-                  {menu.translations[lang]?.name ?? menu.name_ko} × {item.quantity}
+                  {lang !== "ko" && `${menu.translations[lang]?.name ?? menu.name_ko} `}× {item.quantity}
                 </p>
               </div>
             </li>

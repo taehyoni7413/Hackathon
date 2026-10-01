@@ -190,3 +190,22 @@ export async function getMenuInsight(
     return null;
   }
 }
+
+/**
+ * 주문번호 발급 (백엔드 /api/orders, 들어온 순서대로). 백엔드에 못 닿으면 이 기기에서만 세는 번호.
+ */
+export async function getOrderNumber(): Promise<number> {
+  try {
+    const r = await request<{ number: number }>("/orders", { method: "POST" });
+    if (Number.isInteger(r.number)) return r.number;
+  } catch {
+    // 아래 기기 번호로
+  }
+  try {
+    const n = Number(localStorage.getItem("buk.orderSeq") ?? "0") + 1;
+    localStorage.setItem("buk.orderSeq", String(n));
+    return n;
+  } catch {
+    return Math.floor(Math.random() * 90) + 10;
+  }
+}

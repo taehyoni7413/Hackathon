@@ -23,6 +23,8 @@ export type Order = {
   store_id: string;
   items: CartItem[];
   created_at: string;
+  /** 주문번호 (사장님 화면에서 발급, 대기 화면에 크게) */
+  number?: number;
 };
 
 type AppState = {
@@ -43,6 +45,10 @@ type AppState = {
   setQuantity: (key: string, quantity: number) => void;
   removeFromCart: (key: string) => void;
   clearCart: () => void;
+
+  /** 지금 장바구니에 붙은 주문번호 (사장님께 보여주기 화면에서 발급) */
+  orderNo: number | null;
+  setOrderNo: (n: number | null) => void;
 
   order: Order | null;
   placeOrder: () => void;
@@ -74,6 +80,8 @@ export function AppProvider({ children }: { children: ReactNode }) {
     "app.order",
     null,
   );
+
+  const [orderNo, setOrderNo] = usePersistentState<number | null>("app.orderNo", null);
 
   const lang: Lang = isLang(storedLang) ? storedLang : DEFAULT_LANG;
   const t = useCallback(
@@ -119,6 +127,8 @@ export function AppProvider({ children }: { children: ReactNode }) {
         ),
       removeFromCart: (key) => setCart((prev) => prev.filter((c) => c.key !== key)),
       clearCart: () => setCart([]),
+      orderNo,
+      setOrderNo,
       order,
       placeOrder: () => {
         if (!cart.length) return;
@@ -126,8 +136,10 @@ export function AppProvider({ children }: { children: ReactNode }) {
           store_id: cart[0].store_id,
           items: cart,
           created_at: new Date().toISOString(),
+          number: orderNo ?? undefined,
         });
         setCart([]);
+        setOrderNo(null);
       },
       finishOrder: () => setOrder(null),
       resetAll: () => {
@@ -135,11 +147,12 @@ export function AppProvider({ children }: { children: ReactNode }) {
         setDemo(false);
         setCart([]);
         setOrder(null);
+        setOrderNo(null);
       },
     }),
     [
       langReady, demoReady, cartReady, orderReady, lang, storedLang, setStoredLang,
-      t, demo, setDemo, cart, setCart, addToCart, order, setOrder,
+      t, demo, setDemo, cart, setCart, addToCart, order, setOrder, orderNo, setOrderNo,
     ],
   );
 

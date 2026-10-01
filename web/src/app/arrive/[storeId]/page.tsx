@@ -64,12 +64,12 @@ export default function ArrivePage() {
 
   if (phase === "confirm") {
     return (
-      <main className="flex flex-1 flex-col justify-center gap-6 px-6">
+      <main className="flex flex-1 flex-col items-center justify-center gap-6 px-6 text-center">
         <p className="flex justify-center text-6xl text-brand" aria-hidden><MapPin /></p>
-        <h1 className="text-center text-2xl font-bold">
+        <h1 className="text-center font-display text-3xl leading-snug text-ink">
           {t("arrive.question", { name: pickText(target.name, lang, target.name_ko) })}
         </h1>
-        <div className="flex flex-col gap-3">
+        <div className="flex w-full flex-col gap-3">
           <button className="btn-primary w-full" onClick={() => goMenu(target.id)}>
             {t("arrive.yes")}
           </button>
@@ -93,7 +93,9 @@ export default function ArrivePage() {
         <button className="icon-btn shadow-none" onClick={() => router.back()} aria-label={t("common.back")}>
           <CaretLeft weight="bold" />
         </button>
-        <h1 className="text-lg font-bold">{t("arrive.selectNearby")}</h1>
+        <h1 className="flex-1 text-center text-lg font-bold">{t("arrive.selectNearby")}</h1>
+        {/* 제목이 가운데 오도록 뒤로 버튼만큼 오른쪽 자리 */}
+        <span className="w-11 shrink-0" aria-hidden />
       </header>
 
       {showEmpty ? (
