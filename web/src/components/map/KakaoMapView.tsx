@@ -139,7 +139,7 @@ export default function KakaoMapView({
     line.current = new k.maps.Polyline({
       path,
       strokeWeight: 6,
-      strokeColor: "#ff6a2b",
+      strokeColor: "#ec8a33",
       strokeOpacity: 0.9,
     });
     line.current.setMap(map.current);
