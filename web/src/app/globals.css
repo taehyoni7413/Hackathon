@@ -2,25 +2,42 @@
 
 :root {
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: #18181b;
+  --brand: #ff6a2b;
+  --brand-dark: #e5531a;
+  --brand-soft: #fff1ea;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-brand: var(--brand);
+  --color-brand-dark: var(--brand-dark);
+  --color-brand-soft: var(--brand-soft);
+  --font-sans: system-ui, -apple-system, "Apple SD Gothic Neo", "Noto Sans KR",
+    "PingFang SC", "Microsoft YaHei", "Malgun Gothic", sans-serif;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
+html,
 body {
-  background: var(--background);
+  background: #f4f4f5;
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans);
+  -webkit-tap-highlight-color: transparent;
+}
+
+@layer components {
+  /* 모바일 우선: 큰 화면에서도 휴대폰 폭으로 가운데 정렬 */
+  .app-shell {
+    @apply relative mx-auto flex min-h-dvh w-full max-w-[480px] flex-col bg-background shadow-sm;
+  }
+  .btn-primary {
+    @apply inline-flex min-h-12 items-center justify-center rounded-2xl bg-brand px-5 text-base font-semibold text-white transition active:bg-brand-dark disabled:opacity-40;
+  }
+  .btn-secondary {
+    @apply inline-flex min-h-12 items-center justify-center rounded-2xl border border-zinc-300 bg-white px-5 text-base font-semibold text-zinc-800 transition active:bg-zinc-100;
+  }
+  .icon-btn {
+    @apply inline-flex h-11 w-11 items-center justify-center rounded-full bg-white text-xl shadow-md active:bg-zinc-100;
+  }
 }

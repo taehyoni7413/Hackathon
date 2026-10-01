@@ -53,6 +53,24 @@ bash scripts/dev.sh                                           # macOS / Linux
 cd web && npm run lint && npm run build
 ```
 
+## 🗺️ 프론트 환경변수 (`web/.env.local`, 커밋 금지)
+| 이름 | 설명 |
+|------|------|
+| `NEXT_PUBLIC_KAKAO_MAP_KEY` | 카카오맵 JavaScript 키. 없으면 지도 대신 식당 목록만 표시 |
+| `NEXT_PUBLIC_USE_MOCK` | `0`이면 백엔드 API 사용, 그 외(기본)는 내장 데이터(`web/src/data/stores.json` → 비어 있으면 가짜 데이터) |
+| `BACKEND_URL` | Next.js가 `/api/*`를 전달할 FastAPI 주소 |
+
+카카오 개발자 콘솔 → 앱 → 플랫폼 → Web 에 `http://localhost:3000` 과 배포 도메인을 등록해야 지도가 뜹니다.
+
+## 📱 휴대폰에서 테스트하기
+위치(Geolocation)는 **HTTPS**에서만 동작합니다. PC는 `http://localhost:3000`으로 확인하고, 휴대폰은 배포 주소로 확인하세요.
+
+1. https://vercel.com 에서 GitHub 레포 Import
+2. **Root Directory**: `web`
+3. Environment Variables: `NEXT_PUBLIC_KAKAO_MAP_KEY` (필요하면 `NEXT_PUBLIC_USE_MOCK`, `BACKEND_URL`)
+4. Deploy → 나온 `https://...vercel.app` 주소를 카카오 콘솔 Web 플랫폼에 추가
+5. 백엔드 없이도 내장 데이터로 동작합니다 (기본값). 발표장에서는 설정 ⚙️ → **데모 모드**를 켜세요.
+
 ## 📦 외부 자료 (발표에서 공개 필수)
 > 대회 규정: 외부 코드·오픈소스·데이터를 활용했다면 최종 발표에서 주요 활용 내용을 밝혀야 함. **새로 쓰면 바로 한 줄 추가.**
 
@@ -64,6 +82,10 @@ cd web && npm run lint && npm run build
 | 라이브러리 | pandas, numpy, scikit-learn | 데이터 처리·모델 | https://scikit-learn.org |
 | API | OpenAI API (gpt-6-luna, text-embedding-3-small, 주최 측 제공) | LLM 기능 | https://platform.openai.com/docs |
 | AI 도구 | Claude Code | 코딩 보조 | https://claude.com/claude-code |
+| API | 카카오맵 JavaScript SDK | 지도·마커·경로선 표시 (프론트) | https://apis.map.kakao.com/web/ |
+| API | 카카오맵 길찾기 링크 (`map.kakao.com/link/to`) | 외부 길 안내 버튼 | https://apis.map.kakao.com/web/guide/#routeurl |
+| API·데이터 | OSRM 공개 도보 경로 서버 (routing.openstreetmap.de, © OpenStreetMap 기여자) | 도보 경로 2순위 | https://routing.openstreetmap.de |
+| API | TMAP 보행자 경로 API (백엔드 `/route`, 예정) | 도보 경로 1순위 | https://openapi.sk.com |
 |  |  |  |  |
 
 **사전 준비 내역 (규정상 허용되는 기본 환경 설정):** 대회 전에는 프로젝트 기본 구조(FastAPI + Next.js 템플릿), 세팅·실행 스크립트, 협업 문서만 준비했으며, 주제 관련 기능 코드는 모두 대회 시간(10/1 19:30 ~ 10/2 11:30) 중 작성.
