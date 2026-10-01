@@ -105,7 +105,7 @@ export default function CartPage() {
         })}
       </ul>
 
-      <footer className="sticky bottom-0 border-t border-zinc-100 bg-white p-4">
+      <footer className="sticky bottom-0 border-t border-zinc-100 bg-white px-4 pt-4 pb-safe">
         <div className="flex items-center justify-between text-lg font-bold">
           <span>{t("cart.total")}</span>
           <span>{formatPrice(total, lang)}</span>

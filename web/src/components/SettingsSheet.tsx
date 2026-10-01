@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 
+import { InstallButton } from "@/components/InstallButton";
 import { useApp } from "@/context/AppContext";
 import { LANGS } from "@/i18n";
 import { api, type DataSource } from "@/lib/api";
@@ -20,7 +21,7 @@ export function SettingsSheet({ onClose }: { onClose: () => void }) {
   return (
     <div className="fixed inset-0 z-50 flex items-end justify-center bg-black/40" onClick={onClose}>
       <div
-        className="w-full max-w-[480px] rounded-t-3xl bg-white p-5 pb-8"
+        className="w-full max-w-[480px] rounded-t-3xl bg-white px-5 pt-5 pb-safe"
         onClick={(e) => e.stopPropagation()}
         role="dialog"
         aria-modal
@@ -59,6 +60,9 @@ export function SettingsSheet({ onClose }: { onClose: () => void }) {
             onChange={(e) => setDemo(e.target.checked)}
           />
         </label>
+
+        <p className="mb-2 mt-6 font-semibold">{t("settings.app")}</p>
+        <InstallButton />
 
         <div className="mt-6 flex items-center justify-between text-sm">
           <span className="font-semibold">{t("settings.backend")}</span>

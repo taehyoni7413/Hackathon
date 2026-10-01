@@ -65,14 +65,14 @@ export default function RoutePage() {
       )}
 
       <button
-        className="icon-btn absolute left-3 top-3 z-20"
+        className="icon-btn absolute left-3 top-safe z-20"
         onClick={() => router.push(`/map?store=${store.id}`)}
         aria-label={t("common.back")}
       >
         ←
       </button>
 
-      <section className="absolute inset-x-0 bottom-0 z-30 rounded-t-3xl bg-white p-5 shadow-[0_-8px_24px_rgba(0,0,0,0.12)]">
+      <section className="absolute inset-x-0 bottom-0 z-30 rounded-t-3xl bg-white px-5 pt-5 pb-safe shadow-[0_-8px_24px_rgba(0,0,0,0.12)]">
         <p className="text-sm text-zinc-500">{t("route.title")}</p>
         <h1 className="text-xl font-bold">{name}</h1>
 

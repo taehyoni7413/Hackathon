@@ -60,7 +60,7 @@ export default function WaitingPage() {
         })}
       </ul>
 
-      <footer className="sticky bottom-0 bg-white p-4">
+      <footer className="sticky bottom-0 bg-white px-4 pt-4 pb-safe">
         <button
           className="btn-primary w-full"
           onClick={() => {

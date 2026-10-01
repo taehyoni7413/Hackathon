@@ -37,7 +37,7 @@ export default function ShowOrderPage() {
 
   return (
     <main className="flex flex-1 flex-col bg-white">
-      <header className="bg-brand px-5 pb-5 pt-4 text-white">
+      <header className="bg-brand px-5 pb-5 pt-safe text-white">
         <button
           className="mb-2 min-h-11 text-sm text-white/90"
           onClick={() => router.back()}
@@ -91,7 +91,7 @@ export default function ShowOrderPage() {
         </div>
       </section>
 
-      <footer className="sticky bottom-0 bg-white p-4">
+      <footer className="sticky bottom-0 bg-white px-4 pt-4 pb-safe">
         <button
           className="btn-primary w-full"
           onClick={() => {
