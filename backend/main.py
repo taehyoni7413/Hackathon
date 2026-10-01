@@ -4,13 +4,9 @@
 모든 엔드포인트는 /api 아래에 있다. Vercel은 /api/* 요청을 경로 그대로(/api/health) 이 서비스로 보내고,
 로컬에서는 Next.js(next.config.ts)가 /api/* 를 같은 경로로 전달한다.
 """
-import threading
-from datetime import datetime
-from zoneinfo import ZoneInfo
-
 from fastapi import APIRouter, FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
-from pydantic import BaseModel, Field
+from pydantic import BaseModel
 
 from backend import llm, menu_coach, places
 
@@ -81,31 +77,6 @@ def translate(req: TranslateRequest):
     except llm.LLMError as e:
         raise HTTPException(status_code=502, detail=str(e))
     return {"ko": ko}
-
-
-# 음식 번호: 주문이 들어온 순서대로 음식마다 1, 2, 3 … (날짜가 바뀌면 1부터).
-# 사장님이 음식을 건넬 때 번호로 맞춰 보도록 손님 화면과 주문서에 같은 번호를 붙인다.
-# 서버 메모리에 두므로 서버가 다시 뜨면 1부터 — 해커톤 시연용. 실제 서비스는 DB 필요
-_order_seq = {"date": "", "n": 0}
-_order_lock = threading.Lock()
-
-
-class OrderNumbersRequest(BaseModel):
-    # 번호를 붙일 음식(장바구니 줄) 수
-    count: int = Field(1, ge=1, le=30)
-
-
-@router.post("/orders")
-def create_dish_numbers(req: OrderNumbersRequest | None = None):
-    """사장님 화면을 열 때 음식마다 번호 발급 → {"numbers": [7, 8]}"""
-    count = req.count if req else 1
-    today = datetime.now(ZoneInfo("Asia/Seoul")).date().isoformat()
-    with _order_lock:
-        if _order_seq["date"] != today:
-            _order_seq.update(date=today, n=0)
-        start = _order_seq["n"] + 1
-        _order_seq["n"] += count
-        return {"numbers": list(range(start, start + count))}
 
 
 @router.post("/chat")

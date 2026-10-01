@@ -4,7 +4,6 @@
 import { CaretLeft } from "@/components/Icon";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import { useEffect } from "react";
 
 import { DishNo } from "@/components/DishNo";
 import { OrderRequestItem } from "@/components/OrderRequestItem";
@@ -12,36 +11,17 @@ import { EmptyView, ErrorView, LoadingView } from "@/components/StateViews";
 import { useApp } from "@/context/AppContext";
 import { useStore } from "@/hooks/useStores";
 import { pickText, translate } from "@/i18n";
-import { getDishNumbers } from "@/lib/api";
 import { cartTotal, selectedOptions } from "@/lib/cart";
 import { formatPrice, formatPriceKo } from "@/lib/format";
 
 /** 9. 사장님께 보여주기: 본문은 전부 한국어, 각 줄 아래 사용자 언어 번역을 작게 */
 export default function ShowOrderPage() {
   const router = useRouter();
-  const { lang, t, ready, cart, cartStoreId, placeOrder, dishNos, setDishNos } = useApp();
+  const { lang, t, ready, cart, cartStoreId, placeOrder } = useApp();
   const data = useStore(cartStoreId ?? "");
   const store = data.status === "ok" ? data.store : null;
   const ko = (key: Parameters<typeof translate>[1], vars?: Record<string, string | number>) =>
     translate("ko", key, vars);
-
-  // 번호 없는 음식에 번호 발급 (이미 받은 음식은 같은 번호 유지)
-  const missingKey = cart
-    .filter((c) => dishNos[c.key] === undefined)
-    .map((c) => c.key)
-    .join(",");
-  useEffect(() => {
-    if (!ready || !missingKey) return;
-    const keys = missingKey.split(",");
-    let alive = true;
-    getDishNumbers(keys.length).then((nums) => {
-      if (!alive) return;
-      setDishNos((prev) => ({ ...prev, ...Object.fromEntries(keys.map((k, i) => [k, nums[i]])) }));
-    });
-    return () => {
-      alive = false;
-    };
-  }, [ready, missingKey, setDishNos]);
 
   if (!ready || (cartStoreId && data.status === "loading")) return <LoadingView />;
   if (data.status === "error") return <ErrorView onRetry={data.reload} />;
@@ -79,7 +59,7 @@ export default function ShowOrderPage() {
           <img src="/logo.png" alt="" aria-hidden className="h-9 w-auto" />
         </div>
         <ul className="divide-y divide-zinc-100">
-          {cart.map((item) => {
+          {cart.map((item, index) => {
             const menu = store.menus.find((m) => m.id === item.menu_id);
             if (!menu) return null;
             const userName = menu.translations[lang]?.name ?? menu.name_ko;
@@ -87,7 +67,7 @@ export default function ShowOrderPage() {
               <li key={item.key} className="space-y-2 py-5">
                 <div className="flex items-start gap-3">
                   {/* 음식 번호: 손님 대기 화면에도 같은 번호 → 음식을 건넬 때 맞춰 봄 */}
-                  <DishNo n={dishNos[item.key]} />
+                  <DishNo n={index + 1} />
                   <p className="font-display text-4xl leading-tight text-ink">
                     {ko("show.item", { name: menu.name_ko, n: item.quantity })}
                   </p>
