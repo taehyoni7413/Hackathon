@@ -1,5 +1,6 @@
 "use client";
 
+import { Check, DeviceMobile } from "@/components/Icon";
 import { useEffect, useState } from "react";
 
 import { useApp } from "@/context/AppContext";
@@ -40,7 +41,7 @@ export function InstallButton() {
   }, []);
 
   if (standalone) {
-    return <p className="text-sm text-zinc-500">✓ {t("settings.installed")}</p>;
+    return <p className="text-sm text-zinc-500"><Check className="mr-1 inline align-[-3px]" />{t("settings.installed")}</p>;
   }
 
   if (deferred) {
@@ -52,7 +53,7 @@ export function InstallButton() {
           setDeferred(null);
         }}
       >
-        📲 {t("settings.install")}
+        <DeviceMobile className="mr-1 inline align-[-3px]" />{t("settings.install")}
       </button>
     );
   }
@@ -61,7 +62,7 @@ export function InstallButton() {
     return (
       <div>
         <button className="btn-secondary w-full" onClick={() => setShowIosHelp((v) => !v)}>
-          📲 {t("settings.install")}
+          <DeviceMobile className="mr-1 inline align-[-3px]" />{t("settings.install")}
         </button>
         {showIosHelp && (
           <p className="mt-2 rounded-xl bg-zinc-50 p-3 text-sm text-zinc-700">{t("settings.installIos")}</p>

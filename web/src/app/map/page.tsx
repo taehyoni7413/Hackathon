@@ -1,5 +1,6 @@
 "use client";
 
+import { GearSix, MapPin, MapTrifold } from "@/components/Icon";
 import { useRouter, useSearchParams } from "next/navigation";
 import { Suspense, useCallback, useMemo, useState } from "react";
 
@@ -101,13 +102,13 @@ function MapHome() {
             onClick={() => setSettingsOpen(true)}
             aria-label={t("settings.title")}
           >
-            ⚙️
+            <GearSix />
           </button>
         </div>
         {(status === "denied" || mapUnavailable) && (
           <p className="mx-4 mt-2 rounded-xl bg-white/95 px-3 py-2 text-sm text-zinc-700 shadow">
-            {status === "denied" && <span className="block">📍 {t("map.locationDenied")}</span>}
-            {mapUnavailable && <span className="block">🗺️ {t("map.mapUnavailable")}</span>}
+            {status === "denied" && <span className="flex items-center gap-1"><MapPin className="shrink-0 text-brand" /> {t("map.locationDenied")}</span>}
+            {mapUnavailable && <span className="flex items-center gap-1"><MapTrifold className="shrink-0 text-brand" /> {t("map.mapUnavailable")}</span>}
           </p>
         )}
       </div>

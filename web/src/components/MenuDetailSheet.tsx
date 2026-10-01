@@ -1,5 +1,7 @@
 "use client";
 
+import { Check } from "@/components/Icon";
+import { X } from "@/components/Icon";
 import { useState } from "react";
 
 import { CustomRequestInput } from "@/components/CustomRequestInput";
@@ -59,7 +61,7 @@ export function MenuDetailSheet({
             onClick={onClose}
             aria-label={t("common.close")}
           >
-            ✕
+            <X weight="bold" />
           </button>
         </div>
 
@@ -104,7 +106,7 @@ export function MenuDetailSheet({
                           <span className="block text-xs text-zinc-500">{o.name_ko}</span>
                         </span>
                         <span className="text-sm text-zinc-500">
-                          {o.price_delta ? `+${formatPrice(o.price_delta, lang)}` : on ? "✓" : ""}
+                          {o.price_delta ? `+${formatPrice(o.price_delta, lang)}` : on ? <Check weight="bold" className="text-brand" /> : ""}
                         </span>
                       </button>
                     </li>

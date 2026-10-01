@@ -1,5 +1,6 @@
 "use client";
 
+import { CreditCard, Microphone } from "@/components/Icon";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 
@@ -75,7 +76,7 @@ export default function CartPage() {
                 ))}
                 {item.custom_requests?.map((r, i) => (
                   <p key={i} className="text-sm text-zinc-600">
-                    · 🎤 “{r.text}”
+                    · <Microphone className="inline align-[-2px]" /> “{r.text}”
                   </p>
                 ))}
                 <div className="mt-2 flex items-center justify-between">
@@ -116,7 +117,7 @@ export default function CartPage() {
           <span className="font-display text-3xl text-ink">{formatPrice(total, lang)}</span>
         </div>
         <p className="mt-2 rounded-xl bg-rice px-3 py-2 text-sm text-ink">
-          💳 {t("cart.payNotice")}
+          <CreditCard className="mr-1 inline align-[-3px]" />{t("cart.payNotice")}
         </p>
         <Link href="/show-order" className="btn-primary mt-3 w-full">
           {t("cart.showOwner")}

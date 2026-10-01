@@ -1,5 +1,6 @@
 "use client";
 
+import { Hourglass } from "@/components/Icon";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 
@@ -31,7 +32,7 @@ export default function WaitingPage() {
   return (
     <main className="flex flex-1 flex-col bg-rice">
       <header className="px-5 pb-4 pt-10 text-center">
-        <p className="text-5xl" aria-hidden>⏳</p>
+        <p className="flex justify-center text-6xl text-brand" aria-hidden><Hourglass /></p>
         <h1 className="mt-3 font-display text-3xl text-ink">{t("wait.title")}</h1>
         <p className="mt-2 text-zinc-600">{t("wait.hint")}</p>
       </header>

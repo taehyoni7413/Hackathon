@@ -1,6 +1,7 @@
 /* eslint-disable @next/next/no-img-element -- 원본 메뉴판 사진을 확대해서 보기 위해 img 사용 */
 "use client";
 
+import { X } from "@/components/Icon";
 import { useState } from "react";
 
 import { useApp } from "@/context/AppContext";
@@ -19,7 +20,7 @@ export function MenuBoardViewer({ images, onClose }: { images: string[]; onClose
           onClick={() => (zoom ? setZoom(null) : onClose())}
           aria-label={t("common.close")}
         >
-          ✕
+          <X weight="bold" />
         </button>
       </div>
 

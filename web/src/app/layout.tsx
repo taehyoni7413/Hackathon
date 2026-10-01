@@ -3,6 +3,7 @@ import { Do_Hyeon } from "next/font/google";
 import "./globals.css";
 
 import { AppProvider } from "@/context/AppContext";
+import { IconProvider } from "@/components/Icon";
 import { DemoBadge } from "@/components/DemoBadge";
 import { ServiceWorkerRegister } from "@/components/ServiceWorkerRegister";
 
@@ -46,7 +47,9 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
     <html lang="ko" className={`h-full antialiased ${display.variable}`}>
       <body className="min-h-full">
         <AppProvider>
-          <div className="app-shell">{children}</div>
+          <IconProvider>
+            <div className="app-shell">{children}</div>
+          </IconProvider>
           <DemoBadge />
         </AppProvider>
         <ServiceWorkerRegister />

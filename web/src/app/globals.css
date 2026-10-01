@@ -24,7 +24,8 @@
   --color-leaf-soft: var(--leaf-soft);
   --color-rice: var(--rice);
   --font-display: var(--font-do-hyeon), system-ui, -apple-system, "Apple SD Gothic Neo", "PingFang SC", "Microsoft YaHei", "Malgun Gothic", sans-serif;
-  --font-sans: system-ui, -apple-system, "Apple SD Gothic Neo", "Noto Sans KR",
+  /* 앱 전체 글꼴: Do Hyeon (사장님 화면과 같은 톤). 중국어 등 없는 글자는 시스템 글꼴 */
+  --font-sans: var(--font-do-hyeon), system-ui, -apple-system, "Apple SD Gothic Neo", "Noto Sans KR",
     "PingFang SC", "Microsoft YaHei", "Malgun Gothic", sans-serif;
 }
 
@@ -33,6 +34,9 @@ body {
   background: #f4f4f5;
   color: var(--foreground);
   font-family: var(--font-sans);
+  /* Do Hyeon 은 굵기가 하나뿐 → 가짜 굵게(번짐) 막기. 위계는 크기로 */
+  font-synthesis-weight: none;
+  letter-spacing: 0.01em;
   -webkit-tap-highlight-color: transparent;
   /* 앱처럼: 당겨서 새로고침·바운스 막기, 길게 눌러 생기는 메뉴 줄이기 */
   overscroll-behavior: none;

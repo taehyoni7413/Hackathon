@@ -1,5 +1,6 @@
 "use client";
 
+import { Microphone } from "@/components/Icon";
 import { useApp } from "@/context/AppContext";
 import type { SpeechStatus } from "@/hooks/useSpeechRecognition";
 
@@ -49,8 +50,8 @@ export function VoiceOverlay({
             <span className="siri-orb absolute inset-0 rounded-full" />
           </span>
           <span className="relative h-20 w-20 rounded-full bg-white/90 shadow-[0_0_40px_rgba(255,255,255,0.6)]" />
-          <span className="absolute text-3xl" aria-hidden>
-            🎤
+          <span className="absolute text-4xl text-ink" aria-hidden>
+            <Microphone weight="fill" />
           </span>
         </button>
 

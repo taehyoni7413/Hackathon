@@ -1,5 +1,6 @@
 "use client";
 
+import { X } from "@/components/Icon";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 
@@ -31,7 +32,7 @@ export function SettingsSheet({ onClose }: { onClose: () => void }) {
         <div className="mb-4 flex items-center justify-between">
           <h2 className="text-xl font-bold">{t("settings.title")}</h2>
           <button className="icon-btn shadow-none" onClick={onClose} aria-label={t("common.close")}>
-            ✕
+            <X weight="bold" />
           </button>
         </div>
 

@@ -1,5 +1,6 @@
 "use client";
 
+import { Hourglass, Microphone, X } from "@/components/Icon";
 import { useCallback, useState } from "react";
 
 import { VoiceOverlay } from "@/components/VoiceOverlay";
@@ -73,12 +74,12 @@ export function CustomRequestInput({
             onClick={() => onChange(value.filter((_, j) => j !== i))}
             aria-label={t("cart.remove")}
           >
-            ✕
+            <X weight="bold" />
           </button>
         </div>
       ))}
 
-      {translating && <p className="text-sm text-zinc-500">⏳ {t("voice.translating")}</p>}
+      {translating && <p className="text-sm text-zinc-500"><Hourglass className="mr-1 inline align-[-3px]" />{t("voice.translating")}</p>}
       {failed && <p className="text-sm text-amber-700">{t("voice.translateFail")}</p>}
       {speech.status === "denied" && <p className="text-sm text-red-600">{t("voice.denied")}</p>}
       {speech.status === "error" && <p className="text-sm text-red-600">{t("voice.error")}</p>}
@@ -140,7 +141,7 @@ export function CustomRequestInput({
             }}
             disabled={translating}
           >
-            🎤 {t("voice.speak")} · {speechLabel}
+            <Microphone className="mr-1 inline align-[-3px]" />{t("voice.speak")} · {speechLabel}
           </button>
           <button
             className="btn-secondary px-4"

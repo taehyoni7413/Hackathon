@@ -1,6 +1,7 @@
 /* eslint-disable @next/next/no-img-element -- public 의 로고 이미지를 그대로 사용 */
 "use client";
 
+import { Check } from "@/components/Icon";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 
@@ -53,7 +54,7 @@ export default function LanguagePage() {
                     active ? "bg-brand text-white" : "ring-2 ring-zinc-200"
                   }`}
                 >
-                  {active ? "✓" : ""}
+                  {active && <Check weight="bold" />}
                 </span>
               </button>
             </li>

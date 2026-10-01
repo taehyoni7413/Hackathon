@@ -1,5 +1,6 @@
 "use client";
 
+import { Camera, ShoppingCartSimple } from "@/components/Icon";
 import Link from "next/link";
 import { useParams, useRouter } from "next/navigation";
 import { useMemo, useRef, useState } from "react";
@@ -65,7 +66,7 @@ export default function MenuPage() {
               className="min-h-11 shrink-0 rounded-full bg-zinc-900 px-3 text-sm font-semibold text-white"
               onClick={() => setBoardOpen(true)}
             >
-              📷 {t("menu.viewBoard")}
+              <Camera className="mr-1 inline align-[-3px]" />{t("menu.viewBoard")}
             </button>
           )}
         </div>
@@ -146,7 +147,7 @@ export default function MenuPage() {
       {count > 0 && (
         <div className="fixed inset-x-0 bottom-0 z-30 mx-auto max-w-[480px] px-4 pt-4 pb-safe">
           <Link href="/cart" className="btn-primary w-full shadow-lg">
-            🛒 {t("menu.cartBtn", { n: count, price: formatPrice(cartTotal(store.menus, myCart), lang) })}
+            <ShoppingCartSimple className="mr-1.5" />{t("menu.cartBtn", { n: count, price: formatPrice(cartTotal(store.menus, myCart), lang) })}
           </Link>
         </div>
       )}

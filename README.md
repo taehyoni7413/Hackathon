@@ -112,7 +112,8 @@ cd web && npm run lint && npm run build
 | 프레임워크 | Flask | 메뉴 번역 단독 데모(`app.py`) | https://flask.palletsprojects.com |
 | 데이터 | OpenStreetMap (© OpenStreetMap 기여자, ODbL) | 학교 정문 좌표(`SCHOOL_COORD`) | https://www.openstreetmap.org/node/4629757791 |
 | 데이터 | 네이버 지도(플레이스) 메뉴 사진·메뉴명·가격 | 3개 가게 실제 메뉴 데이터와 메뉴 사진·원본 메뉴판 (`scripts/build_menus.py`, 번역·식단 정보는 AI 추정) | https://map.naver.com |
-| 글꼴 | Google Fonts Do Hyeon (SIL OFL 1.1) | 제목·가격 글꼴 (`next/font`로 자체 호스팅) | https://fonts.google.com/specimen/Do+Hyeon |
+| 글꼴 | Google Fonts Do Hyeon (SIL OFL 1.1) | 앱 전체 글꼴 (`next/font`로 자체 호스팅) | https://fonts.google.com/specimen/Do+Hyeon |
+| 아이콘 | Phosphor Icons (`@phosphor-icons/react`, MIT) | 화면 아이콘·식단 배지·지도 표시·기본 이미지 (duotone) | https://phosphoricons.com |
 | 도구 | Claude Code 스킬 frontend-design (anthropics/skills, Apache-2.0) | 디자인 작업 지침 (`.claude/skills/frontend-design/`) | https://github.com/anthropics/skills/tree/main/skills/frontend-design |
 |  |  |  |  |
 

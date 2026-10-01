@@ -1,6 +1,7 @@
 /* eslint-disable @next/next/no-img-element -- 로고 파일이 없을 때 텍스트 로고로 바꾸기 위해 img 사용 */
 "use client";
 
+import { BowlSteam } from "@/components/Icon";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 
@@ -27,8 +28,8 @@ export default function SplashPage() {
   return (
     <main className="flex flex-1 flex-col items-center justify-center gap-4 bg-brand px-6 text-white">
       {logoFailed ? (
-        <div className="flex h-28 w-28 items-center justify-center rounded-3xl bg-white text-6xl shadow-lg">
-          🍚
+        <div className="flex h-28 w-28 items-center justify-center rounded-3xl bg-white text-6xl text-ink shadow-lg">
+          <BowlSteam />
         </div>
       ) : (
         <img

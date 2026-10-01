@@ -1,5 +1,6 @@
 "use client";
 
+import { SealCheck } from "@/components/Icon";
 import { OpenBadge } from "@/components/OpenBadge";
 import { SmartImage, defaultImage } from "@/components/SmartImage";
 import { useApp } from "@/context/AppContext";
@@ -15,7 +16,7 @@ export function VerificationBadges({ store }: { store: Store }) {
     <div className="flex flex-wrap gap-1">
       {store.verifications.map((v) => (
         <span key={v.type} className="rounded-md bg-sky-50 px-1.5 py-0.5 text-xs text-sky-700">
-          ✓ {t("store.verified")} · {v.type} {v.count}
+          <SealCheck className="mr-0.5 inline align-[-3px]" />{t("store.verified")} · {v.type} {v.count}
         </span>
       ))}
     </div>
