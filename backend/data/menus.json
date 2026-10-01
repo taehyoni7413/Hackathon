@@ -1,1 +1,682 @@
-[]
+[
+  {
+    "id": 1,
+    "store_id": 1,
+    "menu_category": "식사",
+    "menu_category_name": {
+      "ko": "식사",
+      "zh": "主食",
+      "en": "Mains"
+    },
+    "name_ko": "제육덮밥",
+    "pronunciation": "jeyuk-deopbap",
+    "translations": {
+      "ko": {
+        "name": "제육덮밥"
+      },
+      "zh": {
+        "name": "辣炒猪肉盖饭",
+        "description": "辣酱炒猪肉配米饭"
+      },
+      "en": {
+        "name": "Spicy pork rice bowl",
+        "description": "Pork stir-fried in chili sauce over rice"
+      }
+    },
+    "price": 8500,
+    "image_url": null,
+    "ingredients": [
+      "돼지고기",
+      "고추장",
+      "양파",
+      "밥"
+    ],
+    "allergens": [
+      "대두",
+      "밀"
+    ],
+    "contains_pork": true,
+    "contains_alcohol": false,
+    "halal": "no",
+    "vegan": "no",
+    "spicy": 2,
+    "options": [
+      {
+        "id": "less_spicy",
+        "type": "spicy",
+        "name_ko": "덜 맵게 해주세요",
+        "translations": {
+          "zh": "少辣",
+          "en": "Less spicy"
+        }
+      },
+      {
+        "id": "not_spicy",
+        "type": "spicy",
+        "name_ko": "안 맵게 해주세요",
+        "translations": {
+          "zh": "不要辣",
+          "en": "Not spicy"
+        }
+      },
+      {
+        "id": "no_onion",
+        "type": "remove",
+        "name_ko": "양파는 빼주세요",
+        "translations": {
+          "zh": "不要洋葱",
+          "en": "No onion"
+        }
+      },
+      {
+        "id": "extra_rice",
+        "type": "add",
+        "name_ko": "공깃밥 추가해주세요",
+        "translations": {
+          "zh": "加一碗米饭",
+          "en": "Extra rice"
+        },
+        "price_delta": 1000
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "store_id": 1,
+    "menu_category": "식사",
+    "menu_category_name": {
+      "ko": "식사",
+      "zh": "主食",
+      "en": "Mains"
+    },
+    "name_ko": "김치볶음밥",
+    "pronunciation": "kimchi-bokkeumbap",
+    "translations": {
+      "ko": {
+        "name": "김치볶음밥"
+      },
+      "zh": {
+        "name": "泡菜炒饭",
+        "description": "泡菜炒饭配煎蛋"
+      },
+      "en": {
+        "name": "Kimchi fried rice",
+        "description": "Fried rice with kimchi and a fried egg"
+      }
+    },
+    "price": 8000,
+    "image_url": null,
+    "ingredients": [
+      "김치",
+      "밥",
+      "계란",
+      "햄"
+    ],
+    "allergens": [
+      "계란"
+    ],
+    "contains_pork": true,
+    "contains_alcohol": false,
+    "halal": "no",
+    "vegan": "no",
+    "spicy": 1,
+    "options": [
+      {
+        "id": "not_spicy",
+        "type": "spicy",
+        "name_ko": "안 맵게 해주세요",
+        "translations": {
+          "zh": "不要辣",
+          "en": "Not spicy"
+        }
+      },
+      {
+        "id": "no_pork",
+        "type": "remove",
+        "name_ko": "돼지고기는 빼주세요",
+        "translations": {
+          "zh": "不要猪肉",
+          "en": "No pork"
+        }
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "store_id": 1,
+    "menu_category": "식사",
+    "menu_category_name": {
+      "ko": "식사",
+      "zh": "主食",
+      "en": "Mains"
+    },
+    "name_ko": "된장찌개",
+    "pronunciation": "doenjang-jjigae",
+    "translations": {
+      "ko": {
+        "name": "된장찌개"
+      },
+      "zh": {
+        "name": "大酱汤",
+        "description": "韩式大豆酱炖汤，配米饭"
+      },
+      "en": {
+        "name": "Soybean paste stew",
+        "description": "Korean soybean paste stew with rice"
+      }
+    },
+    "price": 8000,
+    "image_url": null,
+    "ingredients": [
+      "된장",
+      "두부",
+      "애호박",
+      "감자"
+    ],
+    "allergens": [
+      "대두"
+    ],
+    "contains_pork": null,
+    "contains_alcohol": false,
+    "halal": "unknown",
+    "vegan": "unknown",
+    "spicy": 0,
+    "options": [
+      {
+        "id": "extra_rice",
+        "type": "add",
+        "name_ko": "공깃밥 추가해주세요",
+        "translations": {
+          "zh": "加一碗米饭",
+          "en": "Extra rice"
+        },
+        "price_delta": 1000
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "store_id": 1,
+    "menu_category": "사이드",
+    "menu_category_name": {
+      "ko": "사이드",
+      "zh": "小菜",
+      "en": "Sides"
+    },
+    "name_ko": "계란말이",
+    "pronunciation": "gyeran-mari",
+    "translations": {
+      "ko": {
+        "name": "계란말이"
+      },
+      "zh": {
+        "name": "鸡蛋卷",
+        "description": "韩式厚蛋卷"
+      },
+      "en": {
+        "name": "Rolled omelette",
+        "description": "Korean-style rolled egg"
+      }
+    },
+    "price": 5000,
+    "image_url": null,
+    "ingredients": [
+      "계란",
+      "당근",
+      "대파"
+    ],
+    "allergens": [
+      "계란"
+    ],
+    "contains_pork": false,
+    "contains_alcohol": false,
+    "halal": "unknown",
+    "vegan": "no",
+    "spicy": 0,
+    "options": [
+      {
+        "id": "no_green_onion",
+        "type": "remove",
+        "name_ko": "파는 빼주세요",
+        "translations": {
+          "zh": "不要葱",
+          "en": "No green onion"
+        }
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "store_id": 2,
+    "menu_category": "식사",
+    "menu_category_name": {
+      "ko": "식사",
+      "zh": "主食",
+      "en": "Mains"
+    },
+    "name_ko": "햄치즈 샌드위치",
+    "pronunciation": "haem-chijeu saendeuwichi",
+    "translations": {
+      "ko": {
+        "name": "햄치즈 샌드위치"
+      },
+      "zh": {
+        "name": "火腿芝士三明治",
+        "description": "火腿和芝士三明治"
+      },
+      "en": {
+        "name": "Ham & cheese sandwich",
+        "description": "Sandwich with ham and cheese"
+      }
+    },
+    "price": 6500,
+    "image_url": null,
+    "ingredients": [
+      "햄",
+      "치즈",
+      "양상추",
+      "빵"
+    ],
+    "allergens": [
+      "밀",
+      "우유"
+    ],
+    "contains_pork": true,
+    "contains_alcohol": false,
+    "halal": "no",
+    "vegan": "no",
+    "spicy": 0,
+    "options": [
+      {
+        "id": "no_onion",
+        "type": "remove",
+        "name_ko": "양파는 빼주세요",
+        "translations": {
+          "zh": "不要洋葱",
+          "en": "No onion"
+        }
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "store_id": 2,
+    "menu_category": "식사",
+    "menu_category_name": {
+      "ko": "식사",
+      "zh": "主食",
+      "en": "Mains"
+    },
+    "name_ko": "에그마요 샌드위치",
+    "pronunciation": "egeu-mayo saendeuwichi",
+    "translations": {
+      "ko": {
+        "name": "에그마요 샌드위치"
+      },
+      "zh": {
+        "name": "鸡蛋蛋黄酱三明治",
+        "description": "鸡蛋沙拉三明治"
+      },
+      "en": {
+        "name": "Egg mayo sandwich",
+        "description": "Egg salad sandwich"
+      }
+    },
+    "price": 5900,
+    "image_url": null,
+    "ingredients": [
+      "계란",
+      "마요네즈",
+      "빵"
+    ],
+    "allergens": [
+      "계란",
+      "밀"
+    ],
+    "contains_pork": false,
+    "contains_alcohol": false,
+    "halal": "unknown",
+    "vegan": "no",
+    "spicy": 0,
+    "options": []
+  },
+  {
+    "id": 7,
+    "store_id": 2,
+    "menu_category": "식사",
+    "menu_category_name": {
+      "ko": "식사",
+      "zh": "主食",
+      "en": "Mains"
+    },
+    "name_ko": "치킨 샐러드",
+    "pronunciation": "chikin saelleodeu",
+    "translations": {
+      "ko": {
+        "name": "치킨 샐러드"
+      },
+      "zh": {
+        "name": "鸡肉沙拉",
+        "description": "烤鸡胸肉沙拉"
+      },
+      "en": {
+        "name": "Chicken salad",
+        "description": "Salad with grilled chicken breast"
+      }
+    },
+    "price": 7500,
+    "image_url": null,
+    "ingredients": [
+      "닭가슴살",
+      "양상추",
+      "토마토",
+      "드레싱"
+    ],
+    "allergens": [
+      "대두"
+    ],
+    "contains_pork": false,
+    "contains_alcohol": false,
+    "halal": "unknown",
+    "vegan": "no",
+    "spicy": 0,
+    "options": [
+      {
+        "id": "no_onion",
+        "type": "remove",
+        "name_ko": "양파는 빼주세요",
+        "translations": {
+          "zh": "不要洋葱",
+          "en": "No onion"
+        }
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "store_id": 2,
+    "menu_category": "음료",
+    "menu_category_name": {
+      "ko": "음료",
+      "zh": "饮品",
+      "en": "Drinks"
+    },
+    "name_ko": "아메리카노",
+    "pronunciation": "amerikano",
+    "translations": {
+      "ko": {
+        "name": "아메리카노"
+      },
+      "zh": {
+        "name": "美式咖啡",
+        "description": ""
+      },
+      "en": {
+        "name": "Americano",
+        "description": ""
+      }
+    },
+    "price": 2500,
+    "image_url": null,
+    "ingredients": [
+      "커피"
+    ],
+    "allergens": [],
+    "contains_pork": false,
+    "contains_alcohol": false,
+    "halal": "yes",
+    "vegan": "yes",
+    "spicy": 0,
+    "options": [
+      {
+        "id": "less_ice",
+        "type": "remove",
+        "name_ko": "얼음 적게 넣어주세요",
+        "translations": {
+          "zh": "少冰",
+          "en": "Less ice"
+        }
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "store_id": 3,
+    "menu_category": "라멘",
+    "menu_category_name": {
+      "ko": "라멘",
+      "zh": "拉面",
+      "en": "Ramen"
+    },
+    "name_ko": "돈코츠 라멘",
+    "pronunciation": "donkocheu ramen",
+    "translations": {
+      "ko": {
+        "name": "돈코츠 라멘"
+      },
+      "zh": {
+        "name": "豚骨拉面",
+        "description": "浓郁猪骨汤拉面"
+      },
+      "en": {
+        "name": "Tonkotsu ramen",
+        "description": "Rich pork bone broth ramen"
+      }
+    },
+    "price": 9500,
+    "image_url": null,
+    "ingredients": [
+      "돼지뼈 육수",
+      "차슈",
+      "면",
+      "대파"
+    ],
+    "allergens": [
+      "밀",
+      "대두"
+    ],
+    "contains_pork": true,
+    "contains_alcohol": false,
+    "halal": "no",
+    "vegan": "no",
+    "spicy": 0,
+    "options": [
+      {
+        "id": "no_green_onion",
+        "type": "remove",
+        "name_ko": "파는 빼주세요",
+        "translations": {
+          "zh": "不要葱",
+          "en": "No green onion"
+        }
+      },
+      {
+        "id": "extra_noodle",
+        "type": "add",
+        "name_ko": "면 추가해주세요",
+        "translations": {
+          "zh": "加面",
+          "en": "Extra noodles"
+        },
+        "price_delta": 1500
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "store_id": 3,
+    "menu_category": "라멘",
+    "menu_category_name": {
+      "ko": "라멘",
+      "zh": "拉面",
+      "en": "Ramen"
+    },
+    "name_ko": "매운 라멘",
+    "pronunciation": "maeun ramen",
+    "translations": {
+      "ko": {
+        "name": "매운 라멘"
+      },
+      "zh": {
+        "name": "辣味拉面",
+        "description": "辣味猪骨汤拉面"
+      },
+      "en": {
+        "name": "Spicy ramen",
+        "description": "Spicy pork bone broth ramen"
+      }
+    },
+    "price": 10000,
+    "image_url": null,
+    "ingredients": [
+      "돼지뼈 육수",
+      "고추기름",
+      "차슈",
+      "면"
+    ],
+    "allergens": [
+      "밀",
+      "대두"
+    ],
+    "contains_pork": true,
+    "contains_alcohol": false,
+    "halal": "no",
+    "vegan": "no",
+    "spicy": 3,
+    "options": [
+      {
+        "id": "less_spicy",
+        "type": "spicy",
+        "name_ko": "덜 맵게 해주세요",
+        "translations": {
+          "zh": "少辣",
+          "en": "Less spicy"
+        }
+      },
+      {
+        "id": "more_spicy",
+        "type": "spicy",
+        "name_ko": "더 맵게 해주세요",
+        "translations": {
+          "zh": "多加辣",
+          "en": "Extra spicy"
+        }
+      },
+      {
+        "id": "extra_noodle",
+        "type": "add",
+        "name_ko": "면 추가해주세요",
+        "translations": {
+          "zh": "加面",
+          "en": "Extra noodles"
+        },
+        "price_delta": 1500
+      }
+    ]
+  },
+  {
+    "id": 11,
+    "store_id": 3,
+    "menu_category": "라멘",
+    "menu_category_name": {
+      "ko": "라멘",
+      "zh": "拉面",
+      "en": "Ramen"
+    },
+    "name_ko": "쇼유 라멘",
+    "pronunciation": "syoyu ramen",
+    "translations": {
+      "ko": {
+        "name": "쇼유 라멘"
+      },
+      "zh": {
+        "name": "酱油拉面",
+        "description": "酱油味清汤拉面"
+      },
+      "en": {
+        "name": "Shoyu ramen",
+        "description": "Soy sauce based ramen"
+      }
+    },
+    "price": 9000,
+    "image_url": null,
+    "ingredients": [
+      "간장",
+      "닭 육수",
+      "면",
+      "계란"
+    ],
+    "allergens": [
+      "밀",
+      "대두",
+      "계란"
+    ],
+    "contains_pork": null,
+    "contains_alcohol": false,
+    "halal": "unknown",
+    "vegan": "no",
+    "spicy": 0,
+    "options": [
+      {
+        "id": "no_green_onion",
+        "type": "remove",
+        "name_ko": "파는 빼주세요",
+        "translations": {
+          "zh": "不要葱",
+          "en": "No green onion"
+        }
+      },
+      {
+        "id": "extra_noodle",
+        "type": "add",
+        "name_ko": "면 추가해주세요",
+        "translations": {
+          "zh": "加面",
+          "en": "Extra noodles"
+        },
+        "price_delta": 1500
+      }
+    ]
+  },
+  {
+    "id": 12,
+    "store_id": 3,
+    "menu_category": "사이드",
+    "menu_category_name": {
+      "ko": "사이드",
+      "zh": "小菜",
+      "en": "Sides"
+    },
+    "name_ko": "교자",
+    "pronunciation": "gyoja",
+    "translations": {
+      "ko": {
+        "name": "교자"
+      },
+      "zh": {
+        "name": "煎饺",
+        "description": "日式煎饺 5个"
+      },
+      "en": {
+        "name": "Gyoza",
+        "description": "Pan-fried dumplings (5 pcs)"
+      }
+    },
+    "price": 5000,
+    "image_url": null,
+    "ingredients": [
+      "돼지고기",
+      "양배추",
+      "밀가루"
+    ],
+    "allergens": [
+      "밀"
+    ],
+    "contains_pork": true,
+    "contains_alcohol": false,
+    "halal": "no",
+    "vegan": "no",
+    "spicy": 0,
+    "options": []
+  }
+]
