@@ -135,5 +135,18 @@
   "coach.error": "AI 추천을 가져오지 못했어요.",
   "coach.summary": "한 줄 요약",
   "coach.goodFor": "이런 분께 추천",
-  "coach.notice": "주의"
+  "coach.notice": "주의",
+  "ai.label": "AI 맞춤 추천",
+  "ai.ex1": "고기가 먹고 싶어요",
+  "ai.ex2": "매운 음식이 땡겨요",
+  "ai.ex3": "빵 종류를 먹고 싶어요",
+  "ai.title": "무엇이 먹고 싶으세요?",
+  "ai.subtitle": "말하듯이 적으면 AI가 학교 앞 식당 메뉴 중에서 골라 드려요",
+  "ai.submit": "추천받기",
+  "ai.loading": "메뉴를 고르고 있어요",
+  "ai.empty": "맞는 메뉴를 찾지 못했어요. 다르게 적어 보세요",
+  "ai.error": "추천을 가져오지 못했어요. 다시 시도해 주세요",
+  "ai.results": "이런 메뉴는 어떠세요?",
+  "ai.keyword": "AI 연결이 안 돼서 키워드로 골랐어요",
+  "ai.tapHint": "메뉴를 누르면 가게를 보여 드려요"
 }

@@ -190,3 +190,27 @@ export async function getMenuInsight(
     return null;
   }
 }
+
+export type Recommendation = { menu_id: string; store_id: string; reason: string };
+
+/**
+ * AI 맞춤 추천 (백엔드 /api/recommend, gpt-6-luna): 손님 말 → 우리 가게 메뉴 중에서만 최대 6개.
+ * source: "ai" | "keyword"(AI 실패 시 키워드). 실패하면 null.
+ */
+export async function recommendMenus(
+  query: string,
+  lang: string,
+): Promise<{ items: Recommendation[]; source: string } | null> {
+  try {
+    const r = await request<{ items: { menu_id: number; store_id: number; reason: string }[]; source: string }>(
+      "/recommend",
+      { method: "POST", body: JSON.stringify({ query: query.slice(0, 120), lang }) },
+    );
+    return {
+      source: r.source,
+      items: r.items.map((i) => ({ menu_id: String(i.menu_id), store_id: String(i.store_id), reason: i.reason })),
+    };
+  } catch {
+    return null;
+  }
+}

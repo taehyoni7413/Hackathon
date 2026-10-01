@@ -9,7 +9,8 @@ const COLLAPSED_PX = 132;
 export function snapHeight(snap: Snap, viewport: number) {
   if (snap === "collapsed") return COLLAPSED_PX;
   if (snap === "half") return Math.round(viewport * 0.5);
-  return Math.round(viewport * 0.88);
+  // 펼침: 위쪽 AI 검색창·카테고리 칩(안전 영역 포함 약 180px)이 가리지 않는 높이까지
+  return Math.min(Math.round(viewport * 0.88), viewport - 180);
 }
 
 export function useViewportHeight() {

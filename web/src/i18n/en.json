@@ -135,5 +135,18 @@
   "coach.error": "Couldn't get an AI suggestion.",
   "coach.summary": "Summary",
   "coach.goodFor": "Good for",
-  "coach.notice": "Note"
+  "coach.notice": "Note",
+  "ai.label": "AI picks for you",
+  "ai.ex1": "I want some meat",
+  "ai.ex2": "Craving something spicy",
+  "ai.ex3": "I feel like bread",
+  "ai.title": "What do you feel like eating?",
+  "ai.subtitle": "Type it like you'd say it. AI picks from the menus of restaurants near campus",
+  "ai.submit": "Get picks",
+  "ai.loading": "Picking dishes",
+  "ai.empty": "No matching dishes. Try saying it differently",
+  "ai.error": "Couldn't get picks. Please try again",
+  "ai.results": "How about these?",
+  "ai.keyword": "AI is unavailable, picked by keywords",
+  "ai.tapHint": "Tap a dish to see the restaurant"
 }
