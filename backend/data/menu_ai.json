@@ -1616,14 +1616,13 @@
     "menu_category_zh": "双人套餐",
     "pronunciation": "i-in-seteu",
     "zh_name": "双人套餐",
-    "zh_description": "适合两人分享的套餐，具体搭配因套餐内容而异。",
+    "zh_description": "任选主菜2份 + 小菜2份 + 饮料1杯（青提气泡饮或柠檬气泡饮）",
     "en_name": "Set for Two",
-    "en_description": "A meal set for two to share; exact dishes may vary.",
+    "en_description": "Choose 2 mains + 2 sides + 1 drink (shine muscat or lemon ade)",
     "ingredients": [
-      "면",
-      "돼지고기",
-      "채소",
-      "소스"
+      "메인 메뉴 2개(선택)",
+      "곁들임 메뉴 2개(선택)",
+      "에이드 1개"
     ],
     "allergens": [
       "밀",
@@ -1632,10 +1631,11 @@
       "돼지고기"
     ],
     "contains_pork": null,
-    "contains_alcohol": null,
+    "contains_alcohol": false,
     "halal": "unknown",
     "vegan": "no",
-    "spicy": 0
+    "spicy": 0,
+    "ko_description": "메인 메뉴 2개 + 곁들임 메뉴 2개 + 음료 1개(샤인머스켓에이드 또는 레몬에이드) 선택"
   },
   "1인세트": {
     "menu_category": "세트",
@@ -1643,14 +1643,12 @@
     "menu_category_zh": "单人套餐",
     "pronunciation": "il-in-seteu",
     "zh_name": "单人套餐",
-    "zh_description": "适合一人享用的套餐，具体搭配因套餐内容而异。",
+    "zh_description": "豚骨拉面 + 火烤迷你猪肉盖饭",
     "en_name": "Set for One",
-    "en_description": "A meal set for one; exact dishes may vary.",
+    "en_description": "Tonkotsu ramen + mini flame-grilled pork rice bowl",
     "ingredients": [
-      "면",
-      "돼지고기",
-      "채소",
-      "소스"
+      "돈코츠라멘",
+      "미니부타동(돼지고기 덮밥)"
     ],
     "allergens": [
       "밀",
@@ -1658,11 +1656,12 @@
       "계란",
       "돼지고기"
     ],
-    "contains_pork": null,
+    "contains_pork": true,
     "contains_alcohol": null,
     "halal": "unknown",
     "vegan": "no",
-    "spicy": 0
+    "spicy": 0,
+    "ko_description": "돈코츠라멘 + 불맛미니부타동 (면식당 대표 구성)"
   },
   "에비돈코츠라멘": {
     "menu_category": "라멘",
@@ -1927,7 +1926,7 @@
       "대두"
     ],
     "contains_pork": false,
-    "contains_alcohol": true,
+    "contains_alcohol": false,
     "halal": "no",
     "vegan": "no",
     "spicy": 0
@@ -2031,7 +2030,7 @@
       "대두"
     ],
     "contains_pork": false,
-    "contains_alcohol": true,
+    "contains_alcohol": false,
     "halal": "no",
     "vegan": "no",
     "spicy": 0

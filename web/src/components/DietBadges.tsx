@@ -33,7 +33,7 @@ function Peppers({ n }: { n: number }) {
   );
 }
 
-/** 할랄·비건: yes / no / unknown("확인 필요") */
+/** 비건: yes / no / unknown("확인 필요") */
 function TriBadge({ label, value }: { label: string; value: Tri }) {
   const { t } = useApp();
   if (value === "yes") return <Badge tone="good"><SealCheck /> {label}</Badge>;
@@ -43,7 +43,7 @@ function TriBadge({ label, value }: { label: string; value: Tri }) {
 
 /**
  * 메뉴 식단 배지. detail이면 전부(할랄·비건 아님/확인 필요, 알레르기 포함),
- * 목록에서는 판단에 바로 쓰이는 것만: 돼지고기·술(주의), 할랄·비건 가능(안심), 맵기
+ * 목록에서는 판단에 바로 쓰이는 것만: 돼지고기·술(주의), 비건 가능(안심), 맵기
  */
 export function DietBadges({ menu, detail }: { menu: Menu; detail?: boolean }) {
   const { t } = useApp();
@@ -52,7 +52,6 @@ export function DietBadges({ menu, detail }: { menu: Menu; detail?: boolean }) {
       <div className="flex flex-wrap gap-1">
         {menu.contains_pork === true && <Badge tone="bad"><Pig /> {t("diet.pork")}</Badge>}
         {menu.contains_alcohol === true && <Badge tone="bad"><BeerStein /> {t("diet.alcohol")}</Badge>}
-        {menu.halal === "yes" && <Badge tone="good"><SealCheck /> {t("diet.halal")}</Badge>}
         {menu.vegan === "yes" && <Badge tone="good"><SealCheck /> {t("diet.vegan")}</Badge>}
         {menu.spicy > 0 && (
           <Badge tone={menu.spicy >= 2 ? "bad" : "neutral"}>
@@ -68,7 +67,6 @@ export function DietBadges({ menu, detail }: { menu: Menu; detail?: boolean }) {
       {menu.contains_pork === false && <Badge tone="good">{t("diet.noPork")}</Badge>}
       {menu.contains_pork === null && <Badge tone="warn"><Pig /> {t("diet.porkUnknown")}</Badge>}
       {menu.contains_alcohol === true && <Badge tone="bad"><BeerStein /> {t("diet.alcohol")}</Badge>}
-      <TriBadge label={t("diet.halal")} value={menu.halal} />
       <TriBadge label={t("diet.vegan")} value={menu.vegan} />
       <Badge tone={menu.spicy >= 2 ? "bad" : "neutral"}>
         <Peppers n={Math.max(1, menu.spicy)} /> {t(`diet.spicy${menu.spicy}` as MessageKey)}

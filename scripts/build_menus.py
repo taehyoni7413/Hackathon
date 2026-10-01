@@ -192,7 +192,7 @@ def main():
                 "name_ko": m["name_ko"],
                 "pronunciation": ai["pronunciation"],
                 "translations": {
-                    "ko": {"name": m["name_ko"]},
+                    "ko": {"name": m["name_ko"], **({"description": ai["ko_description"]} if ai.get("ko_description") else {})},
                     "zh": {"name": ai["zh_name"], "description": ai["zh_description"]},
                     "en": {"name": ai["en_name"], "description": ai["en_description"]},
                 },
