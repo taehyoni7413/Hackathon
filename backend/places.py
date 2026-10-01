@@ -179,11 +179,52 @@ def geocode(address: str, name: str = ""):
     return None
  
  
+# 카카오 장소 분류("음식점 > 양식 > 멕시칸,브라질")의 두 번째 단계 → 앱 카테고리
+KAKAO_CATEGORY_MAP = {
+    "한식": "korean", "중식": "chinese", "일식": "japanese", "양식": "western",
+    "분식": "snack", "패스트푸드": "snack", "간식": "cafe", "카페": "cafe", "퓨전요리": "fusion",
+}
+
+
+def kakao_category(name: str, lat: float, lng: float) -> str | None:
+    """가게 이름을 좌표 근처(300m)에서 카카오 키워드 검색 → 카카오 분류 문자열 (예: "음식점 > 퓨전요리")"""
+    res = httpx.get(
+        "https://dapi.kakao.com/v2/local/search/keyword.json",
+        params={"query": name, "x": lng, "y": lat, "radius": 300, "sort": "distance"},
+        headers={"Authorization": f"KakaoAK {KAKAO_REST_KEY}"}, timeout=5,
+    )
+    if res.status_code != 200:
+        raise RuntimeError(f"카카오 API 오류 ({res.status_code}): {res.text}")
+    docs = [d for d in res.json().get("documents", []) if d.get("category_group_code") in ("FD6", "CE7")]
+    return docs[0]["category_name"] if docs else None
+
+
+def to_app_category(kakao: str) -> str | None:
+    parts = [p.strip() for p in kakao.split(">")]
+    if len(parts) > 1 and parts[1] in KAKAO_CATEGORY_MAP:
+        return KAKAO_CATEGORY_MAP[parts[1]]
+    if parts[0] == "카페":
+        return "cafe"
+    return None
+
+
 def load_stores():
-    """가게 목록을 읽고, 좌표가 비어 있으면 주소로 자동 변환해서 파일에 저장"""
+    """가게 목록을 읽고, 좌표가 비어 있으면 주소로 자동 변환,
+    카카오 분류(kakao_category)가 없으면 카카오 장소 검색으로 채워서 category 를 정한 뒤 파일에 저장"""
     stores = load_json("stores.json")
     changed = False
     for s in stores:
+        if not s.get("kakao_category") and s.get("lat") is not None and KAKAO_REST_KEY:
+            try:
+                kc = kakao_category(s["name"], s["lat"], s["lng"])
+            except Exception as e:
+                print(f"[카카오 분류 실패] {s['name']}: {e}")
+                kc = None
+            if kc:
+                s["kakao_category"] = kc
+                s["category"] = to_app_category(kc) or s.get("category") or "other"
+                changed = True
+                print(f"[카카오 분류] {s['name']} → {kc} → {s['category']}")
         if s.get("lat") is None and s.get("address") and KAKAO_REST_KEY:
             try:
                 pos = geocode(s["address"], s.get("name", ""))
@@ -197,7 +238,10 @@ def load_stores():
             else:
                 print(f"[좌표 못 찾음] {s['name']}: 주소를 확인하세요")
     if changed:
-        save_json("stores.json", stores)
+        try:
+            save_json("stores.json", stores)
+        except OSError as e:  # Vercel 은 파일 쓰기 불가 → 이번 응답에만 반영
+            print(f"[stores.json 저장 실패] {e}")
     return stores
  
  

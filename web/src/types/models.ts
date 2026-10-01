@@ -8,6 +8,8 @@ export type Category =
   | "chinese"
   | "japanese"
   | "western"
+  /** 카카오 분류 "퓨전요리" */
+  | "fusion"
   | "snack"
   | "cafe"
   /** 백엔드 데이터에 카테고리가 없을 때 ("전체"에서만 보임) */
@@ -18,6 +20,7 @@ export const CATEGORIES: Category[] = [
   "chinese",
   "japanese",
   "western",
+  "fusion",
   "snack",
   "cafe",
 ];

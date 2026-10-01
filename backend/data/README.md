@@ -1,6 +1,8 @@
 # 백엔드B 데이터
 
-- `stores.json`: 가게 3곳 (실제). `category` 는 설명을 보고 넣은 값
+- `stores.json`: 가게 3곳 (실제). `category` 는 **카카오 로컬 API 장소 분류**(`kakao_category`, 예: "음식점 > 퓨전요리")로 자동 결정
+  - `kakao_category` 가 비어 있는 가게는 서버가 가게 이름을 좌표 근처에서 카카오 검색해 채움 (`backend/places.py` `load_stores`)
+  - 다시 분류하려면 `kakao_category` 줄을 지우고 서버를 한 번 실행
 - `menus.json`: **실제 메뉴명·가격·사진** (네이버 지도 메뉴 사진, 팀원 수집). `scripts/build_menus.py` 로 생성 — 직접 고치지 말고 스크립트를 다시 실행
   - 번역·발음·재료·알레르기·식단(할랄/비건/돼지고기/술)·맵기·메뉴 분류는 **AI(gpt-6-luna) 추정** → 앱에 "AI가 추정한 정보" 안내 표시
 - `menu_ai.json`: AI 추정 결과 캐시 (메뉴명 기준). 틀린 값은 여기서 고치고 스크립트를 다시 실행하면 반영
@@ -14,4 +16,4 @@
 
 ## 형식
 프론트 변환 코드: `web/src/lib/backendAdapter.ts` 의 `BackendStore`, `BackendMenu`
-`category`: korean / chinese / japanese / western / snack / cafe (없으면 "기타")
+`category`: korean / chinese / japanese / western / fusion / snack / cafe (없으면 "기타")
