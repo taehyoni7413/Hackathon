@@ -1,5 +1,5 @@
 /**
- * 화면 연결 스위치. 경로 안내(3순위)가 완성되기 전에는
+ * 화면 연결 스위치. 경로 안내(3순위)가 동작하지 않으면 false로 바꿔서
  * 식당 상세의 [경로 안내]를 메뉴 화면으로 바로 연결해 흐름이 끊기지 않게 한다.
  */
-export const ROUTE_READY = false;
+export const ROUTE_READY = true;
