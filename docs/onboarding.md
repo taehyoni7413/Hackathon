@@ -82,4 +82,4 @@ git push -u origin feat/12-result-page
 
 ## 🔑 API 키
 - 기본값 `MOCK_LLM=1` → 키 없이 `/chat` 이 가짜 응답을 줌. **대부분 이대로 개발**하면 됨.
-- 실제 Claude 호출은 AI/백엔드 담당과 시연 노트북만 (`MOCK_LLM=0` + `ANTHROPIC_API_KEY`).
+- 실제 AI 호출: 주최 측 공용 OpenAI 키(단톡방에서 받기)를 `.env`의 `OPENAI_API_KEY`에 붙여넣고 `MOCK_LLM=0`. 모델은 `gpt-6-luna`, 임베딩은 `text-embedding-3-small`만 사용 가능.

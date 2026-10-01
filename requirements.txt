@@ -4,7 +4,7 @@ pandas
 numpy
 scikit-learn
 joblib
-anthropic
+openai
 python-dotenv
 httpx
 pytest

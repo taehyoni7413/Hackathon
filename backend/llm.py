@@ -1,56 +1,63 @@
-"""Claude API 호출 래퍼."""
+"""OpenAI API 호출 래퍼 (주최 측 제공 공용 키, 사용 가능 모델: gpt-6-luna, text-embedding-3-small)."""
 import os
 
-import anthropic
+import openai
 from dotenv import load_dotenv
 
 load_dotenv()
 
-MODEL = os.getenv("CLAUDE_MODEL", "claude-opus-5-5")
-# MOCK_LLM=1 이면 API 호출 없이 가짜 응답 (프론트 개발용, 키 불필요)
+MODEL = os.getenv("OPENAI_MODEL", "gpt-6-luna")
+EMBEDDING_MODEL = os.getenv("OPENAI_EMBEDDING_MODEL", "text-embedding-3-small")
+# MOCK_LLM=1 이면 API 호출 없이 가짜 응답 (키 없이 개발, 공용 키 한도 USD 100 절약)
 MOCK = os.getenv("MOCK_LLM", "0") == "1"
 
-_client: anthropic.Anthropic | None = None
+_client: openai.OpenAI | None = None
 
 
 class LLMError(Exception):
     pass
 
 
-def _get_client() -> anthropic.Anthropic:
+def _get_client() -> openai.OpenAI:
     global _client
     if _client is None:
-        _client = anthropic.Anthropic()  # ANTHROPIC_API_KEY 환경변수 사용
+        _client = openai.OpenAI()  # OPENAI_API_KEY 환경변수 사용
     return _client
 
 
-def ask(prompt: str, system: str | None = None, effort: str = "medium") -> str:
-    """단일 질문 → 텍스트 응답. effort: low / medium / high / xhigh / max"""
+def _call(fn, *args, **kwargs):
+    try:
+        return fn(*args, **kwargs)
+    except openai.RateLimitError as e:
+        raise LLMError("요청 한도 초과 (공용 키 사용량 확인 필요)") from e
+    except openai.APIStatusError as e:
+        raise LLMError(f"API 오류 ({e.status_code}): {e.message}") from e
+    except openai.APIConnectionError as e:
+        raise LLMError("API 연결 실패") from e
+
+
+def ask(prompt: str, system: str | None = None) -> str:
+    """단일 질문 → 텍스트 응답."""
     if MOCK:
         return f"[MOCK] '{prompt}' 에 대한 가짜 응답입니다."
 
-    kwargs = {}
+    messages = []
     if system:
-        kwargs["system"] = system
-    try:
-        response = _get_client().beta.messages.create(
-            model=MODEL,
-            max_tokens=16000,
-            output_config={"effort": effort},
-            # 안전 분류기가 거절하면 서버가 자동으로 다른 모델로 이어서 응답
-            betas=["server-side-fallback-2026-07-01"],
-            fallbacks="default",
-            messages=[{"role": "user", "content": prompt}],
-            **kwargs,
-        )
-    except anthropic.RateLimitError as e:
-        raise LLMError("요청 한도 초과, 잠시 후 다시 시도하세요") from e
-    except anthropic.APIStatusError as e:
-        raise LLMError(f"API 오류 ({e.status_code}): {e.message}") from e
-    except anthropic.APIConnectionError as e:
-        raise LLMError("API 연결 실패") from e
+        messages.append({"role": "system", "content": system})
+    messages.append({"role": "user", "content": prompt})
 
-    if response.stop_reason == "refusal":
-        raise LLMError("모델이 요청을 거절했습니다")
+    response = _call(
+        _get_client().chat.completions.create, model=MODEL, messages=messages
+    )
+    return response.choices[0].message.content or ""
 
-    return "".join(b.text for b in response.content if b.type == "text")
+
+def embed(texts: list[str]) -> list[list[float]]:
+    """텍스트 목록 → 임베딩 벡터 목록 (검색·유사도용)."""
+    if MOCK:
+        return [[0.0] * 1536 for _ in texts]
+
+    response = _call(
+        _get_client().embeddings.create, model=EMBEDDING_MODEL, input=texts
+    )
+    return [d.embedding for d in response.data]

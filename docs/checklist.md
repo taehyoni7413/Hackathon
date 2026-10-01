@@ -10,8 +10,8 @@
 - [ ] 노트북 충전기, 멀티탭, 핫스팟 등 장비 체크
 
 ### 🧠 AI / 백엔드 담당
-- [ ] Anthropic API 키 발급 + 결제/한도 확인
-- [ ] `.env`에 `MOCK_LLM=0`, `ANTHROPIC_API_KEY` 설정 → `/chat` 실제 호출 테스트
+- [ ] 주최 측 공용 OpenAI 키를 `.env`의 `OPENAI_API_KEY`에 붙여넣기 (단톡방에서 받기, 레포에 올리지 않기)
+- [ ] `MOCK_LLM=0` 으로 바꿔 `/chat` 실제 호출 테스트 (한도 USD 100 — 반복 테스트는 `MOCK_LLM=1`)
 - [ ] 키는 본인 `.env`에만 보관 (레포·단톡 공유 금지)
 
 ### 📋 PM (나)

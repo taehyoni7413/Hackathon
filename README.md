@@ -17,7 +17,7 @@
 - **Backend**: FastAPI
 - **Frontend**: Next.js (TypeScript + Tailwind)
 - **ML**: pandas, numpy, scikit-learn
-- **LLM**: Claude API (`anthropic` SDK)
+- **LLM**: OpenAI API (`gpt-6-luna`, `text-embedding-3-small`) — 주최 측 제공 공용 키
 
 ## 📁 Structure
 ```
@@ -45,7 +45,7 @@ bash scripts/dev.sh                                           # macOS / Linux
 ```
 - 프론트: http://localhost:3000
 - API 문서: http://localhost:8000/docs
-- 기본 `MOCK_LLM=1` → API 키 없이 가짜 응답. 실제 호출은 AI 담당만 ([onboarding](docs/onboarding.md#-api-키))
+- 기본 `MOCK_LLM=1` → API 키 없이 가짜 응답. 실제 호출은 `MOCK_LLM=0` + 공용 키 ([onboarding](docs/onboarding.md#-api-키))
 
 **테스트**
 ```bash
@@ -62,7 +62,7 @@ cd web && npm run lint && npm run build
 | 프레임워크 | Next.js (create-next-app 기본 템플릿) | 프론트엔드 | https://nextjs.org |
 | 라이브러리 | Tailwind CSS | 스타일 | https://tailwindcss.com |
 | 라이브러리 | pandas, numpy, scikit-learn | 데이터 처리·모델 | https://scikit-learn.org |
-| API | Anthropic Claude API | LLM 기능 | https://docs.anthropic.com |
+| API | OpenAI API (gpt-6-luna, text-embedding-3-small, 주최 측 제공) | LLM 기능 | https://platform.openai.com/docs |
 | AI 도구 | Claude Code | 코딩 보조 | https://claude.com/claude-code |
 |  |  |  |  |
 

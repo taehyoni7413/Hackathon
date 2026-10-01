@@ -4,7 +4,7 @@
 대회 규칙·심사 기준은 `docs/contest.md`. 개발은 10/1 19:30 ~ 10/2 11:30, 기술적 구현·완성도(30점)가 최우선. 외부 API·오픈소스·데이터를 새로 쓰면 README「외부 자료」 표에 추가 (발표 공개 필수).
 
 ## 구조
-- `backend/` FastAPI. `main.py`(엔드포인트, Pydantic 모델), `llm.py`(Claude 래퍼, `MOCK_LLM=1`이면 가짜 응답)
+- `backend/` FastAPI. `main.py`(엔드포인트, Pydantic 모델), `llm.py`(OpenAI 래퍼: `ask()`=gpt-6-luna, `embed()`=text-embedding-3-small, `MOCK_LLM=1`이면 가짜 응답. 공용 키 USD 100 한도)
 - `web/` Next.js (App Router, TS, Tailwind). `/api/*` 요청을 `next.config.ts` rewrites로 FastAPI에 전달. API 타입은 `web/src/lib/api.ts`
 - `ml/` 학습 스크립트, `data/`(원본 git 제외), `notebooks/`
 - `docs/api-contract.md` 백엔드↔프론트 계약의 단일 기준. 엔드포인트 변경 시 이 문서 → `backend/main.py` → `web/src/lib/api.ts` 순서로 함께 수정

@@ -10,7 +10,7 @@
 |--------|------|------|------|------|
 | GET | `/health` | 서버 상태 | ✅ 구현 | Backend |
 | POST | `/predict` | 예시 예측 (주제 확정 후 교체) | 🟡 더미 | ML |
-| POST | `/chat` | Claude 응답 | ✅ 구현 (`MOCK_LLM`) | Backend |
+| POST | `/chat` | AI 응답 (gpt-6-luna) | ✅ 구현 (`MOCK_LLM`) | Backend |
 
 상태: ⬜ 계획 / 🟡 더미 응답 / ✅ 실제 구현
 
