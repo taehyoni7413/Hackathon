@@ -60,6 +60,8 @@ export type MenuOption = {
   name_ko: string;
   translations: Localized;
   price_delta?: number;
+  /** 같은 group 끼리는 하나만 선택 (예: "set" = 세트 A/B). 맵기(spicy)도 하나만 */
+  group?: string;
 };
 
 export type Menu = {

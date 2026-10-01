@@ -10,3 +10,7 @@
 /models/
 /.env
 /web/.env.local
+# 메뉴 사진 원본 (앱은 web/public/stores/ 의 복사본을 씀)
+/assets/
+/Appro_메뉴사진/
+/밀플랜비_메뉴사진/
