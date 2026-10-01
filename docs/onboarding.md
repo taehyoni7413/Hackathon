@@ -7,6 +7,27 @@
 
 필요 도구: **Git, Python 3.10+, Node.js 20+**
 
+<details>
+<summary>🍎 macOS 사용자: 도구 설치 (처음 한 번)</summary>
+
+macOS 기본 `python3` 는 3.9 인 경우가 많아서 **새로 설치**해야 합니다. 터미널(⌘+Space → "터미널")에서:
+
+```bash
+# 1) Homebrew 가 없으면 설치 (https://brew.sh)
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+
+# 2) 도구 설치
+xcode-select --install          # git (이미 있으면 에러 메시지 무시)
+brew install python@3.12 node
+
+# 3) 확인
+python3.12 --version            # 3.12.x
+node --version                  # v20 이상
+```
+
+`setup.sh` 가 3.10 이상 Python 을 자동으로 찾아 씁니다. 버전이 낮으면 설치 명령을 안내하고 멈춥니다.
+</details>
+
 ```bash
 git clone https://github.com/taehyoni7413/Hackathon.git
 cd Hackathon
@@ -29,7 +50,7 @@ powershell -ExecutionPolicy Bypass -File scripts\dev.ps1   # Windows
 bash scripts/dev.sh                                         # macOS / Linux
 ```
 
-http://localhost:3000 에서 오른쪽 위에 **"백엔드 연결됨"** 이 보이면 성공.
+http://localhost:3000 에서 오른쪽 위에 **"백엔드 연결됨"** 이 보이면 성공. 끌 때는 터미널에서 `Ctrl+C` (맥도 `Ctrl+C`, ⌘ 아님).
 안 되면 단톡에 에러 메시지 캡처 공유.
 
 ## 2. 도착하면
