@@ -122,5 +122,14 @@
   "wait.hint": "사장님이 아래 이름을 부르면 받으러 가세요",
   "wait.received": "음식을 받았어요",
   "done.title": "맛있게 드세요!",
-  "done.backMap": "지도로 돌아가기"
+  "done.backMap": "지도로 돌아가기",
+  "coach.label": "AI 메뉴 코치",
+  "coach.question": "이 메뉴가 나에게 맞을까?",
+  "coach.ask": "AI에게 물어보기",
+  "coach.loading": "생각하는 중…",
+  "coach.retry": "다시 시도",
+  "coach.error": "AI 추천을 가져오지 못했어요.",
+  "coach.summary": "한 줄 요약",
+  "coach.goodFor": "이런 분께 추천",
+  "coach.notice": "주의"
 }

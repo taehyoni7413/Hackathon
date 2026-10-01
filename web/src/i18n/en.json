@@ -100,9 +100,9 @@
   "voice.done": "Done",
   "voice.toOwner": "To owner",
   "voice.translating": "Translating to Korean",
-  "voice.translateFail": "Couldn\u0027t translate. The owner will see your original words.",
+  "voice.translateFail": "Couldn't translate. The owner will see your original words.",
   "voice.denied": "Please allow microphone access",
-  "voice.error": "Couldn\u0027t recognize speech. Try again or type it.",
+  "voice.error": "Couldn't recognize speech. Try again or type it.",
   "voice.typePlaceholder": "e.g. No cilantro, please",
   "voice.add": "Add",
   "cart.title": "Cart",
@@ -122,5 +122,14 @@
   "wait.hint": "When the owner calls the name below, go pick it up",
   "wait.received": "I got my food",
   "done.title": "Enjoy your meal!",
-  "done.backMap": "Back to map"
+  "done.backMap": "Back to map",
+  "coach.label": "AI menu coach",
+  "coach.question": "Would this dish suit me?",
+  "coach.ask": "Ask AI",
+  "coach.loading": "Thinking…",
+  "coach.retry": "Try again",
+  "coach.error": "Couldn't get an AI suggestion.",
+  "coach.summary": "Summary",
+  "coach.goodFor": "Good for",
+  "coach.notice": "Note"
 }

@@ -102,7 +102,7 @@ cd web && npm run lint && npm run build
 | 프레임워크 | Next.js (create-next-app 기본 템플릿) | 프론트엔드 | https://nextjs.org |
 | 라이브러리 | Tailwind CSS | 스타일 | https://tailwindcss.com |
 | 라이브러리 | pandas, numpy, scikit-learn | 데이터 처리·모델 | https://scikit-learn.org |
-| API | OpenAI API (gpt-6-luna, text-embedding-3-small, 주최 측 제공) | 요청사항 한국어 번역(`/api/translate`), LLM 기능 | https://platform.openai.com/docs |
+| API | OpenAI API (gpt-6-luna, text-embedding-3-small, 주최 측 제공) | 요청사항 한국어 번역(`/api/translate`), AI 메뉴 코치(`/api/menu-insight`), LLM 기능 | https://platform.openai.com/docs |
 | AI 도구 | Claude Code | 코딩 보조 | https://claude.com/claude-code |
 | API | 카카오맵 JavaScript SDK | 지도·마커·경로선 표시 (프론트) | https://apis.map.kakao.com/web/ |
 | API | 카카오맵 길찾기 링크 (`map.kakao.com/link/to`) | 외부 길 안내 버튼 | https://apis.map.kakao.com/web/guide/#routeurl |

@@ -166,3 +166,27 @@ export async function getWalkingRoute(
 }
 
 export { SCHOOL_COORD };
+
+export type MenuInsight = { summary: string; recommended_for: string; notice: string };
+
+/**
+ * AI 메뉴 코치: 메뉴 정보 기반 한 줄 요약·추천 대상·주의사항 (백엔드 /api/menu-insight, gpt-6-luna).
+ * 백엔드 메뉴(숫자 id)만 가능. 실패하면 null.
+ */
+export async function getMenuInsight(
+  storeId: string,
+  menuId: string,
+  lang: string,
+): Promise<MenuInsight | null> {
+  const store_id = Number(storeId);
+  const menu_id = Number(menuId);
+  if (!Number.isInteger(store_id) || !Number.isInteger(menu_id)) return null;
+  try {
+    return await request<MenuInsight>("/menu-insight", {
+      method: "POST",
+      body: JSON.stringify({ store_id, menu_id, lang }),
+    });
+  } catch {
+    return null;
+  }
+}
