@@ -78,8 +78,12 @@ export type Menu = {
   translations: Partial<Record<Lang, { name: string; description?: string }>>;
   price: number;
   image_url: string | null;
+  /** 한국어 원문 (사장님 확인용) */
   ingredients: string[];
   allergens: string[];
+  /** 언어별 재료·알레르기 (없으면 한국어 원문) — localTerms() 로 꺼내 쓴다 */
+  ingredients_i18n?: Partial<Record<Lang, string[]>>;
+  allergens_i18n?: Partial<Record<Lang, string[]>>;
   contains_pork: boolean | null;
   contains_alcohol: boolean | null;
   halal: Tri;
@@ -114,3 +118,9 @@ export type RouteResult = {
   duration_s: number;
   source: "backend" | "osrm" | "straight";
 };
+
+/** 재료·알레르기를 화면 언어로 (번역이 없거나 개수가 안 맞으면 한국어 원문) */
+export function localTerms(ko: string[], i18n: Partial<Record<Lang, string[]>> | undefined, lang: Lang): string[] {
+  const t = lang === "ko" ? undefined : i18n?.[lang];
+  return t && t.length === ko.length ? t : ko;
+}

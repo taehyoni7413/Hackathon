@@ -84,6 +84,8 @@ export function adaptMenu(m: BackendMenu, index: number): Menu {
     image_url: m.image_url || null,
     ingredients: m.ingredients ?? [],
     allergens: m.allergens ?? [],
+    ingredients_i18n: m.ingredients_i18n,
+    allergens_i18n: m.allergens_i18n,
     contains_pork: m.contains_pork ?? null,
     contains_alcohol: m.contains_alcohol ?? null,
     halal: toTri(m.halal),

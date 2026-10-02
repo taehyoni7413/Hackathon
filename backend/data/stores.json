@@ -6,14 +6,19 @@
     "lat": 36.9489305165078,
     "lng": 127.903216045866,
     "description": {
-      "ko": "맛있는 집",
-      "en": "A local favorite with tasty food"
+      "ko": "파스타·덮밥·전골과 하이볼을 즐기는 퓨전 요리 주점",
+      "zh": "可以享用意面、盖饭、火锅和嗨棒的融合料理餐酒馆",
+      "en": "Fusion bistro with pasta, rice bowls, hot pots and highballs"
     },
     "open_hours": {},
     "image_url": "/stores/1/menu/001.png",
     "category": "fusion",
     "menu_board_images": [],
-    "kakao_category": "음식점 > 퓨전요리"
+    "kakao_category": "음식점 > 퓨전요리",
+    "names": {
+      "zh": "Appro",
+      "en": "Appro"
+    }
   },
   {
     "id": 2,
@@ -22,8 +27,9 @@
     "lat": 36.9499189724636,
     "lng": 127.904116649718,
     "description": {
-      "ko": "샌드위치집",
-      "en": "Sandwich shop"
+      "ko": "부리또·핫도그 전문점 (콜라·감자튀김 세트 있음)",
+      "zh": "墨西哥卷饼和热狗专卖店（有可乐、薯条套餐）",
+      "en": "Burritos and hot dogs, with cola & fries combo sets"
     },
     "open_hours": {},
     "image_url": "/stores/2/menu/047.jpg",
@@ -31,7 +37,11 @@
     "menu_board_images": [
       "/stores/2/menu_board_01.png"
     ],
-    "kakao_category": "음식점 > 양식 > 멕시칸,브라질"
+    "kakao_category": "음식점 > 양식 > 멕시칸,브라질",
+    "names": {
+      "zh": "Meal Plan B 忠州建国大学店",
+      "en": "Meal Plan B (Konkuk Univ. Chungju)"
+    }
   },
   {
     "id": 3,
@@ -40,8 +50,9 @@
     "lat": 36.9489978151753,
     "lng": 127.904093637669,
     "description": {
-      "ko": "라멘 맛집",
-      "en": "Popular ramen restaurant"
+      "ko": "돈코츠 라멘·소바·카츠 전문 일식당",
+      "zh": "主打豚骨拉面、拌面和炸猪排的日式餐厅",
+      "en": "Japanese spot for tonkotsu ramen, soba and katsu"
     },
     "open_hours": {},
     "image_url": "/stores/3/menu/059.jpg",
@@ -49,6 +60,10 @@
     "menu_board_images": [
       "/stores/3/menu_board_01.jpg"
     ],
-    "kakao_category": "음식점 > 일식"
+    "kakao_category": "음식점 > 일식",
+    "names": {
+      "zh": "面食堂 忠州建国大学店",
+      "en": "Myeon Sikdang (Konkuk Univ. Chungju)"
+    }
   }
 ]
