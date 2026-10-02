@@ -3,7 +3,7 @@
 import { BeerStein, Info, Pepper, Pig, SealCheck } from "@/components/Icon";
 import { useApp } from "@/context/AppContext";
 import type { MessageKey } from "@/i18n";
-import type { Menu, Tri } from "@/types/models";
+import { localTerms, type Menu, type Tri } from "@/types/models";
 
 type Tone = "bad" | "good" | "warn" | "neutral";
 
@@ -46,7 +46,7 @@ function TriBadge({ label, value }: { label: string; value: Tri }) {
  * 목록에서는 판단에 바로 쓰이는 것만: 돼지고기·술(주의), 비건 가능(안심), 맵기
  */
 export function DietBadges({ menu, detail }: { menu: Menu; detail?: boolean }) {
-  const { t } = useApp();
+  const { lang, t } = useApp();
   if (!detail) {
     return (
       <div className="flex flex-wrap gap-1">
@@ -72,7 +72,7 @@ export function DietBadges({ menu, detail }: { menu: Menu; detail?: boolean }) {
         <Peppers n={Math.max(1, menu.spicy)} /> {t(`diet.spicy${menu.spicy}` as MessageKey)}
       </Badge>
       {detail && menu.allergens.length > 0 && (
-        <Badge tone="warn">{t("diet.allergens", { list: menu.allergens.join(", ") })}</Badge>
+        <Badge tone="warn">{t("diet.allergens", { list: localTerms(menu.allergens, menu.allergens_i18n, lang).join(lang === "zh" ? "、" : ", ") })}</Badge>
       )}
     </div>
   );

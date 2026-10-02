@@ -12,7 +12,7 @@ import { useApp } from "@/context/AppContext";
 import { pickText } from "@/i18n";
 import { unitPrice } from "@/lib/cart";
 import { formatPrice } from "@/lib/format";
-import type { CustomRequest, Menu } from "@/types/models";
+import { localTerms, type CustomRequest, type Menu } from "@/types/models";
 
 /** 메뉴 상세: 수량·요청사항 선택 후 장바구니 담기 */
 export function MenuDetailSheet({
@@ -86,7 +86,7 @@ export function MenuDetailSheet({
 
           {menu.ingredients.length > 0 && (
             <p className="mt-4 text-sm text-zinc-600">
-              <span className="font-semibold">{t("menu.ingredients")}</span> · {menu.ingredients.join(", ")}
+              <span className="font-semibold">{t("menu.ingredients")}</span> · {localTerms(menu.ingredients, menu.ingredients_i18n, lang).join(lang === "zh" ? "、" : ", ")}
             </p>
           )}
 

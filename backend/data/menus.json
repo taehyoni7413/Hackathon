@@ -40,7 +40,31 @@
     "halal": "unknown",
     "vegan": "no",
     "spicy": 0,
-    "options": []
+    "options": [],
+    "ingredients_i18n": {
+      "zh": [
+        "鸡肉",
+        "酸奶",
+        "蛋黄酱",
+        "香草"
+      ],
+      "en": [
+        "chicken",
+        "yogurt",
+        "mayonnaise",
+        "herbs"
+      ]
+    },
+    "allergens_i18n": {
+      "zh": [
+        "牛奶",
+        "鸡蛋"
+      ],
+      "en": [
+        "milk",
+        "egg"
+      ]
+    }
   },
   {
     "id": 2,
@@ -84,7 +108,33 @@
     "halal": "no",
     "vegan": "no",
     "spicy": 0,
-    "options": []
+    "options": [],
+    "ingredients_i18n": {
+      "zh": [
+        "鸡肉",
+        "面粉",
+        "鸡蛋",
+        "酱油"
+      ],
+      "en": [
+        "chicken",
+        "flour",
+        "egg",
+        "soy sauce"
+      ]
+    },
+    "allergens_i18n": {
+      "zh": [
+        "小麦",
+        "鸡蛋",
+        "大豆"
+      ],
+      "en": [
+        "wheat",
+        "egg",
+        "soybeans"
+      ]
+    }
   },
   {
     "id": 3,
@@ -137,7 +187,31 @@
           "en": "No green onion"
         }
       }
-    ]
+    ],
+    "ingredients_i18n": {
+      "zh": [
+        "鸡肉",
+        "锅巴",
+        "蘑菇",
+        "大葱",
+        "酱油"
+      ],
+      "en": [
+        "chicken",
+        "scorched rice",
+        "mushrooms",
+        "green onion",
+        "soy sauce"
+      ]
+    },
+    "allergens_i18n": {
+      "zh": [
+        "大豆"
+      ],
+      "en": [
+        "soybeans"
+      ]
+    }
   },
   {
     "id": 4,
@@ -190,7 +264,31 @@
           "en": "No green onion"
         }
       }
-    ]
+    ],
+    "ingredients_i18n": {
+      "zh": [
+        "大酱",
+        "锅巴",
+        "豆腐",
+        "大葱"
+      ],
+      "en": [
+        "doenjang",
+        "scorched rice",
+        "tofu",
+        "green onion"
+      ]
+    },
+    "allergens_i18n": {
+      "zh": [
+        "大豆",
+        "小麦"
+      ],
+      "en": [
+        "soybeans",
+        "wheat"
+      ]
+    }
   },
   {
     "id": 5,
@@ -234,7 +332,33 @@
     "halal": "yes",
     "vegan": "yes",
     "spicy": 0,
-    "options": []
+    "options": [],
+    "ingredients_i18n": {
+      "zh": [
+        "荞麦面",
+        "紫苏油",
+        "酱油",
+        "海苔"
+      ],
+      "en": [
+        "buckwheat noodles",
+        "perilla oil",
+        "soy sauce",
+        "seaweed"
+      ]
+    },
+    "allergens_i18n": {
+      "zh": [
+        "荞麦",
+        "大豆",
+        "小麦"
+      ],
+      "en": [
+        "buckwheat",
+        "soybeans",
+        "wheat"
+      ]
+    }
   },
   {
     "id": 6,
@@ -289,7 +413,35 @@
           "en": "No onion"
         }
       }
-    ]
+    ],
+    "ingredients_i18n": {
+      "zh": [
+        "年糕",
+        "肉酱",
+        "番茄",
+        "洋葱",
+        "奶酪"
+      ],
+      "en": [
+        "rice cake",
+        "ragu sauce",
+        "tomato",
+        "onion",
+        "cheese"
+      ]
+    },
+    "allergens_i18n": {
+      "zh": [
+        "小麦",
+        "大豆",
+        "牛奶"
+      ],
+      "en": [
+        "wheat",
+        "soybeans",
+        "milk"
+      ]
+    }
   },
   {
     "id": 7,
@@ -333,7 +485,33 @@
     "halal": "no",
     "vegan": "no",
     "spicy": 0,
-    "options": []
+    "options": [],
+    "ingredients_i18n": {
+      "zh": [
+        "短意面",
+        "肉酱",
+        "番茄",
+        "牛肉",
+        "奶酪"
+      ],
+      "en": [
+        "short pasta",
+        "ragu sauce",
+        "tomato",
+        "beef",
+        "cheese"
+      ]
+    },
+    "allergens_i18n": {
+      "zh": [
+        "小麦",
+        "牛奶"
+      ],
+      "en": [
+        "wheat",
+        "milk"
+      ]
+    }
   },
   {
     "id": 8,
@@ -375,7 +553,29 @@
     "halal": "no",
     "vegan": "no",
     "spicy": 0,
-    "options": []
+    "options": [],
+    "ingredients_i18n": {
+      "zh": [
+        "土豆",
+        "肉酱",
+        "番茄",
+        "奶酪"
+      ],
+      "en": [
+        "potato",
+        "ragu sauce",
+        "tomato",
+        "cheese"
+      ]
+    },
+    "allergens_i18n": {
+      "zh": [
+        "牛奶"
+      ],
+      "en": [
+        "milk"
+      ]
+    }
   },
   {
     "id": 9,
@@ -448,7 +648,35 @@
           "en": "No onion"
         }
       }
-    ]
+    ],
+    "ingredients_i18n": {
+      "zh": [
+        "牛肉",
+        "米饭",
+        "洋葱",
+        "酱油",
+        "韩式辣椒酱"
+      ],
+      "en": [
+        "beef",
+        "rice",
+        "onion",
+        "soy sauce",
+        "gochujang"
+      ]
+    },
+    "allergens_i18n": {
+      "zh": [
+        "牛肉",
+        "大豆",
+        "小麦"
+      ],
+      "en": [
+        "beef",
+        "soybeans",
+        "wheat"
+      ]
+    }
   },
   {
     "id": 10,
@@ -511,7 +739,33 @@
           "en": "Not spicy"
         }
       }
-    ]
+    ],
+    "ingredients_i18n": {
+      "zh": [
+        "意大利面",
+        "虾",
+        "大蒜",
+        "辣椒",
+        "橄榄油"
+      ],
+      "en": [
+        "pasta",
+        "shrimp",
+        "garlic",
+        "chili pepper",
+        "olive oil"
+      ]
+    },
+    "allergens_i18n": {
+      "zh": [
+        "小麦",
+        "虾"
+      ],
+      "en": [
+        "wheat",
+        "shrimp"
+      ]
+    }
   },
   {
     "id": 11,
@@ -575,7 +829,35 @@
           "en": "Not spicy"
         }
       }
-    ]
+    ],
+    "ingredients_i18n": {
+      "zh": [
+        "意大利面",
+        "蟹肉",
+        "奶油",
+        "大蒜",
+        "辣椒"
+      ],
+      "en": [
+        "pasta",
+        "crab meat",
+        "cream",
+        "garlic",
+        "chili pepper"
+      ]
+    },
+    "allergens_i18n": {
+      "zh": [
+        "小麦",
+        "螃蟹",
+        "牛奶"
+      ],
+      "en": [
+        "wheat",
+        "crab",
+        "milk"
+      ]
+    }
   },
   {
     "id": 12,
@@ -638,7 +920,33 @@
           "en": "Not spicy"
         }
       }
-    ]
+    ],
+    "ingredients_i18n": {
+      "zh": [
+        "牛大肠",
+        "大米",
+        "韩式辣椒酱",
+        "酱油",
+        "大蒜"
+      ],
+      "en": [
+        "beef large intestine",
+        "rice",
+        "gochujang",
+        "soy sauce",
+        "garlic"
+      ]
+    },
+    "allergens_i18n": {
+      "zh": [
+        "大豆",
+        "小麦"
+      ],
+      "en": [
+        "soybeans",
+        "wheat"
+      ]
+    }
   },
   {
     "id": 13,
@@ -710,7 +1018,33 @@
           "en": "No onion"
         }
       }
-    ]
+    ],
+    "ingredients_i18n": {
+      "zh": [
+        "猪肉",
+        "大米",
+        "烧烤酱",
+        "洋葱",
+        "大蒜"
+      ],
+      "en": [
+        "pork",
+        "rice",
+        "barbecue sauce",
+        "onion",
+        "garlic"
+      ]
+    },
+    "allergens_i18n": {
+      "zh": [
+        "大豆",
+        "小麦"
+      ],
+      "en": [
+        "soybeans",
+        "wheat"
+      ]
+    }
   },
   {
     "id": 14,
@@ -754,7 +1088,33 @@
     "halal": "unknown",
     "vegan": "no",
     "spicy": 0,
-    "options": []
+    "options": [],
+    "ingredients_i18n": {
+      "zh": [
+        "意大利面条",
+        "明太鱼籽",
+        "鲜奶油",
+        "大蒜",
+        "黄油"
+      ],
+      "en": [
+        "pasta noodles",
+        "pollock roe",
+        "cream",
+        "garlic",
+        "butter"
+      ]
+    },
+    "allergens_i18n": {
+      "zh": [
+        "小麦",
+        "牛奶"
+      ],
+      "en": [
+        "wheat",
+        "milk"
+      ]
+    }
   },
   {
     "id": 15,
@@ -798,7 +1158,33 @@
     "halal": "unknown",
     "vegan": "no",
     "spicy": 0,
-    "options": []
+    "options": [],
+    "ingredients_i18n": {
+      "zh": [
+        "意大利面条",
+        "明太鱼籽",
+        "黄油",
+        "橄榄油",
+        "大蒜"
+      ],
+      "en": [
+        "pasta noodles",
+        "pollock roe",
+        "butter",
+        "olive oil",
+        "garlic"
+      ]
+    },
+    "allergens_i18n": {
+      "zh": [
+        "小麦",
+        "牛奶"
+      ],
+      "en": [
+        "wheat",
+        "milk"
+      ]
+    }
   },
   {
     "id": 16,
@@ -852,7 +1238,33 @@
           "en": "No onion"
         }
       }
-    ]
+    ],
+    "ingredients_i18n": {
+      "zh": [
+        "牛肉",
+        "大米",
+        "洋葱",
+        "酱油",
+        "糖"
+      ],
+      "en": [
+        "beef",
+        "rice",
+        "onion",
+        "soy sauce",
+        "sugar"
+      ]
+    },
+    "allergens_i18n": {
+      "zh": [
+        "大豆",
+        "小麦"
+      ],
+      "en": [
+        "soybeans",
+        "wheat"
+      ]
+    }
   },
   {
     "id": 17,
@@ -897,7 +1309,35 @@
     "halal": "yes",
     "vegan": "no",
     "spicy": 0,
-    "options": []
+    "options": [],
+    "ingredients_i18n": {
+      "zh": [
+        "短意面",
+        "虾",
+        "罗勒",
+        "鲜奶油",
+        "大蒜"
+      ],
+      "en": [
+        "short pasta",
+        "shrimp",
+        "basil",
+        "cream",
+        "garlic"
+      ]
+    },
+    "allergens_i18n": {
+      "zh": [
+        "小麦",
+        "虾",
+        "牛奶"
+      ],
+      "en": [
+        "wheat",
+        "shrimp",
+        "milk"
+      ]
+    }
   },
   {
     "id": 18,
@@ -959,7 +1399,31 @@
           "en": "Not spicy"
         }
       }
-    ]
+    ],
+    "ingredients_i18n": {
+      "zh": [
+        "意大利面条",
+        "橄榄油",
+        "大蒜",
+        "意大利辣椒",
+        "欧芹"
+      ],
+      "en": [
+        "pasta noodles",
+        "olive oil",
+        "garlic",
+        "peperoncino",
+        "parsley"
+      ]
+    },
+    "allergens_i18n": {
+      "zh": [
+        "小麦"
+      ],
+      "en": [
+        "wheat"
+      ]
+    }
   },
   {
     "id": 19,
@@ -1004,7 +1468,35 @@
     "halal": "unknown",
     "vegan": "no",
     "spicy": 0,
-    "options": []
+    "options": [],
+    "ingredients_i18n": {
+      "zh": [
+        "玉米",
+        "面粉",
+        "鸡蛋",
+        "奶酪",
+        "糖"
+      ],
+      "en": [
+        "corn",
+        "flour",
+        "egg",
+        "cheese",
+        "sugar"
+      ]
+    },
+    "allergens_i18n": {
+      "zh": [
+        "小麦",
+        "鸡蛋",
+        "牛奶"
+      ],
+      "en": [
+        "wheat",
+        "egg",
+        "milk"
+      ]
+    }
   },
   {
     "id": 20,
@@ -1050,7 +1542,37 @@
     "halal": "no",
     "vegan": "no",
     "spicy": 0,
-    "options": []
+    "options": [],
+    "ingredients_i18n": {
+      "zh": [
+        "意大利面",
+        "法式火腿",
+        "鲜奶油",
+        "鸡蛋",
+        "帕尔马奶酪"
+      ],
+      "en": [
+        "pasta",
+        "jambon",
+        "cream",
+        "egg",
+        "parmesan cheese"
+      ]
+    },
+    "allergens_i18n": {
+      "zh": [
+        "小麦",
+        "猪肉",
+        "牛奶",
+        "鸡蛋"
+      ],
+      "en": [
+        "wheat",
+        "pork",
+        "milk",
+        "egg"
+      ]
+    }
   },
   {
     "id": 21,
@@ -1114,7 +1636,35 @@
           "en": "Not spicy"
         }
       }
-    ]
+    ],
+    "ingredients_i18n": {
+      "zh": [
+        "土豆",
+        "奶酪",
+        "面粉",
+        "鸡蛋",
+        "墨西哥烟熏辣椒"
+      ],
+      "en": [
+        "potato",
+        "cheese",
+        "flour",
+        "egg",
+        "chipotle"
+      ]
+    },
+    "allergens_i18n": {
+      "zh": [
+        "小麦",
+        "牛奶",
+        "鸡蛋"
+      ],
+      "en": [
+        "wheat",
+        "milk",
+        "egg"
+      ]
+    }
   },
   {
     "id": 22,
@@ -1157,7 +1707,31 @@
     "halal": "unknown",
     "vegan": "no",
     "spicy": 0,
-    "options": []
+    "options": [],
+    "ingredients_i18n": {
+      "zh": [
+        "披萨饼底",
+        "玉米",
+        "奶酪",
+        "番茄酱"
+      ],
+      "en": [
+        "pizza dough",
+        "corn",
+        "cheese",
+        "tomato sauce"
+      ]
+    },
+    "allergens_i18n": {
+      "zh": [
+        "小麦",
+        "牛奶"
+      ],
+      "en": [
+        "wheat",
+        "milk"
+      ]
+    }
   },
   {
     "id": 23,
@@ -1211,7 +1785,33 @@
           "en": "No onion"
         }
       }
-    ]
+    ],
+    "ingredients_i18n": {
+      "zh": [
+        "鸡肉",
+        "鲜奶油",
+        "土豆",
+        "洋葱",
+        "胡萝卜"
+      ],
+      "en": [
+        "chicken",
+        "cream",
+        "potato",
+        "onion",
+        "carrot"
+      ]
+    },
+    "allergens_i18n": {
+      "zh": [
+        "鸡肉",
+        "牛奶"
+      ],
+      "en": [
+        "chicken",
+        "milk"
+      ]
+    }
   },
   {
     "id": 24,
@@ -1284,7 +1884,35 @@
           "en": "No green onion"
         }
       }
-    ]
+    ],
+    "ingredients_i18n": {
+      "zh": [
+        "五花肉",
+        "泡菜",
+        "豆腐",
+        "大葱",
+        "辣椒粉"
+      ],
+      "en": [
+        "pork belly",
+        "kimchi",
+        "tofu",
+        "green onion",
+        "chili powder"
+      ]
+    },
+    "allergens_i18n": {
+      "zh": [
+        "猪肉",
+        "大豆",
+        "虾"
+      ],
+      "en": [
+        "pork",
+        "soybeans",
+        "shrimp"
+      ]
+    }
   },
   {
     "id": 25,
@@ -1328,7 +1956,33 @@
     "halal": "unknown",
     "vegan": "no",
     "spicy": 0,
-    "options": []
+    "options": [],
+    "ingredients_i18n": {
+      "zh": [
+        "意大利面",
+        "蘑菇",
+        "松露油",
+        "橄榄油",
+        "帕尔马奶酪"
+      ],
+      "en": [
+        "pasta",
+        "mushrooms",
+        "truffle oil",
+        "olive oil",
+        "parmesan cheese"
+      ]
+    },
+    "allergens_i18n": {
+      "zh": [
+        "小麦",
+        "牛奶"
+      ],
+      "en": [
+        "wheat",
+        "milk"
+      ]
+    }
   },
   {
     "id": 26,
@@ -1371,7 +2025,31 @@
     "halal": "no",
     "vegan": "no",
     "spicy": 0,
-    "options": []
+    "options": [],
+    "ingredients_i18n": {
+      "zh": [
+        "土豆",
+        "法式火腿",
+        "松露油",
+        "帕尔马奶酪"
+      ],
+      "en": [
+        "potato",
+        "jambon",
+        "truffle oil",
+        "parmesan cheese"
+      ]
+    },
+    "allergens_i18n": {
+      "zh": [
+        "猪肉",
+        "牛奶"
+      ],
+      "en": [
+        "pork",
+        "milk"
+      ]
+    }
   },
   {
     "id": 27,
@@ -1416,7 +2094,35 @@
     "halal": "unknown",
     "vegan": "no",
     "spicy": 0,
-    "options": []
+    "options": [],
+    "ingredients_i18n": {
+      "zh": [
+        "短意面",
+        "肉末",
+        "鲜奶油",
+        "蘑菇",
+        "松露油"
+      ],
+      "en": [
+        "short pasta",
+        "minced meat",
+        "cream",
+        "mushrooms",
+        "truffle oil"
+      ]
+    },
+    "allergens_i18n": {
+      "zh": [
+        "小麦",
+        "牛奶",
+        "猪肉"
+      ],
+      "en": [
+        "wheat",
+        "milk",
+        "pork"
+      ]
+    }
   },
   {
     "id": 28,
@@ -1461,7 +2167,35 @@
     "halal": "unknown",
     "vegan": "no",
     "spicy": 0,
-    "options": []
+    "options": [],
+    "ingredients_i18n": {
+      "zh": [
+        "韩牛",
+        "苏子叶",
+        "梨",
+        "酱油",
+        "蛋黄"
+      ],
+      "en": [
+        "korean beef",
+        "perilla leaves",
+        "pear",
+        "soy sauce",
+        "egg yolk"
+      ]
+    },
+    "allergens_i18n": {
+      "zh": [
+        "牛肉",
+        "大豆",
+        "鸡蛋"
+      ],
+      "en": [
+        "beef",
+        "soybeans",
+        "egg"
+      ]
+    }
   },
   {
     "id": 29,
@@ -1524,7 +2258,33 @@
           "en": "Not spicy"
         }
       }
-    ]
+    ],
+    "ingredients_i18n": {
+      "zh": [
+        "韩牛大肠",
+        "大酱",
+        "酱油",
+        "蔬菜"
+      ],
+      "en": [
+        "korean beef large intestine",
+        "doenjang",
+        "soy sauce",
+        "vegetables"
+      ]
+    },
+    "allergens_i18n": {
+      "zh": [
+        "小麦",
+        "大豆",
+        "牛肉"
+      ],
+      "en": [
+        "wheat",
+        "soybeans",
+        "beef"
+      ]
+    }
   },
   {
     "id": 30,
@@ -1563,7 +2323,23 @@
     "halal": "no",
     "vegan": "no",
     "spicy": 0,
-    "options": []
+    "options": [],
+    "ingredients_i18n": {
+      "zh": [
+        "猪肉",
+        "盐",
+        "胡椒"
+      ],
+      "en": [
+        "pork",
+        "salt",
+        "pepper"
+      ]
+    },
+    "allergens_i18n": {
+      "zh": [],
+      "en": []
+    }
   },
   {
     "id": 31,
@@ -1606,7 +2382,31 @@
     "halal": "no",
     "vegan": "no",
     "spicy": 0,
-    "options": []
+    "options": [],
+    "ingredients_i18n": {
+      "zh": [
+        "猪肉",
+        "绿豆芽",
+        "大米",
+        "酱油"
+      ],
+      "en": [
+        "pork",
+        "mung bean sprouts",
+        "rice",
+        "soy sauce"
+      ]
+    },
+    "allergens_i18n": {
+      "zh": [
+        "小麦",
+        "大豆"
+      ],
+      "en": [
+        "wheat",
+        "soybeans"
+      ]
+    }
   },
   {
     "id": 32,
@@ -1646,7 +2446,25 @@
     "halal": "unknown",
     "vegan": "no",
     "spicy": 0,
-    "options": []
+    "options": [],
+    "ingredients_i18n": {
+      "zh": [
+        "鸡肉",
+        "盐",
+        "胡椒",
+        "烟熏风味"
+      ],
+      "en": [
+        "chicken",
+        "salt",
+        "pepper",
+        "smoke flavor"
+      ]
+    },
+    "allergens_i18n": {
+      "zh": [],
+      "en": []
+    }
   },
   {
     "id": 33,
@@ -1709,7 +2527,33 @@
           "en": "Not spicy"
         }
       }
-    ]
+    ],
+    "ingredients_i18n": {
+      "zh": [
+        "鸡肉",
+        "奶酪",
+        "韩式辣椒酱",
+        "酱油"
+      ],
+      "en": [
+        "chicken",
+        "cheese",
+        "gochujang",
+        "soy sauce"
+      ]
+    },
+    "allergens_i18n": {
+      "zh": [
+        "牛奶",
+        "小麦",
+        "大豆"
+      ],
+      "en": [
+        "milk",
+        "wheat",
+        "soybeans"
+      ]
+    }
   },
   {
     "id": 34,
@@ -1781,7 +2625,33 @@
           "en": "No onion"
         }
       }
-    ]
+    ],
+    "ingredients_i18n": {
+      "zh": [
+        "鸡肉",
+        "大米",
+        "洋葱",
+        "番茄",
+        "咖喱"
+      ],
+      "en": [
+        "chicken",
+        "rice",
+        "onion",
+        "tomato",
+        "curry"
+      ]
+    },
+    "allergens_i18n": {
+      "zh": [
+        "小麦",
+        "大豆"
+      ],
+      "en": [
+        "wheat",
+        "soybeans"
+      ]
+    }
   },
   {
     "id": 35,
@@ -1853,7 +2723,33 @@
           "en": "No onion"
         }
       }
-    ]
+    ],
+    "ingredients_i18n": {
+      "zh": [
+        "鸡肉",
+        "短意面",
+        "洋葱",
+        "番茄",
+        "咖喱"
+      ],
+      "en": [
+        "chicken",
+        "short pasta",
+        "onion",
+        "tomato",
+        "curry"
+      ]
+    },
+    "allergens_i18n": {
+      "zh": [
+        "小麦",
+        "大豆"
+      ],
+      "en": [
+        "wheat",
+        "soybeans"
+      ]
+    }
   },
   {
     "id": 36,
@@ -1897,7 +2793,33 @@
     "halal": "no",
     "vegan": "no",
     "spicy": 0,
-    "options": []
+    "options": [],
+    "ingredients_i18n": {
+      "zh": [
+        "猪肉",
+        "荞麦面",
+        "紫苏油",
+        "酱油"
+      ],
+      "en": [
+        "pork",
+        "buckwheat noodles",
+        "perilla oil",
+        "soy sauce"
+      ]
+    },
+    "allergens_i18n": {
+      "zh": [
+        "荞麦",
+        "大豆",
+        "小麦"
+      ],
+      "en": [
+        "buckwheat",
+        "soybeans",
+        "wheat"
+      ]
+    }
   },
   {
     "id": 37,
@@ -1950,7 +2872,31 @@
           "en": "No onion"
         }
       }
-    ]
+    ],
+    "ingredients_i18n": {
+      "zh": [
+        "猪肉",
+        "大米",
+        "酱油",
+        "洋葱"
+      ],
+      "en": [
+        "pork",
+        "rice",
+        "soy sauce",
+        "onion"
+      ]
+    },
+    "allergens_i18n": {
+      "zh": [
+        "小麦",
+        "大豆"
+      ],
+      "en": [
+        "wheat",
+        "soybeans"
+      ]
+    }
   },
   {
     "id": 38,
@@ -1992,7 +2938,29 @@
     "halal": "no",
     "vegan": "no",
     "spicy": 0,
-    "options": []
+    "options": [],
+    "ingredients_i18n": {
+      "zh": [
+        "烧酒",
+        "荔枝",
+        "牛奶",
+        "气泡水"
+      ],
+      "en": [
+        "soju",
+        "lychee",
+        "milk",
+        "sparkling water"
+      ]
+    },
+    "allergens_i18n": {
+      "zh": [
+        "牛奶"
+      ],
+      "en": [
+        "milk"
+      ]
+    }
   },
   {
     "id": 39,
@@ -2032,7 +3000,25 @@
     "halal": "no",
     "vegan": "yes",
     "spicy": 0,
-    "options": []
+    "options": [],
+    "ingredients_i18n": {
+      "zh": [
+        "薄荷",
+        "青柠",
+        "苏打水",
+        "酒类"
+      ],
+      "en": [
+        "mint",
+        "lime",
+        "soda water",
+        "alcohol"
+      ]
+    },
+    "allergens_i18n": {
+      "zh": [],
+      "en": []
+    }
   },
   {
     "id": 40,
@@ -2073,7 +3059,27 @@
     "halal": "no",
     "vegan": "unknown",
     "spicy": 0,
-    "options": []
+    "options": [],
+    "ingredients_i18n": {
+      "zh": [
+        "橘子",
+        "雪葩",
+        "烧酒",
+        "气泡水",
+        "糖"
+      ],
+      "en": [
+        "mandarin",
+        "sherbet",
+        "soju",
+        "sparkling water",
+        "sugar"
+      ]
+    },
+    "allergens_i18n": {
+      "zh": [],
+      "en": []
+    }
   },
   {
     "id": 41,
@@ -2113,7 +3119,25 @@
     "halal": "no",
     "vegan": "yes",
     "spicy": 0,
-    "options": []
+    "options": [],
+    "ingredients_i18n": {
+      "zh": [
+        "柠檬",
+        "烧酒",
+        "气泡水",
+        "糖浆"
+      ],
+      "en": [
+        "lemon",
+        "soju",
+        "sparkling water",
+        "syrup"
+      ]
+    },
+    "allergens_i18n": {
+      "zh": [],
+      "en": []
+    }
   },
   {
     "id": 42,
@@ -2153,7 +3177,25 @@
     "halal": "no",
     "vegan": "yes",
     "spicy": 0,
-    "options": []
+    "options": [],
+    "ingredients_i18n": {
+      "zh": [
+        "阳光玫瑰葡萄",
+        "烧酒",
+        "气泡水",
+        "糖浆"
+      ],
+      "en": [
+        "shine muscat grapes",
+        "soju",
+        "sparkling water",
+        "syrup"
+      ]
+    },
+    "allergens_i18n": {
+      "zh": [],
+      "en": []
+    }
   },
   {
     "id": 43,
@@ -2193,7 +3235,25 @@
     "halal": "no",
     "vegan": "yes",
     "spicy": 0,
-    "options": []
+    "options": [],
+    "ingredients_i18n": {
+      "zh": [
+        "伯爵茶",
+        "威士忌",
+        "气泡水",
+        "柠檬"
+      ],
+      "en": [
+        "earl grey",
+        "whiskey",
+        "sparkling water",
+        "lemon"
+      ]
+    },
+    "allergens_i18n": {
+      "zh": [],
+      "en": []
+    }
   },
   {
     "id": 44,
@@ -2233,7 +3293,25 @@
     "halal": "no",
     "vegan": "yes",
     "spicy": 0,
-    "options": []
+    "options": [],
+    "ingredients_i18n": {
+      "zh": [
+        "柚子",
+        "烧酒",
+        "气泡水",
+        "糖浆"
+      ],
+      "en": [
+        "yuzu",
+        "soju",
+        "sparkling water",
+        "syrup"
+      ]
+    },
+    "allergens_i18n": {
+      "zh": [],
+      "en": []
+    }
   },
   {
     "id": 45,
@@ -2273,7 +3351,25 @@
     "halal": "no",
     "vegan": "yes",
     "spicy": 0,
-    "options": []
+    "options": [],
+    "ingredients_i18n": {
+      "zh": [
+        "威士忌",
+        "桃子利口酒",
+        "气泡水",
+        "糖浆"
+      ],
+      "en": [
+        "whiskey",
+        "peach liqueur",
+        "sparkling water",
+        "syrup"
+      ]
+    },
+    "allergens_i18n": {
+      "zh": [],
+      "en": []
+    }
   },
   {
     "id": 46,
@@ -2314,7 +3410,27 @@
     "halal": "no",
     "vegan": "unknown",
     "spicy": 0,
-    "options": []
+    "options": [],
+    "ingredients_i18n": {
+      "zh": [
+        "白桃",
+        "烧酒",
+        "气泡水"
+      ],
+      "en": [
+        "white peach",
+        "soju",
+        "sparkling water"
+      ]
+    },
+    "allergens_i18n": {
+      "zh": [
+        "桃子"
+      ],
+      "en": [
+        "peach"
+      ]
+    }
   },
   {
     "id": 47,
@@ -2400,7 +3516,35 @@
           "en": "Not spicy"
         }
       }
-    ]
+    ],
+    "ingredients_i18n": {
+      "zh": [
+        "虾",
+        "土豆",
+        "米饭",
+        "小麦玉米饼",
+        "酱汁"
+      ],
+      "en": [
+        "shrimp",
+        "potato",
+        "cooked rice",
+        "wheat tortilla",
+        "sauce"
+      ]
+    },
+    "allergens_i18n": {
+      "zh": [
+        "小麦",
+        "虾",
+        "大豆"
+      ],
+      "en": [
+        "wheat",
+        "shrimp",
+        "soybeans"
+      ]
+    }
   },
   {
     "id": 48,
@@ -2486,7 +3630,35 @@
           "en": "Not spicy"
         }
       }
-    ]
+    ],
+    "ingredients_i18n": {
+      "zh": [
+        "牛肉培根",
+        "米饭",
+        "小麦玉米饼",
+        "蔬菜",
+        "酱汁"
+      ],
+      "en": [
+        "beef bacon",
+        "cooked rice",
+        "wheat tortilla",
+        "vegetables",
+        "sauce"
+      ]
+    },
+    "allergens_i18n": {
+      "zh": [
+        "小麦",
+        "大豆",
+        "牛肉"
+      ],
+      "en": [
+        "wheat",
+        "soybeans",
+        "beef"
+      ]
+    }
   },
   {
     "id": 49,
@@ -2552,7 +3724,31 @@
         },
         "price_delta": 4000
       }
-    ]
+    ],
+    "ingredients_i18n": {
+      "zh": [
+        "猪肉",
+        "香肠",
+        "香料",
+        "食用油"
+      ],
+      "en": [
+        "pork",
+        "sausage",
+        "spices",
+        "cooking oil"
+      ]
+    },
+    "allergens_i18n": {
+      "zh": [
+        "猪肉",
+        "大豆"
+      ],
+      "en": [
+        "pork",
+        "soybeans"
+      ]
+    }
   },
   {
     "id": 50,
@@ -2620,7 +3816,35 @@
         },
         "price_delta": 4000
       }
-    ]
+    ],
+    "ingredients_i18n": {
+      "zh": [
+        "香肠",
+        "红薯",
+        "面粉",
+        "炸油",
+        "糖"
+      ],
+      "en": [
+        "sausage",
+        "sweet potato",
+        "flour",
+        "frying oil",
+        "sugar"
+      ]
+    },
+    "allergens_i18n": {
+      "zh": [
+        "小麦",
+        "猪肉",
+        "大豆"
+      ],
+      "en": [
+        "wheat",
+        "pork",
+        "soybeans"
+      ]
+    }
   },
   {
     "id": 51,
@@ -2705,7 +3929,33 @@
           "en": "Not spicy"
         }
       }
-    ]
+    ],
+    "ingredients_i18n": {
+      "zh": [
+        "鸡肉",
+        "土豆",
+        "米饭",
+        "小麦玉米饼",
+        "酱汁"
+      ],
+      "en": [
+        "chicken",
+        "potato",
+        "cooked rice",
+        "wheat tortilla",
+        "sauce"
+      ]
+    },
+    "allergens_i18n": {
+      "zh": [
+        "小麦",
+        "大豆"
+      ],
+      "en": [
+        "wheat",
+        "soybeans"
+      ]
+    }
   },
   {
     "id": 52,
@@ -2790,7 +4040,33 @@
           "en": "Not spicy"
         }
       }
-    ]
+    ],
+    "ingredients_i18n": {
+      "zh": [
+        "鸡肉",
+        "米饭",
+        "小麦玉米饼",
+        "蔬菜",
+        "酱汁"
+      ],
+      "en": [
+        "chicken",
+        "cooked rice",
+        "wheat tortilla",
+        "vegetables",
+        "sauce"
+      ]
+    },
+    "allergens_i18n": {
+      "zh": [
+        "小麦",
+        "大豆"
+      ],
+      "en": [
+        "wheat",
+        "soybeans"
+      ]
+    }
   },
   {
     "id": 53,
@@ -2830,7 +4106,25 @@
     "halal": "yes",
     "vegan": "yes",
     "spicy": 0,
-    "options": []
+    "options": [],
+    "ingredients_i18n": {
+      "zh": [
+        "土豆",
+        "食用油",
+        "盐",
+        "淀粉"
+      ],
+      "en": [
+        "potato",
+        "cooking oil",
+        "salt",
+        "starch"
+      ]
+    },
+    "allergens_i18n": {
+      "zh": [],
+      "en": []
+    }
   },
   {
     "id": 54,
@@ -2870,7 +4164,25 @@
     "halal": "yes",
     "vegan": "yes",
     "spicy": 0,
-    "options": []
+    "options": [],
+    "ingredients_i18n": {
+      "zh": [
+        "碳酸水",
+        "糖",
+        "橙味香料",
+        "酸味剂"
+      ],
+      "en": [
+        "carbonated water",
+        "sugar",
+        "orange flavoring",
+        "acidulant"
+      ]
+    },
+    "allergens_i18n": {
+      "zh": [],
+      "en": []
+    }
   },
   {
     "id": 55,
@@ -2910,7 +4222,25 @@
     "halal": "yes",
     "vegan": "yes",
     "spicy": 0,
-    "options": []
+    "options": [],
+    "ingredients_i18n": {
+      "zh": [
+        "碳酸水",
+        "糖",
+        "菠萝味香料",
+        "酸味剂"
+      ],
+      "en": [
+        "carbonated water",
+        "sugar",
+        "pineapple flavoring",
+        "acidulant"
+      ]
+    },
+    "allergens_i18n": {
+      "zh": [],
+      "en": []
+    }
   },
   {
     "id": 56,
@@ -2950,7 +4280,25 @@
     "halal": "yes",
     "vegan": "yes",
     "spicy": 0,
-    "options": []
+    "options": [],
+    "ingredients_i18n": {
+      "zh": [
+        "碳酸水",
+        "甜味剂",
+        "香料",
+        "酸味剂"
+      ],
+      "en": [
+        "carbonated water",
+        "sweetener",
+        "flavoring",
+        "acidulant"
+      ]
+    },
+    "allergens_i18n": {
+      "zh": [],
+      "en": []
+    }
   },
   {
     "id": 57,
@@ -2990,7 +4338,25 @@
     "halal": "yes",
     "vegan": "yes",
     "spicy": 0,
-    "options": []
+    "options": [],
+    "ingredients_i18n": {
+      "zh": [
+        "碳酸水",
+        "糖",
+        "香料",
+        "酸味剂"
+      ],
+      "en": [
+        "carbonated water",
+        "sugar",
+        "flavoring",
+        "acidulant"
+      ]
+    },
+    "allergens_i18n": {
+      "zh": [],
+      "en": []
+    }
   },
   {
     "id": 58,
@@ -3030,7 +4396,25 @@
     "halal": "yes",
     "vegan": "yes",
     "spicy": 0,
-    "options": []
+    "options": [],
+    "ingredients_i18n": {
+      "zh": [
+        "碳酸水",
+        "糖",
+        "焦糖色素",
+        "香料"
+      ],
+      "en": [
+        "carbonated water",
+        "sugar",
+        "caramel color",
+        "flavoring"
+      ]
+    },
+    "allergens_i18n": {
+      "zh": [],
+      "en": []
+    }
   },
   {
     "id": 59,
@@ -3085,7 +4469,35 @@
           "en": "No green onion"
         }
       }
-    ]
+    ],
+    "ingredients_i18n": {
+      "zh": [
+        "拉面",
+        "猪肉",
+        "猪骨汤",
+        "葱"
+      ],
+      "en": [
+        "ramen",
+        "pork",
+        "pork bone broth",
+        "green onion"
+      ]
+    },
+    "allergens_i18n": {
+      "zh": [
+        "小麦",
+        "大豆",
+        "鸡蛋",
+        "猪肉"
+      ],
+      "en": [
+        "wheat",
+        "soybeans",
+        "egg",
+        "pork"
+      ]
+    }
   },
   {
     "id": 60,
@@ -3159,7 +4571,37 @@
           "en": "No green onion"
         }
       }
-    ]
+    ],
+    "ingredients_i18n": {
+      "zh": [
+        "面条",
+        "猪肉",
+        "鸡蛋",
+        "葱",
+        "酱油"
+      ],
+      "en": [
+        "noodles",
+        "pork",
+        "egg",
+        "green onion",
+        "soy sauce"
+      ]
+    },
+    "allergens_i18n": {
+      "zh": [
+        "小麦",
+        "大豆",
+        "鸡蛋",
+        "猪肉"
+      ],
+      "en": [
+        "wheat",
+        "soybeans",
+        "egg",
+        "pork"
+      ]
+    }
   },
   {
     "id": 61,
@@ -3203,7 +4645,33 @@
     "halal": "unknown",
     "vegan": "no",
     "spicy": 0,
-    "options": []
+    "options": [],
+    "ingredients_i18n": {
+      "zh": [
+        "米粉",
+        "牛肉",
+        "白菜",
+        "绿豆芽",
+        "高汤"
+      ],
+      "en": [
+        "rice noodles",
+        "beef",
+        "napa cabbage",
+        "mung bean sprouts",
+        "broth"
+      ]
+    },
+    "allergens_i18n": {
+      "zh": [
+        "牛肉",
+        "大豆"
+      ],
+      "en": [
+        "beef",
+        "soybeans"
+      ]
+    }
   },
   {
     "id": 62,
@@ -3277,7 +4745,37 @@
           "en": "No green onion"
         }
       }
-    ]
+    ],
+    "ingredients_i18n": {
+      "zh": [
+        "拉面",
+        "猪肉",
+        "猪骨汤",
+        "麻辣酱",
+        "葱"
+      ],
+      "en": [
+        "ramen",
+        "pork",
+        "pork bone broth",
+        "mala sauce",
+        "green onion"
+      ]
+    },
+    "allergens_i18n": {
+      "zh": [
+        "小麦",
+        "大豆",
+        "鸡蛋",
+        "猪肉"
+      ],
+      "en": [
+        "wheat",
+        "soybeans",
+        "egg",
+        "pork"
+      ]
+    }
   },
   {
     "id": 63,
@@ -3323,7 +4821,37 @@
     "halal": "no",
     "vegan": "no",
     "spicy": 0,
-    "options": []
+    "options": [],
+    "ingredients_i18n": {
+      "zh": [
+        "猪肉",
+        "面包糠",
+        "面粉",
+        "鸡蛋",
+        "炸猪排酱"
+      ],
+      "en": [
+        "pork",
+        "breadcrumbs",
+        "flour",
+        "egg",
+        "tonkatsu sauce"
+      ]
+    },
+    "allergens_i18n": {
+      "zh": [
+        "小麦",
+        "大豆",
+        "鸡蛋",
+        "猪肉"
+      ],
+      "en": [
+        "wheat",
+        "soybeans",
+        "egg",
+        "pork"
+      ]
+    }
   },
   {
     "id": 64,
@@ -3369,7 +4897,37 @@
     "halal": "no",
     "vegan": "no",
     "spicy": 0,
-    "options": []
+    "options": [],
+    "ingredients_i18n": {
+      "zh": [
+        "猪肉",
+        "马苏里拉奶酪",
+        "面包糠",
+        "面粉",
+        "鸡蛋"
+      ],
+      "en": [
+        "pork",
+        "mozzarella",
+        "breadcrumbs",
+        "flour",
+        "egg"
+      ]
+    },
+    "allergens_i18n": {
+      "zh": [
+        "小麦",
+        "牛奶",
+        "鸡蛋",
+        "猪肉"
+      ],
+      "en": [
+        "wheat",
+        "milk",
+        "egg",
+        "pork"
+      ]
+    }
   },
   {
     "id": 65,
@@ -3414,7 +4972,33 @@
     "halal": "unknown",
     "vegan": "no",
     "spicy": 0,
-    "options": []
+    "options": [],
+    "ingredients_i18n": {
+      "zh": [
+        "主菜2选1组",
+        "配菜2选1组",
+        "果味汽水（1杯）"
+      ],
+      "en": [
+        "choice of 2 main dishes",
+        "choice of 2 sides",
+        "ade (1 serving)"
+      ]
+    },
+    "allergens_i18n": {
+      "zh": [
+        "小麦",
+        "大豆",
+        "鸡蛋",
+        "猪肉"
+      ],
+      "en": [
+        "wheat",
+        "soybeans",
+        "egg",
+        "pork"
+      ]
+    }
   },
   {
     "id": 66,
@@ -3458,7 +5042,31 @@
     "halal": "unknown",
     "vegan": "no",
     "spicy": 0,
-    "options": []
+    "options": [],
+    "ingredients_i18n": {
+      "zh": [
+        "豚骨拉面",
+        "迷你猪肉盖饭"
+      ],
+      "en": [
+        "tonkotsu ramen",
+        "mini pork rice bowl"
+      ]
+    },
+    "allergens_i18n": {
+      "zh": [
+        "小麦",
+        "大豆",
+        "鸡蛋",
+        "猪肉"
+      ],
+      "en": [
+        "wheat",
+        "soybeans",
+        "egg",
+        "pork"
+      ]
+    }
   },
   {
     "id": 67,
@@ -3515,7 +5123,39 @@
           "en": "No green onion"
         }
       }
-    ]
+    ],
+    "ingredients_i18n": {
+      "zh": [
+        "拉面",
+        "虾",
+        "猪肉",
+        "猪骨汤",
+        "葱"
+      ],
+      "en": [
+        "ramen",
+        "shrimp",
+        "pork",
+        "pork bone broth",
+        "green onion"
+      ]
+    },
+    "allergens_i18n": {
+      "zh": [
+        "小麦",
+        "大豆",
+        "鸡蛋",
+        "虾",
+        "猪肉"
+      ],
+      "en": [
+        "wheat",
+        "soybeans",
+        "egg",
+        "shrimp",
+        "pork"
+      ]
+    }
   },
   {
     "id": 68,
@@ -3589,7 +5229,37 @@
           "en": "No green onion"
         }
       }
-    ]
+    ],
+    "ingredients_i18n": {
+      "zh": [
+        "拉面",
+        "猪肉",
+        "猪骨汤",
+        "辣椒",
+        "葱"
+      ],
+      "en": [
+        "ramen",
+        "pork",
+        "pork bone broth",
+        "chili pepper",
+        "green onion"
+      ]
+    },
+    "allergens_i18n": {
+      "zh": [
+        "小麦",
+        "大豆",
+        "鸡蛋",
+        "猪肉"
+      ],
+      "en": [
+        "wheat",
+        "soybeans",
+        "egg",
+        "pork"
+      ]
+    }
   },
   {
     "id": 69,
@@ -3645,7 +5315,37 @@
           "en": "No green onion"
         }
       }
-    ]
+    ],
+    "ingredients_i18n": {
+      "zh": [
+        "拉面",
+        "酱油",
+        "猪肉",
+        "高汤",
+        "葱"
+      ],
+      "en": [
+        "ramen",
+        "soy sauce",
+        "pork",
+        "broth",
+        "green onion"
+      ]
+    },
+    "allergens_i18n": {
+      "zh": [
+        "小麦",
+        "大豆",
+        "鸡蛋",
+        "猪肉"
+      ],
+      "en": [
+        "wheat",
+        "soybeans",
+        "egg",
+        "pork"
+      ]
+    }
   },
   {
     "id": 70,
@@ -3708,7 +5408,33 @@
           "en": "Not spicy"
         }
       }
-    ]
+    ],
+    "ingredients_i18n": {
+      "zh": [
+        "米粉",
+        "牛肉",
+        "白菜",
+        "绿豆芽",
+        "辣椒"
+      ],
+      "en": [
+        "rice noodles",
+        "beef",
+        "napa cabbage",
+        "mung bean sprouts",
+        "chili pepper"
+      ]
+    },
+    "allergens_i18n": {
+      "zh": [
+        "牛肉",
+        "大豆"
+      ],
+      "en": [
+        "beef",
+        "soybeans"
+      ]
+    }
   },
   {
     "id": 71,
@@ -3769,7 +5495,29 @@
           "en": "Not spicy"
         }
       }
-    ]
+    ],
+    "ingredients_i18n": {
+      "zh": [
+        "米粉",
+        "牛肉",
+        "蔬菜",
+        "麻辣汤底"
+      ],
+      "en": [
+        "rice noodles",
+        "beef",
+        "vegetables",
+        "mala broth"
+      ]
+    },
+    "allergens_i18n": {
+      "zh": [
+        "大豆"
+      ],
+      "en": [
+        "soybeans"
+      ]
+    }
   },
   {
     "id": 72,
@@ -3812,7 +5560,31 @@
     "halal": "unknown",
     "vegan": "no",
     "spicy": 0,
-    "options": []
+    "options": [],
+    "ingredients_i18n": {
+      "zh": [
+        "乌冬面",
+        "鱼饼",
+        "木鱼花",
+        "酱油"
+      ],
+      "en": [
+        "udon noodles",
+        "fish cake",
+        "bonito flakes",
+        "soy sauce"
+      ]
+    },
+    "allergens_i18n": {
+      "zh": [
+        "小麦",
+        "大豆"
+      ],
+      "en": [
+        "wheat",
+        "soybeans"
+      ]
+    }
   },
   {
     "id": 73,
@@ -3874,7 +5646,31 @@
           "en": "Not spicy"
         }
       }
-    ]
+    ],
+    "ingredients_i18n": {
+      "zh": [
+        "乌冬面",
+        "泡菜",
+        "辣椒粉",
+        "高汤"
+      ],
+      "en": [
+        "udon noodles",
+        "kimchi",
+        "chili powder",
+        "broth"
+      ]
+    },
+    "allergens_i18n": {
+      "zh": [
+        "小麦",
+        "大豆"
+      ],
+      "en": [
+        "wheat",
+        "soybeans"
+      ]
+    }
   },
   {
     "id": 74,
@@ -3931,7 +5727,39 @@
           "en": "No green onion"
         }
       }
-    ]
+    ],
+    "ingredients_i18n": {
+      "zh": [
+        "荞麦面",
+        "猪肉",
+        "鸡蛋",
+        "海苔",
+        "葱"
+      ],
+      "en": [
+        "buckwheat noodles",
+        "pork",
+        "egg",
+        "seaweed",
+        "green onion"
+      ]
+    },
+    "allergens_i18n": {
+      "zh": [
+        "荞麦",
+        "小麦",
+        "猪肉",
+        "鸡蛋",
+        "大豆"
+      ],
+      "en": [
+        "buckwheat",
+        "wheat",
+        "pork",
+        "egg",
+        "soybeans"
+      ]
+    }
   },
   {
     "id": 75,
@@ -4005,7 +5833,37 @@
           "en": "No green onion"
         }
       }
-    ]
+    ],
+    "ingredients_i18n": {
+      "zh": [
+        "荞麦面",
+        "猪肉",
+        "辣椒粉",
+        "葱",
+        "海苔"
+      ],
+      "en": [
+        "buckwheat noodles",
+        "pork",
+        "chili powder",
+        "green onion",
+        "seaweed"
+      ]
+    },
+    "allergens_i18n": {
+      "zh": [
+        "荞麦",
+        "小麦",
+        "猪肉",
+        "大豆"
+      ],
+      "en": [
+        "buckwheat",
+        "wheat",
+        "pork",
+        "soybeans"
+      ]
+    }
   },
   {
     "id": 76,
@@ -4049,7 +5907,33 @@
     "halal": "no",
     "vegan": "no",
     "spicy": 0,
-    "options": []
+    "options": [],
+    "ingredients_i18n": {
+      "zh": [
+        "荞麦面",
+        "酱油",
+        "木鱼花",
+        "萝卜"
+      ],
+      "en": [
+        "buckwheat noodles",
+        "soy sauce",
+        "bonito flakes",
+        "radish"
+      ]
+    },
+    "allergens_i18n": {
+      "zh": [
+        "荞麦",
+        "小麦",
+        "大豆"
+      ],
+      "en": [
+        "buckwheat",
+        "wheat",
+        "soybeans"
+      ]
+    }
   },
   {
     "id": 77,
@@ -4112,7 +5996,33 @@
           "en": "Not spicy"
         }
       }
-    ]
+    ],
+    "ingredients_i18n": {
+      "zh": [
+        "荞麦面",
+        "高汤",
+        "韩式辣椒酱",
+        "黄瓜"
+      ],
+      "en": [
+        "buckwheat noodles",
+        "broth",
+        "gochujang",
+        "cucumber"
+      ]
+    },
+    "allergens_i18n": {
+      "zh": [
+        "荞麦",
+        "小麦",
+        "大豆"
+      ],
+      "en": [
+        "buckwheat",
+        "wheat",
+        "soybeans"
+      ]
+    }
   },
   {
     "id": 78,
@@ -4175,7 +6085,33 @@
           "en": "Not spicy"
         }
       }
-    ]
+    ],
+    "ingredients_i18n": {
+      "zh": [
+        "荞麦面",
+        "韩式辣椒酱",
+        "黄瓜",
+        "芝麻油"
+      ],
+      "en": [
+        "buckwheat noodles",
+        "gochujang",
+        "cucumber",
+        "sesame oil"
+      ]
+    },
+    "allergens_i18n": {
+      "zh": [
+        "荞麦",
+        "小麦",
+        "大豆"
+      ],
+      "en": [
+        "buckwheat",
+        "wheat",
+        "soybeans"
+      ]
+    }
   },
   {
     "id": 79,
@@ -4219,7 +6155,33 @@
     "halal": "unknown",
     "vegan": "no",
     "spicy": 0,
-    "options": []
+    "options": [],
+    "ingredients_i18n": {
+      "zh": [
+        "荞麦面",
+        "紫苏油",
+        "酱油",
+        "海苔"
+      ],
+      "en": [
+        "buckwheat noodles",
+        "perilla oil",
+        "soy sauce",
+        "seaweed"
+      ]
+    },
+    "allergens_i18n": {
+      "zh": [
+        "荞麦",
+        "小麦",
+        "大豆"
+      ],
+      "en": [
+        "buckwheat",
+        "wheat",
+        "soybeans"
+      ]
+    }
   },
   {
     "id": 80,
@@ -4263,7 +6225,33 @@
     "halal": "no",
     "vegan": "no",
     "spicy": 0,
-    "options": []
+    "options": [],
+    "ingredients_i18n": {
+      "zh": [
+        "荞麦面",
+        "酱油",
+        "木鱼花",
+        "海苔"
+      ],
+      "en": [
+        "buckwheat noodles",
+        "soy sauce",
+        "bonito flakes",
+        "seaweed"
+      ]
+    },
+    "allergens_i18n": {
+      "zh": [
+        "荞麦",
+        "小麦",
+        "大豆"
+      ],
+      "en": [
+        "buckwheat",
+        "wheat",
+        "soybeans"
+      ]
+    }
   },
   {
     "id": 81,
@@ -4307,7 +6295,33 @@
     "halal": "unknown",
     "vegan": "no",
     "spicy": 0,
-    "options": []
+    "options": [],
+    "ingredients_i18n": {
+      "zh": [
+        "荞麦面",
+        "鸡肉",
+        "黄瓜",
+        "醋"
+      ],
+      "en": [
+        "buckwheat noodles",
+        "chicken",
+        "cucumber",
+        "vinegar"
+      ]
+    },
+    "allergens_i18n": {
+      "zh": [
+        "荞麦",
+        "小麦",
+        "大豆"
+      ],
+      "en": [
+        "buckwheat",
+        "wheat",
+        "soybeans"
+      ]
+    }
   },
   {
     "id": 82,
@@ -4371,7 +6385,35 @@
           "en": "Not spicy"
         }
       }
-    ]
+    ],
+    "ingredients_i18n": {
+      "zh": [
+        "荞麦面",
+        "鸡肉",
+        "黄瓜",
+        "醋",
+        "韩式辣椒酱"
+      ],
+      "en": [
+        "buckwheat noodles",
+        "chicken",
+        "cucumber",
+        "vinegar",
+        "gochujang"
+      ]
+    },
+    "allergens_i18n": {
+      "zh": [
+        "荞麦",
+        "小麦",
+        "大豆"
+      ],
+      "en": [
+        "buckwheat",
+        "wheat",
+        "soybeans"
+      ]
+    }
   },
   {
     "id": 83,
@@ -4436,7 +6478,37 @@
           "en": "Not spicy"
         }
       }
-    ]
+    ],
+    "ingredients_i18n": {
+      "zh": [
+        "荞麦面",
+        "鸡肉",
+        "黄瓜",
+        "醋",
+        "芥末"
+      ],
+      "en": [
+        "buckwheat noodles",
+        "chicken",
+        "cucumber",
+        "vinegar",
+        "mustard"
+      ]
+    },
+    "allergens_i18n": {
+      "zh": [
+        "小麦",
+        "大豆",
+        "鸡肉",
+        "荞麦"
+      ],
+      "en": [
+        "wheat",
+        "soybeans",
+        "chicken",
+        "buckwheat"
+      ]
+    }
   },
   {
     "id": 84,
@@ -4482,7 +6554,37 @@
     "halal": "no",
     "vegan": "no",
     "spicy": 0,
-    "options": []
+    "options": [],
+    "ingredients_i18n": {
+      "zh": [
+        "猪肉",
+        "面包糠",
+        "鸡蛋",
+        "半釉汁",
+        "卷心菜"
+      ],
+      "en": [
+        "pork",
+        "breadcrumbs",
+        "egg",
+        "demi-glace sauce",
+        "cabbage"
+      ]
+    },
+    "allergens_i18n": {
+      "zh": [
+        "小麦",
+        "大豆",
+        "鸡蛋",
+        "猪肉"
+      ],
+      "en": [
+        "wheat",
+        "soybeans",
+        "egg",
+        "pork"
+      ]
+    }
   },
   {
     "id": 85,
@@ -4556,7 +6658,37 @@
           "en": "No green onion"
         }
       }
-    ]
+    ],
+    "ingredients_i18n": {
+      "zh": [
+        "猪肉",
+        "面包糠",
+        "鸡蛋",
+        "大葱",
+        "辣酱"
+      ],
+      "en": [
+        "pork",
+        "breadcrumbs",
+        "egg",
+        "green onion",
+        "hot sauce"
+      ]
+    },
+    "allergens_i18n": {
+      "zh": [
+        "小麦",
+        "大豆",
+        "鸡蛋",
+        "猪肉"
+      ],
+      "en": [
+        "wheat",
+        "soybeans",
+        "egg",
+        "pork"
+      ]
+    }
   },
   {
     "id": 86,
@@ -4603,7 +6735,39 @@
     "halal": "no",
     "vegan": "no",
     "spicy": 0,
-    "options": []
+    "options": [],
+    "ingredients_i18n": {
+      "zh": [
+        "猪肉",
+        "面包糠",
+        "鸡蛋",
+        "切达奶酪",
+        "卷心菜"
+      ],
+      "en": [
+        "pork",
+        "breadcrumbs",
+        "egg",
+        "cheddar cheese",
+        "cabbage"
+      ]
+    },
+    "allergens_i18n": {
+      "zh": [
+        "小麦",
+        "大豆",
+        "牛奶",
+        "鸡蛋",
+        "猪肉"
+      ],
+      "en": [
+        "wheat",
+        "soybeans",
+        "milk",
+        "egg",
+        "pork"
+      ]
+    }
   },
   {
     "id": 87,
@@ -4650,7 +6814,39 @@
     "halal": "no",
     "vegan": "no",
     "spicy": 0,
-    "options": []
+    "options": [],
+    "ingredients_i18n": {
+      "zh": [
+        "猪肉",
+        "面包糠",
+        "鸡蛋",
+        "奶酪",
+        "卷心菜"
+      ],
+      "en": [
+        "pork",
+        "breadcrumbs",
+        "egg",
+        "cheese",
+        "cabbage"
+      ]
+    },
+    "allergens_i18n": {
+      "zh": [
+        "小麦",
+        "大豆",
+        "牛奶",
+        "鸡蛋",
+        "猪肉"
+      ],
+      "en": [
+        "wheat",
+        "soybeans",
+        "milk",
+        "egg",
+        "pork"
+      ]
+    }
   },
   {
     "id": 88,
@@ -4724,7 +6920,37 @@
           "en": "No onion"
         }
       }
-    ]
+    ],
+    "ingredients_i18n": {
+      "zh": [
+        "米饭",
+        "鸡肉",
+        "面粉",
+        "咖喱酱",
+        "洋葱"
+      ],
+      "en": [
+        "rice",
+        "chicken",
+        "flour",
+        "curry sauce",
+        "onion"
+      ]
+    },
+    "allergens_i18n": {
+      "zh": [
+        "小麦",
+        "大豆",
+        "鸡蛋",
+        "鸡肉"
+      ],
+      "en": [
+        "wheat",
+        "soybeans",
+        "egg",
+        "chicken"
+      ]
+    }
   },
   {
     "id": 89,
@@ -4798,7 +7024,37 @@
           "en": "No onion"
         }
       }
-    ]
+    ],
+    "ingredients_i18n": {
+      "zh": [
+        "米饭",
+        "虾",
+        "面包糠",
+        "咖喱酱",
+        "洋葱"
+      ],
+      "en": [
+        "rice",
+        "shrimp",
+        "breadcrumbs",
+        "curry sauce",
+        "onion"
+      ]
+    },
+    "allergens_i18n": {
+      "zh": [
+        "小麦",
+        "大豆",
+        "鸡蛋",
+        "虾"
+      ],
+      "en": [
+        "wheat",
+        "soybeans",
+        "egg",
+        "shrimp"
+      ]
+    }
   },
   {
     "id": 90,
@@ -4864,7 +7120,39 @@
           "en": "Not spicy"
         }
       }
-    ]
+    ],
+    "ingredients_i18n": {
+      "zh": [
+        "猪肉",
+        "面包糠",
+        "鸡蛋",
+        "咖喱酱",
+        "米饭"
+      ],
+      "en": [
+        "pork",
+        "breadcrumbs",
+        "egg",
+        "curry sauce",
+        "rice"
+      ]
+    },
+    "allergens_i18n": {
+      "zh": [
+        "小麦",
+        "大豆",
+        "牛奶",
+        "鸡蛋",
+        "猪肉"
+      ],
+      "en": [
+        "wheat",
+        "soybeans",
+        "milk",
+        "egg",
+        "pork"
+      ]
+    }
   },
   {
     "id": 91,
@@ -4928,7 +7216,35 @@
           "en": "No green onion"
         }
       }
-    ]
+    ],
+    "ingredients_i18n": {
+      "zh": [
+        "米饭",
+        "猪肉",
+        "洋葱",
+        "大葱",
+        "酱油"
+      ],
+      "en": [
+        "rice",
+        "pork",
+        "onion",
+        "green onion",
+        "soy sauce"
+      ]
+    },
+    "allergens_i18n": {
+      "zh": [
+        "小麦",
+        "大豆",
+        "猪肉"
+      ],
+      "en": [
+        "wheat",
+        "soybeans",
+        "pork"
+      ]
+    }
   },
   {
     "id": 92,
@@ -5001,7 +7317,35 @@
           "en": "No onion"
         }
       }
-    ]
+    ],
+    "ingredients_i18n": {
+      "zh": [
+        "米饭",
+        "猪肉",
+        "泡菜",
+        "洋葱",
+        "酱油"
+      ],
+      "en": [
+        "rice",
+        "pork",
+        "kimchi",
+        "onion",
+        "soy sauce"
+      ]
+    },
+    "allergens_i18n": {
+      "zh": [
+        "小麦",
+        "大豆",
+        "猪肉"
+      ],
+      "en": [
+        "wheat",
+        "soybeans",
+        "pork"
+      ]
+    }
   },
   {
     "id": 93,
@@ -5083,7 +7427,35 @@
           "en": "No green onion"
         }
       }
-    ]
+    ],
+    "ingredients_i18n": {
+      "zh": [
+        "米饭",
+        "猪排骨",
+        "洋葱",
+        "大葱",
+        "韩式辣椒酱"
+      ],
+      "en": [
+        "rice",
+        "pork ribs",
+        "onion",
+        "green onion",
+        "gochujang"
+      ]
+    },
+    "allergens_i18n": {
+      "zh": [
+        "小麦",
+        "大豆",
+        "猪肉"
+      ],
+      "en": [
+        "wheat",
+        "soybeans",
+        "pork"
+      ]
+    }
   },
   {
     "id": 94,
@@ -5157,7 +7529,37 @@
           "en": "No onion"
         }
       }
-    ]
+    ],
+    "ingredients_i18n": {
+      "zh": [
+        "米饭",
+        "猪肉",
+        "咖喱酱",
+        "洋葱",
+        "酱油"
+      ],
+      "en": [
+        "rice",
+        "pork",
+        "curry sauce",
+        "onion",
+        "soy sauce"
+      ]
+    },
+    "allergens_i18n": {
+      "zh": [
+        "小麦",
+        "大豆",
+        "牛奶",
+        "猪肉"
+      ],
+      "en": [
+        "wheat",
+        "soybeans",
+        "milk",
+        "pork"
+      ]
+    }
   },
   {
     "id": 95,
@@ -5231,7 +7633,37 @@
           "en": "No green onion"
         }
       }
-    ]
+    ],
+    "ingredients_i18n": {
+      "zh": [
+        "米饭",
+        "猪肉",
+        "鸡蛋",
+        "大葱",
+        "海苔"
+      ],
+      "en": [
+        "rice",
+        "pork",
+        "egg",
+        "green onion",
+        "seaweed"
+      ]
+    },
+    "allergens_i18n": {
+      "zh": [
+        "大豆",
+        "鸡蛋",
+        "猪肉",
+        "小麦"
+      ],
+      "en": [
+        "soybeans",
+        "egg",
+        "pork",
+        "wheat"
+      ]
+    }
   },
   {
     "id": 96,
@@ -5277,7 +7709,37 @@
     "halal": "no",
     "vegan": "no",
     "spicy": 0,
-    "options": []
+    "options": [],
+    "ingredients_i18n": {
+      "zh": [
+        "猪肉",
+        "面包糠",
+        "面粉",
+        "鸡蛋",
+        "炸猪排酱"
+      ],
+      "en": [
+        "pork",
+        "breadcrumbs",
+        "flour",
+        "egg",
+        "tonkatsu sauce"
+      ]
+    },
+    "allergens_i18n": {
+      "zh": [
+        "猪肉",
+        "小麦",
+        "鸡蛋",
+        "大豆"
+      ],
+      "en": [
+        "pork",
+        "wheat",
+        "egg",
+        "soybeans"
+      ]
+    }
   },
   {
     "id": 97,
@@ -5323,7 +7785,37 @@
     "halal": "no",
     "vegan": "no",
     "spicy": 0,
-    "options": []
+    "options": [],
+    "ingredients_i18n": {
+      "zh": [
+        "猪肉",
+        "面包糠",
+        "面粉",
+        "鸡蛋",
+        "半釉汁"
+      ],
+      "en": [
+        "pork",
+        "breadcrumbs",
+        "flour",
+        "egg",
+        "demi-glace sauce"
+      ]
+    },
+    "allergens_i18n": {
+      "zh": [
+        "猪肉",
+        "小麦",
+        "鸡蛋",
+        "大豆"
+      ],
+      "en": [
+        "pork",
+        "wheat",
+        "egg",
+        "soybeans"
+      ]
+    }
   },
   {
     "id": 98,
@@ -5369,7 +7861,37 @@
     "halal": "no",
     "vegan": "no",
     "spicy": 0,
-    "options": []
+    "options": [],
+    "ingredients_i18n": {
+      "zh": [
+        "猪肉",
+        "马苏里拉奶酪",
+        "面包糠",
+        "面粉",
+        "鸡蛋"
+      ],
+      "en": [
+        "pork",
+        "mozzarella",
+        "breadcrumbs",
+        "flour",
+        "egg"
+      ]
+    },
+    "allergens_i18n": {
+      "zh": [
+        "猪肉",
+        "牛奶",
+        "小麦",
+        "鸡蛋"
+      ],
+      "en": [
+        "pork",
+        "milk",
+        "wheat",
+        "egg"
+      ]
+    }
   },
   {
     "id": 99,
@@ -5414,7 +7936,35 @@
     "halal": "unknown",
     "vegan": "no",
     "spicy": 0,
-    "options": []
+    "options": [],
+    "ingredients_i18n": {
+      "zh": [
+        "鸡肉",
+        "酱油",
+        "面粉",
+        "淀粉",
+        "大蒜"
+      ],
+      "en": [
+        "chicken",
+        "soy sauce",
+        "flour",
+        "starch",
+        "garlic"
+      ]
+    },
+    "allergens_i18n": {
+      "zh": [
+        "鸡肉",
+        "大豆",
+        "小麦"
+      ],
+      "en": [
+        "chicken",
+        "soybeans",
+        "wheat"
+      ]
+    }
   },
   {
     "id": 100,
@@ -5458,7 +8008,33 @@
     "halal": "unknown",
     "vegan": "no",
     "spicy": 0,
-    "options": []
+    "options": [],
+    "ingredients_i18n": {
+      "zh": [
+        "虾",
+        "面粉",
+        "面包糠",
+        "鸡蛋"
+      ],
+      "en": [
+        "shrimp",
+        "flour",
+        "breadcrumbs",
+        "egg"
+      ]
+    },
+    "allergens_i18n": {
+      "zh": [
+        "虾",
+        "小麦",
+        "鸡蛋"
+      ],
+      "en": [
+        "shrimp",
+        "wheat",
+        "egg"
+      ]
+    }
   },
   {
     "id": 101,
@@ -5502,7 +8078,33 @@
     "halal": "no",
     "vegan": "no",
     "spicy": 0,
-    "options": []
+    "options": [],
+    "ingredients_i18n": {
+      "zh": [
+        "猪肉",
+        "蔬菜",
+        "春卷皮",
+        "酱油"
+      ],
+      "en": [
+        "pork",
+        "vegetables",
+        "spring roll wrapper",
+        "soy sauce"
+      ]
+    },
+    "allergens_i18n": {
+      "zh": [
+        "猪肉",
+        "小麦",
+        "大豆"
+      ],
+      "en": [
+        "pork",
+        "wheat",
+        "soybeans"
+      ]
+    }
   },
   {
     "id": 102,
@@ -5547,7 +8149,35 @@
     "halal": "yes",
     "vegan": "no",
     "spicy": 0,
-    "options": []
+    "options": [],
+    "ingredients_i18n": {
+      "zh": [
+        "土豆",
+        "面包糠",
+        "面粉",
+        "鸡蛋",
+        "牛奶"
+      ],
+      "en": [
+        "potato",
+        "breadcrumbs",
+        "flour",
+        "egg",
+        "milk"
+      ]
+    },
+    "allergens_i18n": {
+      "zh": [
+        "小麦",
+        "鸡蛋",
+        "牛奶"
+      ],
+      "en": [
+        "wheat",
+        "egg",
+        "milk"
+      ]
+    }
   },
   {
     "id": 103,
@@ -5592,7 +8222,35 @@
     "halal": "unknown",
     "vegan": "no",
     "spicy": 0,
-    "options": []
+    "options": [],
+    "ingredients_i18n": {
+      "zh": [
+        "鸡皮",
+        "鸡肉",
+        "饺子皮",
+        "卷心菜",
+        "酱油"
+      ],
+      "en": [
+        "chicken skin",
+        "chicken",
+        "dumpling wrappers",
+        "cabbage",
+        "soy sauce"
+      ]
+    },
+    "allergens_i18n": {
+      "zh": [
+        "鸡肉",
+        "小麦",
+        "大豆"
+      ],
+      "en": [
+        "chicken",
+        "wheat",
+        "soybeans"
+      ]
+    }
   },
   {
     "id": 104,
@@ -5647,7 +8305,35 @@
           "en": "No onion"
         }
       }
-    ]
+    ],
+    "ingredients_i18n": {
+      "zh": [
+        "米饭",
+        "猪肉",
+        "洋葱",
+        "酱油",
+        "糖"
+      ],
+      "en": [
+        "rice",
+        "pork",
+        "onion",
+        "soy sauce",
+        "sugar"
+      ]
+    },
+    "allergens_i18n": {
+      "zh": [
+        "猪肉",
+        "大豆",
+        "小麦"
+      ],
+      "en": [
+        "pork",
+        "soybeans",
+        "wheat"
+      ]
+    }
   },
   {
     "id": 105,
@@ -5720,7 +8406,35 @@
           "en": "No onion"
         }
       }
-    ]
+    ],
+    "ingredients_i18n": {
+      "zh": [
+        "米饭",
+        "猪肉",
+        "泡菜",
+        "洋葱",
+        "辣椒粉"
+      ],
+      "en": [
+        "rice",
+        "pork",
+        "kimchi",
+        "onion",
+        "chili powder"
+      ]
+    },
+    "allergens_i18n": {
+      "zh": [
+        "猪肉",
+        "大豆",
+        "小麦"
+      ],
+      "en": [
+        "pork",
+        "soybeans",
+        "wheat"
+      ]
+    }
   },
   {
     "id": 106,
@@ -5766,6 +8480,36 @@
     "halal": "no",
     "vegan": "no",
     "spicy": 0,
-    "options": []
+    "options": [],
+    "ingredients_i18n": {
+      "zh": [
+        "米饭",
+        "猪肉",
+        "土豆",
+        "胡萝卜",
+        "咖喱酱"
+      ],
+      "en": [
+        "rice",
+        "pork",
+        "potato",
+        "carrot",
+        "curry sauce"
+      ]
+    },
+    "allergens_i18n": {
+      "zh": [
+        "猪肉",
+        "小麦",
+        "大豆",
+        "牛奶"
+      ],
+      "en": [
+        "pork",
+        "wheat",
+        "soybeans",
+        "milk"
+      ]
+    }
   }
 ]

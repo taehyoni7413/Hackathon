@@ -24,6 +24,8 @@ from backend import llm  # noqa: E402
 DATA = ROOT / "backend" / "data"
 PUBLIC = ROOT / "web" / "public" / "stores"
 AI_CACHE = DATA / "menu_ai.json"
+# 재료·알레르기 단어 번역표 (한국어 → zh/en). 틀린 번역은 여기서 고치고 다시 실행
+TERMS = DATA / "terms_i18n.json"
 
 # 가게 id → 사진 폴더 (팀원이 올린 위치 그대로)
 SOURCES = {
@@ -138,6 +140,30 @@ def enrich(names: list[str], store_name: str, cache: dict) -> None:
         AI_CACHE.write_text(json.dumps(cache, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
 
 
+TERMS_SYSTEM = """Translate Korean food ingredient and allergen words for a restaurant menu app.
+Return JSON {"items": [{"ko": "...", "zh": "...", "en": "..."}]} with one object per input, same order.
+zh: Simplified Chinese, short (no explanations). en: short lowercase common English food words.
+Output only the JSON object."""
+
+
+def translate_terms(words: list[str], terms: dict) -> None:
+    todo = sorted(w for w in set(words) if w not in terms)
+    for i in range(0, len(todo), 60):
+        batch = todo[i:i + 60]
+        print(f"  재료 번역 {i + 1}~{i + len(batch)} / {len(todo)}")
+        text = llm.ask(json.dumps(batch, ensure_ascii=False), system=TERMS_SYSTEM)
+        data = json.loads(text[text.find("{"): text.rfind("}") + 1])
+        for ko, item in zip(batch, data["items"]):
+            if item.get("zh") and item.get("en"):
+                terms[ko] = {"zh": item["zh"].strip(), "en": item["en"].strip()}
+        TERMS.write_text(json.dumps(terms, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+
+
+def localize(words: list[str], terms: dict) -> dict:
+    """["돼지고기", "밀"] → {"zh": ["猪肉", "小麦"], "en": ["pork", "wheat"]} (번역 없으면 원문)"""
+    return {lang: [terms.get(w, {}).get(lang, w) for w in words] for lang in ("zh", "en")}
+
+
 def tri(v) -> str:
     return v if v in ("yes", "no", "unknown") else "unknown"
 
@@ -213,6 +239,13 @@ def main():
         if first:
             store["image_url"] = first["image_url"]
         print(f"  메뉴 {sum(1 for x in out if x['store_id'] == sid)}개, 메뉴판 {len(boards)}장")
+
+    # 재료·알레르기를 언어별로 (화면은 고른 언어로 표시)
+    terms = json.loads(TERMS.read_text(encoding="utf-8")) if TERMS.exists() else {}
+    translate_terms([w for x in out for w in x["ingredients"] + x["allergens"]], terms)
+    for x in out:
+        x["ingredients_i18n"] = localize(x["ingredients"], terms)
+        x["allergens_i18n"] = localize(x["allergens"], terms)
 
     (DATA / "menus.json").write_text(json.dumps(out, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     (DATA / "stores.json").write_text(json.dumps(stores, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")

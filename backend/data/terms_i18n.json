@@ -1,0 +1,598 @@
+{
+  "橙味香料": {
+    "zh": "橙味香料",
+    "en": "orange flavoring"
+  },
+  "焦糖色素": {
+    "zh": "焦糖色素",
+    "en": "caramel color"
+  },
+  "甜味剂": {
+    "zh": "甜味剂",
+    "en": "sweetener"
+  },
+  "短意面": {
+    "zh": "短意面",
+    "en": "short pasta"
+  },
+  "碳酸水": {
+    "zh": "碳酸水",
+    "en": "carbonated water"
+  },
+  "糖": {
+    "zh": "糖",
+    "en": "sugar"
+  },
+  "菠萝味香料": {
+    "zh": "菠萝味香料",
+    "en": "pineapple flavoring"
+  },
+  "酸味剂": {
+    "zh": "酸味剂",
+    "en": "acidulant"
+  },
+  "香料": {
+    "zh": "香料",
+    "en": "flavoring"
+  },
+  "가쓰오부시": {
+    "zh": "木鱼花",
+    "en": "bonito flakes"
+  },
+  "간장": {
+    "zh": "酱油",
+    "en": "soy sauce"
+  },
+  "감자": {
+    "zh": "土豆",
+    "en": "potato"
+  },
+  "게": {
+    "zh": "螃蟹",
+    "en": "crab"
+  },
+  "게살": {
+    "zh": "蟹肉",
+    "en": "crab meat"
+  },
+  "겨자": {
+    "zh": "芥末",
+    "en": "mustard"
+  },
+  "곁들임 메뉴 2개(선택)": {
+    "zh": "配菜2选1组",
+    "en": "choice of 2 sides"
+  },
+  "계란": {
+    "zh": "鸡蛋",
+    "en": "egg"
+  },
+  "계란노른자": {
+    "zh": "蛋黄",
+    "en": "egg yolk"
+  },
+  "고구마": {
+    "zh": "红薯",
+    "en": "sweet potato"
+  },
+  "고추": {
+    "zh": "辣椒",
+    "en": "chili pepper"
+  },
+  "고추장": {
+    "zh": "韩式辣椒酱",
+    "en": "gochujang"
+  },
+  "고춧가루": {
+    "zh": "辣椒粉",
+    "en": "chili powder"
+  },
+  "귤": {
+    "zh": "橘子",
+    "en": "mandarin"
+  },
+  "김": {
+    "zh": "海苔",
+    "en": "seaweed"
+  },
+  "김치": {
+    "zh": "泡菜",
+    "en": "kimchi"
+  },
+  "깻잎": {
+    "zh": "苏子叶",
+    "en": "perilla leaves"
+  },
+  "누룽지": {
+    "zh": "锅巴",
+    "en": "scorched rice"
+  },
+  "다진 고기": {
+    "zh": "肉末",
+    "en": "minced meat"
+  },
+  "닭고기": {
+    "zh": "鸡肉",
+    "en": "chicken"
+  },
+  "닭껍질": {
+    "zh": "鸡皮",
+    "en": "chicken skin"
+  },
+  "당근": {
+    "zh": "胡萝卜",
+    "en": "carrot"
+  },
+  "대두": {
+    "zh": "大豆",
+    "en": "soybeans"
+  },
+  "대파": {
+    "zh": "大葱",
+    "en": "green onion"
+  },
+  "데미글라스 소스": {
+    "zh": "半釉汁",
+    "en": "demi-glace sauce"
+  },
+  "데미글라스소스": {
+    "zh": "半釉汁",
+    "en": "demi-glace sauce"
+  },
+  "돈가스소스": {
+    "zh": "炸猪排酱",
+    "en": "tonkatsu sauce"
+  },
+  "돈카츠소스": {
+    "zh": "炸猪排酱",
+    "en": "tonkatsu sauce"
+  },
+  "돈코츠라멘": {
+    "zh": "豚骨拉面",
+    "en": "tonkotsu ramen"
+  },
+  "돼지갈비": {
+    "zh": "猪排骨",
+    "en": "pork ribs"
+  },
+  "돼지고기": {
+    "zh": "猪肉",
+    "en": "pork"
+  },
+  "돼지뼈 육수": {
+    "zh": "猪骨汤",
+    "en": "pork bone broth"
+  },
+  "된장": {
+    "zh": "大酱",
+    "en": "doenjang"
+  },
+  "두부": {
+    "zh": "豆腐",
+    "en": "tofu"
+  },
+  "들기름": {
+    "zh": "紫苏油",
+    "en": "perilla oil"
+  },
+  "떡": {
+    "zh": "年糕",
+    "en": "rice cake"
+  },
+  "라구소스": {
+    "zh": "肉酱",
+    "en": "ragu sauce"
+  },
+  "라멘": {
+    "zh": "拉面",
+    "en": "ramen"
+  },
+  "라임": {
+    "zh": "青柠",
+    "en": "lime"
+  },
+  "레몬": {
+    "zh": "柠檬",
+    "en": "lemon"
+  },
+  "리치": {
+    "zh": "荔枝",
+    "en": "lychee"
+  },
+  "마늘": {
+    "zh": "大蒜",
+    "en": "garlic"
+  },
+  "마라 육수": {
+    "zh": "麻辣汤底",
+    "en": "mala broth"
+  },
+  "마라소스": {
+    "zh": "麻辣酱",
+    "en": "mala sauce"
+  },
+  "마요네즈": {
+    "zh": "蛋黄酱",
+    "en": "mayonnaise"
+  },
+  "만두피": {
+    "zh": "饺子皮",
+    "en": "dumpling wrappers"
+  },
+  "매운 소스": {
+    "zh": "辣酱",
+    "en": "hot sauce"
+  },
+  "메밀": {
+    "zh": "荞麦",
+    "en": "buckwheat"
+  },
+  "메밀면": {
+    "zh": "荞麦面",
+    "en": "buckwheat noodles"
+  },
+  "메인 메뉴 2개(선택)": {
+    "zh": "主菜2选1组",
+    "en": "choice of 2 main dishes"
+  },
+  "면": {
+    "zh": "面条",
+    "en": "noodles"
+  },
+  "명란": {
+    "zh": "明太鱼籽",
+    "en": "pollock roe"
+  },
+  "모짜렐라치즈": {
+    "zh": "马苏里拉奶酪",
+    "en": "mozzarella"
+  },
+  "무": {
+    "zh": "萝卜",
+    "en": "radish"
+  },
+  "미니부타동(돼지고기 덮밥)": {
+    "zh": "迷你猪肉盖饭",
+    "en": "mini pork rice bowl"
+  },
+  "민트": {
+    "zh": "薄荷",
+    "en": "mint"
+  },
+  "밀": {
+    "zh": "小麦",
+    "en": "wheat"
+  },
+  "밀 또띠아": {
+    "zh": "小麦玉米饼",
+    "en": "wheat tortilla"
+  },
+  "밀가루": {
+    "zh": "面粉",
+    "en": "flour"
+  },
+  "바베큐소스": {
+    "zh": "烧烤酱",
+    "en": "barbecue sauce"
+  },
+  "바질": {
+    "zh": "罗勒",
+    "en": "basil"
+  },
+  "밥": {
+    "zh": "米饭",
+    "en": "rice"
+  },
+  "배": {
+    "zh": "梨",
+    "en": "pear"
+  },
+  "배추": {
+    "zh": "白菜",
+    "en": "napa cabbage"
+  },
+  "백도": {
+    "zh": "白桃",
+    "en": "white peach"
+  },
+  "버섯": {
+    "zh": "蘑菇",
+    "en": "mushrooms"
+  },
+  "버터": {
+    "zh": "黄油",
+    "en": "butter"
+  },
+  "복숭아": {
+    "zh": "桃子",
+    "en": "peach"
+  },
+  "빵가루": {
+    "zh": "面包糠",
+    "en": "breadcrumbs"
+  },
+  "삼겹살": {
+    "zh": "五花肉",
+    "en": "pork belly"
+  },
+  "새우": {
+    "zh": "虾",
+    "en": "shrimp"
+  },
+  "생크림": {
+    "zh": "鲜奶油",
+    "en": "cream"
+  },
+  "샤인머스켓": {
+    "zh": "阳光玫瑰葡萄",
+    "en": "shine muscat grapes"
+  },
+  "설탕": {
+    "zh": "糖",
+    "en": "sugar"
+  },
+  "셔벗": {
+    "zh": "雪葩",
+    "en": "sherbet"
+  },
+  "소고기": {
+    "zh": "牛肉",
+    "en": "beef"
+  },
+  "소고기 베이컨": {
+    "zh": "牛肉培根",
+    "en": "beef bacon"
+  },
+  "소금": {
+    "zh": "盐",
+    "en": "salt"
+  },
+  "소다수": {
+    "zh": "苏打水",
+    "en": "soda water"
+  },
+  "소대창": {
+    "zh": "牛大肠",
+    "en": "beef large intestine"
+  },
+  "소스": {
+    "zh": "酱汁",
+    "en": "sauce"
+  },
+  "소시지": {
+    "zh": "香肠",
+    "en": "sausage"
+  },
+  "소주": {
+    "zh": "烧酒",
+    "en": "soju"
+  },
+  "숏파스타": {
+    "zh": "短意面",
+    "en": "short pasta"
+  },
+  "숏파스타면": {
+    "zh": "短意面",
+    "en": "short pasta"
+  },
+  "숙주": {
+    "zh": "绿豆芽",
+    "en": "mung bean sprouts"
+  },
+  "시럽": {
+    "zh": "糖浆",
+    "en": "syrup"
+  },
+  "식용유": {
+    "zh": "食用油",
+    "en": "cooking oil"
+  },
+  "식초": {
+    "zh": "醋",
+    "en": "vinegar"
+  },
+  "쌀": {
+    "zh": "大米",
+    "en": "rice"
+  },
+  "쌀국수": {
+    "zh": "米粉",
+    "en": "rice noodles"
+  },
+  "쌀밥": {
+    "zh": "米饭",
+    "en": "cooked rice"
+  },
+  "야채": {
+    "zh": "蔬菜",
+    "en": "vegetables"
+  },
+  "양배추": {
+    "zh": "卷心菜",
+    "en": "cabbage"
+  },
+  "양파": {
+    "zh": "洋葱",
+    "en": "onion"
+  },
+  "어묵": {
+    "zh": "鱼饼",
+    "en": "fish cake"
+  },
+  "얼그레이": {
+    "zh": "伯爵茶",
+    "en": "earl grey"
+  },
+  "에이드 1개": {
+    "zh": "果味汽水（1杯）",
+    "en": "ade (1 serving)"
+  },
+  "오이": {
+    "zh": "黄瓜",
+    "en": "cucumber"
+  },
+  "옥수수": {
+    "zh": "玉米",
+    "en": "corn"
+  },
+  "올리브오일": {
+    "zh": "橄榄油",
+    "en": "olive oil"
+  },
+  "올리브유": {
+    "zh": "橄榄油",
+    "en": "olive oil"
+  },
+  "요거트": {
+    "zh": "酸奶",
+    "en": "yogurt"
+  },
+  "우동면": {
+    "zh": "乌冬面",
+    "en": "udon noodles"
+  },
+  "우유": {
+    "zh": "牛奶",
+    "en": "milk"
+  },
+  "위스키": {
+    "zh": "威士忌",
+    "en": "whiskey"
+  },
+  "유자": {
+    "zh": "柚子",
+    "en": "yuzu"
+  },
+  "육수": {
+    "zh": "高汤",
+    "en": "broth"
+  },
+  "잠봉": {
+    "zh": "法式火腿",
+    "en": "jambon"
+  },
+  "전분": {
+    "zh": "淀粉",
+    "en": "starch"
+  },
+  "주류": {
+    "zh": "酒类",
+    "en": "alcohol"
+  },
+  "참기름": {
+    "zh": "芝麻油",
+    "en": "sesame oil"
+  },
+  "채소": {
+    "zh": "蔬菜",
+    "en": "vegetables"
+  },
+  "체다치즈": {
+    "zh": "切达奶酪",
+    "en": "cheddar cheese"
+  },
+  "춘권피": {
+    "zh": "春卷皮",
+    "en": "spring roll wrapper"
+  },
+  "치즈": {
+    "zh": "奶酪",
+    "en": "cheese"
+  },
+  "치폴레": {
+    "zh": "墨西哥烟熏辣椒",
+    "en": "chipotle"
+  },
+  "카레": {
+    "zh": "咖喱",
+    "en": "curry"
+  },
+  "카레 소스": {
+    "zh": "咖喱酱",
+    "en": "curry sauce"
+  },
+  "카레소스": {
+    "zh": "咖喱酱",
+    "en": "curry sauce"
+  },
+  "크림": {
+    "zh": "奶油",
+    "en": "cream"
+  },
+  "탄산수": {
+    "zh": "气泡水",
+    "en": "sparkling water"
+  },
+  "토마토": {
+    "zh": "番茄",
+    "en": "tomato"
+  },
+  "토마토소스": {
+    "zh": "番茄酱",
+    "en": "tomato sauce"
+  },
+  "튀김유": {
+    "zh": "炸油",
+    "en": "frying oil"
+  },
+  "트러플오일": {
+    "zh": "松露油",
+    "en": "truffle oil"
+  },
+  "파": {
+    "zh": "葱",
+    "en": "green onion"
+  },
+  "파르메산 치즈": {
+    "zh": "帕尔马奶酪",
+    "en": "parmesan cheese"
+  },
+  "파스타": {
+    "zh": "意大利面",
+    "en": "pasta"
+  },
+  "파스타면": {
+    "zh": "意大利面条",
+    "en": "pasta noodles"
+  },
+  "파슬리": {
+    "zh": "欧芹",
+    "en": "parsley"
+  },
+  "페페론치노": {
+    "zh": "意大利辣椒",
+    "en": "peperoncino"
+  },
+  "피자 도우": {
+    "zh": "披萨饼底",
+    "en": "pizza dough"
+  },
+  "피치 리큐르": {
+    "zh": "桃子利口酒",
+    "en": "peach liqueur"
+  },
+  "한우": {
+    "zh": "韩牛",
+    "en": "korean beef"
+  },
+  "한우 대창": {
+    "zh": "韩牛大肠",
+    "en": "korean beef large intestine"
+  },
+  "향신료": {
+    "zh": "香料",
+    "en": "spices"
+  },
+  "허브": {
+    "zh": "香草",
+    "en": "herbs"
+  },
+  "후추": {
+    "zh": "胡椒",
+    "en": "pepper"
+  },
+  "훈연향": {
+    "zh": "烟熏风味",
+    "en": "smoke flavor"
+  }
+}
